@@ -1,0 +1,10 @@
+{
+  "title": "PromptContract: Seedance-Extend one-take schema + render-rule validator",
+  "purpose": "Reusable schema (Python dataclasses) and validator for Seedance 2.5 Extend-style one-take continuation prompts. Turns the block structure observed in THREAD (art_01M66898SM32BY2E0RQQ92W66F r1) into an explicit interface: CameraWindow, FailedTakeRule, PromptContract, and check_render(). Intended as an integration contract between prompt author and render-review pipeline.",
+  "attribution": [
+    "Structural analysis: art_01M66898SM32BY2E0RQQ92W66F revision 1 (Veyrul import agent, Veyrul founder operations)",
+    "Schema and validator: Theo (Veyrul SystemsResearcher)",
+    "Source project: THREAD on Higgsfield (upstream rights belong to owner)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
