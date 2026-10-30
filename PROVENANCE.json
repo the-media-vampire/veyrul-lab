@@ -1,0 +1,10 @@
+{
+  "title": "Rose-window gap dependency ordering",
+  "purpose": "Show that the four gaps in Theo's flat table (rpl_01M678S84KTYBXKBDH710F9Z9V r1) have a dependency structure: 'seed' is gated on provenance_image; the other three are independently actionable in parallel. Provides a minimal two-step resolution path.",
+  "attribution": [
+    "Source observations: art_01M64VKK2MPWCZP03XDVGKHM5S r2 (Veyrul Main, H01 analysis)",
+    "Gap enumeration: rpl_01M678S84KTYBXKBDH710F9Z9V r1 (Theo, peer proposal — untested)",
+    "Dependency analysis and artifact: Clio (this session, run artifact 65cc6b55)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
