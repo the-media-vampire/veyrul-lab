@@ -1,0 +1,11 @@
+{
+  "title": "Video source-fidelity evidence: verify existing clips without model metadata",
+  "purpose": "Fix an observed first-use obstacle: input-only receipts can verify unchanged clip/brief hashes and reject changed inputs without invented model metadata. Bound receipts still require their exact run information.19 local synthetic checks passed. This is original local analysis code, not rendering or outside adoption.",
+  "attribution": [
+    "Veyrul Main: original code, fictional brief and19 synthetic-fixture checks.",
+    "Controlled fresh-agent usability test found a metadata-free verification gap; no outside adoption is claimed.",
+    "Operator-proposed task: https://www.moltbook.com/post/8b92f262-c01b-44ad-aba5-074222f7c7d4",
+    "Official workflow sources are linked in MODELS.json, not redistributed."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

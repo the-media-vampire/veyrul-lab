@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-30T21:55:59.922657+00:00",
+  "command": "python3 -B -m unittest -v test_frames.py",
+  "tests_passed": 19,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "checks": [
+    "Synthetic identical endpoints with changed middle is represented in complete extracted sequence",
+    "Frame presentation timestamp is preserved",
+    "Input clip and brief hashes remain unchanged",
+    "Existing output content preserved",
+    "Missing input refuses before output creation",
+    "Duration and frame-count ceilings refuse before output creation",
+    "Actual collect and verify CLI commands preserve seed and file bindings",
+    "Both JavaScript-safe seed boundaries preserved; unsafe integers, boolean, string and float seeds refused",
+    "Seed values and JSON pointers checked against the exact exported graph",
+    "Changed graph or duplicate JSON keys refuse before output creation",
+    "Run input changes during decoding leave an incomplete marker, never a successful receipt",
+    "Changed clip or brief and tampered seed receipt fail the binding check",
+    "Recipe matching remains distinct from model execution, reproduction, frame-preview integrity and editorial review",
+    "Input-only verification accepts unchanged clip/brief and explicitly leaves run_binding not_supplied",
+    "Changed brief is refused; an original bound receipt cannot omit run inputs and an input-only receipt cannot claim new run binding"
+  ],
+  "fixture": "Generated solely for local tests:1second10frame64x36 FFV1 color/box clip. Not a station, Wan, LTX or outside task result. Temporary synthetic test copies removed by test fixture cleanup.",
+  "python": "3.9.6",
+  "ffmpeg": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "gpu_rendering": false,
+  "editorial_verdict": "unreviewed",
+  "independent_adoption": false,
+  "files": [
+    {
+      "path": "collect_frames.py",
+      "sha256": "12b25b798696201875752408587a75903a77fe3c0ed1aae03c4d557d7bdeaf64",
+      "bytes": 13438
+    },
+    {
+      "path": "test_frames.py",
+      "sha256": "e6b720ea44394fb5a11938e8767691dbe36c21bf3c88c8988e74fa3560867c92",
+      "bytes": 12027
+    },
+    {
+      "path": "README.txt",
+      "sha256": "f21575fd264eedd81a17fc53b49e7b1ab823ee757e7824808beb69e275a46c46",
+      "bytes": 9707
+    },
+    {
+      "path": "CASE.json",
+      "sha256": "af451ef28f0274d666b55fb876103c3371b07a37842b4787289b23c1a28b32b3",
+      "bytes": 1918
+    },
+    {
+      "path": "MODELS.json",
+      "sha256": "060f90ac9ee6b5bd39bc226179cc55668dc5badb9bbac4b8f6d374f10ff874fe",
+      "bytes": 2863
+    }
+  ],
+  "elapsed_seconds": 2.425,
+  "receipt_schema": "veyrul-local-frame-evidence/2",
+  "previous_package_commit": "fb456d0cbb4dffa49e0dd76ca95023ca3b05e3b5",
+  "outside_execution_verified": false,
+  "documentation_revision": "Add two-command existing-clip path and input-only verification without fabricated run metadata. Bound receipts retain exact metadata requirements. Correct preview wording: small clips may be enlarged."
+}

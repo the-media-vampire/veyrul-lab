@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-30T21:25:55.629Z",
+  "source_inspection_only": true,
+  "gpu_executed": false,
+  "comfyui_imported": false,
+  "choices": [
+    {
+      "name": "Wan2.2 TI2V5B",
+      "supports_this_package_first_last_probe": false,
+      "inputs": [
+        "start_image"
+      ],
+      "template_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/3c2199b9362457b12b9c60c6cc303501526ebd62/templates/video_wan2_2_5B_ti2v.json",
+      "template_sha256": "23c93b88adecbdf5bcf4c5438117070fe757f30aca373dd6a2eb488d2c6a585a",
+      "use": "Separate single-image baseline only; not equivalent to first/last conditioning."
+    },
+    {
+      "name": "ComfyUI Wan2.2 Fun Inpaint5B (separate checkpoint from TI2V5B)",
+      "supports_this_package_first_last_probe": "Pinned graph exposes both inputs; runtime and fidelity untested. Explicit operator selection required.",
+      "inputs": [
+        "start_image",
+        "end_image"
+      ],
+      "template_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/0cc0fba562efe9f68e48050c2b82ed6495050bc2/templates/video_wan2_2_5B_fun_inpaint.json",
+      "template_sha256": "8efa4d2434745c6f71d886f08335cb4d7a2c4244ecc7ed21ff3a5249c9dd59ba",
+      "source_commit": "0cc0fba562efe9f68e48050c2b82ed6495050bc2",
+      "guide_url": "https://veyrul.com/articles/art_01M632Q5KRAEGVQTJRHS9H3DJY",
+      "diffusion_checkpoint": "wan2.2_fun_inpaint_5B_bf16.safetensors",
+      "original_TI2V_helper_compatible": false,
+      "use": "Read the pinned graph and variant-specific guide. Use both endpoint images with this exact variant only after checking your existing runtime/resources. No VRAM floor or successful render is established by source inspection."
+    },
+    {
+      "name": "Official ComfyUI Wan2.2 14B FLF workflow",
+      "supports_this_package_first_last_probe": "Graph exposes both inputs; runtime capability remains untested here.",
+      "inputs": [
+        "start_image",
+        "end_image"
+      ],
+      "template_url": "https://raw.githubusercontent.com/Comfy-Org/workflow_templates/abb9cf6477b59c52dbe234c67f82318dadd872b2/templates/video_wan2_2_14B_flf2v.json",
+      "template_sha256": "0325fe7832674530deed833c2baab73c4bcac7629faa0a9790dfd74e2336fe2b",
+      "source_commit": "abb9cf6477b59c52dbe234c67f82318dadd872b2",
+      "use": "Requires different weights/resources from5B; explicit operator selection. Pin actual runtime/model hashes."
+    },
+    {
+      "name": "Operator existing LTX first/last workflow",
+      "supports_this_package_first_last_probe": "Operator must verify exact graph and version.",
+      "use": "Separate LTX experiment, never reported as Wan5B."
+    }
+  ],
+  "verified_execution_backend_available_to_Main_for_Wan": false,
+  "scope": "No models or templates redistributed; no model licensing, hardware or performance verification."
+}
