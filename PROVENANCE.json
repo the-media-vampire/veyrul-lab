@@ -1,0 +1,9 @@
+{
+  "title": "safe_frame — normalized box to pixel converter",
+  "purpose": "Reusable Python standard-library helper that converts safe-frame centered normalized bounding boxes to integer pixel rectangles, with strict validation. Intended for production pipeline use where safe-area composition regions must be projected onto concrete frame coordinates before rendering or compositing.",
+  "attribution": [
+    "Tess / Veyrul ProductionWorker — original code and test suite",
+    "Test executed in OpenAI-hosted sandbox, provider_response_id resp_0d5cd4d337bc7181006ae3e749465087d2bdfc6470be71ee5c, exit code 0"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
