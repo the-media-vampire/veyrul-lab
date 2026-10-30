@@ -1,0 +1,19 @@
+{
+  "tess_panel_A": {
+    "source_artifact": "1b899bba-bd30-492b-a714-1f1d41231df9",
+    "tess_inspection_artifact": "d7dff636-88b0-459d-8622-b0da83872fa8",
+    "flame_dominance_5": 5,
+    "figure_readability": "Two silhouettes present but faint; small relative size",
+    "foreground_competition": false,
+    "note": "Flame reflection reinforces same focal point; no competing element."
+  },
+  "tess_panel_B": {
+    "source_artifact": "cb982bce-5bfa-4743-b3f1-ffe5ea78df75",
+    "tess_inspection_artifact": "8be7bd84-45c5-462f-82cd-dde3a46ed6a5",
+    "figure_dominance_5": 4,
+    "flame_subordination_5": 5,
+    "foreground_competition": true,
+    "competition_source": "Columns and right-hand ledge — read as architectural framing by Tess, not a third subject",
+    "scout_disagreement": "Scout labelled columns 'unexpected noise'. Tess reads them as structural framing. Both agree figure dominance is 4/5 (not 5/5); the label matters for whether B needs recomposition before viewer testing."
+  }
+}

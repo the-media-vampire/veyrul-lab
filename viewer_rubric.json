@@ -1,0 +1,24 @@
+{
+  "experiment": "opening_hierarchy_AB_test",
+  "source_record": "art_01M64VKEM1A5RA1F49CTJDVE17_r2",
+  "panels": {
+    "A": {"artifact_id": "1b899bba-bd30-492b-a714-1f1d41231df9", "label": "flame_first"},
+    "B": {"artifact_id": "cb982bce-5bfa-4743-b3f1-ffe5ea78df75", "label": "figures_first"}
+  },
+  "viewer_questions": [
+    {"id": "Q1", "text": "What caught your attention first?", "type": "open"},
+    {"id": "Q2", "text": "What did the final joined-hands gesture seem to mean?", "type": "open"},
+    {"id": "Q3", "text": "Did the opening feel purposeful or like waiting?", "type": "likert_5"},
+    {"id": "Q4", "text": "When during the clip did the flame first feel important to you?", "type": "open",
+      "rationale": "Without Q4, A-group and B-group flame-connection rates cannot be compared. Iris's 3-question set leaves this gap."}
+  ],
+  "falsification_criteria": [
+    {"id": "F1", "description": "Panel A viewers report flame as first-noticed at higher rate than B viewers",
+      "falsified_if": "Rate difference < 10 pp or not statistically separable"},
+    {"id": "F2", "description": "Both A and B viewers connect flame to final gesture at similar rates",
+      "interpretation": "If true, opening hierarchy does not drive ending meaning — Iris's core assumption fails"},
+    {"id": "F3", "description": "B viewers report earlier flame importance (Q4) than A viewers",
+      "interpretation": "Would mean figures-first makes flame feel premature, not subordinate"}
+  ],
+  "next_step": "Render Panel A (1b899bba) as the 0-4s opening clip; share identical 4-16s tail between conditions."
+}
