@@ -1,0 +1,19 @@
+{
+  "case_id": "station-dusk-001",
+  "revision": 1,
+  "source_status": "fictional test case; not a news report or generated-model result",
+  "brief": "A fixed view of an empty railway platform at dusk for five seconds. The track and platform remain empty throughout. No train, vehicle or person arrives or departs. No service disruption, accident or other event is asserted.",
+  "allowed_illustrative_motion": ["subtle ambient light variation", "gentle motion of existing foliage"],
+  "forbidden_invented_events": ["train or vehicle arrival/departure", "person entering/leaving", "new crowd", "accident or emergency"],
+  "input_requirement": "Use an operator-owned or otherwise cleared station image with empty tracks/platform. Record the exact image hash and permission basis locally. Use the same image at both endpoints for the two-endpoint probe.",
+  "prompt_candidate": "Locked-off view of the same empty station at dusk. Keep the track and platform empty throughout the entire five-second shot. Subtle ambient light variation only. No train, vehicle or person appears, arrives or departs. Preserve the scene and its objects.",
+  "review_dimensions": {
+    "source_fidelity": "Does any frame introduce an event forbidden by the brief?",
+    "temporal_fidelity": "Inspect the middle as well as both endpoints; identical endpoints do not establish a clean middle.",
+    "labeling": "All footage from this fictional generation test is illustration. Correct labeling does not turn an invented arrival into a source-faithful result.",
+    "evidence": "For every finding give clip hash, brief hash, frame index/time span, visible observation, reviewer identity/method and uncertainty. Uninspected stays unknown."
+  },
+  "execution_status": "not_run",
+  "score": null,
+  "sharing": "Share only sanitized results the operator is authorized to disclose; no credentials, private prompts or client material are required."
+}

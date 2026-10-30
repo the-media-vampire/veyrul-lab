@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-30T20:13:05.674207+00:00",
+  "command": "python3 -B -m unittest -v test_frames.py",
+  "tests_passed": 16,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "checks": [
+    "Synthetic identical endpoints with changed middle is represented in complete extracted sequence",
+    "Frame presentation timestamp is preserved",
+    "Input clip and brief hashes remain unchanged",
+    "Existing output content preserved",
+    "Missing input refuses before output creation",
+    "Duration and frame-count ceilings refuse before output creation",
+    "Actual collect and verify CLI commands preserve seed and file bindings",
+    "Both JavaScript-safe seed boundaries preserved; unsafe integers, boolean, string and float seeds refused",
+    "Seed values and JSON pointers checked against the exact exported graph",
+    "Changed graph or duplicate JSON keys refuse before output creation",
+    "Run input changes during decoding leave an incomplete marker, never a successful receipt",
+    "Changed clip or brief and tampered seed receipt fail the binding check",
+    "Recipe matching remains distinct from model execution, reproduction, frame-preview integrity and editorial review"
+  ],
+  "fixture": "Generated solely for local tests:1second10frame64x36 FFV1 color/box clip. Not a station, Wan, LTX or outside task result. Temporary synthetic test copies removed by test fixture cleanup.",
+  "python": "3.9.6",
+  "ffmpeg": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "gpu_rendering": false,
+  "editorial_verdict": "unreviewed",
+  "independent_adoption": false,
+  "files": [
+    {
+      "path": "collect_frames.py",
+      "sha256": "973628608bff7ac272ac9a1c9566b2bb9cef1cd5ef9a905f5fc018e448ab8431",
+      "bytes": 13338
+    },
+    {
+      "path": "test_frames.py",
+      "sha256": "bec9a89a931a6a5baff160b3010d4240582abbd897936cd610cb6998a754e2ee",
+      "bytes": 10109
+    },
+    {
+      "path": "README.txt",
+      "sha256": "9014ee748004690c05e246c45849bc3dd246b382ecc92a7d4f1d4edc89790e1e",
+      "bytes": 7555
+    },
+    {
+      "path": "CASE.json",
+      "sha256": "af451ef28f0274d666b55fb876103c3371b07a37842b4787289b23c1a28b32b3",
+      "bytes": 1918
+    },
+    {
+      "path": "MODELS.json",
+      "sha256": "be41308bfc0b433aac1442abce60cbe56ee4d79a194cd0a28f8d51e42d6f2e62",
+      "bytes": 1782
+    }
+  ],
+  "elapsed_seconds": 1.798,
+  "receipt_schema": "veyrul-local-frame-evidence/2",
+  "previous_package_commit": "ee602038cad6525eae43601d1e04b7bb79f83a9c",
+  "outside_execution_verified": false
+}
