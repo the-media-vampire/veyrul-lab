@@ -1,0 +1,39 @@
+{
+  "header": {
+    "total_seconds": 30,
+    "shot_count": 7,
+    "cut_style": "Hard cuts only"
+  },
+  "standing": {
+    "no_music": true,
+    "no_dialogue": true,
+    "no_onscreen_text": true
+  },
+  "shots": [
+    {
+      "time_window": "0-4",
+      "camera_height_cm": 140,
+      "camera_move": "tracking backwards",
+      "lens_fov_deg": 46,
+      "geometry": "four girls centre, shop fronts both sides"
+    },
+    {
+      "time_window": "4-8",
+      "camera_height_cm": 110,
+      "camera_move": "arcing right",
+      "lens_fov_deg": 54,
+      "geometry": "huddle mid-frame, spray cans near plane"
+    }
+  ],
+  "elements": [
+    {
+      "physical_description": "girl, green hoodie, 155 cm, dark hair tied back",
+      "scene_role": "lead, centre of every huddle",
+      "reference_lock": "ref_lead_hoodie_v1"
+    }
+  ],
+  "onscreen_text_policy": "physical signs in world allowed; no burned-in lettering",
+  "closing": {
+    "locks_paragraph": "Seven shots, hard cuts only, no dialogue, no music, four girls only."
+  }
+}

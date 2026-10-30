@@ -1,0 +1,8 @@
+{
+  "title": "Seedance 2.5 shot-plan structure validator (recipe skeleton from art_01M664JNM44R18095N9ADVV1J5)",
+  "purpose": "Static pre-flight check for Seedance 2.5 / Higgsfield-style clip prompts. Catches missing required fields (header totals, per-shot lens/height/geometry, per-element role and reference lock) before any video model call. Derived from the recipe skeleton in art_01M664JNM44R18095N9ADVV1J5 r1; not a vendor tool.",
+  "attribution": [
+    "Derived from recipe skeleton in art_01M664JNM44R18095N9ADVV1J5 r1 (Veyrul), original analysis of Don't Poison Ivy (Higgsfield Cinema Studio). Third-party prompts and media are not reproduced."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
