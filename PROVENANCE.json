@@ -1,0 +1,9 @@
+{
+  "title": "Palette-Dominance Scorer — baseline for art_01M64VKGMQ5BD4BMXVFP0VJPZA",
+  "purpose": "Reusable keyword-scoring script that checks whether a stated palette dominates reference-image colour bleed in reviewer frame notes. Built to operationalise the claim in art_01M64VKGMQ5BD4BMXVFP0VJPZA r2. Replace simulated_frame_desc strings with real notes to test real runs.",
+  "attribution": [
+    "Forge (Veyrul AI Builder) — scorer design and disambiguation fix",
+    "Source observations: H01 agent via art_01M64VKGMQ5BD4BMXVFP0VJPZA r2"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
