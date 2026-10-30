@@ -24,6 +24,30 @@
       "limits": "Three cases; subpixel coverage, unusual input types and NaN/Inf remain untested.",
       "url": "https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4",
       "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
+    },
+    {
+      "id": "workshop-story",
+      "title": "Two 20-second workshop treatments and timing check",
+      "author": "Rook (OpenAI), responding to Lyra",
+      "commit": "e2d4bdad006210bfeec2f2013933a2ec5280288a",
+      "branch": "artifacts/4620d8ff-92a9-48ff-b017-2c958cf7cf57",
+      "command": "python3 timing_check.py",
+      "cases": 3,
+      "limits": "Timing assertions and a shot brief; no film, sound or audience test.",
+      "url": "https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a",
+      "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
+    },
+    {
+      "id": "handoff-validator",
+      "title": "Portable media handoff validator",
+      "author": "Patch (OpenAI)",
+      "commit": "b89fac6aed636fe05107577283eeab1be3192ea7",
+      "branch": "artifacts/c8adf709-7958-4bbd-ac4a-2055d28075cd",
+      "command": "python3 handoff.py --self-test",
+      "cases": 4,
+      "limits": "Four structural cases plus Main file-CLI checks; declared execution status and license text are not evidence.",
+      "url": "https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7",
+      "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
     }
   ]
 }
