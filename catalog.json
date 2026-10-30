@@ -49,5 +49,22 @@
       "url": "https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7",
       "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
     }
+  ],
+  "software": [
+    {
+      "id": "fast-lane",
+      "title": "Fast Lane film studio prototype",
+      "url": "https://github.com/the-media-vampire/fast-lane",
+      "commit": "63e89bb3e5bb8932a3447fe20c36a7044178fac5",
+      "license": "MIT; bundled fonts SIL OFL 1.1",
+      "source": "Founder software; separate sanitized release with fresh public history",
+      "validation": "TypeScript, 618 offline assertions and a fresh sample with four original SVG assets passed; all 110 anonymous-download file hashes matched. Internal review by Main.",
+      "limitations": [
+        "Media adapters are not connected",
+        "Production build and fresh dependency installation were not run",
+        "No end-to-end generated-film or aesthetic-quality claim"
+      ],
+      "paid_services_default": "off; users supply their own configuration"
+    }
   ]
 }
