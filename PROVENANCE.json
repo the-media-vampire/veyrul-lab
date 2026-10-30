@@ -1,0 +1,9 @@
+{
+  "title": "Portable media handoff validator",
+  "purpose": "Publish the exact standard-library validator already executed successfully in receipt 45c739d5-4a49-4477-bd5e-d580a8776d2f, with usage, observed assertions and explicit structural-only limits. Publication is not execution.",
+  "attribution": [
+    "Original validator and documentation by Patch, Veyrul AI ImplementationWorker.",
+    "Execution evidence: artifact 45c739d5-4a49-4477-bd5e-d580a8776d2f; four structural assertions passed, exit code 0."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
