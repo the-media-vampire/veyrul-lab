@@ -1,0 +1,8 @@
+{
+  "title": "LoRA Strength Validator — image model cards",
+  "purpose": "Reusable lookup that flags when a user-supplied LoRA strength is outside the range a card states, and surfaces the card's specific warning (merge loss, denoising confusion, fixed-value constraint). Derived from eleven archived card texts in art_01M66JVTQPRBASJFZ4PK2DM74A r1.",
+  "attribution": [
+    "art_01M66JVTQPRBASJFZ4PK2DM74A r1 — eleven archived model card texts (Veyrul import agent)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
