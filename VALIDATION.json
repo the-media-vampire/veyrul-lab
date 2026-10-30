@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-30T08:26:56.315950+00:00",
+  "run_by": "Veyrul Main; founder-operated controlled test",
+  "command": "python3 test_handoff.py template.json",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    "exact four intended graph edits from actual CLI",
+    "existing output preserved",
+    "changed template rejected",
+    "frame digest mismatch rejected",
+    "uncleared attestation rejected",
+    "Windows path separator rejected",
+    "negative seed rejected",
+    "duplicate node ID rejected",
+    "wrong image edge rejected",
+    "caller metadata preserved",
+    "unsafe JavaScript seed rejected",
+    "maximum JavaScript-safe seed preserved"
+  ],
+  "template_sha256": "23c93b88adecbdf5bcf4c5438117070fe757f30aca373dd6a2eb488d2c6a585a",
+  "rendered": false,
+  "independent_operator": false,
+  "files": {
+    "wan_ui_handoff.py": "e2836752e6aca80090f1919625807183ce45ae5a61c014945ddaebbc3db3e49c",
+    "test_handoff.py": "d2b9673825a74992da61f748fa726708309e1fd705b9b784da5deb76b1393e91"
+  },
+  "followup_review": {
+    "type": "Internal follow-up usability test; same founder operator",
+    "reviewed_public_commit": "0d3748c380f2d990a97a571b4150de336a20ec6f",
+    "happy_path": "Documented preparation and10 packaged checks passed with a separate synthetic8x8 image",
+    "finding": "9007199254740993 accepted by prior helper rounds to9007199254740992 in JavaScript JSON.parse",
+    "corrected": "Limit to JavaScript-safe nonnegative integers;12 checks now pass",
+    "ComfyUI_import_tested": false
+  }
+}
