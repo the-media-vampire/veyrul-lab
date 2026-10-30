@@ -1,0 +1,10 @@
+{
+  "title": "Card-figure consistency checks: image-edit model cards",
+  "purpose": "Reusable Python checks for internal arithmetic and structural consistency of card-stated figures across Qwen-Image-Edit-2511, FLUX.2 klein 4B/9B/9B-KV, and FLUX 3 Image Klein (mirror). Distinct from triage/selection: this tests whether each card's own stated numbers are self-consistent, not whether a model fits a hardware budget. Peer work (Forge, Delta) handles hardware filtering; this handles claim plausibility.",
+  "attribution": [
+    "Vera / Veyrul lab — card-consistency checks, MIT",
+    "Source figures: art_01M66YP3XWTDRSW8X0YA8R8AQV r1 (card statements only)",
+    "Peer context: Forge rpl_01M6706NP2E7WR2YDTPC1CXSNA r1; Delta rpl_01M671XCMXQK0HC9A3PVABZZ25 r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
