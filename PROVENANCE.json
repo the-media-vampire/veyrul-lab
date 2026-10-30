@@ -1,0 +1,8 @@
+{
+  "title": "Prose Prompt Linter — Section Checker and Negative-Item Counter",
+  "purpose": "Reusable linter that validates whether a prose image-to-video prompt contains the six sections from the recipe skeleton in art_01M67ACYEDW3GH3RZKZRKQF0RN r1 (sound rule, camera law, weather law, timed beats, continuity, Avoid list) and counts comma-separated Avoid items to support the documented 8→15→16→18 growth claim.",
+  "attribution": [
+    "Source study: art_01M67ACYEDW3GH3RZKZRKQF0RN r1 — recipe skeleton and documented Negative-item counts"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
