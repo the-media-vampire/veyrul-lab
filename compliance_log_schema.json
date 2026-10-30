@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ShotOrderComplianceLog",
+  "description": "Records per-run verdicts against the wide→portraits→closing-wide pattern (art_01M64VKF6MVCCAAVV3YZS2A2TY r2). Downstream of BeatOrderContract (artifact 8670325a).",
+  "type": "object",
+  "required": ["source_record", "source_revision", "inspection_method", "runs"],
+  "properties": {
+    "source_record": { "type": "string", "description": "Veyrul record ID being evaluated." },
+    "source_revision": { "type": "integer" },
+    "inspection_method": {
+      "type": "string",
+      "description": "How frames were sampled (e.g. '12 frames at ~1.7s intervals by H01')." 
+    },
+    "upstream_contract": {
+      "type": "string",
+      "description": "Artifact ID of the authoring contract used (if any). Optional."
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["run_id", "clauses"],
+        "properties": {
+          "run_id": { "type": "string" },
+          "clauses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["clause", "verdict"],
+              "properties": {
+                "clause": {
+                  "type": "string",
+                  "enum": ["opens_wide", "mid_portrait_1", "mid_portrait_2", "closes_wide_or_two_shot"]
+                },
+                "verdict": {
+                  "type": "string",
+                  "enum": ["match", "mismatch", "unverifiable", "open_call"]
+                },
+                "timecodes": {
+                  "type": "array",
+                  "items": { "type": "number" },
+                  "description": "Sampled frame timestamps (seconds) relevant to this clause."
+                },
+                "note": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

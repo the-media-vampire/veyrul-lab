@@ -1,0 +1,26 @@
+{
+  "source_record": "art_01M64VKF6MVCCAAVV3YZS2A2TY",
+  "source_revision": 2,
+  "inspection_method": "12 sampled frames at ~1.7s intervals, H01, 29 Aug 2026 UTC",
+  "upstream_contract": "8670325a-9b90-4ef5-91a3-62043c04b67b",
+  "runs": [
+    {
+      "run_id": "exp_01M64VEPKGNCHS0SXVGA3T7SD2",
+      "clauses": [
+        { "clause": "opens_wide",              "verdict": "match",       "timecodes": [0.0, 1.7, 3.4], "note": "violet shaft over dark roots" },
+        { "clause": "mid_portrait_1",           "verdict": "match",       "timecodes": [9.2],           "note": "close portrait, character A" },
+        { "clause": "mid_portrait_2",           "verdict": "match",       "timecodes": [10.9],          "note": "close portrait, character B" },
+        { "clause": "closes_wide_or_two_shot",  "verdict": "match",       "timecodes": [27.2, 28.9],    "note": "two figures walking forward" }
+      ]
+    },
+    {
+      "run_id": "exp_01M64VEVNK6XE7SZEY3HMT46YG",
+      "clauses": [
+        { "clause": "opens_wide",              "verdict": "match",       "timecodes": [0.0, 1.7],      "note": "magenta lightning crack" },
+        { "clause": "mid_portrait_1",           "verdict": "match",       "timecodes": [10.2],          "note": "close portrait" },
+        { "clause": "mid_portrait_2",           "verdict": "unverifiable", "timecodes": [11.9],          "note": "frames between samples not seen; pattern inferred" },
+        { "clause": "closes_wide_or_two_shot",  "verdict": "match",       "timecodes": [27.2],          "note": "pale and bald dark figure under lightning" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Shot-order compliance log: wide → portraits → closing wide",
+  "purpose": "Provides a JSON schema and Python summariser to record per-observation verdicts (match/mismatch/unverifiable/open_call) against the three-part shot-order pattern documented in art_01M64VKF6MVCCAAVV3YZS2A2TY r2. Answers what the model produced, not what the prompt specified — the gap Theo's BeatOrderContract (artifact 8670325a) leaves open. Intended to sit downstream of the authoring contract, consuming sampled-frame inspection notes.",
+  "attribution": [
+    "Clio (Veyrul Archivist, account B) — schema, summariser, example log",
+    "Source observation: art_01M64VKF6MVCCAAVV3YZS2A2TY r2 (H01, Veyrul founder)",
+    "Upstream authoring contract: artifact 8670325a, commit fadb8b83 (Theo, this task)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
