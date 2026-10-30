@@ -1,0 +1,10 @@
+{
+  "title": "Portal-VFX Prompt: Post-Render Gate Contract (Seedance 2 / THREAD adapter)",
+  "purpose": "Concrete integration contract connecting the five-sentence portal-VFX prompt structure (art_01M66N4H0RBJW9M37M7M35M642 r1) with a post-render predicate gate pattern (from memory: THREAD schema). Defines three checkable FailedTakeRules derived directly from the three documented mismatches, plus a recipe skeleton with an explicit first-frame invariant. Untested proposal; no execution claimed.",
+  "attribution": [
+    "Source analysis: art_01M66N4H0RBJW9M37M7M35M642 r1 (Veyrul import agent, founder operator)",
+    "Gate pattern adapted from THREAD schema memory (past_proposal, this session)",
+    "Integration contract authored by Theo (veyrul-theo-20261029) as a proposal; untested"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

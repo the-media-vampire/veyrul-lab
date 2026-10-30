@@ -1,0 +1,65 @@
+# Portal-VFX Prompt / Post-Render Gate — Integration Contract
+# Source: art_01M66N4H0RBJW9M37M7M35M642 r1 (three observed mismatches)
+# Pattern: THREAD-style FailedTakeRule gate (memory ref: past_proposal)
+# Status: proposal / untested
+# License: MIT
+
+prompt_schema:
+  name: portal_vfx_v1
+  sentences:
+    s1_replace:      "Replace [OBJECT] with [IMAGE_REF], present from frame 0."
+    s2_invariant:    "[REPLACEMENT] must stay fully closed / unchanged for the entire shot."
+    s3_pass_through: "[SUBJECTS] pass straight through [REPLACEMENT] as if through a magic portal; no opening, breaking or deforming."
+    s4_effect:       "Barely noticeable [EFFECT_TYPE] distortion — shimmering energy, soft ripples, faint particles — limited to each crossing body; [REPLACEMENT] carries no effect."
+    s5_motion_ref:   "Movement and position of [SUBJECTS] must be identical to [VIDEO_REF]."
+  notes:
+    - "Say 'each body' not 'her body' when subjects are plural (source mismatch: singular pronoun for plural subjects)."
+    - "Add an explicit time anchor to s1/s2 (e.g. 'from frame 0') — the source prompt said 'throughout' but the door arrived at ~2.5 s."
+
+post_render_gate:
+  # Three FailedTakeRules derived from documented mismatches in art_01M66N4H0RBJW9M37M7M35M642 r1.
+  # Each rule: log_key, predicate, check_method, evidence_basis.
+
+  rules:
+    - log_key: door_present_frame0
+      description: "Replacement object must be visible and cover the opening at frame 0."
+      predicate: "frame[0] shows replacement object occluding at least 80% of the target opening"
+      check_method: "frame-diff classifier vs. source image_ref bounding box"
+      failure_action: reject_take
+      evidence_basis: "Mismatch 1 — entrance open 0–2.1 s; door fully closed only from 2.9 s (art_01M66N4H0RBJW9M37M7M35M642 r1)"
+
+    - log_key: door_present_at_crossing
+      description: "Replacement object must be present when subjects reach the threshold."
+      predicate: "at every frame where any subject centroid crosses the threshold x-coordinate, replacement object occludes > 50% of opening"
+      check_method: "subject pose keypoints + opening mask, frame-by-frame"
+      failure_action: reject_take
+      evidence_basis: "Mismatch 2 — door arrived after runners at threshold; crossing happened through open entrance (art_01M66N4H0RBJW9M37M7M35M642 r1)"
+
+    - log_key: shimmer_scale
+      description: "Effect extent must be 'barely noticeable': confined to crossing body, low intensity."
+      predicate: "mean effect-pixel area across crossing frames < 0.15 * subject bounding-box area; peak luminance delta < threshold_T"
+      check_method: "optical-flow residual or segmentation mask on effect layer vs. subject mask"
+      failure_action: flag_for_review   # degree call; do not auto-reject without calibration
+      evidence_basis: "Mismatch 3 — shimmer bright and large, ran along both runners and cart (art_01M66N4H0RBJW9M37M7M35M642 r1, assessed at 1130px stored width)"
+      calibration_note: "threshold_T is uncalibrated; requires at least one reference take labelled 'acceptable' by a human reviewer before auto-rejection."
+
+  open_calls_not_gated:
+    - door_matches_image_ref:   "Image reference was not opened; reference identity unverified."
+    - door_deforms_at_crossing: "One blurred still at 2.5 s is inconclusive."
+    - motion_matches_video_ref: "Video reference not opened; movement correspondence not verified."
+    - audio:                    "No audio tool; prompt has no audio line."
+
+interfaces:
+  inputs:
+    image_ref:  {type: image, provenance: "caller-supplied; license unknown — do not train on without explicit clearance"}
+    video_ref:  {type: video, provenance: "caller-supplied; license unknown"}
+    clip_out:   {type: video, source: "Seedance 2 / Higgsfield render"}
+  outputs:
+    gate_result: {type: enum, values: [pass, reject_take, flag_for_review]}
+    log:         {type: dict, keys: [door_present_frame0, door_present_at_crossing, shimmer_scale]}
+
+assumptions:
+  - "Model (Seedance 2) is the only generation step; no in-painting or compositing pass follows."
+  - "Stills used as evidence are representative frames, not cherry-picked successes (unverified)."
+  - "The five-sentence recipe applies to other objects/subjects only if the replacement is similarly rigid and the effect similarly localised."
+  - "Auto-rejection on shimmer_scale requires a calibrated threshold — flagging is the safe default."
