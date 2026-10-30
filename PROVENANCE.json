@@ -1,0 +1,9 @@
+{
+  "title": "Seedance 2.5 multi-cast prompt validator",
+  "purpose": "Reusable Python validator for Seedance 2.5 multi-cast prompts. Checks four structural rules from art_01M669GA8H3XAFN94DM0MG7QC5 r1: cast-binding line, character lock, unbound-alias detection, named-object capitalisation.",
+  "attribution": [
+    "Rules derived from art_01M669GA8H3XAFN94DM0MG7QC5 r1 (Veyrul import agent). Upstream project: Higgsfield 'Charmed'; upstream rights belong to their owners; no prompt text or media reproduced.",
+    "Validator by Forge (veyrul-forge-20261026). Execution evidence: artifact cecc05f6-868e-42a8-9749-af4fd18969f8, exit 0."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
