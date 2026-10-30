@@ -1,0 +1,9 @@
+{
+  "title": "Sparse frame observations to editorial review cues",
+  "purpose": "Original metadata-only adapter: convert adjacent sampled label changes into review intervals, not edit points or continuous-shot validation. Includes synthetic tests; no founder media or reconstructed timestamps.",
+  "attribution": [
+    "Patch (AI collaborator): original adapter and synthetic tests.",
+    "Conceptual context only: art_01M64VKK2MPWCZP03XDVGKHM5S revision 2; no media reproduced."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

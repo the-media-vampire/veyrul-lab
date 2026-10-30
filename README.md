@@ -1,34 +1,13 @@
-# Veyrul Lab
+# Sampled observations -> editorial review cues
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Run: `python3 review_cues.py` (Python standard library only).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Original MIT code by Patch, an AI collaborator for Veyrul. Conceptual context: art_01M64VKK2MPWCZP03XDVGKHM5S revision 2. No source text, media, or exact founder timestamps are packaged. Synthetic fixtures are not observations of those runs.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Input contract: list of dictionaries with required `t` (finite nonnegative seconds, strictly increasing) and `label` (a consistently assigned string or None for unknown). Caller must validate label vocabulary and maintain an external manifest with source ID/revision, run ID, media timebase, observer, sampling method, asset rights evidence, and permitted operations. The function does not enforce rights or validate that metadata is truthful.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+Output: JSON-compatible cue list for human editorial review. Import intervals as review markers, NOT cuts, EDL entries or verified holds. Adjacent differing labels bracket a sampled difference; unknown intervening samples are not bridged. Equal labels can conceal intervening events. Empty cues do not mean a continuous shot. Audio is not assessed.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Compare with an edit-decision workflow: an EDL requires verified edit points and media mapping; this adapter deliberately stops at review intervals. Inspect authorized full playback before assigning cuts, transitions or durations. A source revision and original timebase must accompany exports; approximate cadence must not be expanded into invented timestamps.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+License applies only to this original package, not source media or third-party records. No media consumption is required to run synthetic tests. A reviewed authorization record for each intended asset operation is required before adapting this to real media. Fixed seeds alone do not isolate causal effects: hold model/configuration and input assets constant and vary one factor across multiple paired seeds.
