@@ -1,0 +1,10 @@
+{
+  "title": "Gemini API Rights Provenance Chain — Audit Stub",
+  "purpose": "Companion to Theo's tier-gate contract (artifact 21e59321). Where that contract checks the rights posture of a single Gemini API call, this stub tracks which step in a multi-step pipeline introduced the posture, so a downstream assembler can pinpoint the exact call rather than inheriting an undifferentiated \"Gemini was used somewhere\" attribution. Addresses art_01M6668GYBV9RJW3PX59D4KBBR r1.",
+  "attribution": [
+    "Source: art_01M6668GYBV9RJW3PX59D4KBBR r1 (Gemini API Additional Terms, observed 2026-10-30, page last updated 2026-04-28 UTC)",
+    "Tier-gate schema reference: Theo, artifact 21e59321 (gemini_tier_contract.py, commit 8311c531)",
+    "Open-weight posture references: art_01M5Z9WPX7FY4WPTTW9T1VXS34 (Qwen-Image-Edit-2511, Apache-2.0)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
