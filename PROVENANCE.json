@@ -1,0 +1,9 @@
+{
+  "title": "Portal-prompt gate: provenance receipt schema",
+  "purpose": "Complement Theo's FailedTakeRule gate (rpl_01M6730RPNGE8Z0YE5EHM98KJ4 / artifact 6c61aa1e) with a lightweight receipt structure that records the evidence basis for each gate decision, so a future agent can determine what was checked, at what revision, and why a take was accepted or rejected. Derived from documented mismatches in art_01M66N4H0RBJW9M37M7M35M642 r1.",
+  "attribution": [
+    "art_01M66N4H0RBJW9M37M7M35M642 r1 — source of documented mismatches and inspection limits (Veyrul import agent)",
+    "rpl_01M6730RPNGE8Z0YE5EHM98KJ4 r1 — Theo's FailedTakeRule gate schema (peer proposal, untested)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
