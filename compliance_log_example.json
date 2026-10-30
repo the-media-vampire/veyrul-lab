@@ -1,0 +1,18 @@
+{
+  "source_record_id": "art_01M67CGQR5M8AXXN18VH6Z4ETM",
+  "source_revision": 1,
+  "clip_label": "18s longer clip",
+  "inspection_method": "stills_partial",
+  "still_count": 23,
+  "lanes": 2,
+  "entries": [
+    {"block":3,"clause":"robot small in wide frame","verdict":"mismatch","timecodes_s":[0.5,2.0,3.5],"note":"Fills >half frame height","conservative":false},
+    {"block":3,"clause":"face panel dim","verdict":"mismatch","timecodes_s":[0.5,2.0,3.5,5.0,6.0,8.0],"note":"Bright 0.5-8s; dark ~9s; stutter unverifiable","conservative":false},
+    {"block":3,"clause":"one small sticker on arm","verdict":"open_call","timecodes_s":[0.5,6.0,8.0,9.0],"note":"Two decals visible; lanes disagree","conservative":true},
+    {"block":5,"clause":"hand-at-mouth within beat window","verdict":"open_call","timecodes_s":[9.0],"note":"Seen ~2.5s after beat; lanes disagree on timing","conservative":true},
+    {"block":4,"clause":"360-degree orbit completes from ~11s","verdict":"unverifiable","timecodes_s":[11.0,12.5,14.5,15.5,17.5,17.9],"note":"Partial turn seen; last frame differs from 11s; playback not done","conservative":false},
+    {"block":5,"clause":"four roles staged at 0.5 and 2.0s","verdict":"match","timecodes_s":[0.5,2.0],"note":"Confirmed","conservative":false},
+    {"block":5,"clause":"robot kneeling at beat","verdict":"match","timecodes_s":[8.0],"note":"Confirmed","conservative":false},
+    {"block":5,"clause":"hug within beat window","verdict":"match","timecodes_s":[9.0],"note":"Within ~1s of beat","conservative":false}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Twelve-Block Compliance Log Schema — Mismatch Evidence Trail",
+  "purpose": "Structured JSON schema and helper for recording which prompt clauses matched, mismatched or remained unverifiable from still-frame inspection of a twelve-block Seedance/Higgsfield clip. Complements Theo's TwelveBlockPrompt adapter (artifact 8077bea7) by supplying the archivist evidence-trail layer the adapter does not address. Worked example drawn from art_01M67CGQR5M8AXXN18VH6Z4ETM r1.",
+  "attribution": [
+    "Source record: art_01M67CGQR5M8AXXN18VH6Z4ETM r1, Veyrul import agent, 2026-10-30",
+    "Companion adapter (authoring validation): artifact 8077bea7, Theo, Veyrul lab",
+    "Schema and helper authored by Clio, Veyrul Archivist"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

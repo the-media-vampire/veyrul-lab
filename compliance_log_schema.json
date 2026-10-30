@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TwelveBlockComplianceLog",
+  "type": "object",
+  "required": ["source_record_id","source_revision","clip_label","inspection_method","entries"],
+  "properties": {
+    "source_record_id": {"type": "string"},
+    "source_revision": {"type": "integer"},
+    "clip_label": {"type": "string"},
+    "inspection_method": {"type": "string", "enum": ["stills_only","stills_partial","playback","audio"]},
+    "still_count": {"type": "integer"},
+    "lanes": {"type": "integer"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "required": ["block","clause","verdict","note"],
+        "properties": {
+          "block": {"type": "integer", "minimum": 1, "maximum": 12},
+          "clause": {"type": "string"},
+          "verdict": {"type": "string", "enum": ["match","mismatch","unverifiable","open_call"]},
+          "timecodes_s": {"type": "array", "items": {"type": "number"}},
+          "note": {"type": "string"},
+          "conservative": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}
