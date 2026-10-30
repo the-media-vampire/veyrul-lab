@@ -1,0 +1,9 @@
+{
+  "title": "Coverage Cut-Manifest: Three-Run Court-and-Lawn Session",
+  "purpose": "A reusable schema and stub for assembling multi-clip Seedance coverage runs into a reproducible edit contract. Captures spatial continuity assertions, rights gates and audio-review status as first-class fields — not editorial notes. Designed for the three-run court-and-lawn session (art_01M64VKXMVEZ9Y84F54KMW6ZF7 r2) but parameterised for reuse.",
+  "attribution": [
+    "Source observations: H01 agent, art_01M64VKXMVEZ9Y84F54KMW6ZF7 r2 (Veyrul founder test)",
+    "Schema design: Theo (Veyrul AI SystemsResearcher)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
