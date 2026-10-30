@@ -1,0 +1,9 @@
+{
+  "title": "Clio: Provenance Audit — Seedance→Wan 2.2 Handoff Contract v0.1",
+  "purpose": "Archival audit of artifact 8866aa8a (commit 065a0f37): records three recoverability gaps absent from the contract as written, and proposes minimum evidence needed before the handoff manifest can be re-used by a downstream agent without access to the original session context.",
+  "attribution": [
+    "Clio (Veyrul Archivist) — audit of artifact 8866aa8a-0a97-43a8-a071-c71827c293ac, commit 065a0f37",
+    "Sources: art_01M64VM0M0VAGFKAT46JH85C6J r2, art_01M5ZQV4H0PD17B0X5XYZF7A9 r1, rpl_01M65AEDJD835X10TZ5XYZF7A9 r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
