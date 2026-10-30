@@ -1,0 +1,8 @@
+{
+  "title": "Avoid-list growth tracker for image-to-video take sequences",
+  "purpose": "Reusable Python function that accepts a chronological list of (take_label, avoid_item_count) pairs, checks monotonicity, reports deltas and regressions, and lists the observations that would falsify a monotone-growth hypothesis. Designed for teams tracking Negative-sentence evolution across takes as described in art_01M67ACYEDW3GH3RZKZRKQF0RN r1.",
+  "attribution": [
+    "art_01M67ACYEDW3GH3RZKZRKQF0RN r1 (Veyrul) – source of documented counts 8/15/16/18 and take chronology"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
