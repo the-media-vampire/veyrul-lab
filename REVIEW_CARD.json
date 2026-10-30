@@ -1,0 +1,52 @@
+{
+  "experiment": "nothing_arrives_single_endpoint",
+  "source_record": "art_01M67BHF7NH8G09AV1W8NEGWSB",
+  "source_revision": 2,
+  "source_image_artifact": "7689067d-2edd-405d-8883-79173e7e0a36",
+  "source_image_sha256": "f07df0e95b2adb04c68faca9e34e20f11a2e0d6489dcbfa17c3cea0af6bda8ae",
+  "test_type": "single_endpoint_i2v",
+  "test_rationale": "No endpoint anchor. Model has maximum freedom to invent. Failure is more informative than a constrained endpoint pass.",
+  "brief": "Locked camera. Empty platform. Nothing arrives or departs. No train, vehicle or person appears at any point. Maintain dusk lighting. No dramatic reveal, no approaching headlights, no camera movement.",
+  "falsification_criteria": [
+    {
+      "id": "F1",
+      "label": "new_object",
+      "description": "A train, vehicle, silhouette or recognisable object not present in frame 1 appears in any middle or final frame.",
+      "verdict_if_met": "FAIL",
+      "record_fields": ["frame_index", "time_seconds", "description", "uncertainty"]
+    },
+    {
+      "id": "F2",
+      "label": "attention_shift",
+      "description": "A new bright patch, specular reflection or edge not in frame 1 draws attention away from the empty platform in any frame.",
+      "verdict_if_met": "REVIEW",
+      "record_fields": ["frame_index", "time_seconds", "description", "uncertainty", "interpretation"]
+    },
+    {
+      "id": "F3",
+      "label": "suggested_event",
+      "description": "Motion or light change that does not introduce a recognisable object but would conventionally suggest an imminent arrival (e.g. headlight bloom, track vibration effect).",
+      "verdict_if_met": "REVIEW",
+      "record_fields": ["frame_index", "time_seconds", "description", "uncertainty", "interpretation"]
+    },
+    {
+      "id": "F4",
+      "label": "camera_movement",
+      "description": "The camera or perspective shifts visibly from the locked wide-angle composition.",
+      "verdict_if_met": "FAIL",
+      "record_fields": ["frame_index", "time_seconds", "description"]
+    }
+  ],
+  "pass_condition": "No F1 or F4 triggered. F2/F3 may be present with REVIEW label; editorial decision required.",
+  "ambient_pass": "Pure sky shimmer or lamp flicker with no new objects or attention shift is acceptable and does not trigger any criterion.",
+  "inspection_instructions": [
+    "Inspect the original video at native resolution, not only thumbnails.",
+    "Extract frames with: python3 collect_frames.py --video clip.mp4 --brief CASE.json --output review-001",
+    "Record every triggered criterion with frame index, time span and uncertainty level.",
+    "Keep fidelity verdict separate from aesthetic judgment.",
+    "Audio: do not assess unless actually reviewed."
+  ],
+  "control_treatment": "Treatment A: static hold of source_image_artifact for 5 seconds. No falsification criteria can trigger.",
+  "result_label_requirement": "Label any passing result as single_endpoint_i2v, not first_last_frame. These are different tests.",
+  "execution_status": "image_generated_and_inspected_not_rendered"
+}

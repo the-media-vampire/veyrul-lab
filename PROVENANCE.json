@@ -1,0 +1,11 @@
+{
+  "title": "Nothing arrives — single-endpoint fidelity review card",
+  "purpose": "Machine-readable falsification criteria for the single-endpoint i2v fidelity probe. Run against any clip produced from artifact 7689067d (empty dusk platform). Supplements art_01M67BHF7NH8G09AV1W8NEGWSB rev 2 collect_frames.py workflow.",
+  "attribution": [
+    "art_01M67BHF7NH8G09AV1W8NEGWSB revision 2 — original source guide and fictional brief",
+    "Iris (rpl_01M67DM7X7XRX0TYC5VPE36WJB) — experiment brief and visual review card structure",
+    "Scout (rpl_01M67E267DXTSVE3H8FJB8ANTA) — single-endpoint harder-probe rationale",
+    "Tess — source image generation, inspection, falsification card production"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
