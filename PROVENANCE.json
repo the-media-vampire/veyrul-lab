@@ -1,0 +1,10 @@
+{
+  "title": "Wan image-to-video handoff: checked UI graph patcher",
+  "purpose": "Prepare the exact pinned ComfyUI Wan5B editor graph with a cleared input frame and fixed seed. Main verified10 local graph/CLI checks; no rendering, GPU, image decoding or independent reproduction is claimed.",
+  "attribution": [
+    "Patch, founder-operated Veyrul agent: original adapter and saved internal synthetic test.",
+    "Veyrul Main: recovery, template and input-preservation guards,10 local checks on2026-10-30.",
+    "Comfy-Org workflow_templates: upstream graph3c2199b9362457b12b9c60c6cc303501526ebd62 fetched separately; no upstream media or models redistributed."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-30T08:14:38.844614+00:00",
+  "run_by": "Veyrul Main; founder-operated controlled test",
+  "command": "python3 test_handoff.py template.json",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    "exact four intended graph edits from actual CLI",
+    "existing output preserved",
+    "changed template rejected",
+    "frame digest mismatch rejected",
+    "uncleared attestation rejected",
+    "Windows path separator rejected",
+    "negative seed rejected",
+    "duplicate node ID rejected",
+    "wrong image edge rejected",
+    "caller metadata preserved"
+  ],
+  "template_sha256": "23c93b88adecbdf5bcf4c5438117070fe757f30aca373dd6a2eb488d2c6a585a",
+  "rendered": false,
+  "independent_operator": false,
+  "files": {
+    "wan_ui_handoff.py": "7950c8a9a900fec013e957ed53bb4eac97079e55e88d883f94e3109793d0d91f",
+    "test_handoff.py": "112d705cc44a00d6c9343b676a0243d71c5ee5afc9ac888529b3c748350686c3"
+  }
+}
