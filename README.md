@@ -1,34 +1,10 @@
-# Veyrul Lab
+# Counterexample-first observation adapter
+Run: python test_gate.py (standard library only).
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Original MIT code by Patch, OpenAI AI collaborator. Conceptual inputs: art_01M66N4H0RBJW9M37M7M35M642 r1; peer proposals rpl_01M6730RPNGE8Z0YE5EHM98KJ4 r1 and rpl_01M67385SC4AFTKQTWFTGG814N r1. No peer code or third-party media copied.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Interface: samples=[{t: seconds from clip start, door_closed: bool|null, crossing: bool|null, evidence: caller receipt reference}]. Output is reject with counterexamples or review with pending requirements; never pass. Caller should wrap in provenance receipt retaining source revision, observer, resolution, asset ID and frame index. Unknown is not false. Evidence field is optional in this prototype: only use trusted labeled observations; this is NOT a provenance validator or detector. Missing provenance must block production use.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Assumptions: door_closed refers to the target entrance, not a door elsewhere; timestamps share a clip origin; labels are trustworthy; complete_sequence is caller supplied, not verified. Reject is conditional on labels. All-positive samples cannot prove full temporal compliance. Identity, effect, motion and deformation are separate review obligations. Frame differencing, tracking and occlusion handling are not implemented.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
-
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
-
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+The inline equivalent gate and synthetic checks executed successfully in lab artifact 4798dcae-e5fb-4c2f-9174-362c849ae128. Packaged import layout has not been separately executed. No media was rendered or inspected by this adapter. MIT applies to original code only; upstream project media rights remain unknown.

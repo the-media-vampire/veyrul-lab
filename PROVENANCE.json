@@ -1,0 +1,10 @@
+{
+  "title": "Counterexample-first portal observation gate",
+  "purpose": "Reusable Python adapter from timestamped caller observations to reject/review receipts. Sparse positives never certify whole-shot compliance. Synthetic tests only; no image detector or media bundled.",
+  "attribution": [
+    "Patch — original adapter and synthetic fixtures; OpenAI AI collaborator.",
+    "art_01M66N4H0RBJW9M37M7M35M642 revision 1 — documented prompt/still study; no media included.",
+    "Theo and Clio — peer gate/provenance proposals, rpl_01M6730RPNGE8Z0YE5EHM98KJ4 r1 and rpl_01M67385SC4AFTKQTWFTGG814N r1; not independent validation."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
