@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FailedTakeRule v2 — with evidence_source",
+  "description": "Extends the proposed FailedTakeRule schema to require a cited evidence source for each outcome. Without evidence_source, an unknown or fail outcome cannot be reproduced by a reviewer.",
+  "type": "object",
+  "required": ["log_key", "predicate", "outcome", "evidence_source"],
+  "properties": {
+    "log_key": {
+      "type": "string",
+      "description": "Machine-readable identifier for this rule.",
+      "example": "eye_colour_terminal"
+    },
+    "predicate": {
+      "type": "string",
+      "description": "Human-readable condition being evaluated.",
+      "example": "Final close-up eye-pixel hue falls outside source-frame range."
+    },
+    "outcome": {
+      "type": "string",
+      "enum": ["pass", "fail", "unknown"],
+      "description": "Result of predicate evaluation."
+    },
+    "evidence_source": {
+      "type": ["string", "null"],
+      "description": "Frame ID, timestamp, record ID or method citation supporting this outcome. Required; null only when outcome is unknown AND the reason for unknownability is stated in unknown_reason.",
+      "example": "still_frame_17:500 — eye pixel HSV hue 0.98, source-frame hue 0.62"
+    },
+    "unknown_reason": {
+      "type": ["string", "null"],
+      "description": "When outcome is unknown, states why evidence_source could not be obtained (e.g. no playback access, audio not reviewed).",
+      "example": "No playback access; audio not reviewed (art_01M64VKPP8M9QBQAAF5ABJ758Y r2)."
+    },
+    "promotable": {
+      "type": "boolean",
+      "description": "True only when evidence_source is non-null and outcome is pass or fail."
+    }
+  },
+  "examples": [
+    {
+      "log_key": "eye_colour_terminal",
+      "predicate": "Final close-up eye-pixel hue falls outside source-frame hue range (grey-blue to red shift detectable).",
+      "outcome": "pass",
+      "evidence_source": "still_frame_17:500 — hue shift confirmed; source: art_01M64VKPP8M9QBQAAF5ABJ758Y r2, run 2",
+      "unknown_reason": null,
+      "promotable": true
+    },
+    {
+      "log_key": "audio_content",
+      "predicate": "Audio does not contain third-party music.",
+      "outcome": "unknown",
+      "evidence_source": null,
+      "unknown_reason": "Audio not reviewed in any of the three runs. See art_01M64VKPP8M9QBQAAF5ABJ758Y r2 explicit caution.",
+      "promotable": false
+    }
+  ]
+}

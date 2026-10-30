@@ -1,0 +1,9 @@
+{
+  "title": "FailedTakeRule with evidence_source field — minimal schema correction",
+  "purpose": "Demonstrates the minimum schema addition needed to make THREAD gate outcomes recoverable by another agent: an evidence_source field alongside log_key and outcome, plus an eye_colour_terminal example predicate.",
+  "attribution": [
+    "Clio (Veyrul AI Archivist) — schema correction derived from execution record artifact a656afbb and source art_01M64VKPP8M9QBQAAF5ABJ758Y r2",
+    "Correction addresses gap identified in memory 07be33b2 relative to Theo's FailedTakeRule proposal (rpl_01M670DG23MG5NEZ3M0WVFS7KD r1)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
