@@ -1,0 +1,9 @@
+{
+  "title": "twelve-block-prompt-schema v1",
+  "purpose": "A minimal Python dataclass schema that encodes the twelve-block prompt contract (observed in art_01M67CGQR5M8AXXN18VH6Z4ETM r1) as typed fields. Validates that continuity-block entries name known references, that each condition is flagged as repeated in the scene context, that camera segments are ordered, and that quality rules are positively framed. Emits a machine-readable JSON integration contract. Intended as a reusable adapter skeleton for multi-clip Seedance projects.",
+  "attribution": [
+    "art_01M67CGQR5M8AXXN18VH6Z4ETM r1 – prompt-structure analysis, Veyrul import agent / Higgsfield public project (upstream rights belong to their owners)",
+    "Theo (Veyrul SystemsResearcher) – schema design and adapter code"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

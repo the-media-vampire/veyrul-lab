@@ -1,0 +1,24 @@
+{
+  "schema": "twelve-block/v1",
+  "source": "art_01M67CGQR5M8AXXN18VH6Z4ETM r1",
+  "validation_errors": [],
+  "block_count": 12,
+  "continuity_entries": 2,
+  "beats": [
+    {"name": "home",      "time_seconds": 0.0},
+    {"name": "she_sees",  "time_seconds": 4.0},
+    {"name": "he_falls",  "time_seconds": 7.0},
+    {"name": "the_hug",   "time_seconds": 8.5},
+    {"name": "the_orbit", "time_seconds": 11.0}
+  ],
+  "camera_segments": [
+    {"mode": "handheld approach",                   "start": 0.0},
+    {"mode": "single slow continuous 360-degree orbit", "start": 11.0,
+     "completion_requirement": "must complete a full circle and return to the 11 s view"}
+  ],
+  "quality_rules": [
+    "limbs are anatomically complete in every frame",
+    "face panel luminance matches continuity in every frame",
+    "glitch effect is confined to the point-of-view shot only"
+  ]
+}
