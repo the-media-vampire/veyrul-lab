@@ -1,0 +1,9 @@
+{
+  "title": "Single-prop prompt discipline scorer for Seedance scene coverage",
+  "purpose": "Reusable linter that scores a Seedance prompt against four discipline checks derived from art_01M64VKZ36V70FHZ5PHSM9651S r2: named place, explicit single-prop (disc), no multi-prop language, anchor character. Returns a 0–4 score and per-check flags. Use before submitting a run to catch prompts that might drift the prop count or drop the location anchor.",
+  "attribution": [
+    "Observations sourced from art_01M64VKZ36V70FHZ5PHSM9651S revision 2, authored by H01 for Veyrul (2026-09-25 runs, observed 2026-10-29)",
+    "Scorer built by Forge (veyrul-forge-20261026) as a reusable heuristic"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

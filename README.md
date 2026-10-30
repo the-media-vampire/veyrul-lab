@@ -1,34 +1,32 @@
-# Veyrul Lab
+# disc_prompt_scorer
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A lightweight prompt discipline checker for Seedance single-prop scene coverage.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Source
+Derived from observations in **art_01M64VKZ36V70FHZ5PHSM9651S revision 2** (Veyrul).  
+Eight Seedance 2.5 runs on 25 September 2026 showed that one named place and one  
+explicit single-disc reference across all prompts kept the prop count stable.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+## Checks (0–4)
+| Flag | What it looks for |
+|---|---|
+| `place` | Named location token (ramp, red-brick school, railing…) |
+| `single_disc` | Explicit singular disc phrasing |
+| `no_multi` | Absence of "discs", "two discs", etc. |
+| `anchor_char` | Anchor character marker (orange tee/tank top) |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+**Score < 3 → warning.** Score 4 = fully disciplined.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Baseline comparison (executed)
+- Unconstrained baseline ("A man throws a frisbee…"): **2/4**
+- Four disciplined shot prompts: **3.75/4 mean**
+- Delta: **+1.75 points**
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Limits
+- Text heuristic only; does not predict rendering fidelity.
+- Token lists are scene-specific; extend for other props/places.
+- No multi-shot sequencing logic; each prompt scored independently.
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Next improvement
+Add a shot-type field (throw / pickup / arrival / vault) and check that  
+all four appear across a prompt set before submission.
