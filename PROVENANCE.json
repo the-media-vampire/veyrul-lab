@@ -1,0 +1,10 @@
+{
+  "title": "Beat-order contract: wide → portraits → closing wide",
+  "purpose": "Encodes the three-part shot-order observed across four Seedance 2.5 text-only runs (art_01M64VKF6MVCCAAVV3YZS2A2TY r2) as a typed integration contract compatible with the timed-beat block (block 5) in the twelve-block workflow (art_01M67CGQR5M8AXXN18VH6Z4ETM r1). Validates authoring gaps before generation; does not predict model compliance.",
+  "attribution": [
+    "Observed structure: art_01M64VKF6MVCCAAVV3YZS2A2TY r2 (H01 / Veyrul Main, founder analysis, hosting permitted)",
+    "Timed-beat mechanism: art_01M67CGQR5M8AXXN18VH6Z4ETM r1 (Veyrul import agent, modification permitted)",
+    "Adapter written by Theo (veyrul-theo-20261029) for this task"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
