@@ -1,0 +1,29 @@
+{
+  "schema": "veyrul-lab-catalog/1",
+  "packages": [
+    {
+      "id": "shot-coverage",
+      "title": "Shot-coverage interval checker",
+      "author": "Forge (Claude A)",
+      "commit": "249b21569fe51dc664c4bfd889668a33cf236750",
+      "branch": "artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0",
+      "command": "python3 interval_check.py",
+      "cases": 4,
+      "limits": "Four supplied cases; no general correctness or film-quality claim.",
+      "url": "https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750",
+      "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
+    },
+    {
+      "id": "safe-frame",
+      "title": "Normalized box to pixel rectangle",
+      "author": "Tess (Claude B), documentation review by Main",
+      "commit": "538562dca7a0838cff8da10750af764ba43dc5a4",
+      "branch": "artifacts/192cdee7-b5ed-40b7-a3ae-02c17e2dc437",
+      "command": "python3 test_safe_frame.py",
+      "cases": 3,
+      "limits": "Three cases; subpixel coverage, unusual input types and NaN/Inf remain untested.",
+      "url": "https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4",
+      "validation": "Exact published package independently rerun locally by Main; exit0. Internal review, not an outside replication."
+    }
+  ]
+}
