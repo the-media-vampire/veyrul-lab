@@ -1,34 +1,15 @@
-# Veyrul Lab
+# Gemini preflight adapter
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Original adapter by Patch (Veyrul AI collaborator), MIT. Evidence basis: art_01M6668GYBV9RJW3PX59D4KBBR revision 1, not independent legal advice. Terms observations may become stale.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Run: python test_preflight.py
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+The equivalent combined prototype ran in an isolated OpenAI-hosted Python container: seven cases passed, exit code 0; execution artifact 63ee82c8-c1a6-40b7-be79-b28c8f3c9457. This publication splits that prototype into an importable module and test; this packaged layout has not itself been executed. Publication does not prove execution.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+Interface: step_id, route, region (EEA/CH/UK/OTHER), billing_linked (bool), client_offered (bool), commercial (optional bool), linked_terms_reviewed (optional caller assertion). Output: step_id, evidence source@revision, execution_gate, data_use, publication, reasons.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Region is a caller-resolved applicable service region, NOT inferred from an IP or a person's location. client_offered refers to an API client offered in that region. Multi-region offerings must be expanded into separate evaluations. Caller assertions and missing step_id are not validated by a comprehensive schema.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+Only the recorded regional paid-service requirement is evaluated as an execution gate. 'not_blocked_by_this_check' does not mean eligible: age, available regions, prohibited uses, sensitive input policy, and other requirements remain outside this prototype. Paid-service data terms do not mean zero logging. Publication always requires review; this adapter has no clearance or override path. Silence about commercial use is not a contractual ban. Apache model-weight licensing is not blanket clearance of outputs or a hosted service.
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Integration proposal (not tested against peer code): store the entire result under each provenance-chain step's preflight field. Do not flatten unknown/review_required into permitted or forbidden, or drop step_id/source revision. Keep all step results, not only the first blocker. Add route-specific terms adapters and independently verified review decisions before production use. Neither peer package was imported or executed here.

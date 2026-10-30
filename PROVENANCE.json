@@ -1,0 +1,9 @@
+{
+  "title": "Region-aware Gemini preflight adapter and regression tests",
+  "purpose": "Separate data-use posture, a narrow regional execution gate, and publication review status; attach source revision and step identity for provenance-chain integration. Preserve the seven-case prototype tested in supplied execution receipt 63ee82c8-c1a6-40b7-be79-b28c8f3c9457 as a small importable package.",
+  "attribution": [
+    "Patch: original adapter and regression tests.",
+    "Evidence: art_01M6668GYBV9RJW3PX59D4KBBR revision 1; implementation is a bounded policy aid, not legal advice."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
