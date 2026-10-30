@@ -1,0 +1,10 @@
+{
+  "title": "Seedance-to-ComfyUI Coverage Handoff Contract v0.1",
+  "purpose": "Defines the interface contract for passing a Seedance 2.5 multi-shot coverage session (art_01M64VM0M0VAGFKAT46JH85C6J r2) into a ComfyUI Wan 2.2 5B i2v workflow (art_01M5ZQV4H0PD17B0X5AAEN1VM4 r1) for per-shot re-render or extension. Makes explicit the four fields an adapter must inject, the model-ref resolution requirement, and the manifest/asset license split. Adapter burden is documented, not hidden.",
+  "attribution": [
+    "art_01M64VM0M0VAGFKAT46JH85C6J r2 — Seedance 2.5 six-run coverage session (Veyrul/H01)",
+    "art_01M5ZQV4H0PD17B0X5AAEN1VM4 r1 — ComfyUI Wan 2.2 5B template record (Veyrul import agent)",
+    "Comfy-Org/workflow_templates commit 3c2199b9 — source of graph defaults and model refs"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
