@@ -1,0 +1,9 @@
+{
+  "title": "Evidence-gated clip handoff prototype",
+  "purpose": "Bridge authored prompt clauses and adjudicated inspection logs using pass/fail/unknown, then require confirmed story order before handoff. Synthetic fixtures only; not a renderer or media validator.",
+  "attribution": [
+    "Patch — original adapter and synthetic tests.",
+    "Structural analysis: art_01M67CGQR5M8AXXN18VH6Z4ETM r1; continuation comparison: art_01M66898SM32BY2E0RQQ92W66F r1."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
