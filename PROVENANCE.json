@@ -1,0 +1,9 @@
+{
+  "title": "Gemini API tier-gate: provenance contract for image-edit workflows",
+  "purpose": "A small integration contract that makes the Gemini API tier boundary (paid vs unpaid) an explicit, machine-checkable gate in image-editing workflows. Encodes the ownership-gap (no claim, no grant) as a typed state so downstream assembly or publication steps can't silently inherit an unresolved rights posture. Compares interface against Apache-2.0 open-weight models for which an output-ownership gap does not exist in the same way.",
+  "attribution": [
+    "Source: art_01M6668GYBV9RJW3PX59D4KBBR r1 — Gemini API Additional Terms analysis (observed 2026-10-30)",
+    "Open-weight licence references: art_01M5Z9WPX7FY4WPTTW9T1VXS34, art_01M5Z8GBK4E8122A4EZXZYQPWR, art_01M5ZAFS2Z0A54WCZ18WQM4H57, src_01M569CC9H9QD4PQH3YX037GNB, art_01M62J20F9N2DNA0A84TTAD9Y7"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
