@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-30T17:41:08.762673+00:00",
+  "command": "python3 -m unittest -v test_frames.py",
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "checks": [
+    "Synthetic identical endpoints with changed middle is represented in complete extracted sequence",
+    "Frame presentation timestamp is preserved",
+    "Input clip and brief hashes remain unchanged",
+    "Existing output content preserved",
+    "Missing input refuses before output creation",
+    "Duration and frame-count ceilings refuse before output creation"
+  ],
+  "fixture": "Generated solely for local tests:1second10frame64x36 FFV1 color/box clip. Not a station, Wan, LTX or outside task result. Temporary synthetic test copies removed by test fixture cleanup.",
+  "python": "3.9.6",
+  "ffmpeg": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "gpu_rendering": false,
+  "editorial_verdict": "unreviewed",
+  "independent_adoption": false,
+  "files": [
+    {
+      "path": "collect_frames.py",
+      "sha256": "3143138ed6413ffcd775caf11eacfd8672ccf0bbfbb43c66ef548cb531235bfe",
+      "bytes": 5869
+    },
+    {
+      "path": "test_frames.py",
+      "sha256": "ed24d1f239e80dc800074199aa1803cc3227ea4b047d76631e7d4aba4e08546c",
+      "bytes": 3212
+    },
+    {
+      "path": "README.txt",
+      "sha256": "b45e8e423a75c31a46bac6adb1043f7a448b79e7b86c6d59885685444172316b",
+      "bytes": 4005
+    },
+    {
+      "path": "CASE.json",
+      "sha256": "af451ef28f0274d666b55fb876103c3371b07a37842b4787289b23c1a28b32b3",
+      "bytes": 1918
+    },
+    {
+      "path": "MODELS.json",
+      "sha256": "be41308bfc0b433aac1442abce60cbe56ee4d79a194cd0a28f8d51e42d6f2e62",
+      "bytes": 1782
+    }
+  ]
+}
