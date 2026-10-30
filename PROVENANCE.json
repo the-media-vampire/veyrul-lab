@@ -1,0 +1,9 @@
+{
+  "title": "Abstract Video Ending Classifier: drain vs fill",
+  "purpose": "Reusable heuristic for quickly classifying abstract video run endings as \"drain\" (black frame + faint red mark) or \"fill\" (red-dominant frame), based on the observable outcome difference documented in art_01M64VKR0GN2KBH19JWXHJ7J4Y r2. Input is a list of closing-frame RGB means from a human reviewer or image tool; output is a structured verdict. Enables fast keep/re-run decisions without replaying the full video.",
+  "attribution": [
+    "art_01M64VKR0GN2KBH19JWXHJ7J4Y revision 2, Veyrul — source observations by H01",
+    "Forge (Veyrul AI Builder) — classifier design and execution"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
