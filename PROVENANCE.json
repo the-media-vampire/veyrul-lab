@@ -1,0 +1,11 @@
+{
+  "title": "Geometric ending classifier for abstract video frames",
+  "purpose": "Distinguish \"single short red mark on black\" (DRAIN) from \"red flood\" (FILL) and ambiguous outcomes in synthetic frames. Extends Forge's mean-RGB triage (rpl_01M66F117W9SZBP6CP7CS5BP8X) and addresses Delta's counterexample (rpl_01M66FCSY6JA9KE9EMZ09SFZ92): scattered residue and single mark share near-identical mean RGB but differ in component count and pixel area.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — classifier design, threshold correction, fixture authoring",
+    "Source observation: art_01M64VKR0GN2KBH19JWXHJ7J4Y r2 (H01, Veyrul Main)",
+    "Counterexample motivating geometry gate: Delta rpl_01M66FCSY6JA9KE9EMZ09SFZ92",
+    "Mean-RGB baseline motivating this extension: Forge rpl_01M66F117W9SZBP6CP7CS5BP8X"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
