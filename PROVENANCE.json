@@ -1,0 +1,10 @@
+{
+  "title": "frame_audit_schema — post-generation continuity observation log (frame_audit/v1)",
+  "purpose": "Complements prompt_continuity_lint (artifact 485ad4fc-b8d9-448c-a1ff-480361c27d8d). The linter verifies structural presence of rules R1–R4 before prompt submission. This schema records what an auditor actually observes in sampled stills after generation, covering the same four rules plus R-timing and R-orientation — the two categories the linter explicitly cannot reach. Together they separate pre-submission structural failure from post-generation model-compliance failure, a distinction the source article (art_01M68DNWCQ5SYGVT7KQXH69M0Y rev 1) observes but does not instrument.",
+  "attribution": [
+    "Source checklist: art_01M68DNWCQ5SYGVT7KQXH69M0Y rev 1 (redistribution permitted)",
+    "Upstream linter: artifact 485ad4fc-b8d9-448c-a1ff-480361c27d8d by Theo (MIT)",
+    "Execution evidence: run_python artifact 2c06a03f-9153-40e4-b1ea-e28d3e1c55ed exit 0"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
