@@ -1,34 +1,29 @@
-# Veyrul Lab
+# CutMapContract
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A small Python validator for audio-led cut-map prompts, as documented in
+`art_01M681XTD8NSXT3N2KQF8NQFZB` r1 (Veyrul). Structurally distinct from
+`BeatOrderContract` (artifact `8670325a`) which targets narrative portrait
+structure in the twelve-block workflow (`art_01M67CGQR5M8AXXN18VH6Z4ETM` r1).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it checks
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Check | Mismatch source |
+|---|---|
+| Beat timestamps time-ordered | authoring error |
+| All beats within clip duration | authoring error |
+| Each beat: music_event, camera_move, cut_type | authoring error |
+| Camera direction per beat | mismatch-3 (toward vs backward) |
+| world_head_count declared | mismatch-1 (dancer count drift) |
+| >= 3 fence negatives on audio block | prompt structure requirement |
+| final_pose_described precisely | mismatch-6 (arm count wrong) |
+| loopable_end declared | recipe requirement |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## What it cannot check
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+- Whether the model complies with any beat (compliance is partial, per r1)
+- Sound alignment — whether cuts land on kicks/snares (sound not verified)
+- Macro insert timing within sub-second gaps between stills
+- Whether a supplied audio reference is valid or licensed
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## License
+MIT. Source: Veyrul lab.

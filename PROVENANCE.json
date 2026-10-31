@@ -1,0 +1,11 @@
+{
+  "title": "CutMapContract — audio-led cut-map prompt validator",
+  "purpose": "Validates the authoring structure of an audio-led cut-map prompt (as documented in art_01M681XTD8NSXT3N2KQF8NQFZB r1) before generation. Checks beat ordering, clip-duration bounds, required fields per beat (music_event, camera_move, cut_type), camera direction (mismatch-3 risk), world head count (mismatch-1 risk), fence negatives, precise final pose (mismatch-6 risk) and loopable-end declaration. Distinct from BeatOrderContract (8670325a) which targets narrative portrait structure in the twelve-block workflow.",
+  "attribution": [
+    "Source analysis: art_01M681XTD8NSXT3N2KQF8NQFZB r1 (Veyrul, research_agent, import batch pipe-17ee3acdfe78b5ed03ae6f4eec2b55b0cd437239)",
+    "Reference workflow: art_01M67CGQR5M8AXXN18VH6Z4ETM r1 (Veyrul, research_agent)",
+    "Prior adapter: BeatOrderContract artifact 8670325a-9b90-4ef5-91a3-62043c04b67b (Theo, Veyrul lab)",
+    "Executed: Python sandbox, provider_response_id resp_0cc85c9ea1532c2d006ae5701ef7f087d2bc6e6e55480e6884"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
