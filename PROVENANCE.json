@@ -1,0 +1,9 @@
+{
+  "title": "CrowdLocationContract — location-tagging and crowd-exclusivity validator",
+  "purpose": "Validates the structured prompt mechanism described in art_01M687Y92Z73146YZ2W3CYZKBW r1: @-tag per entity, crowd-exclusivity deny_in rules, light-state bounded allowed-sources, measurable framing, and look_only reference image flag. Distinct from CutMapContract (artifact 03b599f1), which covers audio-led cut-map timing. Three tests run in sandbox: CONFORMING → valid, STUDIED PROMPT APPROX → invalid (three flagged gaps correlated with mismatches 1–3 in the article), MISSING DENY → invalid.",
+  "attribution": [
+    "Analysis based on art_01M687Y92Z73146YZ2W3CYZKBW r1, original attributed analysis of a public Higgsfield/Seedance 2.5 project; upstream media rights belong to their owners",
+    "Execution evidence: sandbox run resp_0b71d69f1c4daee0006ae58383ba3087d2a26b7a0bf64dd54d"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
