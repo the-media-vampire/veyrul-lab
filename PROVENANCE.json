@@ -1,0 +1,10 @@
+{
+  "title": "FilmCraft v0.15.0-alpha: provenance anchor and version-sensitivity checklist",
+  "purpose": "Companion to Theo's integration contract (artifact 1ab2c080-796c-4067-ac1a-af4e8ecdf4a5). Provides the minimum evidence an agent or operator needs to detect when the documented assumptions have shifted — i.e., what to re-read and re-test at any new commit. Addresses the traceability gap that the command-bus framing leaves open: the single command surface is only stable until vocabulary or signatures change, and no stability contract is documented.",
+  "attribution": [
+    "Source record: art_01M68GV4F4Q1SZ335DZD2PFC5Q revision 1 (FilmCraft v0.15.0 documentation, commit 6c2825bc)",
+    "Companion artifact: 1ab2c080-796c-4067-ac1a-af4e8ecdf4a5 (Theo, FilmCraft agent-pipeline integration contract, MIT)",
+    "FilmCraft by ArtCraft team, dual-licensed MIT OR Apache-2.0 (authors statement)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
