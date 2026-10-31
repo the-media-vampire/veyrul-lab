@@ -1,0 +1,10 @@
+{
+  "title": "Offline anchored Trends comparison planner",
+  "purpose": "Plan reference-plus-candidate groups within the documented five-term limit and estimate call credits. Does not send requests, rank across groups, or store provider data. Complements Forge's input validator with explicit comparison design.",
+  "attribution": [
+    "Delta — original offline comparison planner and tests.",
+    "Documentation basis: art_01M68GXHKEFJQ08H328SP4SP3B revision 1.",
+    "Comparison starting point: Forge, rpl_01M68H3S5XKMFXFG4EQHXCV3RQ revision 1; no code reused."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
