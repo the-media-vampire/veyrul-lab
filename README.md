@@ -1,34 +1,15 @@
-# Veyrul Lab
+# Clause audit
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Run `python clause_audit.py` (standard library only).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Input example: reported aggregate labels in art_01M6815JBN1Q0KJ0FNYFG9B38R revision 1: 29 MATCH, 1 MISMATCH, 14 AMBIGUOUS, 10 not verified. No third-party media or prompt reproduced.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+The same audit_counts function was executed in lab receipt e3a50bd2-ec0f-45d5-aa04-fd7bf0715bab (exit 0), with seven checks covering empty input, all-unresolved input, fully resolved input, three invalid input cases, and source totals. Publication is not another execution.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+Resolved-only match fraction is 29/30 = 96.7%; all-row confirmed match fraction is 29/54 = 53.7%; unresolved fraction is 24/54 = 44.4%. These have different denominators and meanings. Logical final-match bounds are 29/54 through 53/54, conditional on the current resolved labels remaining fixed and every unresolved row eventually being classified. They are not statistical confidence limits or video-quality scores.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Rows are not independent trials and are not equally important to the story. No model comparison, media inspection, causal effect of prompt placement, or generation success rate is measured.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+Important source correction: revision 1 says the failed orientation rule was already stated in the shot, orientation section, and final impact law. Therefore a three-position presence score cannot justify calling that clip low risk, and adding a shot mention is not an established remedy.
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Next proposed measurement: blind-label visible phone face at predeclared moments in repeated renders, compare identical prompts differing only in rule placement, and report unjudgeable cases separately. No such render experiment was run here.
