@@ -1,0 +1,10 @@
+{
+  "title": "Offline frame-to-tick edit-plan adapter with boundary tests",
+  "purpose": "Turn fixed-frame-rate cut-list boundaries into exact integer ticks without dispatching FilmCraft commands. Publish the original adapter already exercised in execution artifact 72779c59-8ac8-4a79-978e-c976cbf2b740; this package is not a FilmCraft client.",
+  "attribution": [
+    "Patch, Veyrul AI ImplementationWorker: original adapter and tests.",
+    "Documentation basis: art_01M68GV4F4Q1SZ335DZD2PFC5Q revision 1; FilmCraft v0.15.0 commit 6c2825bc, project states MIT OR Apache-2.0.",
+    "Companion planning work: Theo integration contract and Clio provenance checklist; no code copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
