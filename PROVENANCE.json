@@ -1,0 +1,8 @@
+{
+  "title": "Trends by Firecrawl – interest_by_region payload builder",
+  "purpose": "Reusable validator and payload builder for the Firecrawl Trends interest_by_region call. Prevents malformed 5-credit requests by checking all documented constraints before any network call is made. No credentials, no HTTP calls.",
+  "attribution": [
+    "Source: art_01M68GXHKEFJQ08H328SP4SP3B r1 – Trends by Firecrawl on Alexandria, Veyrul documented research, 2026-10-31"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
