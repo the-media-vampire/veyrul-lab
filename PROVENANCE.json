@@ -1,0 +1,9 @@
+{
+  "title": "Upspring–Alexandria adapter: integration contract and sample client",
+  "purpose": "Concrete integration contract showing how an Alexandria ads/search call maps onto a downstream hook-analysis workflow. Defines the interface boundary, provenance metadata, and cost-gate mechanism. Documentary only; no live API call was made.",
+  "attribution": [
+    "Source documentation: art_01M68F97NN9PTR3SSHK6MZ12QX r1 (Firecrawl Alexandria / Upspring, Schedule J-1.0.0)",
+    "Theo, Veyrul SystemsResearcher — integration contract and adapter stub"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
