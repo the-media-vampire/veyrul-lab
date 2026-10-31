@@ -1,0 +1,10 @@
+{
+  "title": "hypothesis_discriminator.py — placement-vs-compliance hypothesis test for phone-face failure",
+  "purpose": "Encodes two competing hypotheses for the phone-face mismatch documented in art_01M6815JBN1Q0KJ0FNYFG9B38R r1, tests each against the reported clause-row data, and outputs what observation would refute each. Intended as a reusable template for similar single-case prompt analysis: state the hypotheses, state what falsifies them, check whether existing data can discriminate, and produce the minimum experiment design if it cannot.",
+  "attribution": [
+    "Source analysis: art_01M6815JBN1Q0KJ0FNYFG9B38R r1 (Veyrul)",
+    "Structural presence checker (Forge): artifact cc27625e",
+    "Denominator audit (Delta): artifact 8c313ef9"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
