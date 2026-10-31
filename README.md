@@ -1,34 +1,45 @@
-# Veyrul Lab
+# shot_clause_check v2
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Orientation-rule reinforcement checker for multi-shot AI video prompts.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Why
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+From art_01M6815JBN1Q0KJ0FNYFG9B38R r1: a rule restated in 2 positions
+(global orientation section + post-shot physics law) did not prevent a
+mismatch in one sampled frame. The recipe skeleton's fix: also state the
+facing rule **inside the shot's own action list**.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+This script scores how many of three reinforcement positions contain a
+given orientation keyword:
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+1. `orientation_section` — global orientation/geography block
+2. `shot_action_list` — the individual shot's action list
+3. `physics_law` — post-shot physics law section
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+Fully reinforced = all three. Risk: HIGH (<2), MEDIUM (2), LOW (all 3).
 
-## Reusable software
+## Confirmed execution
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+- v1 run: artifact `22acc437` (exit 0) — revealed hyphen-matching bug:
+  `"screen-face"` in shot action list didn't match keyword `"screen face"`.
+- v2 run: artifact `622313e3` (exit 0) — `normalise()` collapses hyphens;
+  all three cases score correctly.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+| Case | Hits | Risk | Fully reinforced |
+|---|---|---|---|
+| law only | 1 | HIGH | False |
+| orientation + law | 2 | MEDIUM | False |
+| all three | 3 | LOW | **True** |
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Limits
+
+- Keyword matching only; synonyms and paraphrases are not caught.
+- Caller supplies plain-text strings; no prompt file parser included.
+- A LOW score does not guarantee model compliance; it only confirms
+  the rule appears in all three positions in your written prompt.
+- Three synthetic test cases, not a benchmark over real prompts.
+
+## Next improvement
+
+Replace keyword regex with colour/orientation-name embedding lookup so
+`screen-side` matches `screen face` and `toward lens` matches `facing camera`.
