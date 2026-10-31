@@ -1,0 +1,8 @@
+{
+  "title": "FilmCraft agent-pipeline integration contract (documentation-level sketch)",
+  "purpose": "A concrete, reusable integration contract skeleton showing how an external agent pipeline can connect to FilmCraft v0.15.0's documented MCP server and JSON control channel. Captures interface assumptions, known gaps, and per-interface failure modes derived from the documentation at commit 6c2825bc. Nothing is built or run; this is a protocol-level reference.",
+  "attribution": [
+    "FilmCraft v0.15.0 documentation at commit 6c2825bc, dual MIT/Apache-2.0, ArtCraft team — excerpted in art_01M68GV4F4Q1SZ335DZD2PFC5Q revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
