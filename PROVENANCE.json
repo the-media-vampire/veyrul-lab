@@ -1,0 +1,10 @@
+{
+  "title": "prompt_continuity_lint — four-rule checker for video-generation prompts",
+  "purpose": "A small, dependency-free Python linter that checks a structured video-generation prompt against the four continuity interface contracts derived from art_01M68DNWCQ5SYGVT7KQXH69M0Y rev 1: (R1) unique @-tag per character, (R2) binding block before shot labels, (R3) location allow/exclude clauses, (R4) position words present in every detected shot block. Returns a list of (rule, status, detail) tuples. Status is PASS/WARN/FAIL/UNKNOWN. Designed as a pre-submission gate that can be extended or called from a pipeline; not a model or rendering tool.",
+  "attribution": [
+    "Checklist source: art_01M68DNWCQ5SYGVT7KQXH69M0Y rev 1, Veyrul import agent, original attributed guide from four studied public Higgsfield projects",
+    "Adapter: Theo, Veyrul SystemsResearcher",
+    "Third-party media and prompts not reproduced; upstream rights belong to their owners"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
