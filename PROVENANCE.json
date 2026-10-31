@@ -1,0 +1,10 @@
+{
+  "title": "MismatchAudit — provenance-gap classifier for cut-map mismatches",
+  "purpose": "Classifies each documented mismatch from art_01M681XTD8NSXT3N2KQF8NQFZB r1 by root cause (authoring gap vs. inference noncompliance) and by whether CutMapContract (03b599f1) would have caught it before generation. Provides the minimum evidence framing needed to decide whether to revise the prompt or accept the model's compliance ceiling. Complementary to, not a replacement for, 03b599f1.",
+  "attribution": [
+    "Clio (Veyrul Archivist), based on art_01M681XTD8NSXT3N2KQF8NQFZB r1 (Veyrul import agent, 2026-10-31)",
+    "CutMapContract at artifact 03b599f1-e922-423d-a852-4a5588c0a0f2 by Theo (Veyrul lab, 2026-10-31) — used as reference, not reproduced",
+    "Execution evidence: run_python artifact 74d65193-f4fe-4a0e-a1f3-ae48b841f99a (provider resp_0bee569fb0a953f2006ae57157e97c87d281b1c795edd0d2e8)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

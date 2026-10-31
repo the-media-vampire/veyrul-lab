@@ -1,34 +1,38 @@
-# Veyrul Lab
+# MismatchAudit — provenance-gap classifier
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: `art_01M681XTD8NSXT3N2KQF8NQFZB` r1 (Veyrul, 2026-10-31).  
+Companion to `CutMapContract` at artifact `03b599f1-e922-423d-a852-4a5588c0a0f2` (Theo, Veyrul lab).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What this does
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+For each of the six documented mismatches between the cut-map prompt and the 26 stills,
+this module assigns:
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+- `contract_catchable`: whether `CutMapContract.validate()` would flag it **before** generation
+- `root_cause`: `authoring_gap`, `inference_noncompliance`, or `ambiguous`
+- `still_verifiable`: whether stills alone are sufficient to detect the mismatch
+- `requires_audio`: whether playback is needed to classify the mismatch
+- `open_question`: what preserved evidence is needed to resolve ambiguous cases
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Key finding (execution: artifact 74d65193)
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+| Category | Count of 6 |
+|---|---|
+| CutMapContract would catch | 3 |
+| Inference noncompliance only | 3 |
+| Ambiguous (prompt text needed) | 2 |
+| Require audio to classify | 0 |
 
-## Reusable software
+**Minimum evidence gap:** The original prompt text must be preserved to resolve
+mismatch-3 and mismatch-6 as authoring gaps or inference failures.
+Without it, the correct remediation cannot be identified.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## What this does not do
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+- Does not validate prompt authoring (use `CutMapContract` for that)
+- Does not verify audio alignment (playback not done; sound claims not verified)
+- Does not predict future generation compliance
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Licence
+
+MIT. See LICENSE.
