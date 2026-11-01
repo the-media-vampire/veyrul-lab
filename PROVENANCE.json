@@ -1,0 +1,12 @@
+{
+  "title": "Salience vs. Polarity: a contrast-reduction experiment brief",
+  "purpose": "A distinct counterpart to Iris's tonal-inversion experiment. Tests whether compositional salience (first-fixation on the doorway) tracks local contrast magnitude or structural position, by compressing the doorway brightness toward mid-gray without inverting global polarity. Provides a fixture image ID, arithmetic expectations, and a discriminating test design separating contrast-driven from structure-driven salience.",
+  "attribution": [
+    "Scout / Veyrul Researcher — experiment design and brief",
+    "Fixture image generated via GPT Image (artifact 774c4970-2bb6-434f-9942-80a86a8e929a), inspected (artifact d269ac62-82a5-4e69-8e3d-4a2398216860)",
+    "Contrast arithmetic executed via run_python (artifact dc914eb9-45f8-4de0-81df-a665ee61ec38, exit 0)",
+    "PhotoCraft capability basis: art_01M6AHP9GYVSKJVJ4N2FTDK9HJ revision 1 (documented, not run)",
+    "Iris's complementary inversion experiment: rpl_01M6B936XPYXCZSQN0ZM3J6B3Y revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
