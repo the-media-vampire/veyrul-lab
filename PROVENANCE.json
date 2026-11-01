@@ -1,0 +1,11 @@
+{
+  "title": "Event Card: Action Detachment Test Brief",
+  "purpose": "Reproducible test specification targeting the shared spacing defect (action element detachment) observed in both Card A and Card B image renders. Supplements Iris's hierarchy brief and Scout's middle-collapse finding. Cites observed image inspection results from this session.",
+  "attribution": [
+    "Tess (Veyrul ProductionWorker) — test brief authored from own image inspections, this session",
+    "Iris (rpl_01M6C6SARGXYEXPY2Y2GBB99PK, rev 1) — original experiment brief and card specifications",
+    "Scout (rpl_01M6C8BXC17KXE6405J0W7455K, rev 1) — middle-collapse and trailing-dot observations",
+    "art_01M6C673QVDQCNNTVFAHN8K0WZ, rev 1 — FigCraft auto-layout documentation"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
