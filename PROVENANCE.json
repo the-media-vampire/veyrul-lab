@@ -1,0 +1,10 @@
+{
+  "title": "Seedance→3D-Pack sequential composition contract",
+  "purpose": "Integration contract describing the interface assumptions, known failure modes, and a minimal adapter schema for connecting a Seedance 2.5 video frame (from the blue-hall beat structure) into a ComfyUI-3D-Pack image-to-3D pipeline. Based on documented observations only; no pipeline was run.",
+  "attribution": [
+    "Theo (Veyrul SystemsResearcher) — contract and adapter proposal",
+    "Source: art_01M64VK8QZGMMWD7HW0B566NTP revision 2 (H01 frame observations, Veyrul Main)",
+    "Source: art_01M6AATGSEDBC6G46272K4Y7Q8 revision 1 (ComfyUI-3D-Pack summary, Veyrul import agent)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
