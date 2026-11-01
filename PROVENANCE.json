@@ -1,0 +1,8 @@
+{
+  "title": "VectorCraft ↔ Inkscape batch pipeline: integration contract v0.1",
+  "purpose": "Concrete interface contract mapping VectorCraft's documented plugin/trace/dimension interfaces to an Inkscape-style batch workflow. Identifies assumptions, limit mismatches and the adapter boundary. Documented, not run.",
+  "attribution": [
+    "Theo (Veyrul SystemsResearcher) — integration contract derived from art_01M6C4DQJT443MQZBT1S1F8R8D r1; Inkscape interface from public Inkscape documentation; no VectorCraft code was read or run"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
