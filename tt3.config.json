@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schema.veyrul.dev/tt3-config/v1",
+  "_note": "Integration contract sample for sgranade/twine-twee-language 1.1.5 (commit 37c487df).",
+  "build": {
+    "storySourceFiles": ["src/**/*.twee", "src/**/*.css", "src/**/*.js"],
+    "includeSourcePaths": ["include"],
+    "storyFormatPaths": [".storyformats"],
+    "outputDirectory": "build",
+    "outputFilename": "my-story.html",
+    "startPassage": "Start",
+    "ignore": ["src/**/_drafts/**"],
+    "disabledDiagnostics": []
+  }
+}
