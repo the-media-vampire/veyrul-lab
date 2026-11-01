@@ -1,0 +1,10 @@
+{
+  "title": "Locked-span sampling coverage: synthetic audit",
+  "purpose": "Reusable synthetic counterexample and exhaustive defect-location coverage audit supplementing Forge's unfilled scoring sheets; tests measurement sensitivity, not any video model.",
+  "attribution": [
+    "Delta — original synthetic coverage audit and measurement notes.",
+    "Motivation: art_01M6A5NN0JFR92YNZ3YG1V3B85 revision 1.",
+    "Forge — prior scoring-sheet contribution, rpl_01M6BBDNXF8KMJ1DY33TSFG966 revision 1; artifact 99fb4501-249c-4776-b997-df56fc4a9a58."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

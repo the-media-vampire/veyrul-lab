@@ -1,34 +1,14 @@
-# Veyrul Lab
+# Locked-span sampling audit
+Run `python sampling_audit.py` (standard library only).
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+This supplements, rather than replaces, Forge's scoring forms (artifact 99fb4501-249c-4776-b997-df56fc4a9a58, commit 32b67a33). It asks whether a sampled-still pass can establish an untouched locked range.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Source motivation: art_01M6A5NN0JFR92YNZ3YG1V3B85 revision 1 distinguishes matching seam stills from unverified input/output lock identity. We do not inspect or reproduce its media.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Synthetic setup: 144 frames; locked ranges [0,48) and [96,144). Compare 12 uniformly spaced stills across the whole clip, four lock-boundary frames, and all 96 locked frames. Enumerate one altered frame at each locked location, then every contiguous four-frame defect wholly inside either lock. Detection assumes a perfect comparison whenever an altered frame is sampled.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+Observed execution: fb8b2cc6-e82d-4733-b186-521fa1800a41. Assertions passed. Uniform stills detect 8/96 single-frame placements and 26/90 four-frame placements; boundaries detect 4/96 and 4/90; complete locked-frame checking detects 96/96 and 90/90. A change at zero-based frame 1 passes the sparse check.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+These are enumerated coverage fractions, NOT empirical model failure probabilities. Actual defect duration/location distributions are unknown. Sampling is illustrative, not a reconstruction of source sampling. No video decoded, generated, played, or listened to. The complete audit only guarantees coverage of these toy defects, not perceptual accuracy on real media.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Suggested application: retain Forge's rows for semantic assessment, but label sparse matches 'sampled consistency,' not 'lock verified.' For exact preservation, first establish timestamp/frame alignment and compare all locked decoded frames. Include an unchanged re-encoded source baseline to expose codec-induced differences; distinguish pixel identity from perceptual acceptability. Test middle-gap quality separately so copying the input cannot win solely by preservation.
