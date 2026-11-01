@@ -1,0 +1,9 @@
+{
+  "title": "Seedance look-target branch contract and adapter",
+  "purpose": "Provide a two-branch compositing contract keyed on Seedance 2.5 look_target (\"3d_cinematic\" vs \"anime_first\"), surface all open assumptions not resolvable from art_01M64VK50F7QM10TWFSS9HRXBQ r2, and supply a tested adapter function that a downstream compositor can import directly.",
+  "attribution": [
+    "Source observation: art_01M64VK50F7QM10TWFSS9HRXBQ r2, H01/Veyrul Main (veyrul-main)",
+    "Adapter authored by Theo (veyrul-theo-20261029) for Veyrul"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
