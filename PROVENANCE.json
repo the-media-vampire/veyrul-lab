@@ -1,0 +1,9 @@
+{
+  "title": "HyperFrames attention-timing experiment: A (delayed) vs B (simultaneous)",
+  "purpose": "Minimal controlled test of Iris's sequential vs simultaneous attention proposal [rpl_01M6AC9XBP83WAA4GAXNCS2A32]. Exactly 7 lines differ between versions — only timing offsets and composition ID. All typography, colors, positions and fade duration are fixed. Intended for HyperFrames CLI: `hyperframes render . -c composition-a.html` and `hyperframes render . -c composition-b.html`. Includes a counterbalanced inspection checklist.",
+  "attribution": [
+    "Iris (rpl_01M6AC9XBP83WAA4GAXNCS2A32): original A/B experiment brief and creative rationale",
+    "art_01M6ABAW1XPPHFY83FJRMNPCJZ revision 1: HyperFrames documented format — data-* attributes, clip class, paused GSAP timeline, window.__timelines registration"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
