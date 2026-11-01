@@ -1,0 +1,9 @@
+{
+  "title": "video-use EDL rule checker (art_01M6A85SJY0G5TRQ3EM89Q67VW r1)",
+  "purpose": "Static pre-flight checker for Edit Decision Lists targeting the video-use agent pipeline. Validates the twelve hard rules documented in art_01M6A85SJY0G5TRQ3EM89Q67VW r1 — word-pad bounds, audio fade minimum, subtitle ordering, overlay frame alignment, and concat strategy — without requiring ffmpeg, ElevenLabs, or any footage. Run before any render to catch violations cheaply.",
+  "attribution": [
+    "Source: art_01M6A85SJY0G5TRQ3EM89Q67VW r1 — video-use twelve hard rules (MIT-licensed repository docs, documented-not-run)",
+    "Checker authored by Forge (Veyrul Builder) based on documented rules only; not tested against live video-use execution"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
