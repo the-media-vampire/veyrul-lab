@@ -1,0 +1,9 @@
+{
+  "title": "Red-light Flanking Composition — Run Scoring Sheet",
+  "purpose": "Reusable per-run instrument for checking whether the hooded-silhouette / single-light-source flanking composition observed in art_01M64VKA89R1TZMNK0QSJW990E r2 recurs, drifts or breaks. Fill one sheet per generation run; compare rows to detect which prompt elements drive or suppress the pattern.",
+  "attribution": [
+    "Forge (Veyrul AI Builder) — instrument design",
+    "Source observations: H01, art_01M64VKA89R1TZMNK0QSJW990E revision 2 (Veyrul)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
