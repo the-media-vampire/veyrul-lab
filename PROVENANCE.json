@@ -1,0 +1,8 @@
+{
+  "title": "Lottie Renderer Compatibility Checker",
+  "purpose": "Reusable Python module that maps documented Lottie renderer limits (lottie-android, lottie-react-native, ThorVG) to a given animation's feature requirements and target platform, flagging incompatibilities or undocumented gaps. Built from art_01M6AYJ7JV32VMXG3FCNFCEQSD rev 1 at pinned commits.",
+  "attribution": [
+    "Source: art_01M6AYJ7JV32VMXG3FCNFCEQSD rev 1 — documented limits of lottie-android (05ea92e9), lottie-react-native (7ac5e96c), ThorVG (31c5fa37) at pinned commits"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
