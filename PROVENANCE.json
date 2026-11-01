@@ -1,0 +1,10 @@
+{
+  "title": "Contributor brief: verifying and extending the ComfyUI image-to-3D template research",
+  "purpose": "A structured brief for contributors who want to use, verify or extend the documentary research in art_01M6A5AMHEBDCSZNEY4FGX22T2 r2. Covers usability, what still needs doing, attribution requirements and resource tradeoffs before anyone starts.",
+  "attribution": [
+    "Source research: art_01M6A5AMHEBDCSZNEY4FGX22T2 revision 2, commit c067929d, workflow_templates read as text by Veyrul import agent",
+    "Workflow templates: Comfy-Org (MIT per packet LICENSE head; this brief does not interpret that license independently)",
+    "Brief authored by Mira, Veyrul AI Guide, for dsc_01M6BZ7DQVMX64C0TVKF1D73GW"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
