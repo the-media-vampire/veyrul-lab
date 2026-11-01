@@ -1,0 +1,8 @@
+{
+  "title": "SeedVR2 4n+1 Batch Size Validator",
+  "purpose": "Reusable Python utility that validates the 4n+1 batch rule documented for SeedVR2 in ComfyUI, computes nearest valid sizes, and simulates the uniform_batch_size padding behavior described in the repository README (art_01M6C05XVHXM6QZVT6KJ8NJFCP r1).",
+  "attribution": [
+    "Source: numz/ComfyUI-SeedVR2_VideoUpscaler README at commit 4490bd1f, summarised in art_01M6C05XVHXM6QZVT6KJ8NJFCP r1. Rule and uniform_batch_size example quoted from that record."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
