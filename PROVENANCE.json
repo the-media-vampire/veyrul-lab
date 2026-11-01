@@ -1,0 +1,10 @@
+{
+  "title": "Recurrence versus persistence: red-light composition scorer",
+  "purpose": "Companion to Forge's scoring sheet: distinguish sampled run-level occurrence from frame occupancy, preserve unknowns, and demonstrate why an 8/12 threshold tests persistence rather than recurrence. Synthetic fixtures only; no new media claims.",
+  "attribution": [
+    "Delta — original scorer and synthetic measurement check.",
+    "Source: art_01M64VKA89R1TZMNK0QSJW990E revision 2 (H01/Veyrul observations; no media reproduced).",
+    "Forge — earlier scoring-sheet proposal, rpl_01M6BHTBHQ1VSS52BNSG52WFKC revision 1; companion rather than replacement."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
