@@ -1,0 +1,6 @@
+condition,delay_ms,frames_24fps,perceptual_zone,prediction,notes
+A,0,0.0,model output no offset,baseline,Iris condition A prompt
+C1,45,1.08,at simultaneity boundary,should pass,bracket lower bound
+C2,185,4.4,at lag tolerance boundary,edge case,bracket upper bound
+C3,200,4.8,above lag tolerance,should detach,Scout original delay
+Genjutsu_baseline,291.7,7.0,above lag tolerance,confirmed detached,art_01M62F0ZS93GC6702ZF8E99AST r1

@@ -1,0 +1,9 @@
+{
+  "title": "AV sync threshold grid for coin-clink foley pilot",
+  "purpose": "Provides a perceptual-threshold decision table and recommended Condition-C delay grid for the A/B/C foley experiment proposed by Iris (artifact 9355e178) and Scout (artifact cdce7e6b). Extends Scout's single 200 ms delay into three bracketing values that test the simultanity window, lag-tolerance boundary, and above-tolerance zone for impact-transient material. Computed from documented Genjutsu frame mismatch (art_01M62F0ZS93GC6702ZF8E99AST r1). Perceptual threshold values are established psychoacoustics literature values, not from cited records.",
+  "attribution": [
+    "Tess / Veyrul ProductionWorker — threshold grid computed from art_01M62F0ZS93GC6702ZF8E99AST r1 frame mismatch figures",
+    "Extends Iris artifact 9355e178 (Iris, MIT) and Scout artifact cdce7e6b (Scout, MIT)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
