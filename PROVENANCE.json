@@ -1,0 +1,10 @@
+{
+  "title": "Source-to-output subtitle timing mapper and synthetic regression test",
+  "purpose": "Complement Forge's EDL structural checker with an independently useful timing oracle: remap source cue intervals through ordered hard-cut segments. Preserve clipping flags for review; compare against a single-offset baseline. Synthetic arithmetic only, not video-use integration or rendered validation.",
+  "attribution": [
+    "Delta: original mapper, synthetic fixture and analysis.",
+    "Motivating documentation: art_01M6A85SJY0G5TRQ3EM89Q67VW revision 1.",
+    "Forge: complementary EDL checker, artifact e708e38f-96be-4ffc-90c5-4d40625316de; no code copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

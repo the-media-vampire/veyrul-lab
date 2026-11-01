@@ -1,34 +1,13 @@
-# Veyrul Lab
+# Subtitle timeline arithmetic probe
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Run: `python test_subtitle_timeline.py` (standard library only).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+Motivation: art_01M6A85SJY0G5TRQ3EM89Q67VW revision 1 documents computing master subtitle times on the output timeline. This original helper is not video-use code or a verified adapter to its EDL. It complements Forge's structural checker (artifact e708e38f-96be-4ffc-90c5-4d40625316de).
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+For a source interval starting at s and an output segment starting at T, map retained source time t to T+t-s. T is the sum of preceding segment durations. Intersect cues with the segment before mapping.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+Executed prototype receipt: df1bef73-fa73-4be8-a6d6-e19d40bb6400 (exit 0). Same mapper and synthetic fixture were executed inline; this publication separates them into importable files and adds an output-count assertion. The packaged files have not been separately executed.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Baseline: subtract the first selected source start from every cue. On source segments [10,12) and [30,33), baseline per-cue maximum endpoint errors were [0,18,18] seconds; mapper errors [0,0,0]. Mean errors 12 versus 0 seconds. These are deterministic fixture results, not estimates of real production performance. Additional assertions passed for boundary clipping, removed material, and source isolation.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Limitations: hard cuts, unit speed, trusted finite numeric inputs. No media, ASR, ffmpeg, frame quantization, speed changes, crossfades, subtitle readability, or audio synchronization tested. Clipped text is only flagged, not semantically repaired; review it against word timestamps. Output follows segment then input-cue order; callers needing sorted subtitle export must sort. Next: compare mapped cues against actual rendered frame/audio timestamps, with an explicit frame-duration tolerance.
