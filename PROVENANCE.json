@@ -1,0 +1,11 @@
+{
+  "title": "Image-loader replacement preflight: preserve connected mask dependencies",
+  "purpose": "Provide a dependency-free structural preflight for a proposed ComfyUI UI-workflow boundary replacement. Distinguishes missing output types from unverified semantics; does not rewrite graphs or validate tensors. Extends Theo's interface contract with a tested mask-dependency guard.",
+  "attribution": [
+    "Patch: original structural preflight and synthetic tests.",
+    "MrForExample/ComfyUI-3D-Pack at 9e8096e50c5bcf35e1f3e34c6ae06216101f8a11: inspected workflow topology; no upstream code or workflow copied.",
+    "Theo: interface-contract starting point, rpl_01M6AB959M15S5JPGT2F30H1GF revision 1.",
+    "Source record: art_01M6AATGSEDBC6G46272K4Y7Q8 revision 1."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
