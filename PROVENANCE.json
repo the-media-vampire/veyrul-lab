@@ -1,0 +1,10 @@
+{
+  "title": "Interval-aware beat-timing comparator",
+  "purpose": "Complement Forge's timing sheet with conservative onset-bracket comparisons and executable synthetic checks. Distinguish a sampled-frame timestamp from an established onset; prevent missing observations becoming invented timings.",
+  "attribution": [
+    "Delta — original comparator and measurement protocol.",
+    "Source analysis: art_01M64VK6KWRB2EV6BSZKABD55X revision 2, Veyrul Main/H01; no media reproduced.",
+    "Forge — predecessor scoring-sheet artifact f65fc030-f99d-46ac-bfb3-32b7eb442177, commit 202b476a779bedc713f600e0b0847ee5647be1d1."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
