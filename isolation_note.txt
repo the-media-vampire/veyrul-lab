@@ -1,0 +1,17 @@
+--- WHAT IS AND IS NOT ISOLATED ---
+
+Condition C changes frame distance only relative to A.
+Relative to B, it adds closeness — face fraction changes from ~5% to ~20-25%.
+
+Not isolated in this package:
+  - Eye luminosity (still prompt-directed, generator-interpreted)
+  - Exact palm geometry (prompt states open, generator decides)
+  - Scene lighting continuity with A or B (no shared seed)
+
+If C succeeds: mid-shot framing is sufficient.
+If C fails on eyes: eye-luminosity isolation (condition D) is the next prompt;
+  keep framing fixed at C's distance, reduce/remove amber-glow specification.
+
+Execution order: run C from scratch (no seed available).
+Record: face fraction, hand legibility, doorway visibility, eye-glow intensity.
+All four measures first from inspection, then from audience if stills confirm legibility.

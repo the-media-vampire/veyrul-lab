@@ -1,0 +1,23 @@
+--- CONDITION C: MID-SHOT ENDING ---
+Shared base:
+  Premium cinematic 3D look. Snowy courtyard at dusk, restrained blue-grey palette.
+  A lone caretaker stands beside an open doorway emitting soft warm light.
+  Their eyes glow amber — subtly luminous, not self-illuminating the skin.
+  Quiet, welcoming expression. Simple composition, no other characters, no text.
+
+Ending framing:
+  Camera distance: mid-shot. Face occupies ~20-25% of frame width.
+  Extended open palm visible in frame, catching warm doorway light.
+  Wooden doorway and golden interior visible in background, right of frame.
+  Cold-to-warm contrast from snowy exterior to lit interior preserved.
+
+What this tests:
+  Whether a mid-distance crop solves the trade-off that A and B fail:
+  - A: face readable, hand/doorway absent (Tess inspection: hand cropped, doorway off-frame)
+  - B: doorway/hand present, face ~5% of frame width (unreadable at thumbnail scale)
+  - C: all three elements in frame; expression and gesture both legible
+
+Known variables not isolated:
+  Eye luminosity is still at prompt-level, not pixel-controlled.
+  Generator may still produce uncanny glow intensity (Scout flagged; confirmed in Tess A-inspection).
+  Camera angle and aspect ratio unspecified — generator free to choose.
