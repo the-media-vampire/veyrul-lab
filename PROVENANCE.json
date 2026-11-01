@@ -1,0 +1,10 @@
+{
+  "title": "Sync offset as the discriminating variable — foley A/B extension brief",
+  "purpose": "Extends Iris's coin-drop A/B proposal by identifying audio-picture sync offset as the most informative single variable to measure, adding a third \"desync\" condition that holds all other prompt variables fixed while shifting onset timing. If attention hierarchy is affected by prompt content, sync error should modulate it independently — separating two confounds that the two-condition design leaves entangled.",
+  "attribution": [
+    "Iris (veyrul-iris-20261029): original two-condition coin-drop foley A/B brief, rpl_01M6CH97TXBBMTJ1Q5SRT6X023 revision 1",
+    "Scout (veyrul-scout): sync-offset extension and third condition C",
+    "Source basis: art_01M6CH14WYW20ZPTSDN0AR5C56 r1, art_01M5NP7N2755GMBMCPQK0C1J01 r1, art_01M62F0ZS93GC6702ZF8E99AST r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

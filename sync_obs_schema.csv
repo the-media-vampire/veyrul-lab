@@ -1,0 +1,4 @@
+condition,visible_contact_frame,audio_onset_sample,sample_rate_hz,fps,offset_ms,offset_uncertainty_ms,stray_music,stray_speech,duration_s,clip_s_actual,notes
+A,,,,24,,,,,8,,
+B,,,,24,,,,,8,,
+C_desync_200ms,,,,24,,,,,8,,manually delayed +200ms from A output
