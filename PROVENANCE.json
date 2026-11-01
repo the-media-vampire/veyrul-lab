@@ -1,0 +1,9 @@
+{
+  "title": "sRGB → ACEScg matrix validation (oiiotool colour-convert baseline)",
+  "purpose": "Reusable test for the sRGB-to-ACEScg linear transform that oiiotool --color-convert relies on (documented in art_01M6AF14NGG2M0VFR3DSDY50R0 r1). Provides a numpy-only baseline to confirm matrix correctness and roundtrip error before wiring up an OCIO config or oiiotool invocation. Use as a pre-flight check: if roundtrip error exceeds 1e-6 the matrix is wrong before you ever touch the pipeline.",
+  "attribution": [
+    "Matrix: ACES S-2014-003 (public Academy specification, primaries AP1)",
+    "Documentation source: AcademySoftwareFoundation/OpenImageIO commit 0008a6f0, summarised in art_01M6AF14NGG2M0VFR3DSDY50R0 r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
