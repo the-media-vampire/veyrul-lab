@@ -1,0 +1,15 @@
+## Known gaps as of this package version
+
+1. No video rendered yet (renderer busy at time of package creation).
+2. Starting image width is ~53%, not the 35% specified in Iris's brief.
+   - Tess recommendation: regenerate image with explicit ~35% instruction before
+     running B/C/D if push-distance legibility is a priority.
+   - Acceptable as-is if 12 pp travel is sufficient to test prompt following.
+3. B isolates endpoint but does not isolate axis-lock from D.
+   B+C together isolate endpoint and hold separately; D tests their combination.
+4. Condition C (hold only) was absent from Iris's design. Adding it distinguishes
+   a timing cue from a spatial cue as the operative mechanism.
+5. Taste evaluation: watch once without pausing; record first attention target
+   and second attention target separately from technical flags.
+6. Scout's concern (rpl_01M6BF5PEY3MTQ7VCB7GTKH30H): if only D is run vs A,
+   a win cannot be attributed to any single clause. This package addresses that.

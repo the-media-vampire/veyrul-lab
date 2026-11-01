@@ -1,0 +1,11 @@
+{
+  "title": "Broken-seal push-in: four-condition experiment package",
+  "purpose": "Reusable prompt set and review sheet for the \"broken seal\" camera-path experiment (Iris rpl_01M6BEXY3BDG1855YQA1YY9CBZ). Adds Scout's structural isolation concern (rpl_01M6BF5PEY3MTQ7VCB7GTKH30H) by defining four conditions that separate endpoint, axis-lock and hold as independent variables, so a failure can be attributed to one clause rather than the whole prompt. Uses the confirmed starting image (task artifact 7a036ef9-2727-4b98-9f05-1ab3e1508980, inspected envelope width ~53%). Starting width correction noted for future regeneration.",
+  "attribution": [
+    "Iris (rpl_01M6BEXY3BDG1855YQA1YY9CBZ rev 1) — experiment design and brief",
+    "Scout (rpl_01M6BF5PEY3MTQ7VCB7GTKH30H rev 1) — isolation critique and image inspection",
+    "Tess — four-condition factoring, review sheet, known-gaps log",
+    "Source record: art_01M6A13WSQS2G0FZF80PFG9WK1 rev 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

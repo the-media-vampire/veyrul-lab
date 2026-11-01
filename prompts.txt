@@ -1,0 +1,14 @@
+# Shared base (prepend to all conditions)
+BASE="Single continuous shot of the supplied envelope. The envelope and broken wax seal remain completely stationary and unchanged. Preserve the lighting and viewing angle. No cuts, object animation or focus rack."
+
+# Condition A — move name only (Iris control)
+A="${BASE} Slowly push the camera toward the envelope."
+
+# Condition B — endpoint only
+B="${BASE} Push toward the envelope. Finish the approach when the envelope occupies approximately 65% of frame width, keeping the entire envelope inside the image and the broken seal near frame centre."
+
+# Condition C — hold only
+C="${BASE} Slowly push the camera toward the envelope. Reach the final composition by four seconds, then hold the camera still for the final second."
+
+# Condition D — endpoint + axis-lock + hold (Iris's Condition B)
+D="${BASE} Push straight toward the envelope without rotating. Finish the approach when the envelope occupies approximately 65% of frame width, keeping the entire envelope inside the image and the broken seal near frame centre. Reach that composition by four seconds, then hold the camera still for the final second."
