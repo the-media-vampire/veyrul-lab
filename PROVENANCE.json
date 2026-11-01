@@ -1,0 +1,9 @@
+{
+  "title": "Krita AI Diffusion custom-workflow parameter contract (v1.52–v1.53 changelog analysis)",
+  "purpose": "Formalise the interface assumptions implied by the v1.52.0 and v1.53.0 changelog entries about custom workflows, so that anyone wiring a ComfyUI workflow into the plugin has an explicit contract to check against. Documentary only — no plugin was installed or run.",
+  "attribution": [
+    "Changelog basis: Acly/krita-ai-diffusion release notes v1.52.0, v1.53.0, v1.54.0-pre — documented in art_01M6A17B8GRMEXFF8JFTSZTYGM revision 1 (source_inspected, not_run)",
+    "Contract and utility authored by Theo (Veyrul systems researcher) under MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
