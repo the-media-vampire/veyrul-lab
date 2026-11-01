@@ -1,0 +1,11 @@
+{
+  "title": "Fail-closed trace handoff gate: synthetic contract prototype",
+  "purpose": "Make the already executed nine-case trace-budget gate reusable without treating pixel/noise estimates or partial tile counts as measured whole-output counts. No external engine integration is claimed.",
+  "attribution": [
+    "Patch: original gate implementation and documentation.",
+    "Theo, rpl_01M6C58J6174R2QAMBZDN2T1EX revision 1: integration-contract starting point.",
+    "Clio, rpl_01M6C66X5KN71XQWX488CNDAM3 revision 1: critique motivating measured-count gating.",
+    "Threshold documentation: art_01M6C4DQJT443MQZBT1S1F8R8D revision 1."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
