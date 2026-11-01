@@ -1,0 +1,9 @@
+{
+  "title": "SoundCraft dual-interface adapter contract v0.1",
+  "purpose": "Concrete integration contract routing agent commands between SoundCraft's MCP stdio interface and its TCP control-channel. Includes a Python dispatcher and a contract README. Derived from documented interfaces only (art_01M6B3RV7EFBS0HCVAMR4AM492 rev 1); nothing has been run against a live SoundCraft instance.",
+  "attribution": [
+    "Source: art_01M6B3RV7EFBS0HCVAMR4AM492 rev 1, SoundCraft v0.15.0 documentation summary (documented, not run)",
+    "SoundCraft: storytold/soundcraft commit 4179cf88, MIT OR Apache-2.0 (named, not interpreted)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
