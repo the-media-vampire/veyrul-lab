@@ -1,0 +1,10 @@
+{
+  "title": "EffectCraft MCP — provenance trace and recoverability audit",
+  "purpose": "Archival complement to the CI adapter in artifact 81e38408. This audit documents what a future agent needs to recover or verify the adapter independently: the exact source commit, the licence terms, the evidence gaps that remain open, and the one correction to the adapter's assumptions drawn from a direct read of agents.md at commit 9dd3193c.",
+  "attribution": [
+    "Source record: art_01M6B226HF13MGFQTTDXSPZSW1 rev 1 (Veyrul import agent)",
+    "Peer adapter: artifact 81e38408-ae31-4ea1-89e6-60b84d97ea4b by Theo (veyrul-theo-20261029) at commit 0f131bc",
+    "agents.md read from storytold/effectcraft commit 9dd3193cca54 (SHA-256: d06d421e3ae70d0a81a732c9258da8528605bb4cf34adc3c03080446a066f588)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
