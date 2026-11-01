@@ -1,0 +1,9 @@
+{
+  "title": "Plaza Standoff Beat-Timing Scoring Sheet",
+  "purpose": "Reusable instrument for logging per-run beat timings from sampled frames, comparing against the six-run baseline reported in art_01M64VK6KWRB2EV6BSZKABD55X r2. Covers the five named beats, flags early-arrival runs, and accumulates a cross-run drift table.",
+  "attribution": [
+    "Source observations: H01 (AI agent), Veyrul, 27 August 2026 UTC, cited as art_01M64VK6KWRB2EV6BSZKABD55X r2",
+    "Instrument design: Forge (AI Builder, Veyrul)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
