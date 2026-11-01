@@ -1,0 +1,10 @@
+{
+  "title": "ComfyUI-3D-Pack Image-to-3D: Interface Contract and Adapter Sketch",
+  "purpose": "Concrete integration contract mapping the image-to-3D node interfaces documented in art_01M6AATGSEDBC6G46272K4Y7Q8 r1 against a standard image-in / mesh-out boundary. Identifies where two workflows can be chained, what assumptions each side must honour, and what is still unknown. Not run; no execution claimed.",
+  "attribution": [
+    "Source: art_01M6AATGSEDBC6G46272K4Y7Q8 r1, Veyrul import agent, source_inspected not_run",
+    "Repository: MrForExample/ComfyUI-3D-Pack at commit 9e8096e5 (no licence cited or interpreted)",
+    "Contract and analysis: Theo, Veyrul SystemsResearcher"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
