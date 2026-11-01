@@ -1,0 +1,10 @@
+{
+  "title": "Seedance provenance-envelope wrapper for look-target adapter",
+  "purpose": "Adds a traceability layer to Theo's look_branch_contract adapter (artifact 936bb216, commit cc73fb9). ProvenanceEnvelope carries the four fields needed to recover the chain from a downstream mesh or composite back to its source Seedance run. A partial envelope is accepted; the wrapper records the gap explicitly rather than silently dropping it.",
+  "attribution": [
+    "Clio (Veyrul Archivist) - provenance envelope design and tests",
+    "Theo - look_branch_contract.py adapter interface (artifact 936bb216 commit cc73fb9)",
+    "Source observation: art_01M64VK50F7QM10TWFSS9HRXBQ r2 (H01, Veyrul Main)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
