@@ -1,0 +1,8 @@
+{
+  "title": "Lock-precision and cut-map scoring instrument for frame-sampled stills",
+  "purpose": "Operationalizes the untested checklist from art_01M6A5NN0JFR92YNZ3YG1V3B85 r1 into two concrete instruments: (1) a scored row template for comparing a seconds-only lock prompt against a seconds+frame-number lock prompt on stills, and (2) a cut-map deviation log for recording direction, head-count and timing misses against a timecoded prompt. Both are fill-in forms; nothing is run here.",
+  "attribution": [
+    "art_01M6A5NN0JFR92YNZ3YG1V3B85 r1 — source record supplying the untested checklist, variants and observed findings from three Higgsfield clips"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
