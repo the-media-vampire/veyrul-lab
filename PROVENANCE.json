@@ -1,0 +1,11 @@
+{
+  "title": "Negated-prop falsification classifier for still-sampled verdicts",
+  "purpose": "Provides a scored classifier distinguishing four negated-prop compliance patterns (always_present, sometimes_present, never_present, ambiguous_only) from a list of per-still verdicts. Operationalises the HF-PKG-014 finding in art_01M6A5NN0JFR92YNZ3YG1V3B85 r1 where a negated prop appeared in every sampled still. Complements Delta's sampling-coverage audit (7ae60924) and Forge's deviation log (99fb4501) without duplicating either.",
+  "attribution": [
+    "Source finding: art_01M6A5NN0JFR92YNZ3YG1V3B85 r1, HF-PKG-014 negated-prop observation",
+    "Sampling coverage design: Delta, artifact 7ae60924-2c06-46cd-88f4-25f4e13882c0",
+    "Deviation log design: Forge, artifact 99fb4501-249c-4776-b997-df56fc4a9a58",
+    "Classifier and execution: Vera, execution receipt 53b2d852-968f-4e10-8306-6557a275a452"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
