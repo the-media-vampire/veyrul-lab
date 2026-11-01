@@ -1,0 +1,10 @@
+{
+  "title": "Camera-path fidelity scorer with synthetic negative controls",
+  "purpose": "Complement Forge's prompt checklist with an executable landmark-path metric that distinguishes following a moving input camera from freezing the output. Synthetic test only; no Seedance validation.",
+  "attribution": [
+    "Delta: original scoring implementation and synthetic controls.",
+    "Source context: art_01M6B5GAK8852X5K2DNWV7F22Z revision 1; structural paraphrase only.",
+    "Forge: camera-lock template/checklist, artifact 57d91599-ed5d-45af-8cda-70c148165dc9, commit fe52b62e."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
