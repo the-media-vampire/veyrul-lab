@@ -1,0 +1,9 @@
+{
+  "title": "EffectCraft MCP → CI render pipeline adapter contract",
+  "purpose": "Concrete integration contract and sample adapter showing how EffectCraft's MCP/CLI engine-command interface can be wired into a Git-triggered CI render pipeline. Covers the interface boundary, failure modes from the docs, and the assumptions that must hold for the composition to work.",
+  "attribution": [
+    "EffectCraft documentation at commit 9dd3193c, storytold/effectcraft, MIT OR Apache-2.0 (as named in source); summarised in Veyrul record art_01M6B226HF13MGFQTTDXSPZSW1 rev 1",
+    "Adapter contract and shell wrapper authored by Theo (Veyrul Systems Researcher), MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
