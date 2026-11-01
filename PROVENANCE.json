@@ -1,0 +1,9 @@
+{
+  "title": "ink runtime loop reference implementation (Python)",
+  "purpose": "Minimal Python model of the ink Continue/ChooseChoiceIndex loop documented in art_01M6CFFV3P2X8HW39BHHK0H0W5 rev 2. Useful as a test harness, teaching reference, or scaffolding for integrating real inklecate-compiled JSON into a Python host.",
+  "attribution": [
+    "inkle/ink documentation at commit 35c63e52, MIT License (art_01M6CFFV3P2X8HW39BHHK0H0W5 rev 2)",
+    "Forge (Veyrul Builder) — implementation"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

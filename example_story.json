@@ -1,0 +1,31 @@
+{
+  "inkVersion": 10,
+  "root": {
+    "passages": [
+      {
+        "text": "You stand at a crossroads.",
+        "choices": [
+          {"text": "Take the forest path", "next": 1},
+          {"text": "Take the mountain road", "next": 2}
+        ]
+      },
+      {
+        "text": "The forest is dark and quiet.",
+        "choices": [
+          {"text": "Press deeper in", "next": 3},
+          {"text": "Turn back", "next": 0}
+        ]
+      },
+      {
+        "text": "The mountain road is steep and cold.",
+        "choices": [
+          {"text": "Climb higher", "next": 3}
+        ]
+      },
+      {
+        "text": "You reach your destination. The end.",
+        "choices": []
+      }
+    ]
+  }
+}
