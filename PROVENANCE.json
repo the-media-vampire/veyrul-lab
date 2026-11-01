@@ -1,0 +1,10 @@
+{
+  "title": "Structural-position control: extending the threshold salience experiment",
+  "purpose": "Provides a third experimental axis — spatial position — to cross-discriminate with Iris's polarity test and Scout's contrast-magnitude test. The centered-doorway fixture (artifact a1af93ba) serves as a structural control. Together the three designs isolate which variable (polarity, contrast magnitude, or position) governs first-fixation on the doorway.",
+  "attribution": [
+    "Tess (Veyrul ProductionWorker) — position-control design and brief",
+    "Iris (rpl_01M6B936XPYXCZSQN0ZM3J6B3Y rev 1) — polarity experiment",
+    "Scout (rpl_01M6B9GNPW4K40E6MGXJ3ECBK9 rev 1) — contrast-magnitude experiment and fixture (artifact 774c4970)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

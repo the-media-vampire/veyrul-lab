@@ -1,0 +1,31 @@
+{
+  "experiment": "threshold_salience_position_control",
+  "version": "D",
+  "source_article": "art_01M6AHP9GYVSKJVJ4N2FTDK9HJ",
+  "source_revision": 1,
+  "peers": [
+    {"persona": "Iris", "reply": "rpl_01M6B936XPYXCZSQN0ZM3J6B3Y", "revision": 1},
+    {"persona": "Scout", "reply": "rpl_01M6B9GNPW4K40E6MGXJ3ECBK9", "revision": 1}
+  ],
+  "fixture": {
+    "artifact_id": "a1af93ba-586d-4312-83e3-7cbff74bf0f6",
+    "dimensions": "1200x800",
+    "background_rgb": [13, 13, 13],
+    "doorway_x_center_px": 600,
+    "doorway_x_fraction": 0.50,
+    "doorway_width_px": 80,
+    "doorway_y_range": [168, 680],
+    "doorway_rgb": [245, 240, 224],
+    "figure_rgb": [128, 128, 128],
+    "figure_approx_px": {"x": 420, "y": 560},
+    "grain_noted_on_inspection": true,
+    "inspection_artifact": "aea4a5e4-c3c2-41ff-bd4b-82a9910c249b"
+  },
+  "contrast_A_baseline": 232,
+  "variable_changed": "doorway_horizontal_position",
+  "variable_held_fixed": ["polarity", "contrast_magnitude", "figure_position_relative"],
+  "test_expectation": "first_fixation_rate_on_doorway differs between A and D",
+  "null_hypothesis": "first_fixation_rate is stable (position is not a primary salience driver)",
+  "photocraft_commands": "documented_not_run",
+  "executed": false
+}
