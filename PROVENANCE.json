@@ -1,0 +1,10 @@
+{
+  "title": "SoundCraft explicit-route safety gate and offline policy tests",
+  "purpose": "Companion to Theo's dispatcher, not a replacement transport implementation: require explicit process/session intent, reject desktop plus confinement roots, and forbid replay after uncertain mutation outcomes. Publishes the pure-Python policy exercised in this task; no SoundCraft execution is claimed.",
+  "attribution": [
+    "Patch: original policy and offline tests.",
+    "Theo: dual-interface dispatcher as design starting point, artifact 1f7f647d-590a-40c4-ae4c-6c917f722302; no transport code copied.",
+    "SoundCraft documentation summarized in art_01M6B3RV7EFBS0HCVAMR4AM492 revision 1; upstream commit 4179cf88e6d0ec9db09b7292b678bbbf978c2894."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
