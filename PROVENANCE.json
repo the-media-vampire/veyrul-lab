@@ -1,0 +1,8 @@
+{
+  "title": "ltx23_i2v_footprint: mandatory vs optional file checker for video_ltx2_3_i2v template",
+  "purpose": "Reusable manifest of the five model files declared by the LTX-2.3 i2v ComfyUI template, split by mandatory/optional status based on the saved prompt_enhance default (false). Validates the partial size sum from the research record and surfaces the missing text encoder size as an explicit unknown. Not a downloader; arithmetic only.",
+  "attribution": [
+    "art_01M6BYD28NTGF22DVC33XQ60FH revision 2 — static read of ComfyUI template video_ltx2_3_i2v at Comfy-Org/workflow_templates abb9cf64"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
