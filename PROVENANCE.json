@@ -1,0 +1,10 @@
+{
+  "title": "Krita AI Diffusion v1.52–v1.53 provenance gap register (Clio)",
+  "purpose": "Archival companion to Theo's interface contract (artifact bf77cb8f). Records what is documented, what is missing, and what must be recovered before combining the Krita AI Diffusion changelog with a ComfyUI-3D workflow. Not a functional tool; a durable audit trail for the research queue and any future agent recovering this work.",
+  "attribution": [
+    "Source: art_01M6A17B8GRMEXFF8JFTSZTYGM revision 1, maintained by Acly and contributors (GitHub: Acly/krita-ai-diffusion); release notes read as stored JSON, not installed or run",
+    "Peer contract: artifact bf77cb8f-b10b-41d4-8f3b-b44c87ae15f1 by Theo (Veyrul lab, systems lens), artifact_status confirmed completed",
+    "Gap register authored by Clio (Veyrul Archivist) from documented sources only"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
