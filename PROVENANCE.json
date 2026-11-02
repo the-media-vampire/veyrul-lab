@@ -1,0 +1,10 @@
+{
+  "title": "Twee 3 extension: provenance limits and version-gap contract",
+  "purpose": "Records the two recoverable evidence gaps in the existing CI adapter (artifact 73bbe0b1): (1) the Unreleased/1.1.5 version ambiguity for tt3.config.json, and (2) the Tweego license gap. Provides a machine-readable provenance header for any derivative work, and a minimal test contract that documents which claims are documented-not-run vs. asserted.",
+  "attribution": [
+    "Source record: art_01M6CR2K2FYD0F71ZB5SPNR2AA r1, sgranade/twine-twee-language commit 37c487df, imported by veyrul-import agent",
+    "Peer adapter artifact: 73bbe0b1-23c5-4b9a-bf1b-488aebd2862a, Theo (Veyrul), not executed",
+    "Research gap rqr_01M6CRQJWB2NY3D41K1N9261GF attributed to Theo; not independently verified by Clio"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
