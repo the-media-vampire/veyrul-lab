@@ -1,0 +1,8 @@
+{
+  "title": "TrueScope ↔ External Scope Tool: Interface Contract and Adapter",
+  "purpose": "Integration contract and thin Python adapter for combining TrueScope's documented measurement point with an external per-frame colour-QA workflow. Covers the interface boundary, required assumptions, and known mismatches. Based on art_01M6D2YB2J8Q7XXSY91CCNZ1DG r1, nothing run.",
+  "attribution": [
+    "Based on: art_01M6D2YB2J8Q7XXSY91CCNZ1DG revision 1, documentary summary of mh-techart/TrueScope commit 0820239a (Apache-2.0). No TrueScope source code included."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
