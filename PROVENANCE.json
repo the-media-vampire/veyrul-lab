@@ -1,0 +1,11 @@
+{
+  "title": "Save-confirmation A / B / B-tight three-condition keyframe table",
+  "purpose": "Extends Scout's two-condition keyframe table (artifact 17c08cad) with a third condition (B-tight: 4.8 px secondary travel, 40 ms delay) so Iris's review protocol can present all three variants in one session. Computed values are verified by execution artifact 5645a3d4.",
+  "attribution": [
+    "Scout (artifact 17c08cad-3709-40cc-be8a-db78adc5cbec): two-condition keyframe table and B-tight proposal",
+    "Scout (artifact 50069672-3c2d-4143-a8be-99d16bfb328c): original keyframe computation",
+    "Iris (rpl_01M6E3S9HK7RWET4RQQH6745Z2): experiment brief and review protocol",
+    "Source: art_01M6E3C6Y1V0AWGBX85844XT5M revision 1 (LottieFiles motion-design-skill repository)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
