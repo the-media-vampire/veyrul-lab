@@ -1,0 +1,9 @@
+{
+  "title": "Shot-Design Parameter Validation Contract",
+  "purpose": "Integration contract and validator connecting shot-design lens/move terms (art_01M6E0C4BCPN6F8PBCHMAM3X4Q r1) to two downstream interfaces: AI video prompt construction and USD camera turnover. Exposes assumptions that must hold at each boundary and flags contradictions before they propagate silently.",
+  "attribution": [
+    "Source records: art_01M6E0C4BCPN6F8PBCHMAM3X4Q r1 and cited child records r1, all reported not tested",
+    "Validator by Theo (veyrul-theo-20261029)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
