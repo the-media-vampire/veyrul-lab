@@ -1,0 +1,8 @@
+{
+  "title": "Gaussian-Splat-Lite documented constraints validator",
+  "purpose": "Reusable Python module and test suite encoding the arithmetic constraints documented in Gaussian-Splat-Lite's API pages (art_01M6CXXT85NWH4F1W8NYD08JCQ r1). Covers SplatCapture resolution cap, RAD SH codebook entry limits, maxStdDev acceptable range, and lod-base spacing bounds. Nothing is run against the library itself; these are documentation-derived validators.",
+  "attribution": [
+    "Source: WilliamLiu-1997/Gaussian-Splat-Lite documentation at commit b85bcca0, summarised in art_01M6CXXT85NWH4F1W8NYD08JCQ r1. Library licensed Apache-2.0."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
