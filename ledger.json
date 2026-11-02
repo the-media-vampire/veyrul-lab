@@ -1,0 +1,29 @@
+{
+  "record": "art_01M6F25MHDZ019EYGX9CNFZYRE",
+  "revision": 1,
+  "commit": "bd32f8a9",
+  "generated_by": "Clio (Archivist, Veyrul)",
+  "peer_artifact": "4841ce47-3b1c-46c6-8161-6464d4bda5d5",
+  "tier_counts": { "STATED": 7, "GAP": 3, "IRRECOVERABLE": 4 },
+  "tiers": {
+    "STATED": "Claim appears in archived text; not built or run",
+    "GAP": "Contradiction or discrepancy between two archived files; not reconcilable without unarchived files",
+    "IRRECOVERABLE": "File named in listing but not archived at this commit; claim cannot be verified from this record"
+  },
+  "claims": [
+    {"tier":"STATED",  "source":"README",          "claim":"Three-stage pipeline: HDR to cube map to filtered cube map to KTX2",                  "note":"Project own statement; nothing built"},
+    {"tier":"GAP",    "source":"README vs listing", "claim":"Default shader load path: lib/shaders (README) vs lib/source/shaders (listing)",      "note":"Discrepancy not reconcilable; no lib/shaders path exists in listing"},
+    {"tier":"STATED", "source":"file listing",     "claim":"Shader files: lib/source/shaders/filter.frag and primitive.vert",                    "note":"Paths only; contents not archived"},
+    {"tier":"STATED", "source":"CMakeLists.txt",   "claim":"cmake_minimum_required 3.12.0, CXX standard 11, project glTFIBLSampler",             "note":"Read as text; not built"},
+    {"tier":"STATED", "source":"CMakeLists.txt",   "claim":"IBLSAMPLER_EXPORT_SHADERS defaults OFF",                                              "note":"Documented; not tested"},
+    {"tier":"STATED", "source":"README",           "claim":"KTX-Software may need manual install with an unidentified PR fix",                   "note":"PR number not given; current status unknown"},
+    {"tier":"GAP",    "source":"CMakeLists.txt vs README vs listing", "claim":"Glslang source: SDK (README) vs thirdparty/glslang subdir (CMake) vs absent from listing", "note":".gitmodules not archived"},
+    {"tier":"GAP",    "source":"CMakeLists.txt vs listing", "claim":"STB: thirdparty/stb path in CMake; no thirdparty/stb in file listing",          "note":"Submodule pin unknown"},
+    {"tier":"IRRECOVERABLE", "source":"filter.frag (not archived)", "claim":"Algorithm choosing optimal mipLevelCount and cubeMapResolution",         "note":"Logic in filter.frag; not archived"},
+    {"tier":"STATED", "source":"LICENSE",          "claim":"Apache License 2.0 text present; appendix copyright placeholder unfilled",            "note":"Wording observed; no rights determination"},
+    {"tier":"STATED", "source":"CONTRIBUTING.md",  "claim":"CONTRIBUTING.md header names CC-BY-4.0 for that file only",                          "note":"Not project-wide"},
+    {"tier":"IRRECOVERABLE", "source":".gitmodules (not archived)", "claim":"Submodule pins for STB and glslang at bd32f8a9",                        "note":"Listed but not archived"},
+    {"tier":"IRRECOVERABLE", "source":"external URL (not opened)",  "claim":"Algorithm provenance via glTF Sample Environments repository",           "note":"External page not opened"},
+    {"tier":"IRRECOVERABLE", "source":"doc/filterpipeline.png (not archived)", "claim":"Workflow diagram named in listing",                           "note":"Not archived, not viewed"}
+  ]
+}

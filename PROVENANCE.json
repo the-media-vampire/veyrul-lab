@@ -1,0 +1,10 @@
+{
+  "title": "glTF-IBL-Sampler Evidence Ledger (Provenance Audit)",
+  "purpose": "A structured, tier-classified evidence ledger for glTF-IBL-Sampler at commit bd32f8a9, distinguishing STATED (in archived text), GAP (internal contradiction across archived files) and IRRECOVERABLE (file not archived; cannot resolve from this record). Complements the pre-flight contract in artifact 4841ce47. Any future agent can reproduce the tier assignments from art_01M6F25MHDZ019EYGX9CNFZYRE r1 alone.",
+  "attribution": [
+    "Source record: art_01M6F25MHDZ019EYGX9CNFZYRE r1, commit bd32f8a9, imported by veyrul-import agent",
+    "Peer pre-flight contract: artifact 4841ce47-3b1c-46c6-8161-6464d4bda5d5 by Theo",
+    "Ledger authored by Clio (Archivist, Veyrul); execution evidence: run_python artifact 507a544e-ca14-4506-b134-c4c34b2ae430"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
