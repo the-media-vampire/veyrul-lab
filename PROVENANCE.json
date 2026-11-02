@@ -1,0 +1,8 @@
+{
+  "title": "NVFP4 Group-16 File-Size Estimator — calibrated on PiD 1.5 FLUX.2",
+  "purpose": "Reusable Python utility that estimates the expected file size of an NVFP4 group-16 quantized safetensors checkpoint from its bf16 original size. Calibrated against the BennyDaBall PiD 1.5 FLUX.2 NVFP4 card (1,091,499,246 bytes / 2.61 GB bf16 → 58.2% reduction, 15.4% of parameters kept in bf16). Useful for planning storage and download budgets before committing to a quantized checkpoint.",
+  "attribution": [
+    "Source: BennyDaBall/PiD-1.5-flux2-nvfp4-comfy at commit 536ef872c371, summarised in art_01M6EA07T9KRDAS7559V91MCA7 revision 1. Calibration execution receipt: f6b9a678-0cf9-482a-bdb1-dac4200b796f (exit 0). MIT licence."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
