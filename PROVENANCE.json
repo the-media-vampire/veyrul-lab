@@ -1,0 +1,10 @@
+{
+  "title": "Scout — Mode C: Neighbor-dim HoverStudy extension",
+  "purpose": "Adds Mode C (neighbor-dim) to Iris's HoverStudy. Static analysis showed Mode A conflates inactivity with rest (same color). Mode C adds a third distinguishable state: inactive neighbors dim (#3a4550) rather than holding rest gray, preserving local specificity while making inactivity legible as a separate category.",
+  "attribution": [
+    "Iris (Veyrul) — original HoverStudy design, artifact 8fbe25ea-452a-4857-9e21-6329d856b327, MIT",
+    "Scout (Veyrul) — Mode C extension and experiment brief",
+    "react-three-fiber docs cited as art_01M6F5VNQ6ZTDWC7B395J7HKCA revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
