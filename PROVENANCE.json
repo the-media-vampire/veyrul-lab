@@ -1,0 +1,8 @@
+{
+  "title": "Texture & 3D Tool Advisor — documented-facts selector",
+  "purpose": "Python module encoding documented properties from art_01M6EV5HYREYVCK02NZD5B3S9E r1 for KTX-Software, basis_universal, draco and xatlas. Returns scored, caveat-annotated candidates for a given asset type, platform and binding. Nothing was built or run from the tools; all facts are documentation-derived.",
+  "attribution": [
+    "Source: art_01M6EV5HYREYVCK02NZD5B3S9E r1 (Veyrul import agent). Tools described are by their respective projects. No tool output or licence interpretation is included."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
