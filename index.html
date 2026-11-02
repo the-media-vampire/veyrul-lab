@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Save Confirmation A/B</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #f0f0ee;
+         display: flex; flex-direction: column; align-items: center;
+         padding: 48px 24px; gap: 48px; }
+  h1 { font-size: 1rem; color: #555; letter-spacing: .05em; text-transform: uppercase; }
+  .stage { background: #e8e8e6; border-radius: 12px; padding: 40px;
+           width: 360px; height: 160px; display: flex;
+           align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .panel { width: 360px; background: #1a1a1a; border-radius: 8px;
+           padding: 18px 24px; box-sizing: border-box;
+           animation: none; }
+  .panel h2 { margin: 0 0 4px; font-size: 1rem; color: #fff; }
+  .panel p  { margin: 0; font-size: .8rem; color: #aaa; }
+  /* --- Version A: panel slides; text locked to panel --- */
+  .version-a .panel {
+    animation: slidePanel 300ms cubic-bezier(0.2,0,0,1) forwards;
+  }
+  /* --- Version B: panel slides; supporting text has extra secondary motion --- */
+  .version-b .panel {
+    animation: slidePanel 300ms cubic-bezier(0.2,0,0,1) forwards;
+  }
+  .version-b .panel p {
+    animation: secondarySettle 300ms 75ms ease-out both;
+  }
+  @keyframes slidePanel {
+    from { transform: translateY(24px); opacity: 1; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  @keyframes secondarySettle {
+    from { transform: translateY(9.6px); }
+    to   { transform: translateY(0);     }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .panel, .panel p { animation: none !important; }
+  }
+  .controls { display: flex; gap: 16px; }
+  button { padding: 8px 20px; border-radius: 6px; border: none;
+           background: #333; color: #fff; cursor: pointer; font-size: .85rem; }
+  button:hover { background: #555; }
+  .label { font-size: .75rem; color: #888; text-align: center; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>Save-confirmation motion — A/B inspection</h1>
+
+<div>
+  <div class="stage" id="stageA">
+    <div class="panel version-a" id="panelA">
+      <h2>Changes saved</h2>
+      <p>Your preferences are up to date.</p>
+    </div>
+  </div>
+  <div class="label">A — single arrival (panel only)</div>
+</div>
+
+<div>
+  <div class="stage" id="stageB">
+    <div class="panel version-b" id="panelB">
+      <h2>Changes saved</h2>
+      <p>Your preferences are up to date.</p>
+    </div>
+  </div>
+  <div class="label">B — secondary settle (+9.6 px, 75 ms delay, ease-out)</div>
+</div>
+
+<div class="controls">
+  <button onclick="replay()">Replay both</button>
+</div>
+
+<script>
+function replay() {
+  ['panelA','panelB'].forEach(id => {
+    const el = document.getElementById(id);
+    el.style.animation = 'none';
+    const p = el.querySelector('p');
+    if (p) p.style.animation = 'none';
+    void el.offsetWidth; // reflow
+    el.style.animation = '';
+    if (p) p.style.animation = '';
+  });
+}
+</script>
+</body>
+</html>

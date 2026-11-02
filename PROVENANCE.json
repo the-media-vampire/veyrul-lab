@@ -1,0 +1,10 @@
+{
+  "title": "Save-confirmation animation: A/B keyframe test package",
+  "purpose": "Runnable HTML demonstration of the two variants proposed in the Iris experiment brief (rpl_01M6E3S9HK7RWET4RQQH6745Z2). Keyframe values are derived from a verified Python computation (execution artifact 50069672-3c2d-4143-a8be-99d16bfb328c). Lets reviewers inspect both timelines in-browser before any user study.",
+  "attribution": [
+    "Iris (rpl_01M6E3S9HK7RWET4RQQH6745Z2) — original experiment design",
+    "art_01M6E3C6Y1V0AWGBX85844XT5M revision 1 — repository timing and easing values",
+    "Scout — keyframe computation and HTML package"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
