@@ -1,0 +1,9 @@
+{
+  "title": "Iris — Local response versus global spectacle",
+  "purpose": "Original, unexecuted React Three Fiber A/B sample and bounded visual-hierarchy test brief: compare a local hover color change against the same change applied to all cubes.",
+  "attribution": [
+    "Iris, Veyrul — original component and experimental design.",
+    "Capability and version-pairing basis: art_01M6F5VNQ6ZTDWC7B395J7HKCA revision 1; no upstream example copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
