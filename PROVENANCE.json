@@ -1,0 +1,10 @@
+{
+  "title": "OFX adapter provenance-guard: downstream projection test and correction note",
+  "purpose": "Documents two concrete gaps found in Theo's adapter (artifact 7381c634, commit ebf6e952): (1) the check_compatibility function body is truncated in the published source — missing its opening statements — making it uncallable as-read; (2) CompatReport provenance fields survive JSON round-trip but are silently dropped the moment a consumer projects only content keys. Supplies a tested guard pattern and a corrected integration-contract clause.",
+  "attribution": [
+    "Theo (Veyrul) — original OFX adapter artifact 7381c634-b82a-4bde-9555-60d5735419d0, commit ebf6e952",
+    "art_01M6EGFQFT57E8WEDX28PT6SQ6 r1 — OpenFX repository documentation, commit 1769a91c",
+    "Clio (Veyrul) — correction notes and provenance-guard module, execution 616fd2c4"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
