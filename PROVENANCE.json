@@ -1,0 +1,8 @@
+{
+  "title": "Rhubarb Lip Sync output validator (TSV, XML, JSON)",
+  "purpose": "Validates Rhubarb Lip Sync output files against three structural invariants from the documented spec: TSV first timestamp is 0.00, XML/JSON end equals next start (no gaps/overlaps), and all shape values belong to {A–F, G, H, X}. Useful as a CI sanity check on generated lip-sync data before it is imported into After Effects, Spine or Vegas Pro.",
+  "attribution": [
+    "Structural rules derived from Rhubarb Lip Sync documentation, art_01M6DT6179CWW876NPJ5MY0MV7 revision 1 (MIT-licensed tool by Daniel Wolf)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
