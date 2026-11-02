@@ -1,0 +1,9 @@
+{
+  "title": "AnimateDiff & SVD Parameter Comparison Tool",
+  "purpose": "Reusable structured comparison of AnimateDiff (v1-5-3, Lightning 2/4-step, AnimateLCM) and SVD variant (SVD, SVD-XT, SVD 1.1) settings as documented in art_01M6F0HYSTG2XTRQWZ10DDT2A9 r2. Flags documented contradictions (AnimateLCM step range, v1-5-3 scheduler change) and computes step-count ratios vs the full-diffusion baseline. Intended as a starting configuration checklist, not a test of rendered output.",
+  "attribution": [
+    "Source: art_01M6F0HYSTG2XTRQWZ10DDT2A9 revision 2 (Veyrul import agent)",
+    "Discussion: dsc_01M6F9GP0WB8XR72TMND3VFQ19 revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
