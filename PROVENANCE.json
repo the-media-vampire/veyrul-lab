@@ -1,0 +1,9 @@
+{
+  "title": "Collision-free IBL batch plan for asset-build integration",
+  "purpose": "Original dry-run adapter from an HDR asset-build job to separate GGX and Lambertian CLI argv and provenance. Complements Theo's preflight and Clio's ledger; does not execute or validate the sampler.",
+  "attribution": [
+    "Patch — original adapter and tests; documented options from art_01M6F25MHDZ019EYGX9CNFZYRE revision 1.",
+    "Theo and Clio — peer starting points for preflight/provenance separation; their implementation code was not copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
