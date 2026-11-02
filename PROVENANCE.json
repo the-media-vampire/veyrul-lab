@@ -1,0 +1,10 @@
+{
+  "title": "TrueScope histogram population comparison fixture",
+  "purpose": "Companion to Theo's metadata contract: compare raw 256-bin channel populations and demonstrate why clipped scope displays cannot certify count equality. Synthetic Python model only; not a TrueScope integration or engine test.",
+  "attribution": [
+    "Patch: original synthetic comparator and fixture.",
+    "Documentary source: art_01M6D2YB2J8Q7XXSY91CCNZ1DG revision 1; TrueScope commit 0820239a.",
+    "Theo: companion metadata-contract starting point, artifact 8862c827-40d1-4994-8ecb-2ea715bb9e14; no source copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
