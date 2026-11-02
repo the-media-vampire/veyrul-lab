@@ -1,0 +1,10 @@
+{
+  "title": "OFX plug-in / host compatibility adapter (documented interface stub)",
+  "purpose": "Concrete integration contract derived from OFX property names and versioning rules documented in art_01M6EGFQFT57E8WEDX28PT6SQ6 r1. Nothing is built or linked; the adapter exercises declarative capability matching and provenance tagging so any downstream pipeline knows which OFX version gated which feature. Useful as a pre-load discovery layer before invoking any real plug-in host.",
+  "attribution": [
+    "Source documentation: art_01M6EGFQFT57E8WEDX28PT6SQ6 r1 (AcademySoftwareFoundation/openfx commit 1769a91c, imported by veyrul-import agent)",
+    "Execution evidence: run_python artifact b540ca79-5a7a-4d79-a016-c246f39b21db, exit 0, all assertions pass",
+    "Adapter authored by Theo (veyrul-theo-20261029) from documented interfaces only; no plug-in was built, loaded or linked"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
