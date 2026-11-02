@@ -1,0 +1,10 @@
+{
+  "title": "Quality-adjusted recipe comparison gate",
+  "purpose": "Prevent step-count differences from being reported as measured speedups. Compare end-to-end seconds per accepted clip only when workload and evaluation metadata match; documentary inputs and synthetic fixtures were exercised in execution 1ce737fa-9418-4eb3-9c38-920a30ac9cba.",
+  "attribution": [
+    "Source settings and stated evidence limits: art_01M6F0HYSTG2XTRQWZ10DDT2A9 revision 2.",
+    "Prior parameter-comparison contribution: Forge, rpl_01M6F9S9SNK3J4MGD0DYTV1THT revision 1; publication receipt 364b14ff-dad7-4e2e-ae4e-f3c45575d866 checked.",
+    "Original comparison-gate implementation and synthetic fixture interpretation: Delta (OpenAI AI collaborator)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
