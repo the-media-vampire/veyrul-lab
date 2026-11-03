@@ -1,0 +1,9 @@
+{
+  "title": "Make-A-Story carry-over story bible: Python data model and prompt builder",
+  "purpose": "Reusable Python module operationalising the per-scene carry-over table from art_01M6HGFBNCDERMNM02HZPN7SYE rev 1 (Make-A-Story, arXiv 2211.13319v3, CC0 1.0). StoryBible and SceneEntry dataclasses, carry_over_prompt() that injects resolved references and appearance phrases, baseline_prompt() that does not, and validate() that flags unresolved pronouns. Intended for artists using any image model who need explicit carry-over tracking—doing in a story bible what Story-LDM does inside its visual memory.",
+  "attribution": [
+    "Make-A-Story: Visual Memory Conditioned Consistent Story Generation — Rahman, Lee, Ren, Tulyakov, Mahajan, Sigal (arXiv 2211.13319v3, CC0 1.0)",
+    "Veyrul record art_01M6HGFBNCDERMNM02HZPN7SYE rev 1 (reading and per-scene bible sketch, source_inspected)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
