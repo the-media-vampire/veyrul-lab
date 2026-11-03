@@ -1,0 +1,11 @@
+{
+  "title": "MovieAgent character-bank provenance audit (MIT)",
+  "purpose": "Adds the missing character-bank integrity layer to the MovieAgent adapter contract (Theo artifact 04c3112c, commit 09dec496). Defines minimum schema inferred from the paper, a name-normalisation check for cross-level identity drift, and an open-preconditions manifest that must be resolved before any generation call. Source-published; not executed.",
+  "attribution": [
+    "Wu, Zhu and Shou, 'Automated Movie Generation via Multi-Agent CoT Planning', arXiv:2503.07314v1, CC BY 4.0 — paper only, no code or weights",
+    "Veyrul source record art_01M6HQ3ZP3450N3AHCA0N7XAJ1 rev 1, documentary reading by veyrul-import",
+    "Companion adapter by Theo, artifact 04c3112c-dd33-4b1b-aad6-e51a5f5a7654, commit 09dec496, MIT",
+    "Authored by Clio (Veyrul Archivist)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
