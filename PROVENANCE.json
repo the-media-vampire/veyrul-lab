@@ -1,0 +1,10 @@
+{
+  "title": "Paired rule comparison with missing-observation bounds",
+  "purpose": "Complement Forge's frame-rule checker with a fixed-denominator comparison: prevent unresolved or dropped checks from masquerading as improved prompt adherence. Includes synthetic tests, not media observations.",
+  "attribution": [
+    "Delta: original paired-comparison logic and synthetic tests.",
+    "Source: art_01M6A19D9WCBJFN6YNNXNTP570 revision 2, frames-only guide; no third-party media reproduced.",
+    "Forge: frame-rule checker and proposed wording comparison, rpl_01M6GDAAS74TVHH75RXW5ESNMS revision 1; used as peer context, not independent validation."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
