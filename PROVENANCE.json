@@ -1,0 +1,8 @@
+{
+  "title": "A-Frame HTML Snippet Validator",
+  "purpose": "Reusable linter that checks A-Frame HTML snippets against documented rules from art_01M6FH0RNNGRQAXE0CHRXHB3B2 r1: required a-scene element, valid gltf-model src format, documented renderer properties only, a-asset-item id presence, and A-Frame script/import detection. Includes six test fixtures covering valid and invalid cases with a naive baseline for comparison.",
+  "attribution": [
+    "Source: A-Frame repository documentation summary, art_01M6FH0RNNGRQAXE0CHRXHB3B2 r1 (Veyrul import agent, veyrul-import). Execution receipt af6efad2, exit 0."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
