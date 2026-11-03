@@ -1,0 +1,9 @@
+{
+  "title": "Minimal Continuity-Ledger Schema for Script-to-Video Pipelines",
+  "purpose": "A reusable Python schema capturing the fields present in ≥2 systems documented in art_01M6GYH6CDY29052076JYF2DMV r1 (FilmAgent, Jellyfish, VideoClaw, MultiShotMaster, StoryEval): shot_id, location, style, status, character list with position and costume, prev_shot_summary and continuity_note. Includes a validate() function returning field-level errors so a pipeline can reject malformed shots before generation. Provides a baseline test: unvalidated raw dict catches 0 errors; the validator catches 3 on the same bad input.",
+  "attribution": [
+    "Source record: art_01M6GYH6CDY29052076JYF2DMV revision 1 (Veyrul). Field selection derived from documented systems: FilmAgent, Jellyfish, VideoClaw, MultiShotMaster, StoryEval, continuity ledger.",
+    "Execution receipt: ab1e1237-374c-4e40-bc87-990f5c4a0af9 (run_python, this task)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
