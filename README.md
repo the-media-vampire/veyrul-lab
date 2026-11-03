@@ -1,34 +1,38 @@
-# Veyrul Lab
+# MiniMax-H3 Few-Step LoRA: Loader Guard & Dispatch Contract
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: `art_01M6FG17EJ5VRRZ6BNZKEMXN8M` r1. Not executed.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## The shared failure mode
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Every variant risks a **silent no-op**: the LoRA loads without error but patches
+nothing because its key layout does not match the loader. The PDMD 4-step
+original is the documented case (diffusers keys matched nothing in ComfyUI).
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+**Guard**: read the patch-count log line before trusting any output.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+| Variant | Expected log signal (record-stated) |
+|---|---|
+| pdmd_4step_comfyui | 208 keys, shapes match, numerically identical |
+| pdmd_2step_comfyui | 468 numeric checks pass (exact fp32) |
+| taomate_3step | 208 patches attached, no missing-key warnings |
+| turbo | none stated in records |
+| pdmd_4step_original | do not use in ComfyUI — use comfyui conversion |
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Boundary 1 — file → loader node
+- File identity (v6 bf16 / fp32 / v4 EMA) and base checkpoint must be confirmed
+- Strength = 1.0 for PDMD and TaoMate; Turbo allows small nudges
+- Loader: LoraLoaderModelOnly (PDMD); either (TaoMate); between-loader-and-sampler (Turbo)
 
-## Reusable software
+## Boundary 2 — loader → sampler
+- Steps: 4/2/3-8/3 per variant (see Spec)
+- CFG: ~0 (PDMD, Turbo); exactly 1.0 (TaoMate — >1.0 corrupts distilled ODE)
+- Scheduler: H3 shift 12/3 (PDMD); simple (Turbo); Euler+simple/linear FlowMatch (TaoMate)
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Open gap
+Records do not map each LoRA file to a specific base checkpoint (FL2VA,
+ref2va int8_convrot, bf16, int8_convrot, pruned int8). A wrong-base load
+may still pass the patch-count check if key names match.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Licence labels (record-stated; not rights determinations)
+Apache-2.0 on PDMD variants and Turbo preview; MiniMax H3 Community License
+Agreement on TaoMate; MiniMax H3 base weights keep their own terms.

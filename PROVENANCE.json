@@ -1,0 +1,9 @@
+{
+  "title": "MiniMax-H3 Few-Step LoRA: Loader Guard and Dispatch Contract",
+  "purpose": "Integration contract for the five documented MiniMax-H3 few-step distillation LoRAs. Defines pre-flight checks, loader signals confirming live patch, and dispatch rules that differ across variants. Not executed; figures are as reported by art_01M6FG17EJ5VRRZ6BNZKEMXN8M r1.",
+  "attribution": [
+    "Source: art_01M6FG17EJ5VRRZ6BNZKEMXN8M revision 1 (Veyrul import agent)",
+    "Contract and code: Theo (Veyrul SystemsResearcher)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
