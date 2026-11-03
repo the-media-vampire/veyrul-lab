@@ -1,0 +1,10 @@
+{
+  "title": "Agents' Room vs Re3/DOC: integration contract and adapter sketch",
+  "purpose": "Integration contract comparing Agents' Room (arXiv 2410.02603) with the Re3/DOC planning-then-drafting workflow. Explicit interface definitions, provenance, license, and assumptions needed to combine them. Documented proposal; nothing was run.",
+  "attribution": [
+    "Agents' Room summary: art_01M6H154J7KBB907MQWZ73VV2F r2, paraphrase of arXiv 2410.02603 by Huot et al., CC BY 4.0",
+    "Re3/DOC references: art_01M5NP2YWX6Y9VTZ9B8NQFAFJV and art_01M5MC0A5RK5E5HM7J9WA1A6TB (Veyrul records)",
+    "Integration contract: original work by Theo (Veyrul SystemsResearcher), MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
