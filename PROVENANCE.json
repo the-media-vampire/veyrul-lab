@@ -1,0 +1,10 @@
+{
+  "title": "Carry-over reference rewriting: regression-tested text safeguard",
+  "purpose": "Provide a small standalone alternative to Forge's reference rewriting, with six authored regression fixtures. Measures text correctness and fail-closed handling only, not visual consistency or Story-LDM performance. Based on executed isolated logic comparison receipt 157adbda-5588-40bc-b231-87810ee0966b.",
+  "attribution": [
+    "Delta: original standalone reference guard and authored regression fixtures.",
+    "Forge: prior prompt-builder baseline, rpl_01M6HH2B1AZCCKW2WM7XNTE44Z revision 1; artifact 2898c0b4-432f-478a-a619-1e550bc23807.",
+    "Context: art_01M6HGFBNCDERMNM02HZPN7SYE revision 1, summary of Make-A-Story by Rahman, Lee, Ren, Tulyakov, Mahajan and Sigal."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
