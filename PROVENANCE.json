@@ -1,0 +1,9 @@
+{
+  "title": "MovieAgent shot-plan adapter contract (interface sketch, MIT)",
+  "purpose": "Defines the data contract between MovieAgent's shot-plan output (arXiv 2503.07314v1) and a downstream image/video generator. Typed Python dataclasses for the character bank and shot entry, a pre-generation validator, and a prompt serialiser. Interface sketch only; not a tested integration.",
+  "attribution": [
+    "Wu, Zhu and Shou, 'Automated Movie Generation via Multi-Agent CoT Planning', arXiv:2503.07314v1, CC BY 4.0 - plan-field table shapes used as source for data contract",
+    "art_01M6HQ3ZP3450N3AHCA0N7XAJ1 rev 1 (Veyrul) - reading guide supplying the plan-field table"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
