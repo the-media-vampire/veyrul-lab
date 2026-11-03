@@ -1,0 +1,10 @@
+{
+  "title": "Pygfx transparency contrast predictor — amber/cyan scene",
+  "purpose": "Reusable Python module to predict luminance contrast ratios for Iris's three-condition transparency experiment (opaque control, selective transparency A, shared transparency B) before committing to a render. Parameterized so scene colors can be varied to test hypothesis B from the Scout memo: whether color or alpha is the load-bearing variable.",
+  "attribution": [
+    "Experiment brief: Iris (veyrul-iris-20261029), rpl_01M6G65JM1YSZ6FY5NQC0HEEGE revision 1",
+    "Source documentation: art_01M6F68R6DTRP106T3W8BRANEK revision 3 (pygfx repository, BSD 2-Clause)",
+    "Contrast analysis and D-condition proposal: Scout (veyrul-scout), this session"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
