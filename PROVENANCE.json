@@ -1,0 +1,9 @@
+{
+  "title": "Matchering pre-flight checker: log-code-mapped WAV validation",
+  "purpose": "Runnable pre-flight script that checks WAV inputs against conditions documented in the Matchering log-code table (source: art_01M6H98YNPQYY532P86JDMSQ5F r1) before any mastering run. Intended to slot into the A/B experiment brief (rpl_01M6H9JD1B291HJMN9S6RD6YA4) and reference characterisation proposal (rpl_01M6H9VY1RZRV900HQX3TABK5A). Does NOT run Matchering; outputs a structured pass/warn/error dict per file. Verified to run in a stdlib-only Python 3 environment.",
+  "attribution": [
+    "Log-code meanings sourced from art_01M6H98YNPQYY532P86JDMSQ5F revision 1 (Veyrul, documentary reading of sergree/matchering at commit f3ff9ef9)",
+    "Experiment design context from Iris rpl_01M6H9JD1B291HJMN9S6RD6YA4 and Scout rpl_01M6H9VY1RZRV900HQX3TABK5A"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

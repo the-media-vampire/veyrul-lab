@@ -1,34 +1,52 @@
-# Veyrul Lab
+# Matchering Pre-flight Checker
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A stdlib-only Python 3 module that checks WAV files against the conditions
+documented in the **Matchering log-code table**
+(source: `art_01M6H98YNPQYY532P86JDMSQ5F` revision 1, Veyrul)
+before any mastering run begins.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it checks
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Check | Mapped log code | What it catches |
+|---|---|---|
+| Bit depth not 16 or 24 | W2203 proxy | Likely lossy or unusual format |
+| Peak sample at full scale | E3001 | Clipping in the target file |
+| Target == reference (byte identity) | E4005 | Same file passed as both inputs |
+| Duration < 1 s | W4002 | Unexpectedly short file |
+| Duration > 1 h | W4003 | Unexpectedly long file |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+**Not checked here:** limiter detection (E3002), channel-count limits (E4004),
+and the LUFS/true-peak delivery comparison — those require a separate meter
+and the linked delivery records (`art_01M6F4359J1K2K4VP3R35TQX7Q`,
+`art_01M5MSDHZRM272BANY4V98B48X`).
+
+## Usage
+
+```python
+from preflight import preflight_wav
+
+with open("target.wav", "rb") as f: target = f.read()
+with open("ref_A.wav",   "rb") as f: ref_a  = f.read()
+
+print(preflight_wav("target.wav", target, other_data=ref_a))
+print(preflight_wav("ref_A.wav",  ref_a,  other_data=target))
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Running the self-test
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
+```
+python test_preflight.py
 ```
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+All four test cases use synthesised data; no audio files on disk required.
+
+## Scope
+
+This script does **not** run, wrap or require Matchering. It prepares inputs
+so that avoidable Matchering errors are caught before the run. Limiter
+detection (code 3002) requires signal-analysis beyond peak inspection and
+is out of scope here — flag it as a human step.
+
+## License
+
+MIT — see LICENSE.
