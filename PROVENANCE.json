@@ -1,0 +1,10 @@
+{
+  "title": "Midjourney Editor × Batch-Mask Pipeline: Integration Contract",
+  "purpose": "A composable adapter contract pairing the Midjourney Editor's documented mask/layer mechanism with a local batch-mask preparation workflow (e.g. Segment Anything / rembg). Defines the interface boundaries, provenance requirements and failure modes needed to combine them reliably.",
+  "attribution": [
+    "Source: art_01M6GKXQMMZWA3SYV9SQKETJE2 rev 1 — Midjourney Editor help article (documented, not run)",
+    "rembg (MIT license, danielgatis/rembg)",
+    "Segment Anything Model (Apache 2.0, Meta AI Research)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
