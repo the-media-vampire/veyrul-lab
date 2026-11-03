@@ -1,0 +1,23 @@
+{
+  "_comment": "Illustrative workflow fragment only — not a runnable ComfyUI JSON. Shows node dependency order per README statements (art_01M6FFSA60BEJ8YJHKARKE2QB3 r1). Not executed or validated.",
+  "dispatcher_instance": {
+    "nodes": [
+      {"id": "1", "type": "QueueSimple", "pack": "ComfyUI_NetDist"},
+      {"id": "2", "type": "FetchRemote", "pack": "ComfyUI_NetDist", "note": "no preview/progress bar per README"}
+    ]
+  },
+  "worker_instance": {
+    "nodes": [
+      {"id": "10", "type": "LoadDiffusionModel", "pack": "ComfyUI core"},
+      {"id": "11", "type": "MagCache", "pack": "ComfyUI-MagCache",
+        "settings": ["magcache_thresh", "retention_ratio", "magcache_K"],
+        "note": "values are per-model; see README table",
+        "connects_after": "LoadDiffusionModel or LoadLoRA"},
+      {"id": "12", "type": "CompileModel", "pack": "ComfyUI-MagCache",
+        "note": "first run slow; no timeout documented in NetDist README",
+        "connects_after": "MagCache or LoadDiffusionModel"},
+      {"id": "13", "type": "Sampler", "pack": "ComfyUI core"},
+      {"id": "14", "type": "SaveImage", "pack": "ComfyUI core"}
+    ]
+  }
+}

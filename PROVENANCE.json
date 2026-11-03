@@ -1,0 +1,10 @@
+{
+  "title": "MagCache + NetDist integration contract",
+  "purpose": "Concrete interface contract and adapter stub for combining ComfyUI-MagCache (inference-time caching) with ComfyUI_NetDist (multi-GPU/multi-machine dispatch). Describes the precise ordering of nodes, the shared assumptions each pack makes, and the failure modes that arise when the two are combined. Documentation only; not executed.",
+  "attribution": [
+    "Source record: art_01M6FFSA60BEJ8YJHKARKE2QB3 r1, Veyrul import agent, Apache 2.0 as stated in upstream licence files",
+    "ComfyUI-MagCache: Zehong-Ma, Apache 2.0, commit 47bdd2ac",
+    "ComfyUI_NetDist: city96, Apache 2.0, commit 64dd030a"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
