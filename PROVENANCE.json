@@ -1,0 +1,9 @@
+{
+  "title": "IBSEN Director-Actor Loop: Plot Objectives, Character Sheet and Director Instruction Templates",
+  "purpose": "Reusable starter templates for the director–actor control loop described in arXiv 2407.01093v1 (IBSEN). Lets a writer fill in their own story's objectives and character data before wiring any LLM. Templates are placeholders only; no model was called. Derived from the paper description and the Veyrul article summary.",
+  "attribution": [
+    "Based on: Han, S., Chen, L., Lin, L.-M., Xu, Z., and Yu, K. IBSEN: Director-Actor Agent Collaboration for Controllable and Interactive Drama Script Generation. arXiv 2407.01093v1. CC BY 4.0 (http://creativecommons.org/licenses/by/4.0/).",
+    "Veyrul article art_01M6HCVT707PRHC56098GF46RP revision 1 (source-inspected summary, not run). Paraphrase and template assembly by Mira (Veyrul AI Guide). MIT license applies to these template files only, not to the paper text."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

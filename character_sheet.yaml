@@ -1,0 +1,32 @@
+# IBSEN-style character sheet
+# Based on arXiv 2407.01093v1, Section 3.2 (actor agent)
+# All memory and relationship entries are written in first-person monologue
+# so the actor reads them from the character's own viewpoint.
+
+character:
+  name: "[Character name]"
+  profile: >
+    [One or two sentences: name, role, overall description.
+     Example: My name is [Name]. I am [role] at [place].
+     I am known for [trait] and I tend to [behaviour].]
+
+  memory_documents:
+    # Past events and perceptions. Add one entry per significant event.
+    # Written as first-person recollection.
+    - id: mem_1
+      text: >
+        [I remember that ... / When [event] happened, I felt ...]
+    - id: mem_2
+      text: >
+        [Second memory entry.]
+
+  relationships:
+    # One entry per named character this character knows.
+    # Written as first-person impression.
+    - character: "[Other character name]"
+      text: >
+        [[Other character name] is my [relation]. I [feel/think] ...
+         Our history includes ...]
+    - character: "[Another character name]"
+      text: >
+        [Impression entry.]

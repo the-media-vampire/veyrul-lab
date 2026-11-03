@@ -1,0 +1,41 @@
+# IBSEN-style director instruction to an actor
+# Based on arXiv 2407.01093v1, Section 3.1
+# The director sends this to each actor before their turn.
+# Fill in the bracketed placeholders at runtime.
+#
+# The paper notes: giving the actor the full script line verbatim causes copying;
+# giving keywords and a synopsis instead balances actor freedom and plot control.
+
+--- DIRECTOR INSTRUCTION ---
+Current story outline:
+[One or two sentences summarising the current objective and where the scene stands.
+ Example: Hedda has just entered the room and the group is tense about the announcement.]
+
+Upcoming script line (synopsis):
+[One sentence describing what your character is about to do or say in general terms.
+ Example: Your character raises a pointed question to redirect suspicion.]
+
+Keywords for how to play this turn:
+[keyword_1], [keyword_2], [keyword_3]
+(Tie these to the plot objective and the character profile.)
+
+Your character: [Character name]
+Current objective: [Objective sentence from plot_objectives.yaml]
+---
+
+# OBJECTIVE CHECK PROMPT (run after each dialogue turn from turn 5 onward)
+# Director sends the dialogue history and asks:
+
+--- OBJECTIVE CHECK ---
+Dialogue history so far:
+[Paste the last N turns of dialogue here.]
+
+Current objective: [Objective sentence]
+
+Has this objective been completed based on the dialogue above?
+Reply with YES or NO and one sentence of reasoning.
+---
+# If YES: advance to next objective and start a new outline.
+# If NO:  continue using the current script instruction for the next turn.
+# If still incomplete after 9 turns: mark the objective as forcibly completed
+#   and move to the next one (paper evaluation rule).

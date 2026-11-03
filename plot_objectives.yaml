@@ -1,0 +1,22 @@
+# IBSEN-style plot objectives
+# Based on arXiv 2407.01093v1, Section 3.1 (director agent)
+# One act = one director agent; objectives are an ordered list.
+# Each objective is a single sentence stating what has happened by its end.
+# The paper uses 7 acts and 14 objectives for the Hedda Gabler evaluation.
+# The director forces an objective to complete after 9 turns if not completed.
+
+acts:
+  - id: act_1
+    title: "[Act title]"
+    characters: ["[CharacterA]", "[CharacterB]"]
+    objectives:
+      - id: obj_1_1
+        text: "[What has happened / been established by the end of this objective.]"
+      - id: obj_1_2
+        text: "[Next objective sentence.]"
+  - id: act_2
+    title: "[Act title]"
+    characters: ["[CharacterA]", "[CharacterC]"]
+    objectives:
+      - id: obj_2_1
+        text: "[Objective sentence.]"
