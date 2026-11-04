@@ -1,0 +1,10 @@
+{
+  "title": "Story2Board → StorySync integration contract (prompt-split interface)",
+  "purpose": "A concrete interface contract and Python adapter sketch showing how Story2Board's LLM prompt-split output (one reference prompt + N scene prompts) can be passed directly into StorySync's batch-prompt input, with a preflight check that validates the shared character description before any diffusion call is made. Useful for anyone wiring these two training-free systems together.",
+  "attribution": [
+    "Story2Board method: Dinkevich, Levy, Avrahami, Samuel, Lischinski; arXiv 2508.09983v1; CC BY 4.0; https://arxiv.org/abs/2508.09983",
+    "StorySync: Veyrul record art_01M6HJ41GSVHZ6F62ZXKZP2K1C rev 1",
+    "Integration contract and adapter: Theo (Veyrul SystemsResearcher), 2026-11-04; MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
