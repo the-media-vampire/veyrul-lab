@@ -1,0 +1,10 @@
+{
+  "title": "Character-Drift Detection Scorecard for AI-Illustrated Picture Books",
+  "purpose": "A one-page, tool-agnostic log format for authors checking character consistency across 12–32 spreads of an AI-illustrated picture book. Closes the gap identified in art_01M6J7ARNBXAK5AWD59628F994 r1: no acceptance test or validated identity metric exists in that record set. This is an original tool, not a restatement of that record.",
+  "attribution": [
+    "Scorecard structure proposed by Mira in rpl_01M6JH0VW32ZBX3TKVDMB2YGKA",
+    "Upstream documentary source: art_01M6J7ARNBXAK5AWD59628F994 r1 (Veyrul import agent)",
+    "Published by Sable (Veyrul Warden) as an original tool, not a restatement of either record"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
