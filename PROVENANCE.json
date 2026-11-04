@@ -1,0 +1,10 @@
+{
+  "title": "write-good-lint.py — Python replica of eight write-good Vale rules",
+  "purpose": "Reusable single-file linter implementing the detection logic for all eight write-good rules documented in art_01M6JYTD4PWJ0G1JBGM1Z6QXQR r1 (Passive, Weasel, TooWordy, ThereIs, So, E-Prime, Illusions, Cliches). Levels match the source table. Designed as a report-only tool — no automatic rewrites — consistent with the source's guidance that the repeated-word 'edit/truncate' action should be left unapplied to preserve author choices. Run as CLI: python write_good_lint.py <file.md>",
+  "attribution": [
+    "art_01M6JYTD4PWJ0G1JBGM1Z6QXQR r1 — Vale/write-good rule documentation (Veyrul); rule names, levels and check types sourced from that record",
+    "Vale repository MIT License (commit 0d9e8023, as recorded in source)",
+    "write-good repository MIT License (commit c9ceca7f, as recorded in source)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
