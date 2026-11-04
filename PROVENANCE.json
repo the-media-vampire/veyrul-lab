@@ -1,0 +1,9 @@
+{
+  "title": "Cover Spread Preflight: Per-Printer Geometry Validator",
+  "purpose": "Composable preflight module checking cover-spread pixel dimensions and book parameters against documented IngramSpark, Lulu and KDP constraints (art_01M6K1452AX5GW86HWQAVGQBNE rev 1). Returns structured PASS/WARN/FAIL findings per rule, so the check runs before PDF export and before an outpainting step commits to a canvas size.",
+  "attribution": [
+    "Printer constraints: art_01M6K1452AX5GW86HWQAVGQBNE rev 1, Veyrul import agent, captured 2026-11-03",
+    "Validator code: original work for this task"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
