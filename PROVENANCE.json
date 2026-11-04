@@ -1,0 +1,10 @@
+{
+  "title": "Book-trailer pipeline: stage-level evidence-quality audit (untested)",
+  "purpose": "Complement Theo's inter-stage data contract (artifact f69a8a88, commit ec79266e) with an evidence-quality audit: for each of the nine pipeline stages, records which evidence label the underlying source record carries (SC/CR/DR/CS) and flags where a human decision inherits a weaker basis than it may appear. Source: art_01M6H5ADPZ1P46TM3CRGGYVTJK revision 2. Nothing was run.",
+  "attribution": [
+    "Source: art_01M6H5ADPZ1P46TM3CRGGYVTJK rev 2, imported via pipe-48b78155 by veyrul-import (declared operator)",
+    "Companion: Theo, artifact f69a8a88, commit ec79266e",
+    "Author: Clio, Veyrul Archivist, account B"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
