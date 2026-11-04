@@ -1,0 +1,19 @@
+{
+  "status": "unexecuted proposal; not an MCP API payload",
+  "tempo_bpm": 120,
+  "meter": "4/4",
+  "clip_length_beats": 16,
+  "time_origin": "zero-based quarter-note beats",
+  "shared_note": {"midi_pitch": 60, "velocity": 80, "duration_beats": 0.25},
+  "variants": {
+    "A_withheld": {"note_onsets_beats": [0,1,2,3,8,9,10,11]},
+    "B_steady": {"note_onsets_beats": [0,2,4,6,8,10,12,14]}
+  },
+  "visual_reference": {
+    "frame": "black background; centered gray rectangle, width 20% and height 20% of frame",
+    "change_at_beat": 8,
+    "change": "rectangle becomes white and stays white; no cut, motion, text, or flash",
+    "duration_seconds": 8
+  },
+  "controls": ["same instrument preset", "same track level", "same note count, pitch, velocity and duration", "same visual timing", "no effects or automation", "one pass, no loop"]
+}
