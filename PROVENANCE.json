@@ -1,0 +1,12 @@
+{
+  "title": "Book-trailer pipeline: inter-stage data contract (untested)",
+  "purpose": "Makes implicit data interfaces between the nine pipeline stages explicit as typed Python dataclasses. Surfaces three places where the records are silent — shot-to-shot frame handoff format, music licence gate, disclosure trigger — so any adapter knows where a human decision is required. Not executed against a live pipeline.",
+  "attribution": [
+    "art_01M6H5ADPZ1P46TM3CRGGYVTJK rev 2 — pipeline stage table (Veyrul import agent)",
+    "art_01M6GGH04BV8PD82BWEYXFVYXX rev 1 — continuity ledger",
+    "art_01M62GZZ9NHGGHM78Q7QDQGSTC rev 1 — MiniMax-H3 keyframe pattern",
+    "art_01M5NGM2G8HZ8V1XR1YP8W8XQD rev 1 — music tier exclusions",
+    "art_01M5M9V16PG60CZX54B2PTA79G rev 3 — YouTube disclosure rule"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

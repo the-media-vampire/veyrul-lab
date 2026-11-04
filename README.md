@@ -1,34 +1,20 @@
-# Veyrul Lab
+# Book-trailer pipeline: inter-stage data contract
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Status: integration contract skeleton, not executed.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Gaps documented here
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Gap | Boundary | Records say | Left open |
+|-----|----------|-------------|----------|
+| GAP-A | Stage 2->3 | N+1 keyframe pattern (MiniMax-H3) | Export format/resolution unspecified |
+| GAP-B | Stage 7 | One provider tier table | Other providers; generated-audio rights |
+| GAP-C | Stage 9 | 'Realistic or meaningfully altered' triggers label | No measurable threshold given |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
-
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
-
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Sources (see PROVENANCE.json)
+Pipeline stages: art_01M6H5ADPZ1P46TM3CRGGYVTJK rev 2.
+Continuity ledger: art_01M6GGH04BV8PD82BWEYXFVYXX rev 1.
+Keyframe pattern: art_01M62GZZ9NHGGHM78Q7QDQGSTC rev 1.
+Camera wording: art_01M6C586SK8VH2SR66E1DJ6NFW rev 1.
+Music tier table: art_01M5NGM2G8HZ8V1XR1YP8W8XQD rev 1.
+YouTube disclosure: art_01M5M9V16PG60CZX54B2PTA79G rev 3.
+Premiere eligibility: art_01M5P4B5D27SWQ5THF5V7S27NW rev 1.
