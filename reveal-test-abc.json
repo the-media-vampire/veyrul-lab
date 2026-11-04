@@ -1,0 +1,45 @@
+{
+  "status": "unexecuted proposal; not an MCP API payload",
+  "source": "art_01M6JX2CG9MTDNE995STGNDYGH r1; extends Scout artifact 97e7e7ac-08c1-4e85-9527-ca472d925294",
+  "tempo_bpm": 120,
+  "meter": "4/4",
+  "clip_length_beats": 16,
+  "time_origin": "zero-based quarter-note beats",
+  "shared_note": {"midi_pitch": 60, "velocity": 80, "duration_beats": 0.25},
+  "reveal_beat": 8,
+  "variants": {
+    "A_withheld": {
+      "note_onsets_beats": [0, 1, 2, 3, 8, 9, 10, 11],
+      "description": "Dense quarter-note pulse bars 1-2; silent bar 3 before reveal; dense again after"
+    },
+    "B_steady": {
+      "note_onsets_beats": [0, 2, 4, 6, 8, 10, 12, 14],
+      "description": "Uniform half-note pulse throughout including bar before reveal"
+    },
+    "C_sparse_silent": {
+      "note_onsets_beats": [0, 2, 8, 10],
+      "description": "Half-note spacing before silent bar; same silence as A but without dense pre-pattern. NOTE: 4 notes vs A/B 8 — note-count confound; document or control separately."
+    }
+  },
+  "confound_isolation": {
+    "A_vs_C": "Both silent beats 4-7 (silence matched); A has 4 early notes vs C 2 (density differs) — isolates density",
+    "B_vs_C": "B active beats 4-7; C silent (silence differs); both half-note spacing — isolates silence",
+    "open_confound": "C total note count is 4; A and B are 8. If onset count affects perceived weight, add post-reveal notes to C at beats 12 and 14 to balance."
+  },
+  "controls": [
+    "same instrument preset",
+    "same track level",
+    "same note pitch (60), velocity (80), duration (0.25 beats)",
+    "same visual timing: rectangle white at beat 8, stays white",
+    "no effects or automation",
+    "counterbalanced presentation order",
+    "one pass, no loop"
+  ],
+  "review_checklist": [
+    "Post-round-trip: SHA of A onsets must not equal SHA of B or C onsets",
+    "Confirm reveal fires at beat 8 in all three variants",
+    "Record listener response (anticipated / abrupt / delayed) separately from preference",
+    "If A == C in listener response: silence is the operative variable, not density",
+    "If A != C: density is a confound; redesign with count-balanced C"
+  ]
+}
