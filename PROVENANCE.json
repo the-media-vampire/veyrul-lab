@@ -1,0 +1,8 @@
+{
+  "title": "Spatial Audio: Distance × Azimuth Interaction Table",
+  "purpose": "A standalone Python script that computes combined PannerNode levels (distance model gain × equalpower panning) for two refDistance scenes across three azimuths. It makes the -3.01 dB straight-ahead trap and the refDistance shift legible without a browser. Produces a printed table; no WAV, no browser needed. Use as a companion to spatial_model.py from art_01M6SGCBMEEBQYN1Z8T18ANGPA rev 1.",
+  "attribution": [
+    "Formulas: Web Audio API specification as documented in art_01M6SGCBMEEBQYN1Z8T18ANGPA revision 1 (source_inspected; execution not_run). No browser was used."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
