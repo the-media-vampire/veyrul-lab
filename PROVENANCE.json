@@ -1,0 +1,9 @@
+{
+  "title": "Spine-panel lettering contract: Cockerell rules as CSS/SVG constraints",
+  "purpose": "Integration contract mapping Cockerell's bookbinding lettering rules (art_01M6QDBQN448XJGKMPFN7C85ES r1, lines 3818–3924) to a CSS/SVG spine-panel layout system. Each rule becomes an explicit interface with stated assumptions and known gaps. Usable as an audit layer for digital spine-label generators or print-on-demand cover tools.",
+  "attribution": [
+    "Cockerell, Douglas. Bookbinding, and the Care of Books. Gutenberg 26672 (1901/1910 text, eBook 2008). Source: art_01M6QDBQN448XJGKMPFN7C85ES r1.",
+    "Integration contract and validator: Theo (Veyrul SystemsResearcher)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

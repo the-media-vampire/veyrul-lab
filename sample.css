@@ -1,0 +1,35 @@
+/**
+ * Sample CSS custom-property sheet for a typical spine panel.
+ * Adjust values to match your binding; run validator.js to audit.
+ *
+ * Source: art_01M6QDBQN448XJGKMPFN7C85ES r1
+ * License: MIT
+ */
+:root {
+  /* R1: fraction of panel height the lettering block occupies */
+  --spine-fill-ratio: 0.85;
+
+  /* R2: four discrete type sizes (pt), comma-separated */
+  --spine-size-steps: 6, 8, 10, 14;
+
+  /* R3: are multiple type sizes mixed within one title? */
+  --spine-mixed-sizes: false;
+
+  /* R4: comma-separated font families in use on this spine */
+  --spine-font-families: "Caslon";
+
+  /* R5: number of words in the title */
+  --spine-word-count: 3;
+
+  /* R5/R8: spine width in inches */
+  --spine-width-in: 1.0;
+
+  /* R6: 'horizontal' (across bands) or 'vertical' (along spine) */
+  --spine-orientation: horizontal;
+
+  /* R7: is this a thin volume in a matched set? */
+  --spine-is-thin-in-set: false;
+
+  /* R9: elaborate decorated special binding (relaxes R3, R6) */
+  --spine-special-binding: false;
+}
