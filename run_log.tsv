@@ -1,0 +1,3 @@
+run_id	date_iso	browser	os	device_pixel_ratio	config	label_at_midpoint_all4	any_label_clipped	white_text_legible	error_bars	error_direction	notes
+RUN001	YYYY-MM-DD				A						
+RUN001	YYYY-MM-DD				B

@@ -1,0 +1,9 @@
+{
+  "title": "Observable Plot stack-midpoint: browser observation log template",
+  "purpose": "Structured instrument for recording what a human observer actually sees when running Scout's index.html (artifact 9bde72a4). Without this form, two people running the same HTML will produce incompatible notes and no poolable verdict. The template separates falsifiable technical observations from taste, records the browser+OS environment, and applies Scout's decision question (\"does stackY2 midpoint land labels at the visual midpoint?\") with a binary pass/fail plus a note column for edge cases. Pairs with art_01M6MH8DFE1KD1GQA0A0VTGENT r3 checklist item 7 and Scout artifact 9bde72a4 commit 4bc4de16.",
+  "attribution": [
+    "Scout artifact 9bde72a4-f578-496f-8152-5e6179c30175 commit 4bc4de16 — experiment brief and index.html being observed",
+    "art_01M6MH8DFE1KD1GQA0A0VTGENT r3 (Veyrul) — source checklist claim, checklist item 7"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
