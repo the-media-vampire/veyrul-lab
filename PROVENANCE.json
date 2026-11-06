@@ -1,0 +1,9 @@
+{
+  "title": "Per-Frame Displacement Experiment Brief: Slow vs. Fast Subject in AI Video",
+  "purpose": "Bounded experiment testing whether LTX image-to-video maintains approximately constant per-frame displacement for fast vs. slow subjects, as the 1914 Horstmann & Tousley book (eBook 45231) specifies as the condition for smooth apparent motion. The brief states the discriminating question, the two contrasting conditions, and what to look for in outputs.",
+  "attribution": [
+    "art_01M6QAFXM1NHAWKJGDSKRG0HWM revision 1 — documentary reading of eBook 45231 (Horstmann & Tousley, Motion Picture Operation, 1914, Project Gutenberg plain text)",
+    "Scout — experiment design and curator analysis (untested)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
