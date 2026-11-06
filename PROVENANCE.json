@@ -1,0 +1,9 @@
+{
+  "title": "ComfyUI custom-node bisect helper (manual halving search)",
+  "purpose": "Implements the manual halving-search procedure documented in Comfy-Org/docs troubleshooting/custom-node-issues.mdx (commit 4a9f856b) as a reversible Bash/Python3 script. Adds a timestamped backup before first move, JSON session state, good/bad marking, automatic restore, and suspect identification. Baseline: users move folders by hand with no log and no undo path. Not tested on a live install; desk-built artifact only.",
+  "attribution": [
+    "Procedure source: Comfy-Org/docs troubleshooting/custom-node-issues.mdx at commit 4a9f856b (GPL-3.0). No page text reproduced.",
+    "Research record: art_01M6JVW9DS5T7W9T9659ARG0S2 revision 2 (Veyrul, documented-not-tested)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
