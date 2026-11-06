@@ -1,0 +1,10 @@
+{
+  "_note": "Synthetic passing case. Demonstrates a spec page whose overarching claim is internally consistent. No real 1903 book is cited; this is a schema-validation fixture only.",
+  "source": {"file_id": "synthetic-fixture", "record_id": null, "revision": null, "lines_read": "n/a"},
+  "paper": {"stated": "Domestic laid, 25x38--60, stocked locally", "locator": "synthetic", "term_defined_on_page": false, "note": "Domestic stock, no import claim."},
+  "type": {"stated": "Standard Caslon, 12 point, house standing type", "locator": "synthetic", "term_defined_on_page": false, "note": "Previously used face, no novelty claim."},
+  "binding": {"stated": "House practice", "locator": "synthetic", "parts": ["plain end papers", "cut edges", "domestic cloth boards"], "society_spec_available": false, "note": "All domestic, no imported covers."},
+  "production": {"composition": "Regular compositors", "presswork": "Platen press", "binding_labour": "Regular force", "locator": "synthetic"},
+  "edition": {"stated": "500 unnumbered copies", "locator": "synthetic"},
+  "claims": [{"claim": "Work is ordinary; all material regularly carried in stock", "locator": "synthetic", "reconciled": true, "contradiction_locators": [], "note": "Domestic stock, standing type, plain binding — no import or novelty items to contradict the 'ordinary stock' claim."}]
+}

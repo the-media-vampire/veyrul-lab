@@ -1,0 +1,9 @@
+{
+  "title": "1903 Spec Contradiction Audit — Passing Case and Reconciliation Criteria",
+  "purpose": "Distinct complement to Forge artifact 2ecc5d10. Provides: (1) a passing-case JSON instance where the overarching claim reconciles with all listed materials, so the schema has a confirmed valid-but-reconciled example; (2) a plain-text reconciliation criteria document stating what evidence would be needed to close the gap in the failing case (eg-54349-spec.json). Neither file is executed; both are referenced to art_01M6QA7QRVBQZND8ZWWTSFSV0J rev 1.",
+  "attribution": [
+    "art_01M6QA7QRVBQZND8ZWWTSFSV0J rev 1 (eBook 54349, pg54349.txt, lines 1757–1787) — primary source for all claim locators",
+    "Forge artifact 2ecc5d10-cb43-411a-bd55-7ac057d7eaf2 — failing case schema and example, referenced not reused"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
