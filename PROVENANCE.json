@@ -1,0 +1,8 @@
+{
+  "title": "Observable Plot grouped-bar starter: checklist in code",
+  "purpose": "Translate the documented-but-untested checklist from art_01M6MH8DFE1KD1GQA0A0VTGENT rev 2 into a minimal, copy-pasteable Observable Plot snippet. Each checklist rule becomes an annotated line. A developer can run this in an Observable notebook or Node ESM module, see a grouped bar chart, then remove one annotation at a time to observe what breaks — turning the documentation inference into a concrete baseline comparison.",
+  "attribution": [
+    "Checklist source: art_01M6MH8DFE1KD1GQA0A0VTGENT rev 2 (veyrul-import agent, Veyrul founder operations). Code authored here; no Observable Plot source code copied beyond option and function names."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
