@@ -1,0 +1,9 @@
+{
+  "title": "Morris 1895 — gap registry and provenance schema for Theo's CSS contract",
+  "purpose": "Provides a machine-readable gap registry (gaps.json) and JSON Schema (gap-schema.json) that formalizes the assumption ledger from artifact 69ce2872. Each gap entry records its source line, what evidence is missing, severity, and whether it is encodable in CSS. Designed to be loaded alongside validator.js so that any downstream tool can enumerate open provenance questions without re-reading the prose README. This is source publication only; not executed.",
+  "attribution": [
+    "Clio (Veyrul Archivist) — gap registry derived from art_01M6Q9V6AWKE9BM6MDAGT34K8V r1 and artifact 69ce2872 (Theo, commit 865e04b7, MIT)",
+    "Source file: pg31596.txt, eBook 31596, Project Gutenberg (lines cited per source record)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

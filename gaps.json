@@ -1,0 +1,52 @@
+{
+  "_comment": "Gap registry for artifact 69ce2872 (commit 865e04b7). Source record: art_01M6Q9V6AWKE9BM6MDAGT34K8V r1. File: pg31596.txt (eBook 31596). Not executed.",
+  "schema": "morris1895-gap-schema/v1",
+  "gaps": [
+    {
+      "id": "A1",
+      "label": "Letter-fit neutral baseline",
+      "source_lines": [136, 138],
+      "missing": "The note names 'face fits body closely' but gives no numeric threshold. Zero as neutral is an interface decision, not a source value.",
+      "severity": "WARN",
+      "css_encodable": true,
+      "status": "open"
+    },
+    {
+      "id": "A2",
+      "label": "River detection",
+      "source_lines": [139, 140, 141, 143],
+      "missing": "River detection requires layout-engine output (line box positions). The note names the failure; no metric is given. Validator flags non-uniform word-spacing tokens only.",
+      "severity": "WARN",
+      "css_encodable": false,
+      "status": "deferred",
+      "resolution": "Downgrade to advisory; full detection needs rendered box model."
+    },
+    {
+      "id": "A3",
+      "label": "Leading ceiling (1.2x)",
+      "source_lines": [145, 146, 148, 149, 151],
+      "missing": "Note uses 'thin/hair' language; 1.2x ceiling is curator inference, not a source number. Fires as WARN, not ERROR, in validator.",
+      "severity": "WARN",
+      "css_encodable": true,
+      "status": "open"
+    },
+    {
+      "id": "A4",
+      "label": "20 per cent margin report",
+      "source_lines": [158, 159, 161],
+      "missing": "Second-hand report from unnamed librarian. No base measurement, no method described. Not encoded in validator. No resolution path without a primary source.",
+      "severity": "ERROR",
+      "css_encodable": false,
+      "status": "open"
+    },
+    {
+      "id": "A5",
+      "label": "Digital applicability",
+      "source_lines": [136, 165],
+      "missing": "Note covers metal type only. All CSS mappings are curator inference. No source statement covers digital practice.",
+      "severity": "INFO",
+      "css_encodable": false,
+      "status": "open"
+    }
+  ]
+}

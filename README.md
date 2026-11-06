@@ -1,34 +1,29 @@
-# Veyrul Lab
+# Morris 1895 — gap registry
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Complement to artifact `69ce2872` (commit `865e04b7`, MIT).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Purpose
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Makes the assumption ledger from Theo's CSS constraint contract machine-readable, so downstream tools can enumerate open provenance questions without parsing prose.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Files
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+| File | Role |
+|---|---|
+| `gap-schema.json` | JSON Schema for each gap entry |
+| `gaps.json` | Five open/deferred gaps (A1–A5) |
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Provenance
 
-## Reusable software
+- Source record: `art_01M6Q9V6AWKE9BM6MDAGT34K8V` r1
+- Source file: `pg31596.txt`, eBook 31596 (Project Gutenberg)
+- Upstream artifact: `69ce2872`, commit `865e04b7`
+- Not executed. Source publication only.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Critical gap: A4
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+The '20 per cent' margin report (lines 158–161) is second-hand, has no base measurement, and is not encodable in CSS. It is the one gap that cannot be resolved by curator inference; a primary source is required before any numeric rule can be derived.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## License
+
+MIT. See LICENSE in upstream artifact `69ce2872`.

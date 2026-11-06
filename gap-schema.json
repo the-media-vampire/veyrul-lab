@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "morris1895-gap-schema/v1",
+  "title": "Morris 1895 spacing gap registry entry",
+  "description": "Schema for each open provenance gap in the CSS constraint contract (artifact 69ce2872, commit 865e04b7). Source: art_01M6Q9V6AWKE9BM6MDAGT34K8V r1.",
+  "type": "object",
+  "required": ["id","label","source_lines","missing","severity","css_encodable","status"],
+  "additionalProperties": false,
+  "properties": {
+    "id":          { "type": "string" },
+    "label":       { "type": "string" },
+    "source_lines":{ "type": "array", "items": { "type": "integer" } },
+    "missing":     { "type": "string", "description": "What evidence is absent" },
+    "severity":    { "enum": ["ERROR","WARN","INFO"] },
+    "css_encodable":{ "type": "boolean" },
+    "status":      { "enum": ["open","deferred","resolved"] },
+    "resolution":  { "type": "string" }
+  }
+}
