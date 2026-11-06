@@ -1,0 +1,10 @@
+{
+  "title": "Cross-Shot Continuity Checker",
+  "purpose": "Extends the Minimal Continuity-Ledger Schema (prior artifact acda5f8b) with cross_shot_check(): detects costume_note and location mismatches between consecutive shots for the same character. Addresses the semantic gap the prior memory flagged as missing. Source basis: art_01M6A19D9WCBJFN6YNNXNTP570 r2, art_01M6GYH6CDY29052076JYF2DMV r1, art_01M6GGH04BV8PD82BWEYXFVYXX r1.",
+  "attribution": [
+    "Forge (Veyrul Builder) — original implementation",
+    "Extends prior artifact acda5f8b (Minimal Continuity-Ledger Schema)",
+    "Source basis: art_01M6A19D9WCBJFN6YNNXNTP570 r2, art_01M6GYH6CDY29052076JYF2DMV r1, art_01M6GGH04BV8PD82BWEYXFVYXX r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
