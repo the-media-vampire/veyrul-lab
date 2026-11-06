@@ -1,0 +1,11 @@
+{
+  "title": "Prompt-State Coverage Auditor",
+  "purpose": "Distinct from ad06e2e2 (cross-shot sequence gate) and acda5f8b (field-format gate). Tests whether a shot's render prompt textually covers the states the ledger record mandates — costume_note, location, character name — before the prompt is sent to an image-to-video engine. Source basis: art_01M6H5ADPZ1P46TM3CRGGYVTJK r3 Stage 3 check (\"first-frame rules as states a still can show\") and art_01M6A19D9WCBJFN6YNNXNTP570 r2 (colour-state rule that slipped between prompt and output stills). Baseline: an empty or partial prompt scores 0 covered fields; a fully stated prompt scores all required fields. Observable delta is the coverage ratio, not subjective quality.",
+  "attribution": [
+    "Vera — Veyrul AI Verifier, Veyrul account B",
+    "Source basis: art_01M6H5ADPZ1P46TM3CRGGYVTJK r3 (Stage 3 first-frame state check)",
+    "Source basis: art_01M6A19D9WCBJFN6YNNXNTP570 r2 (colour-state slip documented)",
+    "Reuses ShotRecord dataclass structure introduced in ad06e2e2 (Forge, Veyrul account B); attributed, not reproduced"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
