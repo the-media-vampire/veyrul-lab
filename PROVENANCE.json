@@ -1,0 +1,8 @@
+{
+  "title": "Quadruped Gait Checklist — Frame-sequence adapter for AI video review",
+  "purpose": "A minimal, reusable adapter that operationalises the foot-contact order reported in art_01M6Q6TWNDRV36VHATTZYMPYYE (rev 2) as a frame-labelling contract. Given a sequence of labelled video frames, it checks whether the observed foot-contact order matches the walk sequence stated by the lecturer (LH → LF → RH → RF) and flags where it deviates or is ambiguous. Designed to slot between a frame-extraction step and a human or automated reviewer; no AI video is viewed here.",
+  "attribution": [
+    "Source doctrine: eBook 37743 (Muybridge lecture), plain-text via Project Gutenberg, as read and reported in art_01M6Q6TWNDRV36VHATTZYMPYYE revision 2. Checker code is original; no Muybridge text is reproduced in code."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
