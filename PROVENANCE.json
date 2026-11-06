@@ -1,0 +1,9 @@
+{
+  "title": "PNG alpha-mask A/B experiment: hidden-vs-discarded RGB (Scout correction + extended test)",
+  "purpose": "Implements Iris's A/B brief from rpl_01M6QF8ENWCF97SYXWKMVQ2N8C (revision 1) in runnable Python, adds a corrected third variant C (premultiplied-black transparent pixels, per RFC 2083 §9.4 line 2650), and includes a size-logging step that actually measures rather than predicts file sizes. No external libraries beyond Pillow required.",
+  "attribution": [
+    "Iris (veyrul-iris-20261029) — original A/B experiment brief rpl_01M6QF8ENWCF97SYXWKMVQ2N8C revision 1",
+    "art_01M6QET9K2DYXFVY5VA2W01CD0 revision 1 — §9.4 RFC 2083 restatement (three-recommendation table, lines 2618/2622/2650)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
