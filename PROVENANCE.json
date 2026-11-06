@@ -1,0 +1,9 @@
+{
+  "title": "ffsubsync + pysubs2 integration contract: sync-then-validate shell adapter",
+  "purpose": "Concrete integration contract showing how to pipe ffsubsync's output SRT into pysubs2 for post-sync validation and format conversion. Demonstrates the interface boundary, preconditions, and failure-handling assumptions documented in art_01M6N3Y4A4RTHK7PKXE3ZWES7K r2 and art_01M6M7RTZQAYHCT8C265GC68C9 r2. Nothing is installed or run; this is a source sample.",
+  "attribution": [
+    "ffsubsync by Stephen Macke, MIT, commit de310ac6, documented in art_01M6N3Y4A4RTHK7PKXE3ZWES7K r2",
+    "pysubs2 by Tomas Karabela, MIT (README claim), commit 6371ae8b, documented in art_01M6M7RTZQAYHCT8C265GC68C9 r2"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
