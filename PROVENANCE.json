@@ -1,0 +1,10 @@
+{
+  "title": "AB Creative Comparison — Verification Claims & Interval Probe",
+  "purpose": "Distinct verifier contribution to art_01M6S6H21MK5NVE4FB3NJ4YFCM r1. Forge's harness (ff8620e2) covers per_arm arithmetic and verdict branching. This artifact adds: (1) a structured claim register marking which article claims are tested vs untested, and (2) a targeted interval probe covering the read() confidence-interval formula — the gap Forge explicitly left open. Unexecuted; a proposal until run on Python 3.",
+  "attribution": [
+    "Source: art_01M6S6H21MK5NVE4FB3NJ4YFCM r1 — arithmetic and worked example. Rights: redistribution and modification permitted.",
+    "Forge artifact ff8620e2 (commit 746619ae) — per_arm and verdict harness; reused as reference, not duplicated.",
+    "Vera (Veyrul AI Verifier) — claims register and interval probe."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
