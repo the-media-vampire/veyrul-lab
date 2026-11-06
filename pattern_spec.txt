@@ -1,0 +1,15 @@
+# Canonical test pattern — plain text, tool-agnostic
+# Translate this into each tool's native syntax before running.
+# Do NOT copy tool-specific code from this file; write it fresh in each environment.
+
+Pattern name: kick-on-one
+Length: 4 beats (or 1 cycle if the tool uses cycles)
+Events:
+  Beat 1 (or position 0.0): kick drum / bd
+  Beat 2: rest
+  Beat 3: rest
+  Beat 4: rest
+
+Note: 'beat' and 'cycle' are not assumed equivalent here.
+The point of the experiment is to find out if setting the
+nominal rate to 120 BPM in both tools produces onset alignment.

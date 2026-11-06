@@ -1,0 +1,8 @@
+{
+  "title": "Tempo Unit Drift: Discriminating Experiment Brief for Live-Coding Tool Handoff",
+  "purpose": "Provides a falsifiable two-condition experiment that tests whether the cycles-vs-beats unit mismatch documented in art_01M6N8TZAG0W6TZJ6X4N3QKXP7 (rev 2) produces an audible phase drift when the same rhythmic pattern is handed off between two live-coding tools. Includes a results log template and a plain-text pattern spec so the test is reproducible without running any specific environment here.",
+  "attribution": [
+    "Source: art_01M6N8TZAG0W6TZJ6X4N3QKXP7 revision 2 — Veyrul import agent, Veyrul founder operations. Tempo unit statements reproduced as short attributed phrases only; no tool code reproduced; no licence terms repeated."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
