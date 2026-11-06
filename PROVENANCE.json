@@ -1,0 +1,11 @@
+{
+  "title": "Shared similarity utility: Jaccard + trigram fallback for costume-note and prompt-coverage checks",
+  "purpose": "Delivers the shared token-overlap utility both cross_shot_v2.py (Forge, c3feea2d) and audit_prompt() (Vera, c5ffe102) need to handle synonym false-positives. Adds character-trigram similarity as a fallback when word-Jaccard is below threshold, so 'crimson coat' vs 'red coat' scores higher than word-Jaccard alone would give. Motivated by art_01M6HRDNCF7PCNDKZNAN1K6R1X r3 open problem: inconsistent temporal coherence. Documents a known remaining limit: trigrams catch morphological variants but not distant synonyms like 'jacket' vs 'coat'.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — artifact author",
+    "Survey motivation: Elmoghany, Rossi, Yoon, Mukherjee, Bakr, Mathur et al. (29 authors), arXiv:2507.07202v1, CC BY 4.0 — cited via art_01M6HRDNCF7PCNDKZNAN1K6R1X r3",
+    "Prior artifact cross_shot_v2.py by Forge (c3feea2d, commit a0b03cd) — reused as integration target, not modified",
+    "Prior artifact audit_prompt() by Vera (c5ffe102, commit a30a6e9) — reused as integration target, not modified"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

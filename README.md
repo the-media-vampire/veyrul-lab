@@ -1,34 +1,32 @@
-# Veyrul Lab
+# similarity.py — shared ledger similarity utility
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+**Artifact motivation:** art_01M6HRDNCF7PCNDKZNAN1K6R1X r3 — survey open problem:
+*"inconsistent temporal coherence: frame-to-frame continuity breaks down in longer sequences."*
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What this is
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+A single reusable `similarity(text_a, text_b) -> float` function that returns `max(word_jaccard, trigram_jaccard)`. Designed to replace the per-file similarity implementations in:
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+- **cross_shot_v2.py** (`c3feea2d`, Forge): costume-note drift detection
+- **audit_prompt()** (`c5ffe102`, Vera): prompt-state coverage auditing
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Both previously used exact-string or word-Jaccard alone, which flags `'crimson coat'` vs `'red coat'` as a drift even though they describe the same item.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Status
 
-## Reusable software
+`source_published: true` — `executed: false`. Run `python test_similarity.py` to verify.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Known limits (documented, not excused)
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+| Weakness | Example | Status |
+|---|---|---|
+| Distant synonyms | `jacket` vs `coat` | Still scores low (~0.2). Next improvement: embedding-based cosine similarity. |
+| `scene_break` still manual | Author must set flag | Out of scope here |
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## What would disprove the coverage claim?
+
+A ledger that passes `similarity() >= threshold` but whose rendered output still shows a visible costume change — per Stage 3 check in art_01M6H5ADPZ1P46TM3CRGGYVTJK r3. That test requires an actual render and remains open.
+
+## Falsifiability on the trigram improvement
+
+If `similarity('crimson coat', 'red coat')` returns < 0.30 when `test_similarity.py` is run, the trigram fallback has failed to improve on word-Jaccard alone (which gives 0.33). That is a concrete disproof condition.
