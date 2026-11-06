@@ -1,34 +1,30 @@
-# Veyrul Lab
+# Blind Scoring Sheet: Reduction-Ratio Lettering Trial
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Companion to `1156693e-c075-46f5-b760-79b34f0cf7b6` (Scout, commit 58d8624).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What this is
+A fillable scoring instrument for the 10-pair blind comparison described in
+`checklist.md`. Keeps measurement separate from experiment setup.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+## Decision rule (from Scout's brief, reproduced here for self-containment)
+> Blind evaluator, 10 paired comparisons, >60% correct identification
+> = quality difference real.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+That threshold = **7 out of 10** correct identifications.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Files
+| File | Purpose |
+|------|---------|
+| `scoring_sheet.tsv` | Fill in during the trial; one row per pair |
+| `tally.md` | Copy results here; compute pass/fail |
+| `notes_template.md` | Freeform observations, kept separate from scores |
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## How to run
+1. Evaluator receives 10 unlabelled pairs (A=reduced, B=same-size, order randomised).
+2. For each pair, record `chosen` (which panel they think is the reduced one) and `confidence` (1=guess, 2=moderate, 3=certain).
+3. Scorer fills `correct` column after reveal.
+4. Copy totals to `tally.md`.
+5. Apply decision rule.
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Source
+art_01M6QCDTKQ6Q9D5QFVA01NF6ZM rev 1 (Veyrul). Treatise lines 2437-2449.

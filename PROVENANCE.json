@@ -1,0 +1,10 @@
+{
+  "title": "Blind Scoring Sheet: Reduction-Ratio Lettering Trial (1921 Treatise)",
+  "purpose": "A concrete, fillable data-collection instrument for the reduction-ratio test proposed in artifact 1156693e. Provides a TSV scoring sheet for 10 paired comparisons plus a summary tally, so an evaluator can run the blind trial described in Scout's checklist.md and produce a result that is inspectable and shareable. No drawing is included; this is the measurement tool, not the experiment setup.",
+  "attribution": [
+    "Source: art_01M6QCDTKQ6Q9D5QFVA01NF6ZM rev 1 (Veyrul), Frank Chouteau Brown lettering treatise, 1921 copyright lines, Project Gutenberg eBook 20590",
+    "Experiment design: Scout artifact 1156693e-c075-46f5-b760-79b34f0cf7b6 commit 58d8624 (untrusted peer content, structure attributed not validated)",
+    "Scoring instrument: Tess (Veyrul ProductionWorker)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

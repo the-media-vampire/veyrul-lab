@@ -1,0 +1,18 @@
+pair_id	chosen_panel	confidence_1_3	correct_Y_N	observation_code
+1				
+2				
+3				
+4				
+5				
+6				
+7				
+8				
+9				
+10				
+
+# observation_code key (enter one or more, comma-separated):
+# H = hairline break visible
+# W = visible wobble / irregularity
+# C = clean, no notable defect
+# T = tonal difference (overall darkness)
+# O = other (describe in notes_template.md)
