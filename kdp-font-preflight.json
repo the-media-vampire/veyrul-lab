@@ -1,0 +1,19 @@
+{
+  "title": "KDP Paperback Font Pre-flight Rules",
+  "source_record": "art_01M6PQJ1Q3CQPV252JPNSAN0SG",
+  "source_revision": 2,
+  "captured": "2026-11-05",
+  "note": "Derived from one KDP help page reading; page changes; nothing executed; no acceptance guaranteed.",
+  "rules": [
+    {"id":"R01","name":"minimum_font_size","condition":"Every body-text size >= 7 pt","check":"Select all in Word; inspect font-size field","failure":"Any run < 7 pt","fix":"Increase to >= 7 pt, re-export","local":true},
+    {"id":"R02","name":"body_font_readability","condition":"Body font is simple, non-decorative","check":"Print/render one full body page at final size","failure":"Ornate or illegible at page length","fix":"Switch to a named body option (see R03)","local":true},
+    {"id":"R03","name":"named_body_fonts","condition":"Font name matches a KDP-listed option","options":["Centaur","Garamond","Hightower Text","Palatino Linotype","Amazon Endure","Constantia","Cambria","MS Mincho","Yu Mincho","Meiryo","Yu Gothic","MS Gothic"],"check":"Verify font name in document/PDF properties","failure":"Name not in list and no licence verified","fix":"Use listed name or verify licence","local":true},
+    {"id":"R04","name":"sample_page_reviewed","condition":"One full body page reviewed before submission","check":"Confirm review at final size and tone","failure":"Only short strings reviewed","fix":"Set sample pages; review before export","local":true},
+    {"id":"R05","name":"licence_verified","condition":"Licence confirmed for each font used","check":"Locate licence file or vendor page per font","failure":"No licence verification done","fix":"Obtain required licence","note":"Page: 'You are responsible for securing the required licenses.'","local":true},
+    {"id":"R06","name":"fonts_embed_in_pdf","condition":"All fonts show Embedded or Embedded Subset in Acrobat","check":"Single-font test PDF; Acrobat > File > Properties > Fonts","failure":"Font listed without Embedded status","fix":"Replace with embeddable font","local":true},
+    {"id":"R07","name":"no_low_quality_fonts","condition":"No incomplete, badly drawn or misaligned glyphs","check":"Zoom to 400% in PDF viewer","failure":"Characters cut off or misaligned","fix":"Replace with font from reputable source","local":true},
+    {"id":"R08","name":"word_embed_setting","condition":"Word save option: Embed fonts checked; two sub-options unchecked","check":"Word > Options > Save","failure":"Embed off or sub-options checked","fix":"Enable embed; uncheck sub-options; re-save","local":true},
+    {"id":"R09","name":"no_rejected_fonts","condition":"No font flagged by KDP Previewer anywhere in file","where":["text","line breaks","headers","footers","style definitions"],"check":"Run KDP Previewer; inspect all locations on error","failure":"Previewer font error","fix":"Replace font in every hiding place; resubmit","local":false},
+    {"id":"R10","name":"no_faux_fonts","condition":"No synthetic bold/italic where true variant is absent","check":"Select bold/italic text; check whether font name changes","failure":"Font name unchanged on Bold/Italic text","fix":"Use true bold/italic font file; remove synthetic formatting","local":true}
+  ]
+}
