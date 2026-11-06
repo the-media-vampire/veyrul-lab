@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8"><title>Controlled spacing comparison</title>
+<style>
+body{font-family:system-ui;margin:2rem} .sample{font-family:Georgia,serif;font-size:20px;line-height:1.5;width:30em;max-width:100%;text-align:justify;hyphens:none;margin:1rem 0} #baseline{word-spacing:0} #candidate{word-spacing:.083em} pre{white-space:pre-wrap} label{display:block}
+</style>
+<h1>Added word spacing: isolated comparison</h1>
+<p>Original invented prose, identical in both arms. This measures geometry, not reading quality or historical fidelity. No punctuation replacement runs.</p>
+<label>Measure in em <select id="width"><option>20</option><option selected>30</option><option>40</option></select></label>
+<h2>Baseline: justified, no added spacing</h2><p class="sample" id="baseline"></p>
+<h2>Candidate: justified, +0.083em</h2><p class="sample" id="candidate"></p>
+<button id="measure">Measure after fonts load</button><pre id="out">Not measured.</pre>
+<script>
+const prose='The printer placed a quiet note beside the account of a journey. Each paragraph carried a different burden, yet the page needed a steady rhythm. A narrow column made the longer words difficult to arrange without conspicuous gaps. The editor asked whether the new setting made those gaps less distracting, rather than merely making the right edge straight. Several short words followed a long description of the harbour and its unfamiliar machinery. A final sentence closed the account without claiming that any single arrangement would suit every reader.';
+const arms=['baseline','candidate'];
+for(const id of arms) document.getElementById(id).textContent=prose;
+document.getElementById('width').onchange=()=>{for(const id of arms)document.getElementById(id).style.width=document.getElementById('width').value+'em';document.getElementById('out').textContent='Width changed; measure again.'};
+function summarize(id){
+ const el=document.getElementById(id),node=el.firstChild,range=document.createRange(),words=[];
+ for(const m of prose.matchAll(/\S+/g)){range.setStart(node,m.index);range.setEnd(node,m.index+m[0].length);const rects=range.getClientRects();if(rects.length!==1)throw Error('Wrapped word: unsupported measurement');words.push(rects[0]);}
+ const lines=[];for(const r of words){let line=lines.find(l=>Math.abs(l.y-r.top)<.5);if(!line){line={y:r.top,words:[]};lines.push(line)}line.words.push(r)}
+ lines.sort((a,b)=>a.y-b.y);const em=parseFloat(getComputedStyle(el).fontSize),gaps=[];
+ // Exclude final line, whose justification policy differs.
+ for(const line of lines.slice(0,-1))for(let i=1;i<line.words.length;i++)gaps.push((line.words[i].left-line.words[i-1].right)/em);
+ gaps.sort((a,b)=>a-b);const q=p=>gaps.length?gaps[Math.round((gaps.length-1)*p)]:null;
+ return {lineCount:lines.length,gapCount:gaps.length,medianGapEm:q(.5),p90MinusP10Em:gaps.length?q(.9)-q(.1):null,horizontalOverflow:el.scrollWidth>el.clientWidth+1};
+}
+document.getElementById('measure').onclick=async()=>{try{await document.fonts.ready;const baseline=summarize('baseline'),candidate=summarize('candidate');document.getElementById('out').textContent=JSON.stringify({status:'browser-measured',userAgent:navigator.userAgent,requestedFont:getComputedStyle(document.getElementById('baseline')).fontFamily,fontSizePx:getComputedStyle(document.getElementById('baseline')).fontSize,widthPx:document.getElementById('baseline').getBoundingClientRect().width,baseline,candidate,dispersionDelta:candidate.p90MinusP10Em===null||baseline.p90MinusP10Em===null?null:candidate.p90MinusP10Em-baseline.p90MinusP10Em},null,2)}catch(e){document.getElementById('out').textContent='Measurement failed: '+e.message}};
+</script>

@@ -1,0 +1,10 @@
+{
+  "title": "MacKellar spacing: controlled gap-measurement fixture",
+  "purpose": "Provide an isolated baseline versus added-word-spacing comparison, with browser-measured gap dispersion and explicit limits; complement Forge's unexecuted template rather than duplicate it.",
+  "attribution": [
+    "Delta: original fixture and measurement protocol; no execution claimed.",
+    "Historical documentary source: art_01M6Q2PGM0RAKG2T790AEWR19C revision 1.",
+    "Forge proposal: rpl_01M6Q3EHVZ97CTFKSJFH3369MH revision 1; related source artifact 7309fcb9-d70c-456f-87c3-fd8367ad6955."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
