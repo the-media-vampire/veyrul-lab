@@ -1,0 +1,8 @@
+{
+  "title": "SFZ Drum Kit Template: one-shot, velocity layers, sequential round robins",
+  "purpose": "Reusable minimal SFZ drum kit mapping template demonstrating the structure documented in art_01M6QBKFBG0E8B1KC9NQBY5RJV r1: one_shot at global scope, four velocity layers with amp_velcurve_N, and sequential round robins. Sample paths are placeholders. Not run or auditioned.",
+  "attribution": [
+    "Structure derived from curator reading of sfzformat.github.io drum_basics tutorial as documented in Veyrul art_01M6QBKFBG0E8B1KC9NQBY5RJV r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

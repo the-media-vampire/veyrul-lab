@@ -1,34 +1,28 @@
-# Veyrul Lab
+# SFZ Drum Kit Template
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Structural template. Replace every `sample=` path with real files, then load in an SFZ player.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Opcodes used and why
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Opcode | Scope | Purpose |
+|---|---|---|
+| `loop_mode=one_shot` | `<global>` | Play full sample; ignore note-off |
+| `lovel`/`hivel` | `<region>` | Velocity layer bounds (0-31,32-63,64-95,96-127) |
+| `amp_velcurve_N=1` | `<region>` | Full volume at layer ceiling; counteracts default velocity tracking |
+| `seq_length` | `<group>` | Total round-robin count per instrument |
+| `seq_position` | `<region>` | Which take this region belongs to |
+| `key` | `<group>` | MIDI note (GM: kick=36, snare=38, hihat=42) |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Verification steps (manual, requires real samples)
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+1. Trigger each key at velocities 10, 45, 80, 110. Expect four distinct loudness levels.
+2. Trigger the same key repeatedly at one velocity. Expect takes to rotate in order, not repeat.
+3. Trigger and release quickly. Expect the full sample to finish (one_shot).
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Limits
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+- Not loaded or auditioned; structural correctness only.
+- `amp_velcurve_N` with N=hivel: what `=1` means internally is not explained in the source tutorial (gap noted in art_01M6QBKFBG0E8B1KC9NQBY5RJV r1).
+- `lorand`/`hirand` random variant excluded; hi-hat articulations excluded.
+- No tuning, pan or release opcodes.
+- Fourth velocity layer omits `hivel` relying on default=127 (as documented in source).

@@ -1,0 +1,77 @@
+// SFZ Drum Kit Template
+// Structural template only. Replace sample= paths before loading.
+// Source: Veyrul art_01M6QBKFBG0E8B1KC9NQBY5RJV r1
+
+<global>
+loop_mode=one_shot
+
+// KICK - key 36 (GM C2), 4 vel layers x 4 round robins
+<group>
+key=36
+seq_length=4
+
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=1  sample=kick/kick_pp_rr1.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=2  sample=kick/kick_pp_rr2.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=3  sample=kick/kick_pp_rr3.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=4  sample=kick/kick_pp_rr4.wav
+
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=1  sample=kick/kick_mp_rr1.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=2  sample=kick/kick_mp_rr2.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=3  sample=kick/kick_mp_rr3.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=4  sample=kick/kick_mp_rr4.wav
+
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=1  sample=kick/kick_mf_rr1.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=2  sample=kick/kick_mf_rr2.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=3  sample=kick/kick_mf_rr3.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=4  sample=kick/kick_mf_rr4.wav
+
+<region> lovel=96 amp_velcurve_127=1 seq_position=1  sample=kick/kick_ff_rr1.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=2  sample=kick/kick_ff_rr2.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=3  sample=kick/kick_ff_rr3.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=4  sample=kick/kick_ff_rr4.wav
+
+// SNARE - key 38 (GM D2), 4 vel layers x 3 round robins
+<group>
+key=38
+seq_length=3
+
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=1  sample=snare/snare_pp_rr1.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=2  sample=snare/snare_pp_rr2.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=3  sample=snare/snare_pp_rr3.wav
+
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=1  sample=snare/snare_mp_rr1.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=2  sample=snare/snare_mp_rr2.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=3  sample=snare/snare_mp_rr3.wav
+
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=1  sample=snare/snare_mf_rr1.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=2  sample=snare/snare_mf_rr2.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=3  sample=snare/snare_mf_rr3.wav
+
+<region> lovel=96 amp_velcurve_127=1 seq_position=1  sample=snare/snare_ff_rr1.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=2  sample=snare/snare_ff_rr2.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=3  sample=snare/snare_ff_rr3.wav
+
+// HI-HAT (closed) - key 42 (GM F#2), 4 vel layers x 4 round robins
+<group>
+key=42
+seq_length=4
+
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=1  sample=hihat/hh_pp_rr1.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=2  sample=hihat/hh_pp_rr2.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=3  sample=hihat/hh_pp_rr3.wav
+<region> lovel=0  hivel=31  amp_velcurve_31=1  seq_position=4  sample=hihat/hh_pp_rr4.wav
+
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=1  sample=hihat/hh_mp_rr1.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=2  sample=hihat/hh_mp_rr2.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=3  sample=hihat/hh_mp_rr3.wav
+<region> lovel=32 hivel=63  amp_velcurve_63=1  seq_position=4  sample=hihat/hh_mp_rr4.wav
+
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=1  sample=hihat/hh_mf_rr1.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=2  sample=hihat/hh_mf_rr2.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=3  sample=hihat/hh_mf_rr3.wav
+<region> lovel=64 hivel=95  amp_velcurve_95=1  seq_position=4  sample=hihat/hh_mf_rr4.wav
+
+<region> lovel=96 amp_velcurve_127=1 seq_position=1  sample=hihat/hh_ff_rr1.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=2  sample=hihat/hh_ff_rr2.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=3  sample=hihat/hh_ff_rr3.wav
+<region> lovel=96 amp_velcurve_127=1 seq_position=4  sample=hihat/hh_ff_rr4.wav
