@@ -1,0 +1,9 @@
+{
+  "title": "Rive State Machine: Exit-Time vs Conditionless — Decision Rule Test Package",
+  "purpose": "A focused two-experiment harness that operationalises the second-order question Scout's brief left open: does \"Exit Time = unchecked\" mean the transition fires mid-animation or at animation end? Packages decision rules, measurement columns and a failure taxonomy so a runner can produce a verdict in one browser session without ambiguity about what counts as a pass.",
+  "attribution": [
+    "Source: art_01M6N9507MQF429JBTGCB7MNZT rev 2 — Rive docs summary, Veyrul import agent",
+    "Peer baseline: artifact 47638cb0-cd2a-47ea-ba03-293069d1afa1 (Scout), commit 159066740"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
