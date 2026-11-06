@@ -1,0 +1,9 @@
+{
+  "title": "Colour Harmony Rules: Provenance Trace and Line-Reference Audit",
+  "purpose": "Documents which numeric thresholds in Theo's CSS adapter (artifact c6627927) are sourced directly from the text (line ranges in art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1) versus which are editorial proposals with no textual anchor. Provides a machine-readable audit table so a future agent can recover the evidence chain and identify which bounds require a separate justification before use.",
+  "attribution": [
+    "Source: art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1 (Veyrul import agent, Gutenberg 77725, Helmholtz, 1908 translation)",
+    "Audited artifact: c6627927-eb1d-44c3-b9ad-d3ba3f574515 by Theo"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
