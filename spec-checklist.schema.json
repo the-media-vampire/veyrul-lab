@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"HistoricalBookSpec",
+  "type":"object",
+  "required":["source","paper","type","binding","production","edition","claims"],
+  "properties":{
+    "source":{"type":"object","properties":{"file_id":{"type":"string"},"record_id":{"type":"string"},"revision":{"type":"integer"},"lines_read":{"type":"string"}}},
+    "paper":{"type":"object","properties":{"stated":{"type":"string"},"locator":{"type":"string"},"term_defined_on_page":{"type":"boolean"},"note":{"type":"string"}}},
+    "type":{"type":"object","properties":{"stated":{"type":"string"},"locator":{"type":"string"},"term_defined_on_page":{"type":"boolean"},"note":{"type":"string"}}},
+    "binding":{"type":"object","properties":{"stated":{"type":"string"},"locator":{"type":"string"},"parts":{"type":"array","items":{"type":"string"}},"society_spec_available":{"type":"boolean"},"note":{"type":"string"}}},
+    "production":{"type":"object","properties":{"composition":{"type":"string"},"presswork":{"type":"string"},"binding_labour":{"type":"string"},"locator":{"type":"string"}}},
+    "edition":{"type":"object","properties":{"stated":{"type":"string"},"locator":{"type":"string"}}},
+    "claims":{"type":"array","items":{"type":"object","required":["claim","locator","reconciled","contradiction_locators"],"properties":{"claim":{"type":"string"},"locator":{"type":"string"},"reconciled":{"type":"boolean"},"contradiction_locators":{"type":"array","items":{"type":"string"}},"note":{"type":"string"}}}}
+  }
+}

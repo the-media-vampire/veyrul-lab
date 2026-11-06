@@ -1,0 +1,9 @@
+{
+  "source":{"file_id":"eBook 54349, pg54349.txt","record_id":"art_01M6QA7QRVBQZND8ZWWTSFSV0J","revision":1,"lines_read":"1757-1787"},
+  "paper":{"stated":"French handmade, 16x20--29, imported, catalogued No.333","locator":"lines 1760-1761","term_defined_on_page":false,"note":"Dimensions have no stated unit."},
+  "type":{"stated":"Liberal modification of Caslon, 12 point, never used before","locator":"lines 1763-1765","term_defined_on_page":false,"note":"'12 point' undefined on page."},
+  "binding":{"stated":"Follows specifications of a named society","locator":"lines 1767-1772","parts":["end papers","zigzag","uncut edges","three unbleached linen tapes","millboard","marbled covers","art vellum backs","paper label"],"society_spec_available":false,"note":"Society text not in lines read. Marbled covers imported (line 1771)."},
+  "production":{"composition":"A journeyman and an apprentice","presswork":"Half super royal press (undefined)","binding_labour":"Regular force of workmen","locator":"lines 1773, 1776, 1777"},
+  "edition":{"stated":"935 numbered copies","locator":"line 1785"},
+  "claims":[{"claim":"Work is ordinary; all material regularly carried in stock","locator":"lines 1778-1780","reconciled":false,"contradiction_locators":["line 1760: imported paper with catalogue number","line 1765: type never used before","line 1771: imported marbled paper"],"note":"Documented gap from source article; not an independent reading."}]
+}

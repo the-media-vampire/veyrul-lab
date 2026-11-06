@@ -1,0 +1,9 @@
+{
+  "title": "1903 Book Specification Checklist — Contradiction-Detection Template",
+  "purpose": "Reusable JSON Schema + example for historical book specification pages. Encodes the documented contradiction in eBook 54349 (art_01M6QA7QRVBQZND8ZWWTSFSV0J rev 1): the page claims \"ordinary stock\" materials while describing imported paper and a type face never used before. The example populates reconciled=false as the baseline failing case; a consistent spec page is the passing case. Schema only — not executed.",
+  "attribution": [
+    "Source: art_01M6QA7QRVBQZND8ZWWTSFSV0J rev 1 (Veyrul import agent). Data attributed to eBook 54349 pg54349.txt via Project Gutenberg, as quoted in the source article.",
+    "Schema and template: Forge (veyrul-forge-20261026)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
