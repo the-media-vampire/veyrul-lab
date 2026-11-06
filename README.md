@@ -1,34 +1,75 @@
-# Veyrul Lab
+# Reduction-Ratio Experiment Brief
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+**Source:** art_01M6QCDTKQ6Q9D5QFVA01NF6ZM revision 1 (eBook 20590, Frank Chouteau Brown, copyright line 1921).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+This brief is a *proposal only*. No drawing, scan or software run was performed.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+---
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## The Testable Claim
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+The treatise states (file lines 2437–2449, as reported in the source record):
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+- Reducing the drawing is **"the usual method"** for reproduction.
+- Cutting height or width **"by one-third"** is called **"the usual amount"**.
+- "Modern designers" draw only **"a trifle"** larger — a twelfth to a sixth — or at the same size.
+- Less reduction means the line needs **"more careful drawing"** and **"greater exactness"**.
+- A drawing is **"sure to suffer"** if reduced too much.
 
-## Reusable software
+**The untested variable:** Does line quality measurably differ between a one-third-reduced drawing and a same-size drawing when digitally scanned and printed?
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+---
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## Competing Explanations
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+| # | Explanation | What it predicts |
+|---|-------------|------------------|
+| 1 | Reduction consolidates minor wobble in hand strokes | 1/3-reduced copy looks cleaner than same-size |
+| 2 | Same-size drawing with careful line is indistinguishable | No visible quality gap |
+| 3 | Excess reduction destroys thin strokes | 1/3 reduction is worse than same-size for hairlines |
+
+All three are consistent with the treatise text, which hedges toward Explanation 2 for "modern" (1921) practice.
+
+---
+
+## Discriminating Test Design
+
+### Variables held fixed
+- Same pen nib grade for both variants
+- Same paper stock
+- Same ink
+- Same word (e.g., a 5-letter word with both thick and thin strokes)
+- Same scanner settings
+- Same output print size
+
+### Variable changed
+| Variant A | Variant B |
+|-----------|----------|
+| Draw at **150% of final size** (one-third reduction to reach final) | Draw at **100% of final size** (same-size, no reduction) |
+
+### Decision rule (write before drawing)
+If a blind evaluator cannot reliably identify which variant was reduced (>60% correct identification rate across 10 comparisons), Explanation 2 is provisionally supported. If Variant A is consistently preferred, Explanation 1 is provisionally supported. If Variant A shows broken hairlines, Explanation 3 is provisionally supported.
+
+---
+
+## Why This Is the Most Informative Experiment
+
+The treatise's reduction advice is its **only quantitative claim** (one-third). Every other step — small sketch, guide lines, free-hand inking — is qualitative. If the one-third rule proves observably unimportant under modern scanning, it reclassifies the whole workflow: the reduction step becomes a historical artifact of photoengraving tolerances, not a quality principle. That's a large belief update from a small test.
+
+---
+
+## Controls That Must Be Separated
+
+1. **Photoengraving vs. digital scanning** — the treatise was written for photoengraving; a modern scanner may behave differently at any reduction ratio. This is a confound, not a replication.
+2. **Guide-line reliance** — the treatise says guide lines are "invariably" laid with T-square even when inking is free-hand. If guide-line discipline varies between variants, that contaminates the reduction comparison.
+3. **Draughtsman skill level** — the treatise addresses the "beginner". An experienced hand may show no difference at any ratio.
+
+---
+
+## Not Claimed Here
+
+- No drawing was produced.
+- No scan was produced.
+- No software was run.
+- No copyright or public-domain determination is made about eBook 20590.
+- The treatise statements are attributed to the author and the period; they are not endorsed as current advice.
