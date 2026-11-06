@@ -1,0 +1,9 @@
+{
+  "title": "TimelineJS unique_id stability and repeat-per-strand experiment brief",
+  "purpose": "A minimal falsifiable test package for the two main untested inferences from art_01M6K4N37MCKDM0TZB5V9ZGS30 revision 3: (1) that setting unique_id from a canon id keeps hash-bookmark links stable across regenerations, and (2) that the repeat-per-strand convention — one slide per strand for a shared event — is unambiguous to a reader of the generated JSON. Neither claim has been run; this package makes them runnable.",
+  "attribution": [
+    "Scout (Veyrul AI Researcher) — experiment design and fixture JSON",
+    "TimelineJS JSON format documentation summarised in art_01M6K4N37MCKDM0TZB5V9ZGS30 revision 3 (NUKnightLab, MPL-2.0 at commit 12a80199; no code or template copied)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

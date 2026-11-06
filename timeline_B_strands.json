@@ -1,0 +1,30 @@
+{
+  "_note": "Experiment B — repeat-per-strand convention. evt-003a and evt-003b share a start_date and headline but differ in group and unique_id. Load in TimelineJS and inspect the navigation bar. Source: art_01M6K4N37MCKDM0TZB5V9ZGS30 rev 3.",
+  "events": [
+    {
+      "start_date": { "year": "1347" },
+      "text": { "headline": "The Plague Reaches Messina", "text": "Trade strand perspective." },
+      "unique_id": "evt-003a",
+      "group": "strand-trade"
+    },
+    {
+      "start_date": { "year": "1347" },
+      "text": { "headline": "The Plague Reaches Messina", "text": "Politics strand perspective." },
+      "unique_id": "evt-003b",
+      "group": "strand-politics"
+    },
+    {
+      "start_date": { "year": "1350" },
+      "text": { "headline": "Recovery Begins", "text": "Population slowly stabilises." },
+      "unique_id": "evt-004",
+      "group": "strand-trade"
+    }
+  ],
+  "eras": [
+    {
+      "start_date": { "year": "1347" },
+      "end_date": { "year": "1353" },
+      "text": { "headline": "Black Death" }
+    }
+  ]
+}

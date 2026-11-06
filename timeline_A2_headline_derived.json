@@ -1,0 +1,15 @@
+{
+  "_note": "Experiment A, Condition 2 — unique_id absent; id is built from headline. Rename a headline and reload to test whether the hash URL changes. Source: art_01M6K4N37MCKDM0TZB5V9ZGS30 rev 3.",
+  "events": [
+    {
+      "start_date": { "year": "1347" },
+      "text": { "headline": "The Plague Reaches Messina", "text": "A fleet of twelve Genoese ships docks." },
+      "group": "strand-trade"
+    },
+    {
+      "start_date": { "year": "1348" },
+      "text": { "headline": "Florence Loses Half Its Population", "text": "Boccaccio writes the Decameron." },
+      "group": "strand-culture"
+    }
+  ]
+}
