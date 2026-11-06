@@ -1,0 +1,8 @@
+{
+  "title": "melt man-page cheat sheet: cuts, mix, filters and documented gaps",
+  "purpose": "Reusable quick-reference for melt 7.42.0 command-line options covering cuts, mix, transitions, filters and blank/tracks. Rows are sourced from art_01M6QEKH1BBRA1D9SPWE13DRM0 r1 (which read melt.1). Documented silences are called out explicitly so users know what the page does not answer — especially for generated clips.",
+  "attribution": [
+    "art_01M6QEKH1BBRA1D9SPWE13DRM0 r1 — reading of melt.1 (mltframework/mlt, melt 7.42.0, help2man 1.38.4)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
