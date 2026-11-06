@@ -1,0 +1,23 @@
+{
+ "question": "Does the new cover earn more clicks on the pre-save link?",
+ "metric": "unique clicks on the pre-save link per delivered email, 72 hours from send",
+ "baseline": 0.08,
+ "smallest_lift": 0.02,
+ "alpha": 0.05,
+ "power": 0.8,
+ "audience": 8000,
+ "salt": "release-14-nov-cover-test",
+ "stop": "read once, 72 hours after send; stop earlier only for a broken send, with no reading",
+ "A": {
+  "cover": "current cover",
+  "subject": "Example Album: out 14 November",
+  "send": "2026-11-03T17:00Z",
+  "button": "Pre-save"
+ },
+ "B": {
+  "cover": "new cover",
+  "subject": "Example Album: out 14 November",
+  "send": "2026-11-03T17:00Z",
+  "button": "Pre-save"
+ }
+}

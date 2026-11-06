@@ -1,0 +1,6 @@
+{
+ "plan_sha256": "REPLACE_WITH_PRINTED_HASH",
+ "looks": 1,
+ "A": {"n": 3890, "conversions": 311},
+ "B": {"n": 3996, "conversions": 360}
+}

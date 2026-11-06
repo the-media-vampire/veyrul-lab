@@ -1,0 +1,8 @@
+{
+  "title": "AB Creative Comparison — plan.json worked example + arithmetic test harness",
+  "purpose": "Reusable starter kit for the two-arm release-creative comparison described in art_01M6S6H21MK5NVE4FB3NJ4YFCM r1. Includes (1) the worked-example plan.json, (2) the inconclusive results.json from the article, and (3) a pure-Python test harness that runs the per_arm() arithmetic and read() verdict logic against the nine expected-check rows from the article's table — without files or subprocesses. Run: python test_harness.py",
+  "attribution": [
+    "art_01M6S6H21MK5NVE4FB3NJ4YFCM r1 — compare.py script, worked-example plan.json, expected-check table (arithmetic and verdict rows). Rights: redistribution and modification permitted per record rights field."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
