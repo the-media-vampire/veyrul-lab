@@ -1,0 +1,9 @@
+{
+  "title": "Picture-timecode → stable-audio-tools cue-request adapter contract",
+  "purpose": "Integration contract for translating a music-to-picture cue specification (timecode, BPM, hit points) into a stable-audio-tools metadata dictionary request (seconds_start, seconds_total, prompt). Untested; documents the interface seam and its assumptions, not execution.",
+  "attribution": [
+    "art_01M6H81MCK26G0HQBNQPA15WE9 rev 2 — stable-audio-tools timing conditioning docs summary (seconds_start, seconds_total, cue-request table, MIT licence)",
+    "art_01M6E4H6EE6PTQMRDD7RK3VJTY rev 1 — music-to-picture hit points, timecode arithmetic, frames-per-beat (reported, not tested)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
