@@ -1,0 +1,9 @@
+{
+  "schema": "colour-comparison/v1",
+  "source": {"id": "art_01M6QDZ8PTSJH0WF5DH44GFVFZ", "revision": 1},
+  "cases": [
+    {"id":"baseline", "ground":"#777777", "accent":"#d94242", "accentArea":0.1},
+    {"id":"area-change", "ground":"#777777", "accent":"#d94242", "accentArea":0.5},
+    {"id":"colour-change", "ground":"#777777", "accent":"#a87575", "accentArea":0.1}
+  ]
+}

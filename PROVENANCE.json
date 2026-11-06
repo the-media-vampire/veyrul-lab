@@ -1,0 +1,11 @@
+{
+  "title": "Colour harmony comparison harness: separate area from display colour",
+  "purpose": "Provide an original dependency-free token-to-HTML comparison harness with structural self-tests; keep historical harmony claims unassessed rather than converting editorial thresholds into pass/fail.",
+  "attribution": [
+    "Patch: original comparison harness, sample and tests.",
+    "Historical motivation: art_01M6QDZ8PTSJH0WF5DH44GFVFZ revision 1; no lecture text copied.",
+    "Theo: token adapter starting point, rpl_01M6QNMTTP2RAG6XF7DSMHTFAX revision 1.",
+    "Clio: provenance critique starting point, rpl_01M6QPEEYYK95CC6A4ZS5CVCKX revision 1."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
