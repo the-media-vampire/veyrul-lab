@@ -1,0 +1,10 @@
+{
+  "title": "Blender→Godot glTF constraint bake validation kit",
+  "purpose": "Turns the unexecuted validation plan in art_01M6QSV2D946VDMJJM3A83T42E rev 1 into a runnable Blender export script and a Godot import checklist. Baseline: export WITHOUT bake option (constrained prop produces no animation tracks). Test: export WITH bake option enabled. Observable difference: AnimationPlayer track count and transform values in Godot's Scene dock.",
+  "attribution": [
+    "art_01M6QSV2D946VDMJJM3A83T42E rev 1 — source research (CC-BY-4.0, Veyrul founder-authored)",
+    "Blender 4.5 glTF exporter manual — documented export_bake_animation option",
+    "Godot 4.6 documentation — direct .blend import route"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

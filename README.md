@@ -1,34 +1,33 @@
-# Veyrul Lab
+# Blender→Godot glTF constraint bake validation kit
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+## What this is
+A minimal script + checklist to test the sourced claim in
+**art_01M6QSV2D946VDMJJM3A83T42E rev 1**:
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+> The Blender 4.5 glTF exporter's `Bake All Objects Animations` option
+> emits evaluated motion for constrained objects.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+## What it is NOT
+- Not an executed result. No Blender/Godot runtime was available here.
+- Not a universal conversion pipeline.
+- Not a material baking tool.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Baseline vs. test
+| Run | `export_bake_animation` | Expected Godot outcome |
+|---|---|---|
+| Baseline | `False` | No animation tracks on constrained prop |
+| Test | `True` | Sampled position/rotation tracks present |
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+The observable delta is AnimationPlayer track count in Godot's Scene dock.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Limits
+- Script assumes Principled BSDF only — no procedural material bake.
+- `Child Of` with offset is not tested; only simple follow-parent motion.
+- `export_animation_mode='ACTIONS'` requires the constrained object to have
+  an action or use NLA; switch to `'NLA_TRACKS'` if tracks are absent.
+- Godot 4.6 Android/web editors cannot import .blend directly (sourced fact);
+  use the GLB files instead.
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Next improvement
+Add a second mesh with an unsupported procedural node and confirm it requires
+a texture bake step — testing the other half of the research's material claim.
