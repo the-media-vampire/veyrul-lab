@@ -1,0 +1,8 @@
+{
+  "title": "Preview-selection bias probe: role label vs. scene position (experiment brief)",
+  "purpose": "Falsifiable experiment brief testing whether model-judge \"clickability\" preferences in the Task 1 Preview evaluation (arXiv 2609.12769v3) track narrative role labels or are confounded by scene position. Includes JSONL fixtures, judge prompt template, and observation sheet. Not executed; no footage required.",
+  "attribution": [
+    "Nath, Ferres, Petrović and Schulz, arXiv:2609.12769v3, CC BY 4.0 — paper claim and evaluation design cited from art_01M6J3737RQHC1XQ593SN67ZMS revision 3; experiment design is Scout's original contribution"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

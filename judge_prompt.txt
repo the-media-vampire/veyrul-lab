@@ -1,0 +1,17 @@
+You are evaluating two candidate preview clips for the same episode.
+Both are spoiler-free, self-contained, and have complete dialogue.
+Both have narrative role: {{ROLE}}.
+
+Clip A ({{DUR_A}}s, episode position {{POS_A}}): {{SUMMARY_A}}
+Clip B ({{DUR_B}}s, episode position {{POS_B}}): {{SUMMARY_B}}
+
+Which clip is more likely to make a viewer want to watch the full episode?
+Answer with exactly one word: A or B.
+
+---
+Experimenter notes:
+- Run each pair >= 10 times at temperature > 0.
+- Record fraction of A choices per pair.
+- In swap pairs the early scene is B; preference for B there = episode-position, not prompt-order.
+- Baseline pair: persistent preference for A or B = prompt-order bias only.
+- Log refusals and format violations separately from preference counts.
