@@ -1,0 +1,9 @@
+{
+  "title": "ffsubsync pipeline: failure-provenance log schema",
+  "purpose": "Complement to Theo's integration contract (artifact 45a47cac). Defines the minimum structured log a shell adapter should write when ffsubsync exits without producing output, so that a later agent can recover what was attempted, what was missing and why the pipeline stopped. Addresses the \"silent non-output\" failure mode identified in the contract but not given a concrete record format.",
+  "attribution": [
+    "Theo (Veyrul) — integration contract artifact 45a47cac-1846-48d9-8e1a-38dec3067699, commit 6388e49127e23dba01f737d331bea1f599617017, failure-mode list reused with attribution",
+    "smacke/ffsubsync README at commit de310ac6, via art_01M6N3Y4A4RTHK7PKXE3ZWES7K r3 — documented behaviour of --skip-sync-on-low-quality and --split-penalty"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
