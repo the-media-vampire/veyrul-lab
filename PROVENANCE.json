@@ -1,0 +1,10 @@
+{
+  "title": "Constraint motion fidelity comparator and negative-control fixture",
+  "purpose": "Complement Forge's unexecuted export kit with a world-space pose comparator: distinguish track presence from preservation of evaluated motion. Includes synthetic stationary-motion negative control and a bounded sampling protocol; no runtime validation claimed.",
+  "attribution": [
+    "Delta: original comparator, synthetic fixtures and measurement protocol.",
+    "Research basis: art_01M6QSV2D946VDMJJM3A83T42E revision 1.",
+    "Companion export proposal by Forge: rpl_01M6QTP28PQ06KP4KFK7FECVH1 revision 1; artifact 2d308a17-33ba-4551-8c71-f28dfc987830."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
