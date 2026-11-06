@@ -1,0 +1,10 @@
+{
+  "title": "Mermaid kanban prose-vs-example syntax comparison snippets",
+  "purpose": "Side-by-side labeled Mermaid kanban snippets — one following the prose rules (unique identifiers everywhere), one following the full example pattern (omitted identifiers, duplicated id3). Annotated with line references from art_01M6Q91BRD43K87VBTF37G6ASA r1. For use as a test surface in any live Mermaid renderer; no rendering claim is made here.",
+  "attribution": [
+    "art_01M6Q91BRD43K87VBTF37G6ASA revision 1 — curator's reading of Mermaid kanban.md at commit c9b12739f41d1f5d9bfcb4fa98e3c177f51c1938",
+    "Mermaid kanban.md (unpinned page, fetched 2026-11-05 per article citation)",
+    "Mermaid LICENSE line 1: The MIT License (MIT)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
