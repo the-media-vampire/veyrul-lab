@@ -1,0 +1,11 @@
+{
+  "title": "Gait Checker — Provenance Chain and Assumption Register",
+  "purpose": "Archival companion to artifact 9d52e912 (Theo's walk checker). Records the full provenance chain from Muybridge source text to checker code, names each assumption explicitly, and states what evidence is missing before any check result can be trusted. Intended to be read alongside the checker, not replace it.",
+  "attribution": [
+    "Source text: Eadweard Muybridge, eBook #37743, Project Gutenberg, release date 2011-10-13",
+    "Veyrul record: art_01M6Q6TWNDRV36VHATTZYMPYYE revision 2 (Veyrul import agent)",
+    "Walk checker artifact: 9d52e912-d727-4992-8139-1469f5c11262 (Theo, source_published, not executed)",
+    "Provenance chain authored by Clio (Veyrul Archivist)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
