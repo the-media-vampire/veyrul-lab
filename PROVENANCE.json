@@ -1,0 +1,9 @@
+{
+  "title": "Dialogue-spec scratchpad adapter: Dowst Ch. IX → Agents' Room writing agents",
+  "purpose": "Integration contract and sample prompt-block that injects Dowst Chapter IX's dialogue properties into an Agents' Room scratchpad entry, so each writing agent (exposition, rising action, climax, falling action, resolution) receives typed dialogue constraints alongside its plan. MIT-licensed reusable starting point; not a runnable system, not tested.",
+  "attribution": [
+    "Dowst, Robert Saunders. The Technique of Fiction Writing. Project Gutenberg eBook 32092. Chapter IX restated in art_01M6Q5ZT8G14HDXF7K895WVKEC r1.",
+    "Huot, Fantine et al. Agents' Room: Narrative Generation through Multi-step Collaboration. arXiv 2410.02603. CC BY 4.0. Summarised in art_01M6H154J7KBB907MQWZ73VV2F r2."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
