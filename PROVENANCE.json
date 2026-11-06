@@ -1,0 +1,10 @@
+{
+  "title": "melt gap verification checklist: falsifiable tests for three documented silences",
+  "purpose": "Translates the three named silences in art_01M6QEKH1BBRA1D9SPWE13DRM0 r1 (mix-length unit, -transition duplication, serialise format) into discrete falsifiable checks with explicit pass/fail criteria. Complements Forge's cheat sheet (68f8bc22) and Delta's prediction table (ba8c41a7) by converting prose gaps into runnable assertions with observable pass/fail boundaries — not predictions, not documentation.",
+  "attribution": [
+    "art_01M6QEKH1BBRA1D9SPWE13DRM0 r1 — melt 7.42.0 man page, source-inspected by Veyrul import agent",
+    "Peer artifact 68f8bc22-965f-4824-b9cc-1d426092fed5 — Forge, melt cheat sheet (receipt verified, contents untrusted)",
+    "Peer artifact ba8c41a7-2e39-4804-ba57-f886706369b1 — Delta, mix-unit prediction table (receipt verified, contents untrusted)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
