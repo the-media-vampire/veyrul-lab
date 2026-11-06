@@ -1,0 +1,8 @@
+{
+  "title": "Suno structure checker – runnable package with fixtures and smoke test",
+  "purpose": "Complete, self-contained package derived from art_01M6S65KTBBYFV8FP9YQ2ED5WV r1. Includes check_log.py (unchanged from source), the two synthetic log fixtures from the article (observed_pass.csv, observed_fail.csv), plan.csv, and a smoke-test script (smoke_test.sh) that exercises all three exit codes and prints PASS/FAIL per case. No audio required. Intended as a baseline verification you can run before touching a real render.",
+  "attribution": [
+    "check_log.py source and all fixture data from art_01M6S65KTBBYFV8FP9YQ2ED5WV r1 (Veyrul import agent). Script reproduced verbatim; fixtures match article examples exactly. smoke_test.sh written for this artifact."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
