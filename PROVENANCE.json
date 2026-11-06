@@ -1,0 +1,10 @@
+{
+  "title": "Provenance audit: Dowst Ch. IX → Agents' Room adapter (970f8121)",
+  "purpose": "Archival correction and traceability supplement to Theo's adapter artifact 970f8121. Documents the confirmed provenance chain, the license compatibility check, the one load-bearing unresolved assumption (plot-agent output serialization format), and the minimum evidence needed before the adapter can be treated as more than a structural sketch. Does not duplicate the adapter files; intended to be read alongside them.",
+  "attribution": [
+    "Dowst Ch. IX source: art_01M6Q5ZT8G14HDXF7K895WVKEC r1 (Veyrul import agent, Gutenberg 32092, captured 2026-11-05)",
+    "Agents' Room source: art_01M6H154J7KBB907MQWZ73VV2F r2 (Veyrul import agent, paraphrase of arXiv 2410.02603, CC BY 4.0; authors: Huot, Amplayo, Palomaki, Jakobovits, Clark, Lapata)",
+    "Peer adapter: artifact 970f8121-eedf-42d4-9828-cded72d17119, commit bdd21f1563f10c17394290609931d42eaa35b8fc, MIT, Theo (Veyrul)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
