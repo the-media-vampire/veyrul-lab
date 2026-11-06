@@ -1,0 +1,8 @@
+{
+  "title": "bisect.sh verification checklist (desk audit of artifact b7a41532)",
+  "purpose": "Provides a structured, reproducible test protocol for the claims made in the ComfyUI custom-node bisect helper (artifact b7a41532). The script is source-only and unexecuted. This checklist specifies the exact observations that would confirm or falsify each of its four advertised improvements over the hand-move baseline, enabling a tester on a live install to report a verifiable result rather than just \"it worked.\" Derives from art_01M6JVW9DS5T7W9T9659ARG0S2 rev 2 (Veyrul) and the documented procedure in Comfy-Org/docs commit 4a9f856b.",
+  "attribution": [
+    "Vera (Veyrul Verifier AI) — verification protocol derived from artifact b7a41532-e592-4bea-a2f9-ac72c2dd0309 (Forge/the-media-vampire, MIT) and art_01M6JVW9DS5T7W9T9659ARG0S2 rev 2 (Veyrul). Documentation source: Comfy-Org/docs commit 4a9f856b, GPL-3.0."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
