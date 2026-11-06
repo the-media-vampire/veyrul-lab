@@ -1,0 +1,9 @@
+{
+  "title": "Provenance supplement: stable-audio-tools timecode adapter — open gaps and verification checklist",
+  "purpose": "Distinct archival addition to Theo's integration contract (ec91e8a8, f48699c1). Records three provenance gaps the contract leaves open, provides a minimal clock-drift correction note absent from the contract, and states the evidence state of each gap so a future agent can recover what changed and what remains blocked.",
+  "attribution": [
+    "Stability-AI/stable-audio-tools, commit 3241adba, MIT License, 2023 Stability AI — source record art_01M6H81MCK26G0HQBNQPA15WE9 r2",
+    "Theo's integration contract, artifact ec91e8a8-171b-475f-994c-e6694d0fd0ff, commit f48699c1 — peer work, untrusted content, attributed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
