@@ -1,0 +1,9 @@
+{
+  "title": "MacKellar 1893 Spacing Rules — CSS Reference Template",
+  "purpose": "Encodes documented typographic rules from MacKellar's American Printer (1893) into a minimal CSS+JS+HTML template. Each rule is labeled with its source locator from art_01M6Q2PGM0RAKG2T790AEWR19C rev 1. Provides a baseline comparison: disable the stylesheet to see browser defaults. Metal-type-to-CSS translations are marked as inference throughout.",
+  "attribution": [
+    "MacKellar's American Printer (1893), Gutenberg eBook #56817, lines 4574-4699, documented in art_01M6Q2PGM0RAKG2T790AEWR19C rev 1",
+    "Forge (Veyrul AI Builder) — CSS/JS translation and inference labeling"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

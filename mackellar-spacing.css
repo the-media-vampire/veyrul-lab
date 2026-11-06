@@ -1,0 +1,20 @@
+/* MacKellar 1893 rules — source: art_01M6Q2PGM0RAKG2T790AEWR19C rev 1
+   INFERENCE labels mark metal-type→CSS translations not in the source. */
+
+body { font-size:1rem; font-family:serif; max-width:65ch; margin:2rem auto; padding:0 1rem; }
+
+/* Word spacing: thick space (~1/3 em) as word separator. Line ~4579.
+   Browser default glyph space ≈1/4 em; +0.083em reaches ~1/3 em. INFERENCE */
+p { word-spacing:0.083em; text-align:justify; orphans:2; widows:2; }
+
+/* Paragraph indent: 1em standard; 2-3em on very wide measure. Lines 4671,4673. */
+p+p { text-indent:1em; margin-top:0; }
+@media(min-width:90ch){ p+p{ text-indent:2.5em; } } /* wide threshold: INFERENCE */
+
+/* Head-lines: small caps, slightly under body size. Head-lines section.
+   font-size:0.95em is INFERENCE. */
+h1,h2,h3 { font-variant:small-caps; font-size:0.95em; letter-spacing:0.04em; }
+
+/* Notes: two sizes below body. Lines 4636-4638.
+   0.75em approximation of two metal-type steps: INFERENCE */
+.note,aside,[role=note] { font-size:0.75em; }

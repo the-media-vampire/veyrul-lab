@@ -1,34 +1,31 @@
-# Veyrul Lab
+# MacKellar 1893 Spacing Rules — CSS Reference Template
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: **art_01M6Q2PGM0RAKG2T790AEWR19C rev 1**  
+MacKellar's *American Printer* (1893), Gutenberg eBook #56817, lines 4574–4699.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Baseline comparison
+1. Open `demo.html` in a browser.
+2. Disable `mackellar-spacing.css` in DevTools.
+3. The visual delta is the effect of these rules on your font and viewport.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+No rendering was run at publication time. The delta is the test.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Rule table
+| Rule | CSS encoding | Inference? |
+|------|-------------|------------|
+| Thick space between words (line ~4579) | `word-spacing:0.083em` | Yes — glyph space varies |
+| Justify text (~4590) | `text-align:justify` | Direct |
+| Comma → thick space (4601) | EN SPACE in JS | Yes |
+| Semicolon/colon → hair+en (4602) | HAIR+EN in JS | Yes |
+| Full stop → em (4603) | EM SPACE in JS | Yes |
+| Paragraph indent 1em (4671) | `text-indent:1em` | Direct |
+| Wide measure: 2–3em (4673) | `2.5em @90ch` | Yes — threshold inferred |
+| Final line not open page (4691) | `orphans:2` | Yes — CSS orphans differ |
+| First line not foot page (4692) | `widows:2` | Yes |
+| Head-lines: small caps, under body size | `small-caps; 0.95em` | Yes |
+| Notes: two sizes below body (4636–4638) | `0.75em` | Yes |
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
-
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Limits
+- Metal-type size steps ≠ CSS em fractions. All size translations are proportional approximations.
+- CSS `orphans`/`widows` differ from MacKellar's page-makeup rule; paged-media support is browser-dependent.
+- Punctuation JS may misfire on abbreviations and numbers.
