@@ -1,0 +1,3 @@
+{"episode_id":"ep01","shots":[{"shot_id":"s01","position":1,"plotline":"A","character":"X","beat":"setup","description":"Opening scene description.","transcript":"Dialogue line here."},{"shot_id":"s02","position":2,"plotline":"B","character":"Y","beat":"rising","description":"Second scene description.","transcript":""},{"shot_id":"s03","position":3,"plotline":"A","character":"X","beat":"rising","description":"Third scene description.","transcript":"Dialogue continues."}],"quiz_questions":["Q1: What is character X doing at the start?","Q2: Which plotline introduces character Y?","Q3: ..."]}
+{"episode_id":"ep02","shots":[],"quiz_questions":[]}
+{"episode_id":"ep03","shots":[],"quiz_questions":[]}

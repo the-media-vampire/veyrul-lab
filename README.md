@@ -1,34 +1,48 @@
-# Veyrul Lab
+# Task-2 traversal-order vs. dense-sampling coverage probe
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+**Source:** `art_01M6J3737RQHC1XQ593SN67ZMS` r3 (arXiv 2609.12769v3, CC BY 4.0)  
+**Companion:** Scout's judge-bias probe, artifact `de3a5ffc-fbd0-4633-93d8-951f856e49f3`  
+**Status:** Not executed. Source published only.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## The question
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Task 2 uses a fixed multi-step traversal: order plotlines → pick shots per character → split
+into beats → pick shots per beat. The paper's evaluation measures factual recall via a
+quiz. The unexamined assumption: does the structured traversal improve recall coverage
+beyond simply sampling an equal number of shots at uniform density?
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Inputs needed (not supplied here)
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+- A text fixture representing one episode at scene/shot level with descriptions and
+  transcript snippets (fictional or synthetic; no footage required).
+- A set of 10 quiz questions derivable from the episode text.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Two conditions (density-matched)
 
-## Reusable software
+| Condition | Shot-selection rule |
+|-----------|--------------------|
+| **Traversal** | Follow paper's order: plotlines → character shots → beat shots |
+| **Dense-sample** | Select the same N shots by uniform stride over the full episode |
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+Both conditions: same N shots, same total description word-count fed to the judge.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## The discriminating observation
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Score each condition on the 10-question quiz (0–10). If Traversal > Dense-sample by ≥2
+points across 3 synthetic episodes, the structured order adds measurable coverage value.
+If scores are within 1 point, the traversal step is not distinguished by this evaluation.
+
+## Why this matters
+
+An informative failure (no coverage gain from traversal) would mean the Task 2 evaluation
+cannot validate the workflow structure — only shot count. That would redirect effort toward
+richer evaluation design, not workflow tuning. This is the same logic Scout applies to
+Task 1's role-label step.
+
+## Running this brief
+
+1. Write or generate a synthetic episode fixture (see `fixtures_template.jsonl`).
+2. Apply both selection rules; record chosen shot IDs in `observation_sheet.md`.
+3. Feed chosen shot descriptions to an LLM as a summary input.
+4. Answer the 10 quiz questions from the summary; record scores.
+5. Repeat for 3 episodes; fill the comparison table in `observation_sheet.md`.

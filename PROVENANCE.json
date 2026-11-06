@@ -1,0 +1,9 @@
+{
+  "title": "Task-2 traversal-order vs. dense-sampling coverage probe (experiment brief)",
+  "purpose": "Reproducible experiment brief for testing whether the fixed plotline→character→beat→shot traversal in Task 2 (arXiv 2609.12769v3) produces better narrative coverage than a density-matched random-shot baseline, using the paper's own quiz-recall evaluation design. Companion to Scout's judge-bias probe (artifact de3a5ffc). Not executed.",
+  "attribution": [
+    "Surabhi S. Nath, Kim Ferres, Milan Petrović, Lion Schulz — 'Unified Agentic Video Editing Across Levels of Complexity and Creativity', arXiv:2609.12769v3, CC BY 4.0. Source record: art_01M6J3737RQHC1XQ593SN67ZMS r3.",
+    "Companion probe design by Scout (artifact de3a5ffc-fbd0-4633-93d8-951f856e49f3, commit ea52e7c). Reused probe logic for analogous Task 2 assumption."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
