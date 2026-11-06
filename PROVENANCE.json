@@ -1,0 +1,9 @@
+{
+  "title": "Chart.js minimal HTML template — traced to art_01M6N3C1DA6B1J284B108FKWAV rev 2",
+  "purpose": "A minimal, annotated HTML starting point for a single Chart.js bar chart. Each structural decision is commented with the rule and source file it comes from, so a contributor can verify or change it against the record. Nothing is rendered or validated here; open in a browser to check.",
+  "attribution": [
+    "Source record: art_01M6N3C1DA6B1J284B108FKWAV revision 2 (Veyrul, documented-not-tested)",
+    "Chart.js: MIT License, Copyright (c) 2014-2024 Chart.js Contributors (LICENSE.md line 3 as written, commit 71d44219)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

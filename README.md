@@ -1,34 +1,30 @@
-# Veyrul Lab
+# Chart.js minimal HTML skeleton
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source record: `art_01M6N3C1DA6B1J284B108FKWAV` revision 2 (Veyrul).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What this is
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+A single-file starting point for one bar chart. Every structural comment
+cites the rule and source file from the record. Nothing is rendered or
+validated here; open `index.html` in a browser and check it yourself.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## What this is not
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+- Not a tutorial. The step-by-step guide in `usage.md` is.
+- Not validated against an actual Chart.js install. The source record is
+  documentary only (`execution: not_run`).
+- Not accessibility-complete. The Chart.js accessibility page was not read
+  in the source record; `<canvas>` fallback content and ARIA attributes
+  are not covered here.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Known gap
 
-## Reusable software
+The accessibility page (`docs/accessibility.md`) is listed as unread in
+`art_01M6N3C1DA6B1J284B108FKWAV` rev 2. A contributor who reads that page
+and adds the missing guidance would close the most consequential gap.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Attribution
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Template and comments: MIT, Veyrul lab (this artifact).  
+Chart.js: MIT, Copyright (c) 2014-2024 Chart.js Contributors  
+(LICENSE.md line 3, as written — `art_01M6N3C1DA6B1J284B108FKWAV` rev 2).

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One bar chart — Chart.js skeleton</title>
+  <style>
+    /*
+     * Rule: size the CONTAINER, not the canvas.
+     * Source: configuration/responsive.md, Important Note
+     * (art_01M6N3C1DA6B1J284B108FKWAV rev 2)
+     */
+    .chart-container {
+      position: relative; /* required by Chart.js responsive logic */
+      width: 60%;         /* set relative sizes here */
+      max-width: 640px;
+      margin: 2rem auto;
+      /*
+       * Rule: flex/grid child needs min-width:0 or the chart overflows.
+       * Source: configuration/responsive.md, Flexbox / Grid Layout
+       */
+      /* min-width: 0; — uncomment if this container is a flex or grid child */
+    }
+    /*
+     * Do NOT set width/height on the canvas directly when using
+     * maintainAspectRatio (the default). The aspectRatio option is
+     * ignored if a height is set as attribute or style.
+     * Source: configuration/responsive.md, Configuration Options
+     */
+  </style>
+</head>
+<body>
+
+  <!--
+    Rule: each canvas needs its own dedicated container.
+    Source: configuration/responsive.md, Important Note
+  -->
+  <div class="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <!--
+    Rule: include Chart.js from npm or a CDN.
+    Source: getting-started/index.md, Install
+    Using CDN here (simplest path; for production consider tree-shaking — see script below).
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    /*
+     * Rule: acquire the canvas element and instantiate a new Chart.
+     * Two arguments: the canvas element and the options object.
+     * Source: usage.md, Build a new application
+     *
+     * Tree-shaking note: importing from 'chart.js/auto' loads every
+     * component; one such import anywhere disables tree-shaking.
+     * For production, register only the controller, scales and elements
+     * you need. Source: usage.md, Tree-shaking
+     * (CDN script tag above loads everything — equivalent to auto path.)
+     */
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      /*
+       * Rule: a chart type plus data (labels and datasets) is all that
+       * is required. Source: usage.md, Build a new application
+       */
+      type: 'bar',
+
+      data: {
+        labels: ['A', 'B', 'C', 'D'],   // replace with your own labels
+        datasets: [{
+          label: 'My dataset',           // replace with your own label
+          data: [12, 19, 3, 7]           // replace with your own data
+        }]
+      },
+
+      options: {
+        /*
+         * Rule: responsive:true (default) makes the chart fill its container.
+         * maintainAspectRatio:true (default) keeps the aspect ratio.
+         * aspectRatio default is 2 for non-radial charts.
+         * Source: configuration/responsive.md, Configuration Options
+         */
+        responsive: true,
+        maintainAspectRatio: true,
+
+        /*
+         * Customisation examples from the step-by-step guide (usage.md):
+         * - animation: false          disables animation
+         * - plugins.legend.display    hides the legend
+         * - plugins.tooltip.enabled   hides tooltips
+         * Axis ranges follow the dataset by default.
+         * Each dataset is plotted and styled independently.
+         */
+      }
+    });
+  </script>
+
+</body>
+</html>
