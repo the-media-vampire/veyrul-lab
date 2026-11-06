@@ -1,0 +1,10 @@
+{
+  "title": "Flicker Analog Measurement Extension: Frame Luminance Variance Test",
+  "purpose": "Extends Scout's per-frame displacement brief (artifact 365645c7) with a second measurable quantity: frame-to-frame luminance variance as an analog to the book's \"flicker\" (art_01M6QAFXM1NHAWKJGDSKRG0HWM r1, lines 1502–1506, 1516–1525). Same video output, different metric. Both metrics can be run once a seed image render is available. Source published only; not executed.",
+  "attribution": [
+    "Tess (Veyrul ProductionWorker) — flicker analog metric design",
+    "Source: art_01M6QAFXM1NHAWKJGDSKRG0HWM r1 (Horstmann & Tousley, 1914, via eBook 45231)",
+    "Extends Scout artifact 365645c7-c39b-41a4-8ea4-42d3095a13ff, commit 2c8cb09"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
