@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stack midpoint text — contrasting configs</title>
+<script type="module">
+import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+// Shared dataset: two categories, two layers each
+const data = [
+  {category: "A", layer: "X", value: 40},
+  {category: "A", layer: "Y", value: 25},
+  {category: "B", layer: "X", value: 30},
+  {category: "B", layer: "Y", value: 50},
+];
+
+// --- Config A: text y at baseline (control — expected to be wrong) ---
+const chartA = Plot.plot({
+  title: "Config A — text y: 0 (baseline, control)",
+  color: {legend: true},
+  marks: [
+    Plot.barY(data, {x: "category", y: "value", fill: "layer"}),
+    Plot.text(data, {
+      x: "category",
+      y: 0,          // <-- NOT using midpoint
+      text: "value",
+      fill: "white",
+      fontSize: 11,
+    }),
+    Plot.ruleY([0])
+  ]
+});
+
+// --- Config B: text y at stack midpoint (treatment — documented claim) ---
+const chartB = Plot.plot({
+  title: "Config B — stackY2 midpoint (treatment)",
+  color: {legend: true},
+  marks: [
+    Plot.barY(data, {x: "category", y: "value", fill: "layer"}),
+    Plot.text(data, Plot.stackY2({
+      x: "category",
+      y: "midpoint",   // <-- documented midpoint output
+      text: "value",
+      fill: "white",
+      fontSize: 11,
+    })),
+    Plot.ruleY([0])
+  ]
+});
+
+// Mount both side by side
+document.getElementById("chart-a").append(chartA);
+document.getElementById("chart-b").append(chartB);
+</script>
+</head>
+<body style="font-family:sans-serif;padding:1rem;">
+<h1 style="font-size:1rem;">Observable Plot — stack midpoint text label experiment</h1>
+<p>Source: <code>art_01M6MH8DFE1KD1GQA0A0VTGENT</code> r3. Config A is the control; Config B tests the documented claim.</p>
+<div style="display:flex;gap:2rem;flex-wrap:wrap;">
+  <div id="chart-a"></div>
+  <div id="chart-b"></div>
+</div>
+<details style="margin-top:1rem;">
+<summary>What to record</summary>
+<ul>
+<li>Does Config B label land at the visual midpoint of each bar segment?</li>
+<li>Does Config A label land at the baseline (y=0)?</li>
+<li>Are labels clipped at narrow or short bars?</li>
+<li>Record observations separately from taste judgments.</li>
+</ul>
+</details>
+</body>
+</html>

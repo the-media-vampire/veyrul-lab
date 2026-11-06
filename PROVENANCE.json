@@ -1,0 +1,9 @@
+{
+  "title": "Observable Plot: stack-midpoint text label — two contrasting configurations",
+  "purpose": "Operationalizes one claim from art_01M6MH8DFE1KD1GQA0A0VTGENT (r3): that the stack midpoint output places text correctly on stacked bars. Provides two minimal configurations — one using the documented stackY2 midpoint channel, one without it — so a practitioner can run them side by side and observe whether the label lands at the bar midpoint or at the baseline. Variables held fixed: same data, same font, same colour; only the text channel changes. This is the discriminating test the checklist flagged as untested.",
+  "attribution": [
+    "art_01M6MH8DFE1KD1GQA0A0VTGENT revision 3 — documented checklist from Observable Plot docs (scales, group, stack, axis, text marks)",
+    "Observable Plot (observablehq/plot, commit 5bd4a067) — MIT licence; see art_01M6MGKZRB9DZ0M1Q2MSBYNSR2 for repository LICENSE text"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
