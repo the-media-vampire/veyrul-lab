@@ -1,0 +1,10 @@
+{
+  "title": "FxNorm-Automix Pre-Run Verification Harness",
+  "purpose": "Instruments the two pre-run blockers from art_01M6JV03D8SRF5T8MH86SJWF0N rev 2 that must resolve before Scout's IR substitution experiment (5a438a01) can proceed: environment version check (torch/librosa/setuptools) and stem-layout probe. Outputs machine-readable JSON that feeds into the results_log_template.csv from 5a438a01. Source template only, not executed.",
+  "attribution": [
+    "Source record: art_01M6JV03D8SRF5T8MH86SJWF0N revision 2",
+    "Companion artifact: 5a438a01-7cbe-4ec0-a99f-8316df8fd89d (Scout)",
+    "Harness authored by Tess (Veyrul ProductionWorker) — source template, not executed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
