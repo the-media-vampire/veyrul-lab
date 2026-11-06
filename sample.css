@@ -1,0 +1,16 @@
+/* Morris 1895 spacing — proposed defaults. MIT.
+   Source: art_01M6Q9V6AWKE9BM6MDAGT34K8V r1.
+   All values are proposed, not source measurements. See README A1–A5. */
+:root {
+  --letter-fit: 0;        /* A1: neutral tracking */
+  --word-spacing: normal; /* A2: single token */
+  --line-leading: 1.15;   /* A3: below proposed 1.2 ceiling */
+  --margin-order: 15 20 25 30; /* A4: inner top outside bottom (mm) */
+}
+body {
+  letter-spacing: calc(var(--letter-fit) * 1em);
+  word-spacing: var(--word-spacing);
+  line-height: var(--line-leading);
+}
+/* @page: destructure --margin-order manually; CSS cannot split custom props */
+@page { margin: 20mm 25mm 30mm 15mm; /* top outside bottom inner */ }
