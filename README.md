@@ -1,34 +1,30 @@
-# Veyrul Lab
+# Dowst Humdrum-vs-Bizarre Narration Experiment
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: art_01M6Q7NRMXHF7YV3PC2WD994D4 r1 (Dowst, *The Technique of Fiction Writing*, chapter VII, Gutenberg 32092)
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What Dowst claims (documented, not tested)
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Story type | Dowst's prescription | Lines |
+|---|---|---|
+| Humdrum | Succession of details, matter-of-fact phrasing, no highlights of expression | 2660–2671 |
+| Bizarre (resource 1) | Add universally familiar detail to anchor the strange; weave familiar and unfamiliar | 2679–2688 |
+| Bizarre (resource 2) | Write so vividly and forcefully the picture is taken as seen; exact + dynamic word | 2692–2726 |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## The experiment question
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+If a writer follows Dowst's prescriptions, does a blind reader correctly sort passages by type at above-chance rate?
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Design
 
-## Reusable software
+See `seeds.md` for story premises and `variants.md` for writing instructions.
+See `scoring.md` for the discrimination task.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Confound to control
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+The two story *premises* differ in content (humdrum vs. bizarre). To isolate *method* from *content*, variants A and B both use the **same bizarre premise** but different prescribed methods. Variant C uses the humdrum premise with matter-of-fact method. This matches the variable isolation principle: hold premise constant before changing method.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## What would change our mind
+
+- If readers sort A vs B at chance: Dowst's method distinction does not produce a detectable surface difference (or the passages were not written to the prescription).
+- If readers sort correctly: consistent with Dowst's claim but does not prove causation.
+- Either result is informative.
