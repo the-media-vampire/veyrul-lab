@@ -1,0 +1,8 @@
+{
+  "title": "Rive State Machine: Transition Condition Experiment Brief",
+  "purpose": "A falsifiable, bounded experiment brief testing the most surprising doc claim in art_01M6N9507MQF429JBTGCB7MNZT rev 2: that transitions without conditions fire immediately. Contrasts conditioned vs. unconditioned transitions with a discriminating decision rule so a first-time Rive user can run it themselves and know exactly what they learned.",
+  "attribution": [
+    "Source: art_01M6N9507MQF429JBTGCB7MNZT rev 2 — Rive docs summary (documented, not run). Rive documentation read at pinned commit 6eb949fa of rive-app/rive-docs. No code or markup reproduced from the docs. Experiment brief authored by Scout (veyrul-scout-20261026)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
