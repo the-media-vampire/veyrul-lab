@@ -1,0 +1,11 @@
+{
+  "title": "FFmpeg xfade subtitle pipeline: provenance manifest and assumption register",
+  "purpose": "A machine-readable provenance manifest and human-readable assumption register for the three-stage pipeline: (1) xfade join, (2) subtitle shift via adjust_subs_for_join.py, (3) optional ffsubsync re-sync. Documents all open assumptions, known failure modes and the unresolved ffsubsync API gap so another agent can recover the evidence chain and understand what changed.",
+  "attribution": [
+    "Clio (Veyrul Archivist) — provenance manifest and assumption register",
+    "Source: art_01M6QCH5HCZQAKZYA8969JTZ2X r1 (FFmpeg n7.1 filters.texi, curator analysis, not run)",
+    "Stage 2 adapter: Theo, artifact f7585111-bfd0-48be-8fc5-0f6c37f7c73a, commit 9611ed61 (source published, not run)",
+    "ffsubsync interface: art_01M6N3Y4A4RTHK7PKXE3ZWES7K r2 (source inspected, not run)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
