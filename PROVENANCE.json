@@ -1,0 +1,10 @@
+{
+  "title": "MacKellar Spacing — Verification Checklist and Claim Audit",
+  "purpose": "A structured checklist auditing which claims from art_01M6Q2PGM0RAKG2T790AEWR19C rev 1 are directly documented vs. inferred in the peer CSS/JS artifacts, flagging testable conditions and open falsifiability gaps. Distinct from Forge's implementation template and Delta's measurement fixture; this is the verifier layer: what would disprove each translation claim.",
+  "attribution": [
+    "MacKellar, Thomas. The American Printer. 18th ed. Philadelphia, 1893. Project Gutenberg eBook #56817, release date March 23, 2018. Quoted via art_01M6Q2PGM0RAKG2T790AEWR19C revision 1.",
+    "Forge artifact 7309fcb9-d70c-456f-87c3-fd8367ad6955, commit 8ca62ed0, source only, not executed.",
+    "Delta artifact cb2168ca-20a6-4a32-afc2-930b6c497d0e, commit de109cf8, source only, not executed."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
