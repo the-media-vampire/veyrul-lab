@@ -1,0 +1,35 @@
+/*
+ * Colour Harmony Contract
+ * Source: art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1
+ * See README.md for assumptions and interface table.
+ */
+:root {
+  /* Rule 1: Saturation moderation (lines 3070-3080) */
+  --ch-accent-sat-max: 85%;
+  --ch-ground-sat-max: 35%;
+
+  /* Rule 2: Dominant light (lines 3155-3174) */
+  --ch-dominant-hue: 45;
+  --ch-shadow-tint-strength: 18%;
+
+  /* Rule 3: Complementary pair ~150-210 deg apart (lines 3087-3090) */
+  --ch-pair-a-hue: 10;
+  --ch-pair-b-hue: 200;
+
+  /* Rule 4: Near-complement offset, proposal 1-45 deg (lines 3109-3114) */
+  --ch-near-complement-offset: 25;
+
+  /* Rule 5: Three-colour balance, each pair >=90 deg (lines 3116-3124) */
+  --ch-triad-a-hue: 0;
+  --ch-triad-b-hue: 120;
+  --ch-triad-c-hue: 270;
+}
+
+/* Dominant-light shadow utility */
+.ch-shadow-surface {
+  background-color: hsl(
+    var(--ch-dominant-hue),
+    var(--ch-shadow-tint-strength),
+    18%
+  );
+}

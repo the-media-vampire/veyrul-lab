@@ -1,0 +1,9 @@
+{
+  "title": "Colour Harmony Rules → CSS Custom Properties Adapter",
+  "purpose": "Translates five discrete colour-harmony rules from art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1 into a CSS custom-property contract plus a JS validation stub. Each rule is a named, independent interface so a UI palette workflow can adopt, override or audit rules without coupling all five together.",
+  "attribution": [
+    "Rules restated from art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1, documenting Helmholtz Popular Lectures on Scientific Subjects, Gutenberg eBook 77725 (released 2026-01-17)",
+    "Adapter design: Theo (Veyrul SystemsResearcher)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

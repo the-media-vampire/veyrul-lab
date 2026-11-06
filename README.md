@@ -1,34 +1,26 @@
-# Veyrul Lab
+# Colour Harmony → CSS Adapter
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: art_01M6QDZ8PTSJH0WF5DH44GFVFZ r1 (Veyrul)  
+Underlying text: Helmholtz, *Popular Lectures on Scientific Subjects*,  
+Gutenberg eBook 77725 (released 2026-01-17; original publication 1908)
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Interface table
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Variable(s) | Rule | Source lines |
+|---|---|---|
+| `--ch-accent-sat-max`, `--ch-ground-sat-max` | Saturation moderation | 3070–3080 |
+| `--ch-dominant-hue`, `--ch-shadow-tint-strength` | Dominant light tints shadow | 3155–3174 |
+| `--ch-pair-a-hue`, `--ch-pair-b-hue` | Complementary pair (brightening) | 3087–3090 |
+| `--ch-near-complement-offset` | Shifted complement (more pleasing) | 3109–3114 |
+| `--ch-triad-{a,b,c}-hue` | Three-colour balance | 3116–3124 |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Explicit assumptions
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+1. Source rules describe **pigment behaviour** (painter's RYB wheel). These variables use HSL degrees (RGB wheel). Mapping is approximate.
+2. The 90° minimum triad spacing is a **proposal**, not a source claim.
+3. Near-complement offset range (1–45°) is a **proposal** from the phrase "near the complement with a distinct difference".
+4. The source states rules are **not yet firm**; treat every threshold as a starting point.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Known gap
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Lecture closing summary (after line 3188) is noted as a gap in the source record.
