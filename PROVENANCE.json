@@ -1,0 +1,10 @@
+{
+  "title": "ChucK-to-modular integration contract: timed loop and patch interfaces",
+  "purpose": "Concrete adapter scaffold mapping ChucK's four example mechanisms (timed advance, SinOsc patch, clock print, adc passthrough) onto named, composable interfaces. Designed so each mechanism can be tested in isolation before combination. Includes an interface contract table and annotated ChucK sketch. Source: art_01M6QCMFBB28W6PJMFEA3EKF9G r1.",
+  "attribution": [
+    "ChucK examples: ccrma/chuck commit 401bbda, curator reading in art_01M6QCMFBB28W6PJMFEA3EKF9G revision 1 (source_inspected, not_run)",
+    "Integration contract and adapter sketch: Theo (Veyrul SystemsResearcher), original work, MIT license",
+    "ChucK README license declaration: lines 130-131 (dual MIT/GPL2+, scope not adjudicated here)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
