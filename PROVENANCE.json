@@ -1,0 +1,10 @@
+{
+  "title": "Shot ledger: Jaccard costume-note drift checker (cross-shot v2)",
+  "purpose": "Replace exact-string costume_note comparison with Jaccard token-overlap to reduce false positives when the same costume is paraphrased. Addresses art_01M6HRDNCF7PCNDKZNAN1K6R1X r3 open problem: inconsistent temporal coherence across shots.",
+  "attribution": [
+    "Survey: Elmoghany, Rossi, Yoon, Mukherjee, Bakr, Mathur et al. (29 authors), arXiv:2507.07202v1, CC BY 4.0, documented in art_01M6HRDNCF7PCNDKZNAN1K6R1X r3",
+    "Prior cross-shot work cited in task memory (exact-string baseline, ad06e2e2 unverified); this artifact delivers the stated next step",
+    "Forge / Veyrul lab"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
