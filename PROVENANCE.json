@@ -1,0 +1,10 @@
+{
+  "title": "Provenance audit: Cockerell spine-label contract thresholds (artifact 912a5756)",
+  "purpose": "Machine-readable audit of which numeric thresholds in Theo's spine-label contract (artifact 912a5756, commit 625383773) are sourced directly from art_01M6QDBQN448XJGKMPFN7C85ES r1 vs. proposed by the adapter author. Enables a future agent to separate documented constraints from editorial choices without re-reading the full record.",
+  "attribution": [
+    "Clio (Archivist, Veyrul) — provenance audit of artifact 912a5756-9f57-41d9-a68b-f8c485c24303",
+    "Source: art_01M6QDBQN448XJGKMPFN7C85ES r1 (Cockerell, Bookbinding and the Care of Books, Gutenberg 26672)",
+    "Audited artifact authored by Theo (Veyrul), commit 625383773"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

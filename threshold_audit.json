@@ -1,0 +1,111 @@
+{
+  "audit_of": {
+    "artifact_id": "912a5756-9f57-41d9-a68b-f8c485c24303",
+    "commit": "625383773f9ae39a8d8c4fda06fa6c0004f98360",
+    "file": "contract.md",
+    "sha256": "b040d86c1b5eb35d8120b01a9f340ba76b67f7d6892450f448c03b27acac0375"
+  },
+  "source": {
+    "record_id": "art_01M6QDBQN448XJGKMPFN7C85ES",
+    "revision": 1,
+    "upstream": "Project Gutenberg eBook 26672 (Cockerell, Bookbinding and the Care of Books, 1901/1910)"
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "parameter": "--spine-fill-ratio",
+      "source_lines": "3888-3889",
+      "source_language": "fills the panel without strain",
+      "threshold": "0.75-0.95",
+      "threshold_status": "PROPOSAL",
+      "note": "'strain' is unquantified in source; both bounds are adapter invention"
+    },
+    {
+      "id": "R2",
+      "parameter": "--spine-size-steps",
+      "source_lines": "3839-3840",
+      "source_language": "four letter sizes serve every book",
+      "threshold": "exactly 4",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "'four' is Cockerell's explicit stated number; it is his experience claim, not a measurement"
+    },
+    {
+      "id": "R3",
+      "parameter": "--spine-mixed-sizes",
+      "source_lines": "3903-3904",
+      "source_language": "to be avoided when possible",
+      "threshold": "boolean false preferred",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "'when possible' override is correctly preserved as WARN not ERROR"
+    },
+    {
+      "id": "R4",
+      "parameter": "--spine-font-families",
+      "source_lines": "3904-3905",
+      "source_language": "on no account whatever",
+      "threshold": "count === 1",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "Absolute prohibition confirmed in source; hard ERROR is correctly assigned"
+    },
+    {
+      "id": "R5",
+      "parameter": "--spine-width-in",
+      "source_lines": "3892-3894",
+      "source_language": "back no wider than 5/8-inch",
+      "threshold": "0.625 in",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "5/8 inch is Cockerell's stated example; DPI conversion for digital use is adapter addition, not covered by source"
+    },
+    {
+      "id": "R6",
+      "parameter": "--spine-orientation",
+      "source_lines": "3897-3899",
+      "source_language": "unless necessary",
+      "threshold": "horizontal preferred; vertical allowed with WARN",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "Preference structure is correct; omission of raised-bands context is a documented gap"
+    },
+    {
+      "id": "R7",
+      "parameter": "--spine-is-thin-in-set",
+      "source_lines": "3909-3912",
+      "source_language": "generally better",
+      "threshold": "boolean; allows R2 exception",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "'generally better' is hedged; non-absolute treatment as WARN-not-ERROR is correct"
+    },
+    {
+      "id": "R8",
+      "parameter": "--spine-width-in (second threshold)",
+      "source_lines": "3914-3916",
+      "source_language": "very slim books... hardly possible",
+      "threshold": "< 0.25 in",
+      "threshold_status": "PROPOSAL",
+      "note": "No measurement in source; 0.25 in is adapter invention. This is the most underspecified threshold in the contract."
+    },
+    {
+      "id": "R9",
+      "parameter": "--spine-special-binding",
+      "source_lines": "3918-3921",
+      "source_language": "not perhaps out of place",
+      "threshold": "boolean; downgrades R3 and R6 to WARN",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "Hedge confirmed in source ('not perhaps'); boolean representation loses the degree of hedging"
+    },
+    {
+      "id": "R10",
+      "parameter": "default state",
+      "source_lines": "3922-3923",
+      "source_language": "utmost importance",
+      "threshold": "R4 always hard; R1 R3 hard unless R9",
+      "threshold_status": "SOURCE_SUPPORTED",
+      "note": "Default/exception structure matches source's framing of most-books vs. special-books"
+    }
+  ],
+  "summary": {
+    "SOURCE_SUPPORTED": 8,
+    "PROPOSAL": 2,
+    "proposal_rules": ["R1", "R8"],
+    "minimum_evidence_gap": "R8 threshold (very thin book width) has no source number; any combined system relying on this boundary needs an independent typographic or bindery reference before it can be treated as more than a default."
+  }
+}
