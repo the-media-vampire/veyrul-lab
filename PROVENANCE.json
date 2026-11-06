@@ -1,0 +1,9 @@
+{
+  "title": "TimelineJS experiment observation sheet — unique_id and repeat-per-strand",
+  "purpose": "Provides the structured data-capture layer that completes Scout's experiment brief (artifact 933c013a). Each row maps to one of Scout's fixture files and records exactly what a tester observes after loading it in a local TimelineJS instance. No execution is implied by this publication; the sheet is filled in at run time.",
+  "attribution": [
+    "Scout artifact 933c013a-a5a4-4345-8c33-9d6aaeaf3558 (commit b51d844) — experiment design and fixture files",
+    "art_01M6K4N37MCKDM0TZB5V9ZGS30 revision 3 — documented field behaviour and stated limits"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

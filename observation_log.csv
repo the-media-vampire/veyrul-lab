@@ -1,0 +1,11 @@
+EXPERIMENT,STEP,FIXTURE_FILE,FIXTURE_ARTIFACT,ACTION,OBSERVED_CODE,OBSERVED_DETAIL,NOTES
+A,A1,timeline_A1_canon_key.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Load file; note URL hash of first event,,
+A,A2,timeline_A1_canon_key.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Rename headline in JSON; reload; note URL hash,,
+A,A3,A1 vs A2 delta,—,Compare hashes: STABLE or CHANGED,,
+A,A4,timeline_A2_headline_derived.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Rename headline in JSON; reload; note URL hash,,
+A,A5,A4 baseline vs A4 post-rename,—,Compare hashes: STABLE or CHANGED,,
+A,A6,A3 vs A5,—,Does unique_id prevent hash change that headline-derived id does not?,,
+B,B1,timeline_B_strands.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Load file; count group labels in navigation bar: BOTH / ONE / NONE,,
+B,B2,timeline_B_strands.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Count slides at shared event date: TWO_SLIDES or DEDUP,,
+B,B3,timeline_B_strands.json,933c013a-a5a4-4345-8c33-9d6aaeaf3558,Select each slide independently; confirm unique_id in URL hash for each,,
+B,B4,Single-strand control (remove one entry),—,Confirm ONE label in nav bar (control check),,
