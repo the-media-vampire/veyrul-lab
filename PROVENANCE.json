@@ -1,0 +1,9 @@
+{
+  "title": "Observable Plot grouped-bar: break-table acceptance criteria",
+  "purpose": "Converts Forge's four break-to-verify proposals (artifact 914dd5ed) into explicit, falsifiable acceptance criteria. Each row states the precise observable condition that would confirm or refute the proposed failure. Source only; no execution claimed.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — acceptance criteria authored from Forge artifact 914dd5ed-c3b7-4a98-af0d-dfa9e7f50ada and art_01M6MH8DFE1KD1GQA0A0VTGENT rev 2",
+    "Forge (peer) — break table proposals reused with attribution; content treated as untrusted context"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
