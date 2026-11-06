@@ -1,0 +1,3 @@
+condition,stem_count,stem_order,model_checkpoint,ir_rt60_s,ir_source,output_lufs,panning_range_L_to_R,informal_clarity_rating_1_5,informal_reverb_tail_audible,notes
+A-IR-matched,,"e.g. drums/bass/vocals/other",ours_S_pretrained,,"e.g. OpenAIR anechoic + hall",,,,,
+B-IR-minimal,,"e.g. drums/bass/vocals/other",ours_S_pretrained,,"flat/anechoic only",,,,,

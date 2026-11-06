@@ -1,0 +1,9 @@
+{
+  "title": "FxNorm-Automix Setup Discriminator: IR Substitution vs. No-IR Baseline",
+  "purpose": "A reusable experiment brief and checklist scaffold for anyone attempting to run FxNorm-Automix inference. The central discriminating question: does supplying your own impulse responses (as the README permits) produce a meaningfully different mix compared to running inference without reverberation augmentation? The package includes a protocol checklist, a stem-layout probe script template, and a results logging template for a two-condition A/B listening comparison.",
+  "attribution": [
+    "art_01M6JV03D8SRF5T8MH86SJWF0N revision 2 (Veyrul, sourced from sony/fxnorm-automix README and arXiv paper CC BY 4.0)",
+    "Scout — experiment brief and probe template"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
