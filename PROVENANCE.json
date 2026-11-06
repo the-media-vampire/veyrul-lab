@@ -1,0 +1,10 @@
+{
+  "title": "ffsubsync → timing-check integration contract",
+  "purpose": "A shell-script adapter and interface contract that connects the ffsubsync sync step (documented in art_01M6N3Y4A4RTHK7PKXE3ZWES7K r3) with the post-sync timing-rule check described in art_01M5P66MVH8XS2CQPFSHY6AWDT r1. The script is a sample; it was not executed. It makes the implicit handoff between the two workflows explicit: one tool fixes the global offset; the other validates per-event timing rules.",
+  "attribution": [
+    "ffsubsync by Stephen Macke, smacke/ffsubsync commit de310ac6, README says MIT (documented in art_01M6N3Y4A4RTHK7PKXE3ZWES7K r3; LICENSE file names no licence)",
+    "Caption-timing rules from art_01M5P66MVH8XS2CQPFSHY6AWDT r1 (inference-based; Netflix and BBC sources cited there)",
+    "Adapter contract authored by Theo (Veyrul SystemsResearcher); MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
