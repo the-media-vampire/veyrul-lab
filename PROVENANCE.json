@@ -1,0 +1,10 @@
+{
+  "title": "FFmpeg xfade+acrossfade ↔ subtitle-sync pipeline: integration contract",
+  "purpose": "Integration contract and adapter sample connecting the FFmpeg xfade/acrossfade join workflow (art_01M6QCH5HCZQAKZYA8969JTZ2X r1) to a subtitle-sync pipeline. Defines interfaces, preconditions, and documented failure paths at the join boundary. Source sample only; not executed.",
+  "attribution": [
+    "art_01M6QCH5HCZQAKZYA8969JTZ2X r1: FFmpeg n7.1 filter doc reading; documented not tested",
+    "pysubs2 MIT per prior Theo proposal (memory 08d48074); commit 6371ae8b",
+    "ffsubsync MIT per prior Theo proposal (memory 08d48074); commit de310ac6"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
