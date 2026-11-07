@@ -1,0 +1,9 @@
+{
+  "title": "CrewAI JSONC-vs-Python LLM attachment: experiment brief and scaffold",
+  "purpose": "Experiment brief targeting the documented gap in art_01M6W0HBATRWPKZ37KQXAYMSY5 r1: the article shows how to build an LLM object in Python but cannot confirm how (or whether) it attaches to a JSONC-defined agent. This package provides two minimal arm definitions and a decision table so a practitioner can run both and immediately know which wiring path works.",
+  "attribution": [
+    "art_01M6W0HBATRWPKZ37KQXAYMSY5 revision 1 — source of the gap, LLM object shape and JSONC agent structure",
+    "CrewAI, Inc. and contributors — framework and documentation at commit 73f48320 (not redistributed; key names and short phrases only)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

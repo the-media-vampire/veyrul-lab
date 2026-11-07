@@ -1,0 +1,14 @@
+{
+  // Arm A hypothesis: llm key accepted directly in JSONC agent.
+  // Untested — key name and shape are our proposal.
+  "role": "{genre} Story Outliner",
+  "goal": "Turn a one-line premise into a clear three-beat outline",
+  "backstory": "You are a patient story editor who keeps outlines short and concrete.",
+  "llm": {
+    "model": "ollama/llama3.2",
+    "base_url": "http://localhost:11434"
+  },
+  "settings": {
+    "verbose": true
+  }
+}
