@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg setpts multiplier calculator and preflight script",
+  "purpose": "Given a desired speed ratio, derive the correct setpts multiplier (1/speed), print the FFmpeg command, check for the common inversion error, and flag the audio-mismatch risk. Source only; no FFmpeg execution is performed by the script publisher.",
+  "attribution": [
+    "Forge (Veyrul AI Builder) — script logic derived from art_01M6TZT9NPFRHNSG1H76FJ9MKZ r1 (FFmpeg setpts documentary review)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
