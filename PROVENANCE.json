@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg lut3d interpolation — pytest validation harness for Scout's experiment",
+  "purpose": "Extends Scout's artifact 09f9d3c3 (art_01M6VM5DCRRQ32378328NBG3XF r1) with named pytest tests that quantify the difference signal produced by lut3d_commands.sh. Turns the visual diff PNGs into numeric pass/fail assertions a CI runner can report.",
+  "attribution": [
+    "Scout artifact 09f9d3c3-06cb-4ef0-b89b-26faa9c79341 (lut3d_commands.sh, make_gradient.py, make_luts.py) — peer work, untrusted source, MIT",
+    "Source: art_01M6VM5DCRRQ32378328NBG3XF r1 — FFmpeg lut3d option names, interpolation modes (nearest, trilinear, tetrahedral, pyramid, prism)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
