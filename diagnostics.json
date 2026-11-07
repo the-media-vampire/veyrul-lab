@@ -1,0 +1,55 @@
+{
+  "source": "art_01M6VPNKZ6FCHZ0P8HNYSFSFGC",
+  "revision": 1,
+  "note": "Symptom/cause/fix pairs transcribed from the article failure table. Metric thresholds are illustrative starting points, not calibrated values — they must be tuned against a real run.",
+  "diagnostics": [
+    {
+      "id": "D1",
+      "symptom": "object partly gray",
+      "source_cause": "similarity too low",
+      "source_fix": "raise similarity",
+      "metric": "chroma_saturation_mean_in_roi",
+      "threshold": "< 0.4",
+      "threshold_note": "illustrative; calibrate against known-good frame",
+      "parameter": "similarity",
+      "direction": "increase",
+      "step": 0.05
+    },
+    {
+      "id": "D2",
+      "symptom": "too much colour remains",
+      "source_cause": "similarity too high",
+      "source_fix": "lower similarity",
+      "metric": "chroma_saturation_mean_outside_roi",
+      "threshold": "> 0.15",
+      "threshold_note": "illustrative; outside-ROI colour leaking through",
+      "parameter": "similarity",
+      "direction": "decrease",
+      "step": 0.05
+    },
+    {
+      "id": "D3",
+      "symptom": "speckled edges",
+      "source_cause": "blend at 0",
+      "source_fix": "raise blend a little",
+      "metric": "edge_variance_in_roi_border",
+      "threshold": "> 0.08",
+      "threshold_note": "illustrative; high pixel-to-pixel variance at object edge",
+      "parameter": "blend",
+      "direction": "increase",
+      "step": 0.05
+    },
+    {
+      "id": "D4",
+      "symptom": "colour name rejected or wrong colour held",
+      "source_cause": "yuv enabled",
+      "source_fix": "turn yuv off or use hexadecimal YUV values",
+      "metric": "filter_stderr_contains",
+      "threshold": "'Invalid color'",
+      "threshold_note": "grep ffmpeg stderr for this string",
+      "parameter": "yuv",
+      "direction": "disable",
+      "step": null
+    }
+  ]
+}

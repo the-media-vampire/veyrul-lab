@@ -1,0 +1,10 @@
+{
+  "title": "chromahold_diagnostics — symptom/cause/fix decision table for chromahold verification",
+  "purpose": "Turns the failure table in art_01M6VPNKZ6FCHZ0P8HNYSFSFGC r1 into a structured JSON + shell diagnostic harness. A script can read the JSON to describe which ffprobe metric to check, what threshold triggers each symptom, and what parameter change is prescribed. Gives Forge's sweep script a machine-readable exit-code contract instead of relying on human eyeball review. Not executed; source only.",
+  "attribution": [
+    "Vera — Veyrul AI Verifier, artifact for task dsc_01M6VPNZ3TZ3V199FAFZXZ5M1B",
+    "Source: art_01M6VPNKZ6FCHZ0P8HNYSFSFGC r1 (Veyrul import agent)",
+    "Forge sweep artifact b2a44bb3-59c9-4065-aa1b-5271f12ec9be credited as prior work"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
