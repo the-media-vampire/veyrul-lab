@@ -1,0 +1,75 @@
+{
+  "title": "Stop-and-substitution / reversal: interface contract for AI video review",
+  "source": "art_01M6Q7X8AYY9CB2Y8T6ECAGEW8 r1 (eBook 67972, Talbot 1914)",
+  "status": "curator_analysis_untested",
+  "note": "No film viewed, no AI output evaluated, no model named. Own invented subjects only.",
+
+  "mechanisms": {
+    "M1_stop_and_substitution": {
+      "description": "Camera stops; every subject not leaving holds the position the last exposure caught; leaving subject slips out; substitute or returning subject steps in; camera restarts.",
+      "book_locators": ["lines 8028-8036", "lines 8056-8069"],
+      "key_invariant": "Position of all non-leaving subjects is frozen at stop; any deviation is the failure signature.",
+      "ai_analogy": "A generative cut between two prompts or scenes; the model does not enforce the hold-position invariant automatically."
+    },
+    "M2_reversal": {
+      "description": "Natural action photographed forward; film threaded so last frame plays first (projector route), or film run backward through camera (camera route). The worked example wording differs between line 8139 (camera) and caption lines 8078-8079 (projector); which route a given AI tool uses is not stated here.",
+      "book_locators": ["lines 8100-8109", "lines 8116-8130", "lines 8133-8141"],
+      "key_invariant": "Motion direction is inverted across all frames; partial inversion is the failure signature."
+    }
+  },
+
+  "interfaces": {
+    "input": {
+      "subject_count": "integer — number of subjects in scene at stop",
+      "intended_effect": "enum: substitution | disappearance | reversal | return",
+      "review_unit": "enum: single_still | frame_sequence | playback"
+    },
+    "output": {
+      "checkpoints_applicable": "array of checkpoint IDs from the checkpoints block below",
+      "cannot_check": "list of things that cannot be verified at the given review_unit"
+    }
+  },
+
+  "checkpoints": [
+    {
+      "id": "CP_HOLD",
+      "maps_to": "M1_stop_and_substitution",
+      "when": "intended_effect is substitution, disappearance, or return",
+      "question": "Do all non-leaving subjects maintain the same position across the cut frame? Any drift is a failure of the hold-position invariant.",
+      "cannot_check_in": ["single_still"],
+      "requires": "frame_sequence or playback"
+    },
+    {
+      "id": "CP_SUBSTITUTE",
+      "maps_to": "M1_stop_and_substitution",
+      "when": "intended_effect is substitution",
+      "question": "Does the substitute figure appear at the correct position (where the original was last exposed) rather than at an interpolated or drifted position?",
+      "cannot_check_in": ["single_still"],
+      "requires": "frame_sequence or playback"
+    },
+    {
+      "id": "CP_REVERSAL_DIRECTION",
+      "maps_to": "M2_reversal",
+      "when": "intended_effect is reversal",
+      "question": "Does motion run opposite to the natural direction across the full clip? Check start and end frames; partial reversal (some frames forward, some backward) is the failure signature.",
+      "cannot_check_in": ["single_still"],
+      "requires": "playback"
+    },
+    {
+      "id": "CP_REVERSAL_COMPLETENESS",
+      "maps_to": "M2_reversal",
+      "when": "intended_effect is reversal",
+      "question": "Is the reversal applied to the full sequence, or only to a segment? The book describes full-film reversal; partial reversal is not described there and would need separate justification.",
+      "cannot_check_in": ["single_still"],
+      "requires": "playback"
+    }
+  ],
+
+  "explicit_gaps": [
+    "The book does not say how many frames constitute a 'clean' cut; no minimum frame count is given.",
+    "Which reversal route an AI video tool uses (frame-reorder vs. temporal-inversion in latent space) is not addressed by the book and not established here.",
+    "The hold-position invariant assumes discrete stop points; AI interpolation between keyframes may produce a continuous drift that has no direct analog in the book.",
+    "The worked example wording disagreement (camera line 8139 vs. projector caption lines 8078-8079) is noted but not resolved; no determination is made here.",
+    "No audio claim: the book's stop mechanism applies to the visual track only; sound handling is not addressed."
+  ]
+}

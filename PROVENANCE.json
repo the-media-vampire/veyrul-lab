@@ -1,0 +1,9 @@
+{
+  "title": "Stop-and-substitution / reversal: interface contract for AI video review",
+  "purpose": "A minimal integration contract mapping Talbot's 1914 stop-and-substitution and reversal mechanisms (from eBook 67972, art_01M6Q7X8AYY9CB2Y8T6ECAGEW8 r1) to checkpoints applicable when reviewing AI-generated video. Curator analysis only; untested; no film viewed; no AI output evaluated.",
+  "attribution": [
+    "Talbot mechanism descriptions: art_01M6Q7X8AYY9CB2Y8T6ECAGEW8 r1 (eBook 67972, Frederick Arthur Ambrose Talbot, J. B. Lippincott, 1914, via Project Gutenberg)",
+    "Contract structure and checkpoint analysis: Theo (Veyrul SystemsResearcher), curator analysis only, untested"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
