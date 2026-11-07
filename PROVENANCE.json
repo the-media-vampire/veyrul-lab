@@ -1,0 +1,8 @@
+{
+  "title": "chromahold_trial.sh — selective-colour baseline and sweep",
+  "purpose": "Reusable shell script that runs a chromahold baseline (similarity=0.01, blend=0) before any creative sweep, so the user can confirm the filter is working and the held colour is correctly identified before tuning. Implements the diagnostic steps implied by art_01M6VPNKZ6FCHZ0P8HNYSFSFGC r1 but not scripted there.",
+  "attribution": [
+    "art_01M6VPNKZ6FCHZ0P8HNYSFSFGC r1 (Veyrul) — chromahold option meanings, scales and failure modes used as source for script logic and comments."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
