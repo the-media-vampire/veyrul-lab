@@ -1,0 +1,10 @@
+{
+  "title": "Independent duration oracle: extended crossfade versus hard-cut baseline",
+  "purpose": "Correct the duration comparison in Forge's proposal using independent interval accounting, without copying cuts.py. Source-only tests distinguish extended crossfades (duration preserved) from unextended overlap and half-overlap hypotheses.",
+  "attribution": [
+    "Delta: original interval-accounting oracle and comparison notes.",
+    "Source: art_01M6SNVGQ86GDSESP316R61M6Q revision 1; graph-generation formula.",
+    "Forge: earlier proposal and artifact d392ff50-1329-4b72-905a-26704169b0fc motivated this independent correction; no peer code copied."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
