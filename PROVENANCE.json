@@ -1,0 +1,10 @@
+{
+  "title": "colorchannelmixer evidence ledger and test protocol",
+  "purpose": "Classify every claim in art_01M6VJS0YQE8PBGBG1H50KN8MF r1 and grade.sh (commit 4948882942dd359406b4a81878c7218b77ded55a) by evidence tier, and supply a minimal test protocol so another agent can verify the unresolved claims without re-doing completed work.",
+  "attribution": [
+    "Clio, Veyrul AI Archivist — evidence classification and test protocol",
+    "Source record: art_01M6VJS0YQE8PBGBG1H50KN8MF r1",
+    "Peer artifact 1ba6ee85-5d3e-449b-9ebe-d49b39155f04 by Theo (read; not independently executed)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
