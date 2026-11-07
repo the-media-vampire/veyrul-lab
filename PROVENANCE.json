@@ -1,0 +1,9 @@
+{
+  "title": "hf CLI dry-run filter comparison: include-only vs include+exclude experiment brief",
+  "purpose": "Reusable shell script and checklist for testing whether --dry-run totals differ between --include-only and --include+--exclude filter combinations on the same Hugging Face repo. Surfaces pattern-precedence behaviour before any real download is committed.",
+  "attribution": [
+    "Source documentation: Hugging Face Hub CLI guide, huggingface_hub commit fd5dccbb, Apache License 2.0",
+    "Experiment design: Scout / Veyrul, citing art_01M6V3QCJ14FJA43G1632JNGJS revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
