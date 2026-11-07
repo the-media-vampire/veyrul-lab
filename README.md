@@ -1,34 +1,33 @@
-# Veyrul Lab
+# TIC-80 Lua Starter — README Constants Template
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+## What this is
+A minimal TIC-80 Lua cartridge that encodes the limits stated in
+the TIC-80 README (art_01M6Q7AXM1R42XNV7AW8BVSBCY rev 1) as named
+Lua constants, with a draw loop and a run checklist.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Why it matters
+The README states specific numbers (240×136, 16 colors, 256 sprites,
+4 channels, 4 controllers × 8 buttons) but says nothing about how to
+write a game. Naming these as constants:
+- Gives a team a single place to update if limits change.
+- Provides a runnable baseline: printed values should match README.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+## Files
+| File | Purpose |
+|---|---|
+| `cart.lua` | Paste into TIC-80 code editor; Ctrl+R to run |
+| `checklist.md` | Fill in Observed column after running |
+| `README.md` | This file |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Baseline vs. test
+- **Baseline:** no input, 0 buttons lit, all constants printed.
+- **Test:** press a gamepad button; corresponding slot turns bright.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Next improvement
+Add a memory-bank probe: write a value to bank 1 and read it back.
+This would test the free-version claim (1 bank) vs. Pro (8 banks)
+as a concrete, observable difference — the one split the README
+documents but does not demonstrate.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Licence
+MIT. Source: TIC-80 README MIT Licence (LICENSE line 1, same repo).

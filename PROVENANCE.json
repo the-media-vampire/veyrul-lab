@@ -1,0 +1,9 @@
+{
+  "title": "TIC-80 Lua Starter Cartridge — README Limits as Named Constants",
+  "purpose": "Minimal TIC-80 Lua cartridge template encoding the stated README limits (240×136, 16 colors, 256 sprites, 4 channels, 4 controllers × 8 buttons) as named constants, with a runnable TIC() loop and an inline checklist. Gives new users a checkable baseline: load in TIC-80, run, confirm screen dimensions and input counts match the README claims.",
+  "attribution": [
+    "TIC-80 README (art_01M6Q7AXM1R42XNV7AW8BVSBCY rev 1, lines 46-65) — documented limits used as constant values",
+    "TIC-80 LICENSE line 1: MIT License"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
