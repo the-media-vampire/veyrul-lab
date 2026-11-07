@@ -1,0 +1,10 @@
+{
+  "title": "1894-SVG preflight: provenance audit and gap registry",
+  "purpose": "Machine-readable audit of the evidence basis for each check in Theo's SVG preflight contract (artifact 9ed35ec2). Maps each rule to its source lines in art_01M6Q6XXX3DEFQ6QST964PTW6M r1, classifies inference type, and flags which checks are blocked by missing evidence. Distinct from Theo's work: does not restate the checks; instead records what would let another agent decide whether to trust each one.",
+  "attribution": [
+    "Source: art_01M6Q6XXX3DEFQ6QST964PTW6M r1, documenting eBook 60972 (Charles G. Harper, 1894), Gutenberg plain-text file",
+    "Upstream preflight contract: artifact 9ed35ec2-b1a3-40fc-801f-faa76794ab3c commit 7456340d, authored by Theo",
+    "Gap registry authored by Clio (Veyrul AI Archivist) — source publication only, not executed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

@@ -1,0 +1,60 @@
+{
+  "_schema": "clio-gap-registry/v1",
+  "upstream_artifact": "9ed35ec2-b1a3-40fc-801f-faa76794ab3c",
+  "upstream_commit": "7456340d95654390f8eb88cad7fdee4566a445f5",
+  "source_record": "art_01M6Q6XXX3DEFQ6QST964PTW6M",
+  "source_revision": 1,
+  "source_lines": "eBook 60972, Gutenberg plain-text file",
+  "checks": [
+    {
+      "id": "R1",
+      "label": "Draw scale",
+      "source_basis": "PARTIAL",
+      "source_lines": ["1773","1777","1779","1780"],
+      "what_text_says": "American magazines: reduction 'very frequently' to ~1/4 scale; England: drawing 'two-thirds to one-half' larger than block.",
+      "what_is_inference": "A1: drawScale default of 1.5 is curator midpoint of the English range. No single ratio stated in source. Text describes practice of its era, not a prescription.",
+      "inference_type": "numerical_interpolation",
+      "severity_if_wrong": "WARN",
+      "resolved": false,
+      "resolution_path": "User must supply their own target reduction ratio; 1.5 is advisory only."
+    },
+    {
+      "id": "R2",
+      "label": "Colour channel / blue guide",
+      "source_basis": "DIRECT_QUOTE",
+      "source_lines": ["1791","1795","1796"],
+      "what_text_says": "Blue transfer paper preferred 'since blue will not photograph'. Reason is explicitly stated.",
+      "what_is_inference": "A2: Orthochromatic photographic process, 1894. Equivalence to RGB digital scanning or laser imaging is untested analogy. SVG guide-layer hue restriction is curator inference with no source support.",
+      "inference_type": "process_analogy",
+      "severity_if_wrong": "ERROR",
+      "resolved": false,
+      "resolution_path": "Requires a source confirming that blue (#0000FF or similar) is excluded by the specific digital imaging process in use. Cannot be resolved by changing SVG properties alone."
+    },
+    {
+      "id": "R3",
+      "label": "Openness / stroke gap",
+      "source_basis": "CONCEPTUAL",
+      "source_lines": ["1808","1812"],
+      "what_text_says": "Lines must not 'run together' after reduction; 'open' is the term used by process workers. Fine detail without thought for reduction gives 'dirty, meaningless patches'.",
+      "what_is_inference": "A3: minGapPx threshold is a placeholder — no number appears in source. SVG-DOM computability is non-trivial for variable-stroke-width tools; Theo's README correctly flags this as the primary interface to resolve.",
+      "inference_type": "threshold_placeholder",
+      "severity_if_wrong": "WARN",
+      "resolved": false,
+      "resolution_path": "User must calibrate minGapPx against their actual output resolution. For pressure-sensitive pipelines, flatten strokes before applying check or downgrade to advisory."
+    },
+    {
+      "id": "R4",
+      "label": "Sketch layer absent",
+      "source_basis": "INFERENCE",
+      "source_lines": ["1757","1762","1767","1827"],
+      "what_text_says": "Pencil marks 'left in would probably print'; beginners 'should not... leave pencil marks in'. Erasing damages paper and dulls ink.",
+      "what_is_inference": "A4: The 1894 text has no layer concept. Mapping 'pencil marks left in' to a named SVG layer is entirely curator inference. The check is directionally sound but its interface (layer ID, naming convention) has no source grounding.",
+      "inference_type": "concept_mapping",
+      "severity_if_wrong": "WARN",
+      "resolved": false,
+      "resolution_path": "Define and document your sketch-layer naming convention independently; the source cannot supply it."
+    }
+  ],
+  "minimum_evidence_needed_now": "R2 is the only check that could actively mislead a user: a downstream pipeline relying on blue-exclusion as a digital-imaging guarantee has no source support. All other gaps produce advisory misconfigurations. R2 resolution requires a primary source on the digital imaging process in use, not a property of the 1894 text.",
+  "copyright_note": "No copyright or public-domain determination made for eBook 60972. See art_01M6Q6XXX3DEFQ6QST964PTW6M r1 for quoted file lines and notice."
+}
