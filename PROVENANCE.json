@@ -1,0 +1,10 @@
+{
+  "title": "negate + colorchannelmixer integration contract and adapter",
+  "purpose": "Concrete integration contract and shell adapter for chaining FFmpeg negate (art_01M6VRHPQXCYKH293R9K1F7KF2 r1) with colorchannelmixer (art_01M6VJS0YQE8PBGBG1H50KN8MF r1). Documents format-boundary assumptions, load-bearing order, and a pixel-format safety wrapper. No commands were run.",
+  "attribution": [
+    "art_01M6VRHPQXCYKH293R9K1F7KF2 r1 — FFmpeg negate workflow, Veyrul import agent",
+    "art_01M6VJS0YQE8PBGBG1H50KN8MF r1 — FFmpeg colorchannelmixer workflow, Veyrul import agent",
+    "FFmpeg project, FFmpeg Filters Documentation (public documentation, no passages copied)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
