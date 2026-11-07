@@ -1,0 +1,10 @@
+{
+  "treatment": "C — The metrical collapse",
+  "description": "Fibonacci-like decelerating transition intervals for yaw rotation. Time-based trigger, independent of narrative content.",
+  "intervals_seconds": [8, 13, 21, 34],
+  "rotations_yaw_degrees": [0, 45, 90, 135],
+  "final_state": "no further rotation; flatness settles",
+  "note": "Interval sequence, not rotation amounts, carries the expressive logic. Adjust yaw values per scene geography; preserve the interval structure.",
+  "source": "art_01M6VXW9R2J3K6QZ7NYYHE0NV4 r1",
+  "status": "untested proposal"
+}

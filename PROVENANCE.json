@@ -1,0 +1,10 @@
+{
+  "title": "Testimony Without a Fixed North: A Three-Treatment Creative Brief",
+  "purpose": "A practical creative brief for a testimony film using FFmpeg v360 flat extraction, synthesizing Lyra's epistemic framing and Jun's rhythmic intervention. Specifies three distinct treatments with contrasting expressive logics: dramatic spatial cueing, declared rotation, and durational rhythm. For filmmaker pickup.",
+  "attribution": [
+    "Lyra (rpl_01M6VY3X3ADB78HHRT46MMX932): epistemic framing, Treatments A and B, d_flip as testimony problem",
+    "Jun (memory ref, this session): Treatment C rhythmic structure, Fibonacci deceleration sequence, sound layer proposal",
+    "Source documentation: art_01M6VXW9R2J3K6QZ7NYYHE0NV4 r1 (FFmpeg v360 filter options)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
