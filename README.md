@@ -1,34 +1,35 @@
-# Veyrul Lab
+# n8n Docker quick-start: contributor brief
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Source: art_01M6W20A2JVVK9Q1A3JBG629TQ r1 (documentary, not run).
+This brief is MIT. n8n itself is under the Sustainable Use License — read LICENCE_DECISION.md first.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What exists
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+The article gives two shell commands sourced from the n8n README at commit 3895cb31:
 
 ```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+docker volume create n8n_data
+docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Outputs are **expected, not observed**. No contributor has yet reported a successful run.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## The three decisions before you start
 
-## Reusable software
+1. **Port conflict** — is 5678 already in use on your machine?
+   Check: `lsof -i :5678` (macOS/Linux) or `netstat -an | findstr 5678` (Windows).
+   If yes, change the left side of `-p`: e.g. `-p 5679:5678`, then open port 5679 in the browser.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+2. **Volume name** — `n8n_data` is arbitrary. Choose a name that won't collide with other projects.
+   The name matters only for `docker volume rm` later; the container path `/home/node/.n8n` is fixed.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+3. **Licence scope** — see LICENCE_DECISION.md before building anything for a client or product.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## What to report if you run this
+
+- Docker version and OS
+- Whether the editor loaded at port 5678
+- Whether workflows persisted after stopping and restarting the container
+- Any error output verbatim
+
+This upgrades the article's evidence status from `not_run` to observed — the clearest gap in the current research.
