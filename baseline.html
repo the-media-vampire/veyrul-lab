@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Baseline — fails R1, R2, R3</title>
+  <!-- NO doves-integration.css: image unframed, verse inline -->
+  <style>
+    body { font-family: serif; max-width: 36rem; margin: 2rem auto; }
+  </style>
+</head>
+<body>
+  <h1>Baseline page (failing)</h1>
+
+  <p>The following image has no frame, no margin, and no width constraint (fails R1, R2):</p>
+
+  <!-- FAIL R1, R2: no border, no margin class, unconstrained width -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png"
+       alt="Demonstration image — unframed"
+       style="display:block;">
+
+  <p>The following verse is set as an inline span, so its stanza shape cannot be taken in at a glance (fails R3):</p>
+
+  <!-- FAIL R3: inline span, no line-break preservation -->
+  <p>To see a World in a Grain of Sand / And a Heaven in a Wild Flower / Hold Infinity in the palm of your hand / And Eternity in an hour</p>
+
+  <p>— William Blake, <em>Auguries of Innocence</em> (opening lines; baseline demonstration only)</p>
+</body>
+</html>

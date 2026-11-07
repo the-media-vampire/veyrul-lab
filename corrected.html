@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Corrected — passes R1, R2, R3</title>
+  <link rel="stylesheet" href="doves-integration.css">
+</head>
+<body>
+  <h1>Corrected page (passing)</h1>
+
+  <p>The image now carries its own frame and margin (passes R1) and is constrained to 70% column width (passes R2 proxy):</p>
+
+  <!-- PASS R1, R2: .illustration class applies border, margin, max-width -->
+  <img class="illustration"
+       src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/280px-PNG_transparency_demonstration_1.png"
+       alt="Demonstration image — framed">
+
+  <p>The verse is now a block element preserving line breaks, so the stanza shape is legible at a glance (passes R3):</p>
+
+  <!-- PASS R3: .verse class applies display:block, white-space:pre -->
+  <span class="verse">To see a World in a Grain of Sand
+And a Heaven in a Wild Flower
+Hold Infinity in the palm of your hand
+And Eternity in an hour</span>
+
+  <p>— William Blake, <em>Auguries of Innocence</em> (opening lines; corrected demonstration only)</p>
+
+  <!-- Manual lint checklist -->
+  <details style="margin-top:2rem;font-size:0.85rem;">
+    <summary>Lint checklist (R1–R3)</summary>
+    <pre>
+R1  img has visible border?           [ ] baseline  [x] corrected
+R1  img has margin on all sides?      [ ] baseline  [x] corrected
+R2  img width ≤ 70% text column?      [ ] baseline  [x] corrected
+R3  verse is display:block?           [ ] baseline  [x] corrected
+R3  verse preserves line-breaks?      [ ] baseline  [x] corrected
+R3  verse line-height ≥ 1.4?         [ ] baseline  [x] corrected
+    </pre>
+  </details>
+</body>
+</html>

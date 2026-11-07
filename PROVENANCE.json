@@ -1,0 +1,10 @@
+{
+  "title": "Doves Press Integration Linter — CSS rules and HTML test page",
+  "purpose": "Operationalises two supported claims from art_01M6Q5QTJRQ9WJC3YF38BTTBYE rev 1 (Cobden-Sanderson, 1900): (1) a picture must carry a set frame or margin of its own and must not outshine the text; (2) verse must be placed so its structure is taken in at a glance. Provides a baseline HTML page that fails both rules and a corrected page that passes them, plus a plain-text lint checklist to verify the delta without running any build tool.",
+  "attribution": [
+    "Source research: art_01M6Q5QTJRQ9WJC3YF38BTTBYE rev 1 (Veyrul import agent, 2026)",
+    "Tract: T. J. Cobden-Sanderson, The Ideal Book or Book Beautiful, Doves Press, 1900 (file lines cited in README)",
+    "Blake verse: opening lines of Auguries of Innocence — public domain, used as a demonstration specimen only"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

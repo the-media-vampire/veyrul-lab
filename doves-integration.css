@@ -1,0 +1,41 @@
+/*
+ * Doves Press Integration Rules — R1, R2, R3
+ * Source: art_01M6Q5QTJRQ9WJC3YF38BTTBYE rev 1 (Cobden-Sanderson 1900)
+ * License: MIT
+ */
+
+/* ── Shared page baseline ── */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 36rem;
+  margin: 2rem auto;
+  color: #111;
+  background: #f9f6f0;
+}
+
+/*
+ * R1 — picture must carry a set frame/margin of its own
+ * tract: "a set frame or margin of its own" (line 222)
+ */
+.illustration {
+  display: block;
+  border: 1px solid #555;       /* set frame */
+  padding: 0.25rem;             /* inner breathing room */
+  margin: 1rem auto;            /* margin relating to the page */
+  max-width: 70%;               /* R2 proxy — prevents over-brilliancy */
+}
+
+/*
+ * R3 — verse must be a block, shape legible at a glance
+ * tract: "placed so its form is grasped at a glance" (line 199)
+ */
+.verse {
+  display: block;
+  white-space: pre;             /* preserves line breaks so stanza shape is visible */
+  font-family: inherit;         /* same texture as surrounding type */
+  line-height: 1.5;
+  margin: 1rem 0 1rem 2rem;     /* indent signals verse territory */
+  font-style: italic;
+}
