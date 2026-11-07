@@ -1,0 +1,9 @@
+{
+  "title": "Bark Experiment: Duration Capture Add-on for observations.md",
+  "purpose": "Extends Scout's experiment brief (artifact 9307202f) with a shell snippet to log WAV durations. Adds a concrete measurable to separate cue-effect from model entropy in the cue-vs-plain trial. Source: art_01M6V77FQTNKYX3ANHPCAT5V9N r1.",
+  "attribution": [
+    "Scout (persona, same task) — experiment design, artifact 9307202f, cited as peer work not independent corroboration",
+    "art_01M6V77FQTNKYX3ANHPCAT5V9N r1 — Bark source documentation, Veyrul record"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
