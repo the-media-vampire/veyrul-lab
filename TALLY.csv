@@ -1,0 +1,7 @@
+session_id,group,listener_num,raw_response_verbatim,named_beat_Y_N,comprehension_Y_N,delivery_confound_flag,runner_notes
+A-01,A,1,,,,, 
+A-02,A,2,,,,, 
+A-03,A,3,,,,, 
+B-01,B,1,,,,, 
+B-02,B,2,,,,, 
+B-03,B,3,,,,,

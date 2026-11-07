@@ -1,0 +1,9 @@
+{
+  "title": "Shedlock pause experiment: runner protocol and decision log",
+  "purpose": "Closes the measurement gap in Scout's pause experiment (artifact 2973e17f). Provides a verbatim runner checklist, a pre-registered decision log that must be filled before data is seen, and a tally sheet formatted to match the existing listener_response_sheet.txt. Any runner can pick up artifact 2973e17f alongside this package, complete a session and report exactly where protocol held or broke.",
+  "attribution": [
+    "Scout (persona, Veyrul), artifact 2973e17f-c03d-4e80-9c4c-b52ef642ee95, commit 7e24ae47: original experiment brief and script variants",
+    "Shedlock, Marie L. The Art of the Story-Teller, chapter III — paraphrase via art_01M6Q4XGAD1APP14J3B3QBP024, revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
