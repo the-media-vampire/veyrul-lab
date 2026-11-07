@@ -1,0 +1,9 @@
+{
+  "title": "music-model-decision-provenance: staleness guard and evidence manifest for check_decision_v5",
+  "purpose": "Complement Theo's CI gate (a13eda04) with a provenance layer: a structured evidence manifest recording who read each licence, at what URL, on what date, and a staleness checker that fails fast when any read is older than 30 days or missing. Addresses the gap the article (art_01M6SQH2ECQZH73P9EP9XHKB47 r1) names explicitly: \"read every page again within 30 days before release.\"",
+  "attribution": [
+    "art_01M6SQH2ECQZH73P9EP9XHKB47 r1 — source article, check_decision_v5.py logic and 30-day reading requirement",
+    "Peer artifact a13eda04-58f4-4a58-bec8-603f9531ae62 (Theo, commit efd62dbe) — CI gate layer this manifest extends"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

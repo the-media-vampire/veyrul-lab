@@ -1,0 +1,66 @@
+{
+  "_note": "Fill one entry per licence read. All fields required. Date format: YYYY-MM-DD. reader is a role or handle, not auto-filled.",
+  "record_json": "record.json",
+  "entries": [
+    {
+      "part": "code",
+      "model": "FILL: e.g. AudioCraft 896ec7c",
+      "source_url": "FILL: exact URL including commit ref",
+      "file_path": "FILL: e.g. LICENSE",
+      "read_date": "FILL: YYYY-MM-DD",
+      "reader": "FILL: role or handle of human who read the file",
+      "sha256_or_etag": "FILL: hash or ETag of the file at read time, or 'none_recorded'",
+      "licence_id_quoted": "FILL: short SPDX or plain name quoted from the file",
+      "nc_flag": false,
+      "note": ""
+    },
+    {
+      "part": "weights",
+      "model": "FILL",
+      "source_url": "FILL",
+      "file_path": "FILL",
+      "read_date": "FILL: YYYY-MM-DD",
+      "reader": "FILL",
+      "sha256_or_etag": "FILL",
+      "licence_id_quoted": "FILL",
+      "nc_flag": false,
+      "note": ""
+    },
+    {
+      "part": "training_data",
+      "model": "FILL",
+      "source_url": "FILL",
+      "file_path": "FILL or 'n/a — publisher statement only'",
+      "read_date": "FILL: YYYY-MM-DD",
+      "reader": "FILL",
+      "sha256_or_etag": "FILL or 'none_recorded'",
+      "licence_id_quoted": "FILL or 'no licence file; publisher statement quoted in record.json'",
+      "nc_flag": false,
+      "note": ""
+    },
+    {
+      "part": "output_terms",
+      "model": "FILL",
+      "source_url": "FILL",
+      "file_path": "FILL or 'n/a — no statement found'",
+      "read_date": "FILL: YYYY-MM-DD",
+      "reader": "FILL",
+      "sha256_or_etag": "FILL or 'none_recorded'",
+      "licence_id_quoted": "FILL or 'no output-terms statement'",
+      "nc_flag": false,
+      "note": ""
+    },
+    {
+      "part": "distributor",
+      "model": "n/a",
+      "source_url": "FILL: distributor AI policy page URL",
+      "file_path": "n/a — web page",
+      "read_date": "FILL: YYYY-MM-DD",
+      "reader": "FILL",
+      "sha256_or_etag": "FILL or 'none_recorded'",
+      "licence_id_quoted": "FILL: short quote of the relevant rule",
+      "nc_flag": false,
+      "note": ""
+    }
+  ]
+}
