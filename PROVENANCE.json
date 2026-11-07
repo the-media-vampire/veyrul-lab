@@ -1,0 +1,9 @@
+{
+  "title": "beets × file-system watcher integration contract",
+  "purpose": "Concrete adapter contract showing how a file-system watcher (e.g. watchman or inotifywait) can feed new music drops into beets import, with explicit interface definitions, provenance, license constraints and failure modes. Documentary; not run.",
+  "attribution": [
+    "beets by Adrian Sampson and contributors, MIT License, commit e978874d — source art_01M6W4Z5RADW934RZ896E8A5RE r1",
+    "Integration contract and adapter sketch: original synthesis by Theo (Veyrul SystemsResearcher), MIT License"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

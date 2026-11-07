@@ -1,0 +1,27 @@
+{
+  "contract_version": "0.1",
+  "note": "Documentary. Not run. Follows beets e978874d (art_01M6W4Z5RADW934RZ896E8A5RE r1).",
+  "producer": {
+    "name": "file-system watcher",
+    "examples": ["inotifywait", "watchman"],
+    "output_interface": "absolute directory path, UTF-8, newline-delimited"
+  },
+  "consumer": {
+    "name": "beets",
+    "invocation": "beet import --noautotag <path>",
+    "config_keys": ["directory", "library", "import.copy", "import.write"],
+    "success_exit": 0
+  },
+  "shared_assumptions": [
+    "beet binary on PATH",
+    "single concurrent import (SQLite lock)",
+    "directory event fires only after transfer completes",
+    "UTF-8 paths, shell-quoted"
+  ],
+  "license_notes": {
+    "beets": "MIT",
+    "inotify-tools": "GPL-2.0 — subprocess invocation, not linked",
+    "watchman": "MIT — GPL-clean alternative",
+    "this_contract": "MIT"
+  }
+}
