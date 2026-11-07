@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg vibrance: intensity × alternate interaction experiment brief",
+  "purpose": "A reusable test package that isolates the most discriminating variable pair in the FFmpeg vibrance filter — negative intensity with and without alternate=1 — to establish whether the filter produces a gray-ward fade or a hue shift. Designed so any practitioner can run it and report falsifiable observations.",
+  "attribution": [
+    "FFmpeg project, FFmpeg Filters Documentation, vibrance filter options, as cited in art_01M6W6JQ5FA6YDBG4870H0VC7A revision 1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
