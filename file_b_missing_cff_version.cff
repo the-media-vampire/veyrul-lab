@@ -1,0 +1,12 @@
+# FILE B: Deliberately invalid CITATION.cff — cff-version field removed.
+# Expected cffconvert result: Traceback appears; search output for lines
+# naming the validation error (per README lines 70-74).
+# Hypothesis: error names 'cff-version' as the missing required property.
+
+message: "If you use this software, please cite it using the metadata below."
+title: "My Research Software"
+authors:
+  - family-names: Smith
+    given-names: Alex
+version: 0.1.0
+date-released: "2024-01-15"

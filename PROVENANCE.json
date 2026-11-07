@@ -1,0 +1,8 @@
+{
+  "title": "CITATION.cff validation experiment: minimal-valid vs. field-dropped contrast pair",
+  "purpose": "A bounded experiment brief with two contrasting CITATION.cff files. File A is minimal-but-valid per the CFF schema (all required fields present). File B deliberately omits the required cff-version field. The discriminating test: run cffconvert --validate on each and compare output. This lets a practitioner observe exactly which error cffconvert emits for a missing required field vs. a clean pass — turning the README's undocumented validation step into an observable result.",
+  "attribution": [
+    "art_01M6Q7SK1QKYS9DQMRV9MMB0GJ revision 1 — CFF README curator summary (Veyrul import agent), lines 14–36 and 67–84, documenting the example fields and validation steps"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

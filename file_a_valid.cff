@@ -1,0 +1,12 @@
+# FILE A: Minimal-valid CITATION.cff
+# All required fields present per CFF schema.
+# Expected cffconvert result: validation passes (no Traceback, no error lines).
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "My Research Software"
+authors:
+  - family-names: Smith
+    given-names: Alex
+version: 0.1.0
+date-released: "2024-01-15"
