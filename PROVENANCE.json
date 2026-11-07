@@ -1,0 +1,9 @@
+{
+  "title": "1894 pen-drawing rules as an SVG preflight contract",
+  "purpose": "Maps four mechanism-level rules from art_01M6Q6XXX3DEFQ6QST964PTW6M r1 (scale ratio, colour-channel separation, stroke openness, layer hygiene) onto a modern SVG print pipeline as explicit, checkable interfaces. All SVG connections are curator inference, labelled as such. Not executed.",
+  "attribution": [
+    "Source: art_01M6Q6XXX3DEFQ6QST964PTW6M revision 1 — documented summary of Harper, A Practical Hand-book of Drawing for Modern Methods of Reproduction (1894), eBook 60972, lines 1757–1812, Gutenberg plain-text file. No copyright or public-domain determination is made.",
+    "All SVG mappings and rule thresholds are curator inference; the handbook covers no digital practice."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
