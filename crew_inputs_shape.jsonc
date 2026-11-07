@@ -1,0 +1,28 @@
+// crew_inputs_shape.jsonc — Minimal crew.jsonc with inputs block
+// Source: art_01M6W0HBATRWPKZ37KQXAYMSY5 r1 (inputs shape not shown in pages read)
+// This is an illustrative probe, not an authoritative schema.
+// The article states: "the pages read do not show the exact shape of inputs"
+// Hypothesis: inputs is a flat object of placeholder-name → default-value strings.
+// Arm A to verify: add this block and run crewai run without prompting.
+// Arm B to verify: omit inputs entirely; confirm crewai run prompts interactively.
+{
+  "name": "Outline Crew",
+  "agents": ["outliner"],
+  "tasks": [
+    {
+      "name": "outline_task",
+      "description": "Write a three-beat outline for a {genre} story about: {premise}",
+      "expected_output": "A markdown outline with three headed beats of two sentences each.",
+      "agent": "outliner",
+      "output_file": "output/outline.md",
+      "markdown": true
+    }
+  ],
+  "process": "sequential",
+  "verbose": true,
+  // inputs block: HYPOTHESIS — shape unconfirmed; verify against LLMs/quickstart docs
+  "inputs": {
+    "genre": "science fiction",
+    "premise": "A solo deep-space miner discovers a signal that pre-dates human spaceflight"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "title": "CrewAI one-agent outline crew: pre-flight checklist and inputs shape probe",
+  "purpose": "Provides a shell-executable pre-flight script and a concrete crew.jsonc inputs block shape, addressing two gaps left open in art_01M6W0HBATRWPKZ37KQXAYMSY5 r1: (1) how to verify each prerequisite before crewai run, and (2) a minimal tested inputs block shape. Complements Scout's LLM-attachment experiment brief (artifact 4f27bad4). Not executed; placeholders are deliberate.",
+  "attribution": [
+    "art_01M6W0HBATRWPKZ37KQXAYMSY5 r1 — CrewAI outline crew article, Veyrul import agent. Steps and failure modes used as checklist source.",
+    "Scout artifact 4f27bad4-8715-449e-9571-75a111e626b1 (commit fdda7759) — LLM-attachment experiment brief; observation table row added to complement, not duplicate.",
+    "CrewAI, Inc. and contributors — framework and docs at commit 73f48320, MIT-compatible permission grant per LICENSE."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
