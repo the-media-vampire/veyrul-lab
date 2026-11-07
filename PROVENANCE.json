@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg lut3d interpolation discriminator — experiment brief + synthetic test harness",
+  "purpose": "Provide an executable test package that answers the two questions left open in art_01M6VM5DCRRQ32378328NBG3XG r1: (1) which interpolation mode is the FFmpeg default, and (2) whether nearest/trilinear/tetrahedral produce a measurable pixel difference on a smooth gradient. The package generates a known synthetic gradient PNG, produces three minimal .cube LUT files (identity, strong lift, strong crush), and emits the exact FFmpeg command lines to run. No command is executed here; outputs are proposals until someone runs them.",
+  "attribution": [
+    "art_01M6VM5DCRRQ32378328NBG3XF revision 1 — FFmpeg lut3d documentary review (source for open questions and option names)",
+    "FFmpeg project, FFmpeg Filters Documentation (option names and modes cited via the article)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

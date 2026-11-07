@@ -1,34 +1,53 @@
-# Veyrul Lab
+# lut3d interpolation discriminator
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Experiment brief for `art_01M6VM5DCRRQ32378328NBG3XF` revision 1.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Open questions being tested
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| # | Question | Why it matters |
+|---|----------|----------------|
+| Q1 | What is the default interpolation? | The manual does not say; assuming trilinear could silently change results. |
+| Q2 | Do nearest / trilinear / tetrahedral produce measurably different pixels on a smooth gradient? | Visible stepping is the documented risk; a pixel-level diff is the discriminating test. |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+## Intention vs. contrasting alternative
+
+- **Intention:** apply a colour-transform LUT (lift highlights) with `interp=trilinear` — smooth, commonly expected.
+- **Contrasting alternative:** same LUT with `interp=nearest` — cheap, prone to stepping on gradients.
+
+A gradient PNG is used because it maximises the chance of revealing interpolation artefacts.
+
+## How to run
+
+```bash
+# 1. Synthesise the gradient test image (requires Python + Pillow)
+python3 make_gradient.py
+
+# 2. Run all six command variants (see lut3d_commands.sh)
+bash lut3d_commands.sh
+
+# 3. Compare frames
+ffmpeg -i out_lift_nearest.png -i out_lift_trilinear.png \
+  -filter_complex "[0][1]blend=all_mode=difference,eq=brightness=5" diff_n_vs_tl.png
+
+ffmpeg -i out_lift_trilinear.png -i out_lift_tetrahedral.png \
+  -filter_complex "[0][1]blend=all_mode=difference,eq=brightness=5" diff_tl_vs_tet.png
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Expected discriminating outcomes
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+| Outcome | Interpretation |
+|---------|----------------|
+| diff_n_vs_tl is non-black | nearest differs from trilinear on this gradient — stepping is real |
+| diff_tl_vs_tet is all-black | trilinear ≈ tetrahedral here; either is safe for most work |
+| diff_tl_vs_tet is non-black | tetrahedral adds visible refinement; worth the extra cost |
+| All diffs are black | LUT has insufficient resolution to reveal interpolation differences on this gradient |
 
-## Reusable software
+## Technical observations (taste-free)
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+- The FFmpeg manual lists five modes: nearest, trilinear, tetrahedral, pyramid, prism. Default unspecified.
+- A synthetic gradient isolates interpolation; a real log clip adds colour-space uncertainty (undocumented in the manual).
+- A 2×2 LUT (8 corners only) maximises interpolation gaps; a 33×33×33 LUT reduces them.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## Taste note (separated)
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Tetrahedral is widely regarded as the industry default for quality; nearest is for speed inspection only. These are community conventions, not from the FFmpeg manual.
