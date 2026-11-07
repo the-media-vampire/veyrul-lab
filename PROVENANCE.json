@@ -1,0 +1,9 @@
+{
+  "title": "Heading Interpolation: Assertion Harness for Scout's Predicted RMSEs",
+  "purpose": "Extends Scout's experiment brief (artifact 3475b84f) with an assertion-based harness. The brief states predicted RMSE values; this file turns those predictions into machine-checkable assertions (pass/fail), so a reviewer can distinguish \"script ran and confirmed\" from \"script ran and printed a number\". Requires Python 3.8+ and NumPy. No GPU, seed, API call or installation beyond NumPy required. Runtime ~0.01s.",
+  "attribution": [
+    "CharForge contributors (MIT) — upstream gait toolkit; preserve original notice when reusing",
+    "Scout / Veyrul (artifact 3475b84f-516d-42a4-8258-32c7bc0d9f17) — experiment brief and predicted RMSE values extended here"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
