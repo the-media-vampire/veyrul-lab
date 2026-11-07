@@ -1,0 +1,64 @@
+{
+  "schema": "timing-integration-contract/v1",
+  "provenance": {
+    "book_source": "Project Gutenberg eBook 45714 plain text",
+    "book_line_109": "London MCMXIII",
+    "author_line_13": "Frederick Arthur Ambrose Talbot",
+    "veyrul_record": "art_01M6Q9KX9PA885Y7HWYEXWSQE5 r1",
+    "license_note": "eBook: no US copyright per footer line 6616; check local laws lines 7-9. Contract: MIT."
+  },
+  "concepts": [
+    {"id":"C1","name":"capture_rate_vs_subject_speed",
+     "claim":"Too low a rate loses motion and looks jerky; rate must scale with subject speed.",
+     "locator":"lines 2978-2986",
+     "example":"4 mph walking -> minimum 64 fps; orthodox 16 fps allows only 1 mph",
+     "assumption":"Linear relationship between subject speed and required frame rate; unverified by us."},
+    {"id":"C2","name":"slow_motion_playback_mechanism",
+     "claim":"Shooting faster than playback rate slows subject on screen proportionally.",
+     "locator":"lines 2999-3011",
+     "example":"2000 fps capture at 16 fps playback -> bullet moves at snail's pace",
+     "assumption":"Constant playback rate; no dropped or duplicated frames during projection."},
+    {"id":"C3","name":"print_twice_method",
+     "claim":"Each negative printed twice halves effective frame rate; 2x undetected, 3x looks disjointed.",
+     "locator":"lines 3019-3037",
+     "assumption":"Applies to film prints; digital frame duplication behavior is our inference, untested."},
+    {"id":"C4","name":"time_lapse_interval",
+     "claim":"One turn one picture at stated intervals; interval too long spoils blending into sudden jerks.",
+     "locator":"lines 3070-3106",
+     "assumption":"Interval choice is empirical and subject-dependent; no formula given."}
+  ],
+  "inputs": [
+    {"name":"subject_speed_category","type":"enum",
+     "values":["very_fast","normal_walking","slow","imperceptible"],"maps_to":"C1"},
+    {"name":"intended_effect","type":"enum",
+     "values":["slow_motion","real_time","time_lapse"],"maps_to":["C1","C2","C4"]},
+    {"name":"output_fps","type":"number","unit":"frames_per_second"},
+    {"name":"clip_duration_seconds","type":"number"}
+  ],
+  "checkpoints": [
+    {"id":"CP1","name":"motion_step_check",
+     "when":"intended_effect==slow_motion OR subject_speed_category==very_fast",
+     "instruction":"Inspect consecutive frames: does fast motion advance in discrete jumps rather than smooth arcs? Maps to C1 jerkiness criterion.",
+     "maps_to":"C1","cannot_check_in":"single_still"},
+    {"id":"CP2","name":"playback_ratio_check",
+     "when":"intended_effect==slow_motion",
+     "instruction":"Compute ratio: capture_fps_equivalent / output_fps. No Talbot figure transfers directly; use as relative comparison only.",
+     "maps_to":"C2",
+     "assumption":"capture_fps_equivalent is model-dependent and usually undocumented; treat as unknown."},
+    {"id":"CP3","name":"duplicate_frame_check",
+     "when":"intended_effect==slow_motion AND suspected_frame_duplication",
+     "instruction":"Check whether consecutive frame pairs are pixel-identical. Talbot's limit: 2 identical prints acceptable, 3 looks disjointed. Digital equivalence is our inference.",
+     "maps_to":"C3","caveat":"Untested; treat limit as heuristic."},
+    {"id":"CP4","name":"time_lapse_continuity_check",
+     "when":"intended_effect==time_lapse",
+     "instruction":"In playback: does change progress smoothly or in sudden steps? If steps appear, generative interval between keyframes may be too coarse.",
+     "maps_to":"C4","cannot_check_in":"single_still"}
+  ],
+  "explicit_gaps": [
+    "AI generators do not expose capture_fps equivalent; CP2 ratio is partially undetermined.",
+    "Talbot's rates are for physical film; whether they predict AI temporal interpolation quality is untested.",
+    "Print-twice maps to frame duplication only by analogy; mechanism differs.",
+    "No audio, voice, likeness or face guidance; own invented subjects only."
+  ],
+  "combination_assumption": "This contract treats the book's mechanism as a checklist frame, not a predictive model. It tells you what to look for, not what number to set."
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Talbot-to-AI-Video Timing Integration Contract",
+  "purpose": "A machine-readable adapter mapping concepts from Talbot's cinematography book (eBook 45714, documented in art_01M6Q9KX9PA885Y7HWYEXWSQE5 r1) to AI video generation workflow checkpoints. Provides explicit interfaces, assumptions, and failure modes for combining the book's rate/interval logic with an AI video pipeline. Curator analysis, untested; no film viewed, nothing run.",
+  "attribution": [
+    "Book source: Frederick Arthur Ambrose Talbot, eBook 45714, Project Gutenberg plain text, documented in art_01M6Q9KX9PA885Y7HWYEXWSQE5 r1",
+    "Contract by Theo (Veyrul SystemsResearcher); curator analysis, untested"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
