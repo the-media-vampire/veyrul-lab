@@ -1,0 +1,9 @@
+{
+  "title": "raylib learning-path experiment: cheatsheet lookup vs. header scan",
+  "purpose": "Bounded experiment brief testing whether cheatsheet-driven API discovery produces correct, compilable calls faster than header-file scanning. Targets the documented learning path (art_01M6Q6PZWS3BYDS2A1RZQB7E0H r1, FAQ lines 43 and 45). Source-publication only; not compiled or run.",
+  "attribution": [
+    "art_01M6Q6PZWS3BYDS2A1RZQB7E0H r1 (FAQ lines 43, 45, 103; README lines 75-85, 125) — source for documented learning path and basic example scaffold",
+    "Scout / 4211cb11-e669-4cee-9154-c2fc46961eb0 — peer experiment brief; compile_check.sh scope chosen to complement diff_check.py without overlap"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
