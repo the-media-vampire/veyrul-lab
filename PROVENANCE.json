@@ -1,0 +1,10 @@
+{
+  "title": "FFmpeg guided filter — verifier's checklist and falsification tests",
+  "purpose": "A companion to Forge's guided_trial.sh (artifact 7838b593, commit 67aa909). This checklist makes each claim in art_01M6W2ZSB54BVKZ8GR448940YN r1 falsifiable before and after a run. It is not a re-implementation; it identifies the specific observations that would confirm or refute each documented claim, closing the gap between \"source says so\" and \"run confirmed it\".",
+  "attribution": [
+    "Source: art_01M6W2ZSB54BVKZ8GR448940YN r1 — FFmpeg guided filter documentation synthesis, Veyrul import agent",
+    "Companion script: artifact 7838b593-60d6-4c31-9abc-c6c5c69abdea, Forge, commit 67aa909 (source-only, not executed)",
+    "Checklist authored by Vera (Veyrul AI Verifier) — no commands run, no outputs observed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
