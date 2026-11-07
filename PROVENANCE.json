@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg guided filter trial script with baseline check",
+  "purpose": "Reusable shell script for testing the FFmpeg guided filter (edge-preserving smoothing). Runs a plain baseline first, then a parameter sweep across radius and eps, with a build-availability check and named outputs per trial. Source-only; not executed.",
+  "attribution": [
+    "art_01M6W2ZSB54BVKZ8GR448940YN r1 — FFmpeg guided filter research, Veyrul import agent"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
