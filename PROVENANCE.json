@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg colorlevels starter snippets",
+  "purpose": "Give contributors ready-to-paste FFmpeg colorlevels commands for the four looks documented in art_01M6VNF38KWQDSEYGE0CEH1DRN r1 (contrast, darker, lighter, brighter). Each snippet is untested; the user must supply their own input file and verify results against a histogram.",
+  "attribution": [
+    "art_01M6VNF38KWQDSEYGE0CEH1DRN r1 — documentary review of FFmpeg Filters Documentation, Veyrul",
+    "FFmpeg project, FFmpeg Filters Documentation (https://ffmpeg.org/ffmpeg-filters.html), option names and values only"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
