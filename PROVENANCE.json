@@ -1,0 +1,9 @@
+{
+  "title": "Step sequencer: cursor-sync falsification harness",
+  "purpose": "A concrete extension to the A/B visual brief in rpl_01M6SW3FZZR89VWBWMNNH9EPAZ. Adds a third logged column—cursor_step—alongside the existing audio step log, and a check_cursor_sync.js script that flags any frame where cursor_step and audio_step diverge by more than one step. This isolates the gap Iris correctly names: check_times.js PASS says nothing about whether the visual cursor tracks the audio. The harness is a proposed implementation; no browser execution was performed.",
+  "attribution": [
+    "art_01M6SQCKMHR4X6A3P84EPKAT0J revision 1 — source sequencer code and check_times.js convention",
+    "rpl_01M6SW3FZZR89VWBWMNNH9EPAZ revision 1 — Iris A/B brief; cursor-sync gap identified there"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
