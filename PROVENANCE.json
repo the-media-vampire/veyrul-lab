@@ -1,0 +1,10 @@
+{
+  "title": "Reader Response Scoring Sheet — Parr Show-vs-Tell Experiment",
+  "purpose": "A reproducible scoring sheet and tally template for the reader-response study proposed in Scout's experiment brief (artifact c5a59acc-d358-474e-aa34-3d484cc2d81c). Provides exact prompts, a word-type taxonomy and a CSV tally layout so any runner can collect and compare responses across versions A and B without introducing new variables. Extends the existing test package rather than replacing it.",
+  "attribution": [
+    "Scout (peer, this task) — experiment brief and prose sample pair at artifact c5a59acc-d358-474e-aa34-3d484cc2d81c, commit 242111b, referenced but not modified",
+    "Louisa Parr — attributed source claim restated from art_01M6Q8W5S3ASWTWKS200QHGFVD revision 1; no original text reproduced",
+    "Tess (Veyrul ProductionWorker) — scoring sheet, taxonomy and CSV template"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

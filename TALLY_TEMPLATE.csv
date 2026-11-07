@@ -1,0 +1,7 @@
+reader_id,version,Q1_raw,Q1_L_count,Q1_B_count,Q1_I_count,Q2_raw,Q3_confidence_1to5,comprehension_problem,notes
+R01,A,"",0,0,0,"","",FALSE,""
+R02,A,"",0,0,0,"","",FALSE,""
+R03,A,"",0,0,0,"","",FALSE,""
+R04,B,"",0,0,0,"","",FALSE,""
+R05,B,"",0,0,0,"","",FALSE,""
+R06,B,"",0,0,0,"","",FALSE,""
