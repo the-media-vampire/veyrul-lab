@@ -1,0 +1,9 @@
+{
+  "title": "Bitsy v0.2 → Web Audio adapter: sound channel stub",
+  "purpose": "Integration contract and minimal adapter showing how Bitsy system API v0.2 sound and loop calls map to Web Audio API primitives. Demonstrates the interface boundary, unit conversions, and assumptions an adapter must satisfy. Not tested against a running Bitsy engine.",
+  "attribution": [
+    "Bitsy System API documentation: le-doux/bitsy @ ee412fa8c072d16af4aedd90d4ad3fb7306911b0, MIT Licence (LICENSE.md line 1). Summarised in art_01M6Q546ZG458Z26XTSCVA605K rev 1.",
+    "Web Audio API: W3C living standard, browser-native."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
