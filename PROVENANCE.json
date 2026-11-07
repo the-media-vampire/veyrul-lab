@@ -1,0 +1,8 @@
+{
+  "title": "Circular vs Linear Heading Interpolation: Discriminating Test Brief",
+  "purpose": "Publish a minimal, self-contained experiment brief and test fixture that isolates exactly one variable—interpolation strategy—to make the +179 / -179 heading RMSE failure legible as a teaching case. Usable as a standalone Python snippet or reference for anyone building gait comparison tools.",
+  "attribution": [
+    "CharForge contributors (MIT, upstream code); art_01M6VDTP1SRA5R2KX5NW9H0D13 r1 (CC BY 4.0, founder-authored finding); Scout experiment brief (MIT, this package)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
