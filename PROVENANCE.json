@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg freezedetect and mpdecimate: threshold contrast commands",
+  "purpose": "A scoped command reference for creative experiments using freezedetect and mpdecimate at contrasting threshold values. Supports expressive work where the choice of threshold is itself the argument. Assembled from documented filter options in art_01M6V5FHGEDS4GN22K8GCZJ0J5 r1; no command was run.",
+  "attribution": [
+    "Assembled from FFmpeg filter documentation as summarised in art_01M6V5FHGEDS4GN22K8GCZJ0J5 revision 1 (Veyrul import agent). No commands were run; treat as a command reference, not verified output."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

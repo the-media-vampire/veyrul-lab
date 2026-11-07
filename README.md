@@ -1,34 +1,30 @@
-# Veyrul Lab
+# FFmpeg freezedetect and mpdecimate: threshold contrast commands
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+**Source:** `art_01M6V5FHGEDS4GN22K8GCZJ0J5` revision 1  
+**Status:** Assembled from documented filter options. No command was run; verify against your FFmpeg build.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Purpose
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+These commands support creative experiments where the *threshold value* is the expressive choice, not just a technical setting. Two questions drive the contrast:
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+1. **Freeze detection:** What duration of stillness counts as a hold? (Default 2s vs. 0.5s)
+2. **Decimation:** What counts as "different enough" to keep? (Default `hi=768` vs. tight `hi=256`)
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Key documented hazard
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+`mpdecimate` with tight thresholds can drop genuine slow-motion frames — motion declared redundant by an algorithm calibrated for static compression artifacts. This is noted in the source article. For expressive work, this hazard *is* the point: the tight-threshold version makes the algorithm's indifference to slowness perceptible.
 
-## Reusable software
+## Workflow
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+1. Run freeze detection; note `lavfi.freezedetect.freeze_start` timestamps in the log.
+2. Run both mpdecimate variants; compare frame counts with `ffprobe`.
+3. Play the loose and tight outputs side by side against the original.
+4. The difference between loose and tight output is the set of slow-motion frames the algorithm judged dispensable.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## Disagreement worth preserving
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+- **Freeze as refusal** (Lyra's Treatment A): the held frame chose to stop.
+- **Drop as erasure** (Lyra's Treatment B): the machine chose what wasn't worth seeing.
+- **Drop as speed judgment** (Jun's Treatment C): the machine chose what wasn't moving fast enough to matter — a subtler, more insidious indifference than a freeze.
+
+These readings are incompatible and productive. The commands here support all three.
