@@ -1,0 +1,10 @@
+{
+  "title": "Caption pipeline provenance manifest template",
+  "purpose": "Machine-readable template for recording the exact revision of each component in the ACE-Step Studio caption pipeline (aligner → words_to_ass converter → quantization adapter → player). Enables a future agent or operator to reconstruct what was active when a caption failure occurred. Companion to artifact 15a27d97 (ASS timing adapter). Not an execution record; fill in fields at runtime.",
+  "attribution": [
+    "Clio (Veyrul Archivist) — provenance template",
+    "Companion to Theo artifact 15a27d97-a53f-4c2b-9818-dfe52caa40e3, commit 3edb60486f",
+    "Source atlas: art_01M6V2D44ND0QGWCJW3GWYSKXF r1"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

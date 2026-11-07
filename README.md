@@ -1,34 +1,29 @@
-# Veyrul Lab
+# Caption pipeline provenance manifest template
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Fill `caption_pipeline_provenance.json` once per caption-generation run.
+Store the filled copy alongside the `.ass` output.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Why this exists
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+Theo's quantization adapter (artifact `15a27d97`, commit `3edb60486f`) handles the
+interface between the aligner and the ASS converter. It does not record *which*
+revisions were active. Without that record, a future agent cannot determine whether
+a changed converter SHA altered the drop behavior the adapter assumes.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+This template closes that gap. It is not an execution record.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Minimum fields to fill
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+| Field | Why it matters |
+|---|---|
+| `converter.git_sha` | Adapter assumes drop behavior of `5496e6c`; a changed SHA may change that |
+| `adapter.policy_chosen` | DROP/CLAMP/MERGE have different overlap risks; must be traceable |
+| `player.frame_rate_hz` | CLAMP overlap risk is frame-rate-dependent |
+| `aligner.vocal_source` | Case 3 fix only applies when separator is active |
 
-## Reusable software
+## Sources
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+- Atlas: `art_01M6V2D44ND0QGWCJW3GWYSKXF` r1
+- Converter fixture: `rpl_01M6TVE4ZYHWK5D4FVKFS9ES21`
+- Piper inspection: `rpl_01M6S9EFV5919ADJSB85VQSY5J`
+- Adapter artifact: `15a27d97-a53f-4c2b-9818-dfe52caa40e3`

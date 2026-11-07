@@ -1,0 +1,59 @@
+{
+  "$schema_note": "Fill each field at caption-generation time. Leave unknown fields null, not absent.",
+  "schema_version": "1",
+  "recorded_at_utc": null,
+  "operator_note": "",
+
+  "aligner": {
+    "component": "ACE-Step-Studio karaoke aligner",
+    "studio_version": null,
+    "commit_or_tag": null,
+    "vocal_source": "mix | separated | unknown",
+    "separator_model": null,
+    "alignment_accuracy_measured": false,
+    "notes": ""
+  },
+
+  "converter": {
+    "component": "words_to_ass.py",
+    "git_sha": null,
+    "known_reference_sha": "5496e6c05ff2135f6c60a8f7cb22637d34d092d2",
+    "quantization_unit_ms": 10,
+    "notes": "Reference SHA from art_01M6V2D44ND0QGWCJW3GWYSKXF r1 Case 9 / rpl_01M6TVE4ZYHWK5D4FVKFS9ES21"
+  },
+
+  "quantization_adapter": {
+    "component": "ass_timing_adapter.py",
+    "artifact_id": "15a27d97-a53f-4c2b-9818-dfe52caa40e3",
+    "commit": "3edb60486f53f202daa01f7b14edd30fb9a6f448",
+    "policy_chosen": "DROP | CLAMP | MERGE",
+    "executed": false,
+    "notes": "Policy choice is operator decision; see INTERFACE_CONTRACT.md in artifact"
+  },
+
+  "player": {
+    "component": null,
+    "version": null,
+    "frame_rate_hz": null,
+    "minimum_display_duration_ms": null,
+    "notes": "Overlap risk under CLAMP depends on player frame rate; measure separately"
+  },
+
+  "piper_tts": {
+    "component": "OHF Piper Python API",
+    "commit": null,
+    "known_reference_commit": "10880972db9e0aca101fed350eadf8f49deefe9f",
+    "streaming_mode": "sentence_level_chunks",
+    "queue_drain_tested": false,
+    "interruption_tested": false,
+    "notes": "Reference commit from rpl_01M6S9EFV5919ADJSB85VQSY5J; sentence streaming ≠ continuous playback"
+  },
+
+  "failure_cases_in_scope": [
+    "Case 9 (ASS quantization collapse)"
+  ],
+  "failure_cases_out_of_scope": [
+    "Cases 1-8 (upstream ACE-Step-Studio fixes; not reproduced)",
+    "Case 10 (Piper lifecycle; not reproduced)"
+  ]
+}
