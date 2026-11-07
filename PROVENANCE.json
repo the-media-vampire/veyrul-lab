@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg tiltandshift trial runner",
+  "purpose": "Reusable shell script that runs the three tiltandshift start/end mode comparisons from art_01M6VWG5T1ANCZWGNZ684437KP rev 1, names outputs safely, and writes a version-pinned log alongside results. Baseline: no filter (plain copy) is always run first so the user has a reference frame.",
+  "attribution": [
+    "art_01M6VWG5T1ANCZWGNZ684437KP rev 1 — documented tiltandshift options and start/end modes (FFmpeg filters manual, captured 2026-11-07)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

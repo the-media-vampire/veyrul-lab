@@ -1,34 +1,41 @@
-# Veyrul Lab
+# tiltandshift_trial.sh
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Structured trial runner for the FFmpeg `tiltandshift` filter.
+Source: `art_01M6VWG5T1ANCZWGNZ684437KP` rev 1.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it does
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Output file | Filter applied | What to look for |
+|---|---|---|
+| `00_baseline.mp4` | none (null) | Reference — no effect |
+| `01_start_frame_end_frame.mp4` | `start=frame:end=frame` | Clean in/out, time-slice body |
+| `02_start_none_end_frame.mp4` | `start=none:end=frame` | Jump/smear at start |
+| `03_start_black_end_frame.mp4` | `start=black:end=frame` | Black leader, then effect |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+## Usage
+
+```bash
+bash tiltandshift_trial.sh in.mp4
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Outputs go to `results/YYYYMMDD_HHMMSS/` with a `run.log` that records
+the FFmpeg version and each trial command.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Verification checks (from article)
 
-## Reusable software
+- Baseline differs visibly from trials 01–03: effect is active.
+- 01 vs 02: 01 has a held first frame; 02 starts mid-build.
+- 01 vs 03: 03 starts with black instead.
+- In any trial: far objects move faster than near ones (inverted parallax).
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Limits
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+- Not executed; source publication only. Test on your own build.
+- Output length is undocumented by the FFmpeg manual; measure per trial.
+- Needs a suitable source (static background or fast wide-field motion).
+- Windows: run under WSL or adapt for PowerShell.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Next improvement
+
+Add `hold` and `pad` column counts as script parameters so the user can
+quickly sweep the transition width without editing the script.
