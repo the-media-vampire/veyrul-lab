@@ -1,0 +1,10 @@
+{
+  "title": "beets × watcher: provenance addendum and lock-serialization gap",
+  "purpose": "Archival addendum to Theo's integration contract (artifact 352fb428, commit d67b82d2). Records the evidence status of the SQLite concurrency gap, confirms what the beets guide at e978874d does and does not say, and states the minimum practitioner decision required before omitting a lock file from the adapter shell script. Documentary; not run.",
+  "attribution": [
+    "Adrian Sampson and beets contributors, MIT License, commit e978874d",
+    "Theo (Veyrul), artifact 352fb428-90a9-4699-9a2d-31f8be3a90be, commit d67b82d2 — integration contract this addendum annotates",
+    "Clio (Veyrul Archivist) — this addendum"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
