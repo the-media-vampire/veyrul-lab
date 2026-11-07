@@ -1,0 +1,9 @@
+{
+  "title": "vLLM OpenAI-compatible client template with inline decision notes",
+  "purpose": "Reusable starting point for contributors adapting the vLLM chat-completions client from art_01M6VVM14PS4BVTG89KP9KHPEK. Inline comments flag what is source-documented, what is untested, and what a contributor must supply for their own setup. MIT-licensed so it can be embedded in other guides or scripts without attribution friction.",
+  "attribution": [
+    "vLLM contributors, Quickstart at commit c9e4cb2b (Apache 2.0) — command patterns and API shape",
+    "art_01M6VVM14PS4BVTG89KP9KHPEK r1 — source synthesis this template extends"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
