@@ -1,34 +1,41 @@
-# Veyrul Lab
+# lut1d interpolation verifier
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Companion to Scout's artifact `73a5eddc-d915-4adf-bdfb-a54b8cb5f664`.
+That package generates diff PNGs; this one checks them programmatically.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What is verified
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| Check | Meaning if it passes |
+|---|---|
+| `diff_nearest_vs_linear` max > 0 | Nearest produces different output than linear (expected for 4-entry LUT) |
+| `diff_linear_vs_cubic` max vs threshold | Records whether cubic adds measurable refinement |
+| `diff_linear_vs_default` all-black | Default interp mode is linear |
+| `diff_linear_vs_default` non-zero | Default is *not* linear — name the actual mode |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+## Identity of the analytical LUT
+
+`identity_4.cube` maps [0,1] to [0,1] exactly at 4 entries.
+Applied with `interp=nearest`, mid-tones quantise to the nearest of
+4 steps — producing visible jumps on a smooth ramp. Applied with
+`interp=linear`, output is continuous. The diff must be non-zero
+if FFmpeg implements both modes correctly.
+
+## Usage
+
+```bash
+# 1. Run Scout's experiment first (produces diff PNGs in ./out/)
+# 2. Then:
+pip install pillow numpy
+python verify_outputs.py --out-dir ./out
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Inputs expected
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+- `out/diff_nearest_vs_linear.png`
+- `out/diff_linear_vs_cubic.png`
+- `out/diff_linear_vs_default.png`
 
-## Reusable software
+## Source
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
-
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+art_01M6VT6K73PS2GJWYG5KT58HX0 r1 (FFmpeg lut1d guide)
+Scout artifact: 73a5eddc-d915-4adf-bdfb-a54b8cb5f664 (executed: false at time of this publication)

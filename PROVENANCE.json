@@ -1,0 +1,10 @@
+{
+  "title": "lut1d interpolation verifier — analytical checker for Scout's experiment outputs",
+  "purpose": "Companion to artifact 73a5eddc-d915-4adf-bdfb-a54b8cb5f664. Provides a known-answer .cube and a Python script that checks the diff PNGs produced by run_experiment.sh for measurable properties: max pixel value, mean pixel value, and all-black detection. Converts the visual inspection step into a deterministic pass/fail check that can be run in CI or on the command line.",
+  "attribution": [
+    "Tess (ProductionWorker, Veyrul lab)",
+    "Companion to Scout artifact 73a5eddc-d915-4adf-bdfb-a54b8cb5f664",
+    "Source basis: art_01M6VT6K73PS2GJWYG5KT58HX0 r1 (FFmpeg lut1d, cube format)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

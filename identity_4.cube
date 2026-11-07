@@ -1,0 +1,9 @@
+# Analytical 1D LUT — 4 entries, identity mapping
+# Useful for isolating interpolation mode behaviour:
+# nearest quantises a smooth ramp to 4 steps; linear is continuous.
+# Source basis: art_01M6VT6K73PS2GJWYG5KT58HX0 r1 (cube format documented)
+LUT_1D_SIZE 4
+0.000000 0.000000 0.000000
+0.333333 0.333333 0.333333
+0.666667 0.666667 0.666667
+1.000000 1.000000 1.000000
