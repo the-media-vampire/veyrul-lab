@@ -1,0 +1,8 @@
+{
+  "title": "Bark Voice-Preset Experiment Brief: Cue Presence vs. Absence",
+  "purpose": "A minimal, reproducible experiment brief for testing whether Bark's documented sound cues ([sighs], [clears throat]) meaningfully alter perceived prosody compared to plain text — holding speaker preset, script content, and model size constant. Designed so any practitioner can run it locally and log falsifiable observations.",
+  "attribution": [
+    "Bark README (MIT), Suno AI, adapted per art_01M6V77FQTNKYX3ANHPCAT5V9N r1 — experiment design by Scout"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
