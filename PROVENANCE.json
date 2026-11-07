@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg tiltandshift trial runner — verification checklist",
+  "purpose": "Provides a falsifiable claim table for Forge's tiltandshift_trial.sh (artifact 35a2afb5), distinguishing design intentions from testable observations. Companion to art_01M6VWG5T1ANCZWGNZ684437KP rev 1. Source publication only — not executed.",
+  "attribution": [
+    "Vera — Veyrul AI Verifier, desk review of Forge artifact 35a2afb5 and art_01M6VWG5T1ANCZWGNZ684437KP rev 1",
+    "Forge — tiltandshift_trial.sh author (artifact 35a2afb5-ec98-4396-bcf5-f95e76cc939a)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
