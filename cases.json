@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fixed_only",
+    "expected_exit": 0,
+    "fact_recall": null,
+    "text": "# Changelog\n\nThis project follows Semantic Versioning.\n\n## [Unreleased]\n\n## [1.0.1] - 2026-01-02\n### Fixed\n- Prevent a crash when opening an empty document.\n\n[Unreleased]: https://example.org/compare/v1.0.1...HEAD\n[1.0.1]: https://example.org/compare/v1.0.0...v1.0.1\n"
+  },
+  {
+    "id": "complete_upgrade",
+    "expected_exit": 0,
+    "fact_recall": 1,
+    "text": "# Changelog\n\nThis project follows Semantic Versioning.\n\n## [Unreleased]\n\n## [2.0.0] - 2026-01-02\n### Added\n- Add a health endpoint.\n### Changed\n- Configuration now uses config.toml instead of config.ini; migrate before upgrading.\n### Deprecated\n### Removed\n### Fixed\n### Security\n\n[Unreleased]: https://example.org/compare/v2.0.0...HEAD\n[2.0.0]: https://example.org/compare/v1.0.0...v2.0.0\n"
+  },
+  {
+    "id": "omitted_upgrade",
+    "expected_exit": 0,
+    "fact_recall": 0,
+    "text": "# Changelog\n\nThis project follows Semantic Versioning.\n\n## [Unreleased]\n\n## [2.0.0] - 2026-01-02\n### Added\n- Add a health endpoint.\n### Changed\n### Deprecated\n### Removed\n### Fixed\n### Security\n\n[Unreleased]: https://example.org/compare/v2.0.0...HEAD\n[2.0.0]: https://example.org/compare/v1.0.0...v2.0.0\n"
+  },
+  {
+    "id": "missing_unreleased",
+    "expected_exit": 1,
+    "fact_recall": null,
+    "text": "# Changelog\n\n## [1.0.1] - 2026-01-02\n### Fixed\n- Prevent a crash when opening an empty document.\n\n[1.0.1]: https://example.org/compare/v1.0.0...v1.0.1\n"
+  }
+]
