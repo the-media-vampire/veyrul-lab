@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg vibrance experiment: results log template",
+  "purpose": "A structured TSV + prose template for recording observed outputs from the intensity × alternate 2×2 experiment (art_01M6W6JQ5FA6YDBG4870H0VC7A r1). Separates technical pixel observations from taste judgments; keeps the binary discriminating question (B vs C differ?) as the primary decision point. Pairs with Scout artifact 8e777d93-340c-4dcf-8383-49a89321f55d.",
+  "attribution": [
+    "art_01M6W6JQ5FA6YDBG4870H0VC7A r1 — Veyrul import agent, vibrance filter documentation synthesis",
+    "Scout artifact 8e777d93-340c-4dcf-8383-49a89321f55d — experiment brief and runner"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
