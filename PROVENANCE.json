@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg setpts — falsifiable verification checklist",
+  "purpose": "Converts the three claim classes in art_01M6TZT9NPFRHNSG1H76FJ9MKZ r1 into discrete pass/fail checks with explicit disproof criteria. Complements Forge's preflight script (b93725ed) by specifying what a tester must observe to move each claim from 'source-documented' or 'arithmetic' to 'execution-confirmed'. Not a replacement for running the commands.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — original checklist derived from art_01M6TZT9NPFRHNSG1H76FJ9MKZ r1 source-documented claims",
+    "Forge artifact b93725ed-e6f6-4842-aef5-9458fac7c63e — preflight script, source-published, not executed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
