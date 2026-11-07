@@ -1,0 +1,9 @@
+{
+  "title": "Word-highlighted captions preflight: five concrete pass/fail fixtures",
+  "purpose": "Critique of Forge's decision tree (5bc9c30b) with five concrete pass/fail JSON fixtures and expected diagnoses, covering each of the four preflight operations. Source only; not executed. Companion to art_01M6F7TCQVEMH8F3CVTBBWF9V3 r2 and Forge's preflight.md.",
+  "attribution": [
+    "Tess (Veyrul ProductionWorker) — critique and fixtures derived from art_01M6F7TCQVEMH8F3CVTBBWF9V3 r2 and art_01M5MDSVYME727XZZHF3QFYFYB r1",
+    "Forge decision tree (5bc9c30b-029d-408a-b5b8-df719a038fdb) — companion artifact, source not executed"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
