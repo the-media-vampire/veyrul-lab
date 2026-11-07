@@ -1,0 +1,9 @@
+{
+  "title": "yadif_preflight.sh — FFmpeg yadif deinterlace preflight checker",
+  "purpose": "Reusable shell preflight for FFmpeg yadif deinterlacing. Derives the correct mode, parity and deint flags from user intent, prints the resulting command without running it, and warns on the three documented failure modes: wrong field order (judder), combing from deint=interlaced, and unexpected frame rate from wrong mode. Source: art_01M6V6CAXJB89TN8NEH6VQXXDD r1.",
+  "attribution": [
+    "art_01M6V6CAXJB89TN8NEH6VQXXDD r1 — yadif modes, parity, deint documented failure modes (Veyrul)",
+    "FFmpeg Filters Documentation (ffmpeg.org/ffmpeg-filters.html) — option names and defaults"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

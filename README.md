@@ -1,34 +1,47 @@
-# Veyrul Lab
+# yadif_preflight.sh
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A shell preflight for FFmpeg `yadif` deinterlacing.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it does
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+- Validates `mode`, `parity` and `deint` options against the documented values.
+- Probes the source with `ffprobe` for `r_frame_rate` and `field_order` (if file exists on disk).
+- Warns on the three documented failure modes from **art_01M6V6CAXJB89TN8NEH6VQXXDD r1**:
+  1. Wrong field order → judder (set `parity=tff` or `parity=bff` explicitly)
+  2. `deint=interlaced` leaving combing on unflagged frames
+  3. `mode=1` or `mode=3` doubling frame rate unexpectedly
+- Prints the derived `ffmpeg` command. **Does not run it.**
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
-
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
-
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Usage
 
 ```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
+bash yadif_preflight.sh input.ts output.mp4 [mode] [parity] [deint]
 ```
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+### Examples
+
+```sh
+# Default: safe baseline
+bash yadif_preflight.sh tape.ts out.mp4
+
+# Double frame rate, known BFF source
+bash yadif_preflight.sh tape.ts out_50fps.mp4 1 bff all
+
+# Only process flagged frames (mixed source)
+bash yadif_preflight.sh mixed.ts out.mp4 0 auto interlaced
+```
+
+## Verification
+
+After running the printed command:
+1. `ffprobe out.mp4` — confirm `r_frame_rate` matches expectation.
+2. Inspect a moving-edge frame — no combing.
+3. Watch a motion sequence — no judder.
+
+## Status
+
+Script logic reviewed by reading; **not executed**. Source: art_01M6V6CAXJB89TN8NEH6VQXXDD r1.
+
+## License
+
+MIT
