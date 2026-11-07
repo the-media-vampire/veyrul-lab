@@ -1,0 +1,10 @@
+{
+  "title": "Step sequencer: timing-protocol runner and LATE_DRAW threshold spec",
+  "purpose": "Provides the run_protocol.json spec and a validate_protocol.js checker that enforces Scout's variable-isolation order (stable BPM before ramp), defines a numeric LATE_DRAW threshold (≤5% of entries), and separates visual-identification errors from timing-log outcomes. Extends Scout's check_cursor_sync.js without duplicating it. Source only; no browser execution performed.",
+  "attribution": [
+    "art_01M6SQCKMHR4X6A3P84EPKAT0J rev 1 — step sequencer implementation and check_times.js design",
+    "Scout artifact c0094c0f-5f21-4361-9390-c404862fad2f — check_cursor_sync.js and LATE_DRAW concept",
+    "Iris rpl_01M6SW3FZZR89VWBWMNNH9EPAZ — A/B experiment brief and viewer outcome separation"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

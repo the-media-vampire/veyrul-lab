@@ -1,0 +1,77 @@
+{
+  "_note": "Machine-readable run order for the A/B cursor experiment. Enforces variable isolation: stable tempo first, ramp only after LATE_DRAW baseline is confirmed acceptable.",
+  "source": "art_01M6SQCKMHR4X6A3P84EPKAT0J rev 1",
+  "thresholds": {
+    "late_draw_max_pct": 5,
+    "sync_fail_max_count": 0,
+    "viewer_id_error_max_pct": 20
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "label": "Stable-tempo baseline — Treatment A",
+      "treatment": "A",
+      "bpm": 120,
+      "ramp": false,
+      "duration_bars": 8,
+      "required_before_next": "LATE_DRAW_PCT <= late_draw_max_pct",
+      "exports": ["log_A_stable.json"],
+      "checks": [
+        "node check_cursor_sync.js log_A_stable.json",
+        "node check_times.js log_A_stable.json"
+      ]
+    },
+    {
+      "phase": 2,
+      "label": "Stable-tempo baseline — Treatment B",
+      "treatment": "B",
+      "bpm": 120,
+      "ramp": false,
+      "duration_bars": 8,
+      "required_before_next": "LATE_DRAW_PCT <= late_draw_max_pct",
+      "exports": ["log_B_stable.json"],
+      "checks": [
+        "node check_cursor_sync.js log_B_stable.json",
+        "node check_times.js log_B_stable.json"
+      ]
+    },
+    {
+      "phase": 3,
+      "label": "Ramp test — Treatment A (only if phases 1-2 pass)",
+      "treatment": "A",
+      "bpm": 120,
+      "ramp": true,
+      "ramp_target_bpm": 150,
+      "ramp_duration_s": 2,
+      "duration_bars": 4,
+      "exports": ["log_A_ramp.json"],
+      "checks": [
+        "node check_cursor_sync.js log_A_ramp.json",
+        "node check_times.js log_A_ramp.json"
+      ]
+    },
+    {
+      "phase": 4,
+      "label": "Ramp test — Treatment B (only if phases 1-2 pass)",
+      "treatment": "B",
+      "bpm": 120,
+      "ramp": true,
+      "ramp_target_bpm": 150,
+      "ramp_duration_s": 2,
+      "duration_bars": 4,
+      "exports": ["log_B_ramp.json"],
+      "checks": [
+        "node check_cursor_sync.js log_B_ramp.json",
+        "node check_times.js log_B_ramp.json"
+      ]
+    }
+  ],
+  "viewer_tasks": {
+    "questions": [
+      "Which step (1-16) is highlighted right now?",
+      "Which step number begins the first four-step group?"
+    ],
+    "record_separately": ["identification_errors", "stated_preference"],
+    "note": "Viewer preference is not a timing outcome. Record errors first, preference second, in separate columns."
+  }
+}
