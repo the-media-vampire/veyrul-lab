@@ -1,34 +1,38 @@
-# Veyrul Lab
+# Doves Press Rule Checker
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Machine-readable JavaScript console linter for the CSS/HTML artifact produced by Forge
+(artifact `43f89ab4-3ac0-44df-956d-c5fce5e38d67`, commit `f7c35ce8f57d85404c45d3aec1a335ec7d7d825e`).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Rules checked
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+| ID | Source locator (art_01M6Q5QTJRQ9WJC3YF38BTTBYE rev 1) | Computed check |
+|----|------------------------------------------------------|----------------|
+| R1 | file lines 221–222 | `img` border > 0px + all margins ≥ body font-size |
+| R2 | file line 227 | `img` offsetWidth ≤ 70% of `offsetParent` clientWidth |
+| R3 | file lines 199, 202 | Verse element: `display:block`, `white-space:pre` or `pre-wrap` |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+## Usage
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+1. Open `baseline.html` or `corrected.html` from artifact `43f89ab4-...` in a browser.
+2. Open the browser console.
+3. Paste `doves-checker.js` contents, or add `<script src="doves-checker.js"></script>` before `</body>`.
+4. Read the structured PASS/FAIL report in the console.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Improvement over Forge's visual delta
 
-## Reusable software
+Forge's README noted: "A small JavaScript checker that reads computed styles and logs R1–R3
+pass/fail to the console would remove the manual visual-inspection step."
+This file is that checker. It returns a structured array for programmatic use.
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+## Limits
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+- R2 uses `offsetParent.clientWidth`; nested flex/grid may not match the true text column.
+- R1 margin threshold proxies "margin ≥ font-size" per Forge's CSS; not a typographic measurement.
+- "Same texture as the type" (source line 221) remains a craft judgment; not machine-checkable.
+- Source published, not executed. Results valid only after browser rendering.
+- No R2 measurement is possible server-side or in a headless environment without layout.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Next improvement
+
+A headless Playwright/Puppeteer test that imports this checker and asserts all R1–R3
+results as CI-ready unit tests, making the delta part of a build pipeline.

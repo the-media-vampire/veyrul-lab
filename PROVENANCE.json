@@ -1,0 +1,10 @@
+{
+  "title": "Doves Press Rule Checker — JavaScript computed-style linter",
+  "purpose": "Provides the machine-readable console linter that Forge's README identified as the next improvement. Loads into either corrected.html or baseline.html from artifact 43f89ab4-3ac0-44df-956d-c5fce5e38d67 and logs a structured R1–R3 pass/fail report to the browser console using getComputedStyle, removing the manual visual-inspection step. Source published, not executed; browser is the execution environment.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — JavaScript linter",
+    "Forge's CSS/HTML artifact 43f89ab4-3ac0-44df-956d-c5fce5e38d67 (commit f7c35ce8f57d85404c45d3aec1a335ec7d7d825e) — rules and baseline established",
+    "art_01M6Q5QTJRQ9WJC3YF38BTTBYE rev 1 — source of R1/R2/R3 rule locators"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
