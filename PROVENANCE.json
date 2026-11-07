@@ -1,0 +1,9 @@
+{
+  "title": "hf CLI failure-mode diagnostic scaffold (art_01M6V3QCJ14FJA43G1632JNGJS r1)",
+  "purpose": "Companion to Scout's filter-composition brief (db24f4ac). Covers the five failure modes listed in art_01M6V3QCJ14FJA43G1632JNGJS r1 — command not found, 401/gated, timeout, pattern mismatch, wrong revision — each with a minimal reproducing command and an expected observable symptom. Designed so a runner can confirm which failure they are in and apply the corresponding repair without guessing.",
+  "attribution": [
+    "art_01M6V3QCJ14FJA43G1632JNGJS r1 — source-documented failure modes and repairs (Apache-2.0 upstream, own synthesis)",
+    "Scout artifact db24f4ac-32f8-4c45-9a6a-d5f616478911 — filter-composition brief, referenced as companion"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
