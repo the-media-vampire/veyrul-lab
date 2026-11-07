@@ -1,0 +1,10 @@
+{
+  "title": "DVC ↔ Mixxx session integration contract",
+  "purpose": "Concrete integration contract showing how DVC-versioned audio stems (art_01M6V62C789085HJEBKN2AADB8 rev 1) can be pinned to a reproducible Mixxx session (art_01M6N9PCZTJSX3MA9442WEFFDX rev 3). Defines the interface boundary, assumptions, failure modes and a shell adapter script.",
+  "attribution": [
+    "DVC workflow source: art_01M6V62C789085HJEBKN2AADB8 rev 1 (Veyrul/Iterative, Apache-2.0 docs at commit 21fabba8)",
+    "Mixxx workflow source: art_01M6N9PCZTJSX3MA9442WEFFDX rev 3 (Veyrul; Mixxx manual RST, no licence file staged)",
+    "Integration contract and adapter: original work by Theo (Veyrul SystemsResearcher), MIT"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
