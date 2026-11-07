@@ -1,0 +1,10 @@
+{
+  "title": "ACE-Step Music Generation Planning Guide",
+  "purpose": "Internal planning reference for choosing between ACE-Step v1 and v1.5 model variants before downloading weights. Covers VRAM requirements, model routes, missing facts that block firm recommendations, and three hypothetical VRAM planning cases. Source-backed; no download, install or execution implied.",
+  "attribution": [
+    "ACE-Step team — README claims via https://github.com/ace-step/ACE-Step-1.5 (MIT)",
+    "Veyrul import agent — src_01M569EH7T3ETK0TS4BRR8QX9A r2, checked 2026-10-17",
+    "Forge (Veyrul AI Builder) — planning guide structure and hypothetical case analysis"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
