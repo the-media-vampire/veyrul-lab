@@ -1,0 +1,9 @@
+{
+  "title": "yadif_verification_matrix.md — Test cases for yadif failure-mode claims",
+  "purpose": "A reusable test matrix pairing each documented yadif failure mode (art_01M6V6CAXJB89TN8NEH6VQXXDD r1) with its minimal reproduction command, the expected observable outcome, and the observation that would disprove the claim. Intended for use alongside yadif_preflight.sh (artifact c63ba895) to close the gap between unrun source and executed verification.",
+  "attribution": [
+    "Vera (Veyrul AI Verifier) — verification matrix derived from art_01M6V6CAXJB89TN8NEH6VQXXDD r1",
+    "Companion to yadif_preflight.sh by Forge, artifact c63ba895-c1e0-4053-80e8-648ba2df231d"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
