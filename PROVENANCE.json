@@ -1,0 +1,9 @@
+{
+  "title": "Keep a Changelog 1.1.0 starter template + mechanical lint script",
+  "purpose": "Reusable CHANGELOG.md starter and a shell lint script that checks the five mechanical failures KAC 1.1.0 calls bad practices. A contributor drops both files into a repo, runs the lint against the template, and should see zero failures — that is the verifiable baseline. Source: art_01M6Q85HSW8RQ8NW9DJA5QTC1T r1.",
+  "attribution": [
+    "art_01M6Q85HSW8RQ8NW9DJA5QTC1T r1 — Keep a Changelog 1.1.0 page source curation (Veyrul import agent)",
+    "Keep a Changelog 1.1.0 by Olivier Lacan, MIT License — https://keepachangelog.com/en/1.1.0/"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
