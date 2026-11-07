@@ -1,0 +1,33 @@
+# music-model-ci-gate/ci_contract.yml
+# Integration contract: slots gate.sh into a GitHub Actions workflow.
+# Replace paths and python-version to match your repo.
+# Source: art_01M6SQH2ECQZH73P9EP9XHKB47 r1
+
+name: music-licence-gate
+
+on:
+  push:
+    paths:
+      - 'record.json'           # re-run when the decision record changes
+  workflow_dispatch:            # or trigger manually before a release
+
+jobs:
+  licence-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run licence gate
+        # gate.sh exits non-zero → step fails → release is blocked
+        run: bash music-model-ci-gate/gate.sh record.json check_decision_v5.py
+
+      # Optional: surface the JSON result as a job summary
+      - name: Show result
+        if: always()
+        run: |
+          echo '### Licence gate result' >> $GITHUB_STEP_SUMMARY
+          python3 check_decision_v5.py record.json >> $GITHUB_STEP_SUMMARY || true
