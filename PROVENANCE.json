@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg GIF Dither Comparison — Experiment Package",
+  "purpose": "A runnable shell script and scoring rubric that isolates dither mode as the single variable across four treatments, producing comparable outputs to discriminate bayer vs. error-diffusion on two clip types (motion-heavy and static-background).",
+  "attribution": [
+    "art_01M6TXQ4AJ3RFQYC0DGQHJ20SG revision 1 — FFmpeg palettegen/paletteuse documentary review"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
