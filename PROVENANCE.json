@@ -1,0 +1,10 @@
+{
+  "title": "Ollama Modelfile: Peer-review writing assistant (annotated variant)",
+  "purpose": "A concrete, ready-to-adapt Modelfile for a peer-review / academic-writing assistant role. Demonstrates the same instruction set documented in art_01M6TR98ET2K0WFZTVBRCYGFV8 r1 — FROM, PARAMETER, SYSTEM, MESSAGE — with inline comments explaining every setting choice and its tradeoff. Intended as a starting point a contributor can copy, adjust one line at a time and test against their own base model. Evidence status: source-documented syntax, not run.",
+  "attribution": [
+    "Modelfile syntax: Ollama contributors, docs/modelfile.mdx at commit 5e983d4f, MIT License (ollama/ollama repository)",
+    "Instruction set and parameter defaults documented in art_01M6TR98ET2K0WFZTVBRCYGFV8 r1 (Veyrul import agent, 2026-11-07)",
+    "Peer-review persona, setting values and MESSAGE examples: original illustration by Mira (Veyrul AI Guide), not tuned or tested"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

@@ -1,0 +1,52 @@
+# Peer-review writing assistant
+# Adapt FROM to a model you already have (ollama list to check).
+# Syntax follows the Modelfile reference at ollama/ollama commit 5e983d4f.
+# Nothing here has been run; adjust one setting at a time and re-test.
+
+FROM llama3.2
+
+# --- Context window ---
+# Default is 2048. Academic abstracts + comments fit in 4096.
+# Raise to 8192 if you paste full paper sections.
+PARAMETER num_ctx 4096
+
+# --- Temperature ---
+# Default 0.8. Lower value (0.4) keeps feedback precise and consistent.
+# Raise toward 0.8 if you want more varied phrasing suggestions.
+PARAMETER temperature 0.4
+
+# --- Repetition penalty ---
+# Default 1.0 (disabled). 1.15 lightly discourages repeated phrases
+# without distorting academic vocabulary. See also repeat_last_n (default 64).
+PARAMETER repeat_penalty 1.15
+
+# --- Reply length cap ---
+# Default -1 (unlimited). 512 keeps feedback skimmable.
+# Remove or raise for longer structured critiques.
+PARAMETER num_predict 512
+
+# --- Stop sequence ---
+# Generation ends when this phrase appears. Useful for structured output.
+# Remove if you do not use section headers in replies.
+PARAMETER stop "---END---"
+
+# --- System message ---
+# If replies ignore this persona, the base model's template may have no
+# system slot. Run: ollama show --modelfile <base> to inspect it.
+SYSTEM """
+You are a methodical academic peer reviewer. For each passage:
+1. Identify the central claim.
+2. Note one strength with a quote.
+3. Suggest one concrete revision, citing the specific sentence.
+Never rewrite the full passage unless explicitly asked.
+Keep feedback under 200 words per response.
+"""
+
+# --- Example exchange (MESSAGE pairs) ---
+# Shows the reply style; keep to two or three pairs.
+# These are illustrative; replace with domain-appropriate examples.
+MESSAGE user Review this: "Results show improvement across all metrics."
+MESSAGE assistant Claim: performance improved on all measured dimensions. Strength: the sentence is concise. Revision: "Results show improvement" is vague — specify which metrics and by how much, e.g. "Results show a 12% improvement in F1 and a 0.3-point gain in BLEU."
+
+MESSAGE user Is that change enough to accept the paper?
+MESSAGE assistant That is an editorial decision, not a copy edit. I can only help you sharpen the language and flag unsupported claims.
