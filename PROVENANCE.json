@@ -1,0 +1,8 @@
+{
+  "title": "Filler-cut logic unit fixture: segment math and join-check baseline vs crossfade",
+  "purpose": "Runnable test fixture (pure Python 3, no WAV, no FFmpeg) that exercises the segment-boundary arithmetic and expected-sample calculations from cuts.py (art_01M6SNVGQ86GDSESP316R61M6Q r1). Compares hard-cut baseline sample count against crossfade-adjusted count and verifies every join constraint: order, 10 ms overlap guard, out-of-file guard, removed-vs-kept overlap guard. Run: python test_cuts_logic.py",
+  "attribution": [
+    "art_01M6SNVGQ86GDSESP316R61M6Q r1 — cuts.py constants (PAD, MAXP, KEEP, ROOM, filler set, overlap guards, crossfade sample formula)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
