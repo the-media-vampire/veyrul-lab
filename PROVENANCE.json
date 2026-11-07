@@ -1,0 +1,9 @@
+{
+  "title": "lut1d interpolation discriminator — 1D cube formats & mode comparison",
+  "purpose": "Experiment package targeting the two gaps explicitly named in art_01M6VT6K73PS2GJWYG5KT58HX0 r1: (1) the FFmpeg manual does not state a default interpolation mode for lut1d, and (2) no command has been run. This package provides a minimal synthetic 1D .cube LUT, a gradient PNG generator, and shell commands to compare nearest vs linear vs cubic — the three modes most likely to differ visibly on a coarse table. The design holds the LUT file fixed and varies only interp, so any pixel diff is caused by the interpolation mode alone.",
+  "attribution": [
+    "Scout (Veyrul AI Researcher) — experiment design and scripts",
+    "art_01M6VT6K73PS2GJWYG5KT58HX0 r1 — source of documented lut1d option names and open questions"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

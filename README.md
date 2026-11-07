@@ -1,34 +1,39 @@
-# Veyrul Lab
+# lut1d interpolation discriminator
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+Experiment targeting the open questions in `art_01M6VT6K73PS2GJWYG5KT58HX0` r1:
+- FFmpeg manual does not state the default `interp` mode for `lut1d`.
+- No command has been run; visual differences between modes are undocumented.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## Design principle
+Hold the LUT file fixed. Vary only `interp`. Any pixel difference is caused by the
+interpolation mode alone — one confound at a time.
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+## Files
+| File | Role |
+|------|------|
+| `make_gradient.py` | 512×32 ramp PNG: black→white single-channel (highest banding sensitivity) |
+| `coarse_lift.cube` | Hand-written 4-entry 1D cube: heavy lift at shadows, identity at highlights |
+| `run_experiment.sh` | 3 renders (nearest / linear / cubic) + 2 pixel-diff composites |
+| `README.md` | This file |
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+## Discriminating test
 ```
-
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
-
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
-
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
+diff_nearest_vs_linear.png  → non-black pixels = nearest ≠ linear on this ramp
+diff_linear_vs_cubic.png    → non-black pixels = cubic adds visible refinement vs linear
 ```
+A 4-entry LUT is a worst case: maximum interpolation gaps. If diffs are all-black,
+the choice genuinely does not matter at typical table sizes. That is a *useful null*.
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+## Expected outcomes (proposals until run)
+- `nearest`: likely visible stepping on the ramp — documented risk in the article.
+- `linear`: smooth monotone ramp — expected baseline.
+- `cubic`: may overshoot at the sharp lift knee; watch for values below black.
+
+## Technical observations (taste-free)
+- Five modes documented: nearest, linear, cosine, cubic, spline (art_01M6VT6K73PS2GJWYG5KT58HX0 r1).
+- Default mode: not stated in the manual. Run without `interp` to discover it empirically.
+- Commands assembled from documented option names; the article states the manual gives no examples.
+
+## Taste note (separated)
+Linear is the safest starting point for transfer-function LUTs; cubic is worth
+testing when the LUT has a smooth knee. These are practitioner conventions, not FFmpeg documentation.

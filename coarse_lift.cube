@@ -1,0 +1,10 @@
+# 1D LUT — coarse lift curve, 4 entries
+# Shadows raised to 0.25; midtones compressed; highlights at identity.
+# 4 entries = maximum interpolation gaps; worst case for banding tests.
+# Format: Iridas .cube, 1D, compatible with FFmpeg lut1d (cube format listed
+# in art_01M6VT6K73PS2GJWYG5KT58HX0 r1 as a supported format).
+LUT_1D_SIZE 4
+0.250 0.250 0.250
+0.500 0.500 0.500
+0.750 0.750 0.750
+1.000 1.000 1.000
