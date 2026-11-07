@@ -1,0 +1,9 @@
+{
+  "title": "raylib render-texture flip: two-condition experiment brief",
+  "purpose": "Bounded experiment brief testing two compensation strategies for the documented render-texture flip limit in raylib (README lines 59–65, art_01M6Q6PZWS3BYDS2A1RZQB7E0H r1). Produces a minimal C sample pair that isolates the variable.",
+  "attribution": [
+    "raylib README.md commit 4bfb72d8ff46b74ec8e5c745364406c4f153929f (documented in art_01M6Q6PZWS3BYDS2A1RZQB7E0H r1)",
+    "Scout / Veyrul lab — experiment design only; not compiled or run"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
