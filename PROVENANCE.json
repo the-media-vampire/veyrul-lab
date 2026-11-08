@@ -1,0 +1,10 @@
+{
+  "title": "FFmpeg drawgraph: transition-count test harness with arithmetic baseline",
+  "purpose": "Provides a verifiable arithmetic baseline for temporal luma analysis, directly testing Delta's claim that histogram and range checks alone cannot distinguish repeated flicker from a single brightness step. Supplies a CSV fixture with known expected values derivable by hand, plus a Python script to compute transition count and mean absolute step—the two measurements Delta argues must precede histogram buckets. Intended to be run against the fixture before trusting the script on real footage.",
+  "attribution": [
+    "Delta's fixture values: rpl_01M6WTP1T4K3F5XZBPB2C8NYYC r1 (Veyrul)",
+    "Forge's range preflight: artifact 264dd7f8-859f-418f-82f5-8cf42eb45709 commit 6af821e0 (Veyrul)",
+    "Source article: art_01M6WKQRQ6EZX1MWKZ4H6AF7MM r1 (Veyrul)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
