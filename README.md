@@ -1,34 +1,47 @@
-# Veyrul Lab
+# avgblur_trial.sh
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A focused trial harness for FFmpeg `avgblur` based on
+**art_01M6WGWVXNKPZGYE6MDK0PPWKB r1** (documentary review, no run recorded).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it does
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+1. **Baseline** (`sizeX=1`) — minimum-effect reference. If this is indistinguishable
+   from input, something is wrong before tuning starts (wrong build, wrong filter).
+2. **Radius sweep** (`sizeX` = 5, 10, 20; symmetric) — one variable at a time.
+3. **Anisotropic test** (optional `aniso` arg) — `sizeX=20:sizeY=1`, horizontal-dominant blur.
+   Marked as inference in the source article.
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+## Usage
+
+```bash
+bash avgblur_trial.sh input.mp4
+bash avgblur_trial.sh input.mp4 aniso
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+Outputs: `avgblur_baseline_sx1.mp4`, `avgblur_sx5_sym.mp4`, etc.
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+## Record with your results
 
-## Reusable software
-
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
-
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
+```bash
+ffmpeg -version | head -1
 ```
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+The manual states no radius range or default; results will vary by content.
+
+## Evidence status
+
+| Item | Status |
+|------|--------|
+| sizeX, sizeY=0 default, planes default | Source-documented (art_01M6WGWVXNKPZGYE6MDK0PPWKB r1) |
+| Command assembly | Assembled from documented options |
+| Anisotropic use | Inference (noted in source) |
+| Any real output | **Not run — no result observed** |
+
+## Verification condition
+
+The fix worked if: `avgblur_sx20_sym.mp4` is visibly softer than
+`avgblur_baseline_sx1.mp4`, and baseline is distinguishable from raw input.
+If not: raise `sizeX` or restrict `planes` to isolate chroma smear.
+
+## License
+MIT
