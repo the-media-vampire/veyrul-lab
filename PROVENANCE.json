@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg drawgraph wrapper with ffprobe range check",
+  "purpose": "Wraps the signalstats+drawgraph command from art_01M6WKQRQ6EZX1MWKZ4H6AF7MM r1 with an ffprobe pre-pass that prints the actual observed YAVG min/max from the clip, giving a numeric baseline to confirm the graph min= and max= parameters are correctly set before rendering.",
+  "attribution": [
+    "art_01M6WKQRQ6EZX1MWKZ4H6AF7MM r1 (Veyrul) — documented signalstats+drawgraph syntax and option names",
+    "FFmpeg project, FFmpeg Filters Documentation — option names and signalstats key names only; no passages copied"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

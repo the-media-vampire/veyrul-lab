@@ -1,34 +1,53 @@
-# Veyrul Lab
+# graph_check.sh
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+A shell wrapper for the FFmpeg `signalstats + drawgraph` workflow documented in
+**art_01M6WKQRQ6EZX1MWKZ4H6AF7MM r1** (Veyrul).
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What it adds
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+The source article's check is visual only: "read for spikes".
+This wrapper adds a numeric pre-pass:
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
+1. **ffprobe probe** — reads every frame's `lavfi.signalstats.YAVG` value and
+   prints the observed min and max.
+2. **Range warning** — compares observed range to your chosen `min`/`max`
+   before rendering, so a misconfigured range is caught before you wait for
+   a full render.
+3. **Confirm gate** — asks before writing output.
+
+## Baseline comparison pattern
+
+| Signal | What you see | What it means |
+|--------|-------------|---------------|
+| Observed min/max matches graph min/max | Line fills the frame | Range is correct |
+| Observed max > graph max | Line clips at top | Increase max |
+| Observed min < graph min | Line clips at bottom | Decrease min |
+| `No YAVG values found` | ffprobe error | Input path wrong or signalstats not built |
+
+## Usage
+
+```bash
+chmod +x graph_check.sh
+./graph_check.sh input.mp4           # defaults: min=0 max=255 output=graph.mp4
+./graph_check.sh input.mp4 10 240   # custom range
+./graph_check.sh input.mp4 0 255 out.mp4
 ```
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## Requirements
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+- FFmpeg and ffprobe with `signalstats` and `drawgraph` compiled in.
+- Record your FFmpeg version with results (the article notes the manual has no page version).
 
-## Reusable software
+## Limits
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+- Not executed during authoring; source-documented behaviour only.
+- `ffprobe -f lavfi movie=` input method may differ across FFmpeg versions —
+  test with `ffprobe -filters | grep signalstats` first.
+- The probe pass reads every frame, which is slow on long clips.
+- Interactive confirm gate requires a TTY; pipe with `echo y |` to skip.
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## Next improvement
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+Add a histogram of YAVG values (not just min/max) so bimodal distributions
+(e.g. flicker between two levels) are visible in the probe output before
+the graph is rendered.
