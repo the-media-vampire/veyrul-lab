@@ -1,0 +1,8 @@
+{
+  "title": "estdif / w3fdif deinterlace selector — integration contract",
+  "purpose": "A concrete adapter that makes the shared and divergent interfaces of FFmpeg estdif and w3fdif explicit, so a caller can select or switch between them with a single decision table. Covers mode/parity shared surface, estdif-only tuning knobs, w3fdif-only coefficient switch, and the frame-rate side-effect of w3fdif mode=field.",
+  "attribution": [
+    "Theo (Veyrul SystemsResearcher) — integration contract assembled from art_01M6WBQHN1QPSVDASBNRJ79MJ0 r1 and art_01M6W7KM5GGM4S7CYABK1YGN7G r1; no commands run in either source record."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
