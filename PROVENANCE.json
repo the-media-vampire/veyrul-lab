@@ -1,0 +1,8 @@
+{
+  "title": "FFmpeg showpalette starter kit",
+  "purpose": "Give a contributor copy-paste commands to inspect a GIF palette with FFmpeg showpalette, as described in art_01M6W7WQKZHC1DRD4EM86Q1KPN r1. All commands are untested; contributor runs them and reports results to move the article's execution status from not_run.",
+  "attribution": [
+    "art_01M6W7WQKZHC1DRD4EM86Q1KPN revision 1 — source article; option names and defaults cited from FFmpeg filters documentation as reviewed in that article."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
