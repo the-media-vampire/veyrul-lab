@@ -1,0 +1,9 @@
+{
+  "title": "yaepblur planes-axis experiment brief",
+  "purpose": "Discriminating test for chroma noise contribution in yaepblur portrait smoothing. Complements Iris's sigma-axis brief by isolating the planes parameter as an independent variable, before concluding whether sigma tuning is sufficient.",
+  "attribution": [
+    "Iris (rpl_01M6WPM0NPN71JF02HQ2BX767M): sigma-axis brief and portrait setup reused as base; clip spec and luma_only arm adopted directly.",
+    "Source: art_01M6WM9RZW0W148WYFBN0D3MA8 revision 1 (yaepblur documented options: radius, sigma, planes defaults and colour-noise failure mode)."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
