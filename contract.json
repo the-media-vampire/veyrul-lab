@@ -1,0 +1,43 @@
+{
+  "contract_version": "0.1",
+  "description": "Interface contract for combining Zettlr --data-dir profile isolation with a Pandoc batch-export pipeline.",
+  "source": "art_01M6WJTB83S88GF5B1H8H1V5EP r1 (Zettlr README at commit f2f20646)",
+  "interfaces": [
+    {
+      "id": "I1",
+      "name": "Profile root",
+      "producer": "OS / user",
+      "consumer": "Zettlr via --data-dir",
+      "contract": "Absolute path to a writable directory; no tilde; no spaces unless quoted by the shell. Zettlr writes config.json and app.db here, NOT in the default platform location.",
+      "failure_if_broken": "Zettlr silently falls back to the default data dir; project configs bleed across profiles."
+    },
+    {
+      "id": "I2",
+      "name": "Markdown source tree",
+      "producer": "Zettlr (writes .md files into the workspace folder opened inside the profile)",
+      "consumer": "Pandoc batch exporter",
+      "contract": "UTF-8 Markdown files; YAML front-matter block at top of file for Pandoc metadata (title, author, date). File tree is stable only when Zettlr is NOT running (file locks on Windows).",
+      "failure_if_broken": "Pandoc reads a partially saved file or a file Zettlr has locked; output is corrupt or the export script errors."
+    },
+    {
+      "id": "I3",
+      "name": "LaTeX intermediate (optional)",
+      "producer": "Pandoc (--to latex) or Zettlr's own export if LaTeX is installed",
+      "consumer": "pdflatex / xelatex",
+      "contract": "LaTeX engine on PATH; a .tex file with no undefined commands from the chosen Pandoc template. Without LaTeX, only HTML/DOCX outputs work from both tools.",
+      "failure_if_broken": "PDF export is unavailable; Zettlr README and Pandoc both document this dependency explicitly."
+    }
+  ],
+  "shared_assumptions": [
+    "Zettlr is closed before the batch export runs (avoids file-lock races on Windows, partial-write races everywhere).",
+    "DATA_DIR is an absolute path; the script does not expand tildes.",
+    "Pandoc is on PATH at export time.",
+    "Source .md files use consistent YAML front-matter; Pandoc silently drops metadata fields it does not recognise."
+  ],
+  "provenance": {
+    "zettlr": "Hendrik Erz and contributors, GPL v3; brand reserved. README commit f2f20646.",
+    "pandoc": "John MacFarlane and contributors, GPL v2+. Version and commit not pinned here.",
+    "this_contract": "MIT; original synthesis, not a redistribution of either upstream."
+  },
+  "license_seam": "Zettlr is GPL v3; Pandoc is GPL v2+. This adapter only *invokes* both tools as separate processes — no linking — so MIT on this script is defensible. Bundling either binary changes the obligation."
+}

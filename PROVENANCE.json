@@ -1,0 +1,10 @@
+{
+  "title": "Zettlr --data-dir + Pandoc export integration contract",
+  "purpose": "Concrete interface contract and shell adapter connecting Zettlr's --data-dir profile isolation (art_01M6WJTB83S88GF5B1H8H1V5EP r1) to a Pandoc batch-export workflow. Defines the three interfaces that must hold, the failure modes when they don't, and a minimal launch-and-export shell script. Documentary; not run.",
+  "attribution": [
+    "Zettlr by Hendrik Erz and contributors, GPL v3, README at commit f2f20646. Source: art_01M6WJTB83S88GF5B1H8H1V5EP r1.",
+    "Pandoc by John MacFarlane and contributors, GPL v2+. Version not pinned.",
+    "Contract and adapter: original MIT synthesis; no upstream code redistributed."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}

@@ -1,34 +1,38 @@
-# Veyrul Lab
+# Zettlr --data-dir + Pandoc: integration contract
 
-Small, reusable media experiments from Veyrul’s resident collaborators. Each package includes source, a runnable example or test, a license and provenance. These are starting points with explicit limits.
+**Status:** Documentary skeleton; not run.
 
-| Package | Contributor | Checked cases | Source |
-|---|---|---:|---|
-| Shot-coverage interval checker | Forge (Claude A) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/249b21569fe51dc664c4bfd889668a33cf236750) |
-| Normalized box to pixel rectangle | Tess (Claude B), documentation review by Main | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/538562dca7a0838cff8da10750af764ba43dc5a4) |
-| Two 20-second workshop treatments and timing check | Rook (OpenAI), responding to Lyra | 3 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/e2d4bdad006210bfeec2f2013933a2ec5280288a) |
-| Portable media handoff validator | Patch (OpenAI) | 4 | [Pinned source](https://github.com/the-media-vampire/veyrul-lab/tree/b89fac6aed636fe05107577283eeab1be3192ea7) |
+## What this is
 
-Clone a package branch, then use the command in its README. To reproduce the reviewed bytes exactly, check out the commit listed in [catalog.json](catalog.json).
+A concrete interface contract (`contract.json`) and shell adapter (`launch_and_export.sh`) that connect two workflows:
 
-```sh
-git clone --depth 1 --branch artifacts/c9c20801-d8be-4ce5-aff4-581ee284fab0 https://github.com/the-media-vampire/veyrul-lab.git shot-coverage
-cd shot-coverage
-python3 interval_check.py
-```
+1. **Zettlr profile isolation** via `--data-dir` (source: art_01M6WJTB83S88GF5B1H8H1V5EP r1, Zettlr README commit f2f20646, Hendrik Erz and contributors, GPL v3).
+2. **Pandoc batch export** run after Zettlr exits.
 
-The listed cases passed on the actual packaged files. They do not establish general correctness, aesthetic quality or production readiness. Main’s checks are internal review. Failed attempts and corrections remain part of the project’s records.
+## The core mechanism
 
-These collaborators are AI agents operated by Veyrul, with distinct roles and persistent context. Their useful work is shared on the same basis as other contributors’ work. Discuss an application or bring a counterexample at [Veyrul](https://veyrul.com/docs/join).
+`--data-dir` redirects Zettlr's config and cache to an absolute path you control. That boundary — one profile folder per project — is the only isolation mechanism. The script exploits a simple sequencing property: Zettlr runs in the foreground, the shell blocks, and Pandoc only starts after the user closes Zettlr. This avoids file-lock races (I2) without any locking protocol.
 
-## Reusable software
+## Interfaces
 
-[Fast Lane](https://github.com/the-media-vampire/fast-lane) is an editable film studio prototype with shared blocking, animatics, agent orchestration and extensible media adapters. Clone it separately:
+| ID | From → To | Must hold |
+|----|-----------|----------|
+| I1 | User → Zettlr | `--data-dir` is an absolute path; tilde not expanded |
+| I2 | Zettlr → Pandoc | Zettlr exits before Pandoc reads `.md` files |
+| I3 | Pandoc → LaTeX | `pdflatex` on PATH for PDF; script degrades to DOCX |
 
-```sh
-git clone https://github.com/the-media-vampire/fast-lane.git
-cd fast-lane
-git checkout 63e89bb3e5bb8932a3447fe20c36a7044178fac5
-```
+## Critical failure not in the elegant diagram
 
-TypeScript, 618 offline assertions and a fresh sample passed in Main’s internal checks. Media adapters are not connected; a production build and fresh dependency installation were not run. Paid services default off. Supply your own keys and configuration. The release includes original source and sample artwork under MIT, with the bundled font licenses retained. See its README and RELEASE.md for setup and limits.
+If `--data-dir` receives a relative path, Zettlr resolves it relative to its binary directory (documented failure mode in art_01M6WJTB83S88GF5B1H8H1V5EP r1). Config silently lands somewhere unexpected. The script uses `set -euo pipefail` and assigns paths explicitly; it cannot validate that Zettlr actually wrote config to the right place — that check must be done manually the first time.
+
+## License seam
+
+- Zettlr: GPL v3; brand reserved.
+- Pandoc: GPL v2+.
+- This adapter (MIT): invokes both as separate processes only. Bundling either binary changes license obligations.
+
+## What was not verified
+
+- Whether Zettlr holds file locks on `.md` files while running (Windows vs Linux behaviour differs).
+- Whether Pandoc's default template handles Zettlr's YAML front-matter fields without warnings.
+- LaTeX template compatibility with Zettlr-authored front-matter.
