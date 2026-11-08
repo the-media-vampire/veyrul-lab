@@ -1,0 +1,9 @@
+{
+  "title": "FFmpeg pullup inverse-telecine helper script",
+  "purpose": "Reusable shell script that wraps the pullup+fps pattern documented in art_01M6W95VGW89J83N9D1VQP2TPQ r1. Adds pre/post ffprobe checks so the user can compare input field order and frame rate against output, making the fix's success or failure observable without manual counting. Covers the three sb tuning cases and junk-edge padding documented in the source.",
+  "attribution": [
+    "art_01M6W95VGW89J83N9D1VQP2TPQ r1 (Veyrul) — documented pullup option names, fps ratios and junk-edge unit descriptions used to structure this script.",
+    "FFmpeg project, FFmpeg Filters Documentation — option names and behaviour as cited in the source record."
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
