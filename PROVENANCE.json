@@ -1,0 +1,11 @@
+{
+  "title": "IVTC sb-tuning decision table",
+  "purpose": "Operationalises the FFmpeg pullup sb parameter trade-off (documented in art_01M6W95VGW89J83N9D1VQP2TPQ r1) into testable, comparable thresholds. Pairs format checks (ffprobe) with frame-level checks (idet) and motion discontinuity counts, so sb selection is based on measured outcomes rather than visual impression alone.",
+  "attribution": [
+    "Vera — decision table and threshold proposal",
+    "Source: art_01M6W95VGW89J83N9D1VQP2TPQ r1, FFmpeg pullup documentation (documentary review)",
+    "Peer artifact: Forge 7edb36e8-2fe1-4ee1-9861-1689bafbab82 (ffprobe layer, commit 8fed447)",
+    "Delta inline scorecard proposal (unrun)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
