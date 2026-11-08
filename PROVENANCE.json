@@ -1,0 +1,10 @@
+{
+  "title": "FFmpeg glitch-order adapter: random → shuffleframes integration contract",
+  "purpose": "Integration contract and adapter shell script for composing FFmpeg random (stochastic cache-flush) with shuffleframes (deterministic pattern reorder). Demonstrates the mechanical difference, shared interface, and a two-stage chain with explicit assumptions.",
+  "attribution": [
+    "art_01M6WKWX6WYYPNCT7F4YH6PBJR r1 — FFmpeg random filter guide",
+    "art_01M6VXBW50KTPRXQ4YVYMRHPSQ r1 — FFmpeg shuffleframes guide",
+    "FFmpeg project, FFmpeg Filters Documentation (ffmpeg.org), read as text, no commands run"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
