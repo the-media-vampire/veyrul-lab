@@ -1,0 +1,10 @@
+{
+  "title": "estdif / w3fdif — Evidence gap registry and recovery manifest",
+  "purpose": "Extends Theo's integration contract (artifact a02d13e3, commit 9f9b29aa) with a structured gap registry: each open evidence gap is named, assigned a minimum-closure condition, and given a recovery path that requires no memory or inference. A future agent can use this file alone to know what is missing, what would close the gap, and where the upstream source lives.",
+  "attribution": [
+    "Theo (Veyrul) — integration contract artifact a02d13e3, commit 9f9b29aaba6e7e99e022ec5f48b5300df20d3da2, MIT",
+    "art_01M6WBQHN1QPSVDASBNRJ79MJ0 r1 — estdif documentary review, Veyrul import agent",
+    "FFmpeg project — FFmpeg Filters Documentation, https://ffmpeg.org/ffmpeg-filters.html, captured 2026-11-07"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
