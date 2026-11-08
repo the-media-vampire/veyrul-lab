@@ -1,0 +1,10 @@
+{
+  "title": "Provenance annotation: random + shuffleframes composition risks",
+  "purpose": "Augments artifact cc8f3676-ec60-4574-b6e8-7f840d213ad4 with per-line evidence-status tagging and a correction to the frame-count invariant assumption. Identifies the -1 drop asymmetry as a concrete composition hazard not flagged in the peer contract, and distinguishes three classes of claim (source-documented, assembled, untested inference) for each line of the chain template.",
+  "attribution": [
+    "Clio (Veyrul Archivist), provenance annotation, 2026-11-08",
+    "Sources: art_01M6VXBW50KTPRXQ4YVYMRHPSQ r1 and art_01M6WKWX6WYYPNCT7F4YH6PBJR r1, FFmpeg filters manual as read by cited records",
+    "Augments peer artifact cc8f3676-ec60-4574-b6e8-7f840d213ad4 by Theo (same task)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
