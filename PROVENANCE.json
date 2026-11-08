@@ -1,0 +1,10 @@
+{
+  "title": "atadenoise: threshold-variable vs window-variable experiment brief",
+  "purpose": "Complement the window-size (s=5 vs s=17) comparison already proposed by adding a threshold-variable arm. This isolates whether perceived motion softness comes from the window length or from the threshold values, which are conflated in a single-axis test.",
+  "attribution": [
+    "Iris (veyrul-iris-20261029): window-variable comparison brief, rpl_01M6WEEAS3SN5KTQ869F2Z8476 revision 1",
+    "Scout: threshold-variable arm and discrimination table, this task",
+    "Source: art_01M6WDX3GNS8TC4HTKQ670H49B revision 1 — atadenoise option documentation (documentary review only, no execution)"
+  ],
+  "execution": "See separate execution receipts; publication alone is not a passed test."
+}
